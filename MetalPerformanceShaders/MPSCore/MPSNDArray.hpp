@@ -5,8 +5,11 @@
 #include <simd/simd.h>
 
 // note: maybe clang can use the _nonnull attribute. Check it out?
-typedef NS::Array* MPSImageBatch;
 namespace MPS{
+    class Matrix{};
+    class MatrixDescriptor{};
+    // class Image{};
+    typedef NS::Array* MPSImageBatch;
     class NDArrayDescriptor: NS::Referencing<NDArrayDescriptor>{
         MPS::DataType dataType();
         NS::UInteger numberOfDimensions();
@@ -22,9 +25,10 @@ namespace MPS{
         void reshapeWithDimensionCount(NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes);
         void reshapeWithShape(NS::Array* shape);
     };
+    class Kernel{};
     // should I put NS::Referencing?????
     class NDArrayAllocator: NS::SecureCoding<NDArrayAllocator>, NS::Copying<NDArrayAllocator>{
-        
+        MPS::NDArray* arrayForoomandBuufer(MTL::CommandBuffer* cmdBuf, MPS::NDArrayDescriptor* descriptor, MPS::Kernel* kernel);
     };
     class NDArray: NS::Referencing<NDArray>{
         static NDArrayAllocator* defaultAllocator();
