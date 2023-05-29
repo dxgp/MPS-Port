@@ -6,21 +6,21 @@
 
 
 namespace MPS{
-    _NS_OPTIONS(NS::UInteger, MPSKernelOptions){
+    _NS_OPTIONS(NS::UInteger, KernelOptions){
         MPSKernelOptionsNone = 0U,
         MPSKernelOptionsSkipAPIValidation = 1U << 0,
         MPSKernelOptionsAllowReducedPrecision = 1U << 1,
         MPSKernelOptionsInsertDebugGroups = 1U << 3,
         MPSKernelOptionsVerbose = 1U << 4,
     };
-    _NS_ENUM(NS::UInteger, MPSImageEditMode){
+    _NS_ENUM(NS::UInteger, ImageEditMode){
         MPSImageEdgeModeZero = 0,
         MPSImageEdgeModeClamp = 1,
         MPSImageEdgeModeMirror,
         MPSImageEdgeModeMirrorWithEdge,
         MPSImageEdgeModeConstant,
     };
-    _NS_ENUM(NS::UInteger, MPSImageFeatureChannelFormat){
+    _NS_ENUM(NS::UInteger, ImageFeatureChannelFormat){
             MPSImageFeatureChannelFormatNone = 0,
             MPSImageFeatureChannelFormatUnorm8 = 1,
             MPSImageFeatureChannelFormatUnorm16 = 2,
@@ -29,7 +29,7 @@ namespace MPS{
             MPSImageFeatureChannelFormat_reserved0 = 5,
             MPSImageFeatureChannelFormatCount,
     };
-    _NS_ENUM(uint32_t, MPSDataType){
+    _NS_ENUM(uint32_t, DataType){
         MPSDataTypeInvalid = 0,
         MPSDataTypeFloatBit = 0x10000000,
         MPSDataTypeFloat32   = MPSDataTypeFloatBit | 32,
@@ -47,7 +47,7 @@ namespace MPS{
         MPSDataTypeUnorm1 = MPSDataTypeNormalizedBit | 1,
         MPSDataTypeUnorm8 = MPSDataTypeNormalizedBit | 8,
     };
-    _NS_OPTIONS(NS::UInteger, MPSAliasingStrategy){
+    _NS_OPTIONS(NS::UInteger, AliasingStrategy){
         MPSAliasingStrategyDefault = 0,
         MPSAliasingStrategyDontCare = MPSAliasingStrategyDefault,
         MPSAliasingStrategyShallAlias = 1UL << 0,
@@ -61,52 +61,57 @@ namespace MPS{
             NS::Integer y;    /**<    The vertical component of the offset. Units: pixels     */
             NS::Integer z;    /**<    The depth component of the offset. Units: pixels        */
     }MPSOffset;
-    typedef struct MPSOrigin{
+    typedef struct Origin{
         double  x;  /**< The x coordinate of the position       */
         double  y;  /**< The y coordinate of the position       */
         double  z;  /**< The z coordinate of the position       */
     }MPSOrigin;
-    typedef struct MPSSize {
+    typedef struct Size {
         double  width;      /**< The width of the region    */
         double  height;     /**< The height of the region   */
         double  depth;      /**< The depth of the region    */
     }MPSSize;
-    typedef struct MPSDimensionSlice {
+    typedef struct DimensionSlice {
         NS::UInteger        start;        /**< the position of the first element in the slice */
         NS::UInteger        length;        /**< the number of elements in the slice. */
     }MPSDimensionSlice;
 
-    typedef struct MPSRegion {
+    typedef struct Region {
         MPSOrigin       origin;     /**< The top left corner of the region.  Units: pixels  */
         MPSSize         size;       /**< The size of the region. Units: pixels              */
     }MPSRegion;
-    typedef struct MPSScaleTransform {
+    typedef struct ScaleTransform {
         double  scaleX;                         /**< horizontal scaling factor */
         double  scaleY;                         /**< vertical scaling factor */
         double  translateX;                     /**< horizontal translation */
         double  translateY;                     /**< vertical translation */
     }MPSScaleTransform;
 
-    typedef struct MPSImageCoordinate {
+    typedef struct ImageCoordinate {
         NS::UInteger x;           /**<    The horizontal component of the coordinate. Units: pixels      */
         NS::UInteger y;           /**<    The vertical component of the coordinate. Units: pixels        */
         NS::UInteger channel;     /**<    The index of the channel or feature channel within the pixel   */
     }MPSImageCoordinate;
 
-    typedef struct MPSImageRegion {
+    typedef struct ImageRegion {
         MPSImageCoordinate offset;      /**<    The position of the top left corner of the subregion */
         MPSImageCoordinate size;        /**<    The size {pixels, pixels, channels} of the subregion */
     }MPSImageRegion;
 
-    const MTL::Region MPSRectNoClip;
+    const MTL::Region RectNoClip;
 
-    @protocol   MPSDeviceProvider
-        /*! @abstract   Return the device to use when making MPSKernel subclasses from the NSCoder */
-        -(id <MTLDevice>) mpsMTLDevice;
-    @end
+    // @protocol   MPSDeviceProvider
+    //     /*! @abstract   Return the device to use when making MPSKernel subclasses from the NSCoder */
+    //     -(id <MTLDevice>) mpsMTLDevice;
+    // @end
+    class DeviceProvider{
+        public:
+            MTL::Device* mpsMTLDevice;
+    };
 
-    typedef NSArray<NSNumber*> MPSShape;
-
+    // For future reference, the original definition was typedef NSArray<NSNumber*> MPSShape; i.e. MPSShape is an array of NS::Numbers.
+    typedef NS::Array* Shape; // wtf
+    
     // **************************************************************************************************************** MPS DEVICE PROVIDER ADD HEREE ****************************************************************************************************************
 
 }
