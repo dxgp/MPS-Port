@@ -3,6 +3,7 @@
 #include "MPSCoreTypes.hpp"
 #include "../../Metal/MTLBuffer.hpp"
 #include <simd/simd.h>
+#include "../../Foundation/Foundation.hpp"
 
 // note: maybe clang can use the _nonnull attribute. Check it out?
 namespace MPS{
@@ -18,7 +19,7 @@ namespace MPS{
         void transposeDimension(NS::UInteger dimensionIndex, NS::UInteger dimensionIndex2);
         vector_uchar16 dimensionOrder();
         // NOTE: Replace dimensionSizes with NS::Size::Make?? A lot easier.
-        static MPS::NDArrayDescriptor* descriptorWithDataType(MPS::DataType dataType, NS::UInteger numberOfDimension, NS::UInteger* dimsionSizes);
+        static MPS::NDArrayDescriptor* descriptorWithDataType(MPS::DataType dataType, NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes);
         // NOTE: THIS IS ALSO A LITTLE DICEY
         static MPS::NDArrayDescriptor* descriptorWithDataType(MPS::DataType dataType, NS::Array* shape);
         //static NDArrayDescriptor* descriptorWithDatType(MPS::DataType dataType, ...) While cpp 11 does support varidic args, this won't work. internal implementational details will differ
@@ -57,3 +58,27 @@ namespace MPS{
         NS::UInteger readCount();
     };
 }
+
+_MPS_INLINE MPS::DataType MPS::NDArrayDescriptor::dataType(){
+    return Object::sendMessage<MPS::DataType>(this,_MPS_PRIVATE_SEL(dataType));
+}
+_MPS_INLINE NS::UInteger MPS::NDArrayDescriptor::numberOfDimensions(){
+    return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(numberOfDimensions));
+}
+_MPS_INLINE MPS::DimensionSlice MPS::NDArrayDescriptor::sliceRangeForDimension(NS::UInteger dimensionIndex){
+    return Object::sendMessage<MPS::DimensionSlice>(this, _MPS_PRIVATE_SEL(sliceRangeForDimension_), dimensionIndex);
+}
+_MPS_INLINE void MPS::NDArrayDescriptor::sliceDimension(NS::UInteger dimensionIndex, MPS::DimensionSlice subRange){
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(sliceDimension_), dimensionIndex, subRange);
+}
+_MPS_INLINE void MPS::NDArrayDescriptor::transposeDimension(NS::UInteger dimensionIndex, NS::UInteger dimensionIndex2){
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(this, _MPS_PRIVATE_SEL(transposeDimension_), dimensionIndex, dimensionIndex2));
+}
+_MPS_INLINE vector_uchar16 MPS::NDArrayDescriptor::dimensionOrder(){
+    return Object::sendMessage<vector_uchar16>(this, _MPS_PRIVATE_SEL(dimensionOrder));
+}
+_MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType, NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes){
+    return Object::sendMessage<MPS::NDArrayDescriptor*>(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_), dataType, numberOfDimensions, dimensionSizes);
+}
+
+

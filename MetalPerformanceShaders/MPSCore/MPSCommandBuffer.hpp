@@ -11,12 +11,17 @@
 
 namespace MPS
 {
-    class Predicate : public NS::Referencing<Predicate>{
+    class Predicate : public NS::Referencing<MPS::Predicate>{
         public:
         MTL::Buffer* predicateBuffer() const;
         NS::UInteger predicateOffset() const;
-        static Predicate* predicateWithBuffer(MTL::Buffer* buffer, NS::UInteger offset);
-        Predicate* initWithBuffer(MTL::Buffer* buffer, NS::UInteger offset);
-
+        static MPS::Predicate* predicateWithBuffer(MTL::Buffer* buffer, NS::UInteger offset);
+        MPS::Predicate* initWithBuffer(MTL::Buffer* buffer, NS::UInteger offset);
+        MPS::Predicate* initWithDevice(MTL::Device* device);
+    };
+    class HeapProvider: public NS::Referencing<MPS::HeapProvider>{
+        public:
+        MTL::Heap* newHeapWithDescriptor(MTL::HeapDescriptor* descriptor);
+        void retireHeap(MTL::Heap heap, double seconds);
     };
 }
