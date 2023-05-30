@@ -4,6 +4,7 @@
 #include "../../Metal/MTLBuffer.hpp"
 #include <simd/simd.h>
 #include "../../Foundation/Foundation.hpp"
+#include "../MPSHeaderBridge.hpp"
 
 // note: maybe clang can use the _nonnull attribute. Check it out?
 namespace MPS{
@@ -28,12 +29,12 @@ namespace MPS{
     };
     class Kernel{};
     // should I put NS::Referencing?????
-    class NDArrayAllocator: NS::SecureCoding<NDArrayAllocator>, NS::Copying<NDArrayAllocator>{
-        static class NDArrayAllocator* alloc();
-        static class NDArrayAllocator* init();
+    class NDArrayAllocator: public NS::Copying<NDArrayAllocator>{
+        static MPS::NDArrayAllocator* alloc();
+        MPS::NDArrayAllocator* init();
         MPS::NDArray* arrayForCommandBuffer(MTL::CommandBuffer* cmdBuf, MPS::NDArrayDescriptor* descriptor, MPS::Kernel* kernel);
     };
-    class NDArray: NS::Referencing<NDArray>{
+    class NDArray: public NS::Referencing<NDArray>{
         static NDArrayAllocator* defaultAllocator();
         NS::String* label();
         MPS::DataType dataType() const;
@@ -75,7 +76,7 @@ _MPS_INLINE void MPS::NDArrayDescriptor::sliceDimension(NS::UInteger dimensionIn
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(sliceDimension_), dimensionIndex, subRange);
 }
 _MPS_INLINE void MPS::NDArrayDescriptor::transposeDimension(NS::UInteger dimensionIndex, NS::UInteger dimensionIndex2){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(this, _MPS_PRIVATE_SEL(transposeDimension_), dimensionIndex, dimensionIndex2));
+    Object::sendMessage<void>(this,_MPS_PRIVATE_SEL(transposeDimension_), dimensionIndex, dimensionIndex2);
 }
 _MPS_INLINE vector_uchar16 MPS::NDArrayDescriptor::dimensionOrder(){
     return Object::sendMessage<vector_uchar16>(this, _MPS_PRIVATE_SEL(dimensionOrder));
@@ -95,13 +96,15 @@ _MPS_INLINE void MPS::NDArrayDescriptor::reshapeWithShape(NS::Array* shape){
 
 //class NDArrayAllocator
 _MPS_INLINE MPS::NDArrayAllocator* MPS::NDArrayAllocator::alloc(){
-    return Object::sendMessage<MPS::NDArrayAllocator*>(_MPS_PRIVATE_CLS(MPSNDArrayAllocator), _MPS_PRIVATE_SEL(alloc));
+    //return Object::sendMessage<MPS::NDArrayAllocator*>(_MPS_PRIVATE_CLS(MPSNDArrayAllocator), _MPS_PRIVATE_SEL(alloc));
+    return NS::Object::alloc<MPS::NDArrayAllocator>(_MPS_PRIVATE_CLS(MPSNDArrayAllocator));
 }
 _MPS_INLINE MPS::NDArrayAllocator* MPS::NDArrayAllocator::init(){
-    return Object::sendMessage<MPS::NDArrayAllocator*>(_MPS_PRIVATE_CLS(MPSNDArray), _MPS_PRIVATE_SEL(init));
+    //return Object::sendMessage<MPS::NDArrayAllocator*>(_MPS_PRIVATE_CLS(MPSNDArray), _MPS_PRIVATE_SEL(init));
+    return NS::Object::init<MPS::NDArrayAllocator>();
 }
 _MPS_INLINE MPS::NDArray* MPS::NDArrayAllocator::arrayForCommandBuffer(MTL::CommandBuffer* cmdBuf, MPS::NDArrayDescriptor* descriptor, MPS::Kernel* kernel){
-    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(arrayFromCommandBuffer_), cmdBuf, descriptor, kernel);
+    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(arrayForCommandBuffer_), cmdBuf, descriptor, kernel);
 }
 
 //class NDArray
@@ -133,7 +136,7 @@ _MPS_INLINE MPS::NDArray* MPS::NDArray::initWithDevice(MTL::Device* device, NDAr
     return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device, descriptor);
 }
 _MPS_INLINE MPS::NDArray* MPS::NDArray::initWithDevice(MTL::Device* device, double value){
-    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(initWithDevice), device, value);
+    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device, value);
 }
 _MPS_INLINE NS::UInteger MPS::NDArray::resourceSize(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(resourceSize));
