@@ -45,7 +45,7 @@ _MPS_INLINE MPS::Predicate* MPS::Predicate::predicateWithBuffer(MTL::Buffer* buf
     return Object::sendMessage<MPS::Predicate*>(_MPS_PRIVATE_CLS(MPSPredicate), _MPS_PRIVATE_SEL(predicateWithBuffer_), buffer, offset);
 }
 _MPS_INLINE MPS::Predicate* MPS::Predicate::initWithBuffer(MTL::Buffer* buffer, NS::UInteger offset){
-    return Object::sendMessage<MPS::Predicate*>(this, _MPS_PRIVATE_CLS(initWithBuffer_), buffer, offset);
+    return Object::sendMessage<MPS::Predicate*>(this, _MPS_PRIVATE_SEL(initWithBuffer_), buffer, offset);
 }
 _MPS_INLINE MPS::Predicate* MPS::Predicate::initWithDevice(MTL::Device* device){
     return Object::sendMessage<MPS::Predicate*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device);

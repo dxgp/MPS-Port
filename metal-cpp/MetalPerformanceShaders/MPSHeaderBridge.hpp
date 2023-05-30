@@ -4,11 +4,16 @@
 namespace MPS::Private::Class
 {
     // _MTL_PRIVATE_DEF_CLS(MTLAccelerationStructureBoundingBoxGeometryDescriptor);
+    //MPSNDArray
     _MPS_PRIVATE_DEF_CLS(MPSNDArrayAllocator);
     _MPS_PRIVATE_DEF_CLS(MPSNDArray);
     _MPS_PRIVATE_DEF_CLS(MPSNDArrayDescriptor);
     _MPS_PRIVATE_DEF_CLS(MPSTemporaryNDArray);
     
+    //MPSCommandBuffer
+    _MPS_PRIVATE_DEF_CLS(MPSPredicate);
+    _MPS_PRIVATE_DEF_CLS(MPSCommandBuffer);
+    _MPS_PRIVATE_DEF_CLS(MPSCommandBuffer);
 }
 
 namespace MPS::Private::Protocol
@@ -19,6 +24,7 @@ namespace MPS::Private::Protocol
 namespace MPS::Private::Selector
 {
     // _MTL_PRIVATE_DEF_SEL(GPUEndTime,"GPUEndTime");
+    //MPSNDArray
     _MPS_PRIVATE_DEF_SEL(numberOfDimensions, "numberOfDimensions");
     _MPS_PRIVATE_DEF_SEL(sliceRangeForDimension_, "sliceRangeForDimension:");
     _MPS_PRIVATE_DEF_SEL(sliceDimension_, "sliceDimension:");
@@ -48,5 +54,22 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(synchronizeOnCommandBuffer_, "synchronizeOnCommandBuffer:");
     _MPS_PRIVATE_DEF_SEL(readCount, "readCount");
     
+    //MPSCommandBuffer
+    _MPS_PRIVATE_DEF_SEL(predicateBuffer, "predicateBuffer");
+    _MPS_PRIVATE_DEF_SEL(predicateOffset, "predicateOffset");
+    _MPS_PRIVATE_DEF_SEL(predicateWithBuffer_, "predicateWithBuffer:");
+    _MPS_PRIVATE_DEF_SEL(initWithBuffer_, "initWithBuffer:");
+    _MPS_PRIVATE_DEF_SEL(newHeapWithDescriptor_, "newHeapWithDescriptor:");
+    _MPS_PRIVATE_DEF_SEL(retireHeap_, "retireHeap:");
+    _MPS_PRIVATE_DEF_SEL(commandBuffer, "commandBuffer");
+    _MPS_PRIVATE_DEF_SEL(rootCommandBuffer, "rootCommandBuffer");
+    _MPS_PRIVATE_DEF_SEL(predicate, "predicate");
+    _MPS_PRIVATE_DEF_SEL(heapProvider, "heapProvider");
+    _MPS_PRIVATE_DEF_SEL(commandBufferWithCommandBuffer_, "commandBufferWithCommandBuffer:");
+    _MPS_PRIVATE_DEF_SEL(commandBufferFromCommandQueue_, "commandBufferFromCommandQueue:");
+    _MPS_PRIVATE_DEF_SEL(initWithCommandBuffer_, "initWithCommandBuffer:");
+    _MPS_PRIVATE_DEF_SEL(commitAndContinue, "commitAndContinue");
+    _MPS_PRIVATE_DEF_SEL(prefetchHeapForWorkloadSize_, "prefetchHeapForWorkloadSize:");
+
 
 }
