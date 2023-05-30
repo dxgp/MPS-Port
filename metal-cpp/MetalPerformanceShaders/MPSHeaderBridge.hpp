@@ -19,7 +19,6 @@ namespace MPS::Private::Protocol
 namespace MPS::Private::Selector
 {
     // _MTL_PRIVATE_DEF_SEL(GPUEndTime,"GPUEndTime");
-    _MPS_PRIVATE_DEF_SEL(dataType, "dataType");
     _MPS_PRIVATE_DEF_SEL(numberOfDimensions, "numberOfDimensions");
     _MPS_PRIVATE_DEF_SEL(sliceRangeForDimension_, "sliceRangeForDimension:");
     _MPS_PRIVATE_DEF_SEL(sliceDimension_, "sliceDimension:");

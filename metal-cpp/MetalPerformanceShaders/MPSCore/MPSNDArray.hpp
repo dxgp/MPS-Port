@@ -8,8 +8,8 @@
 
 // note: maybe clang can use the _nonnull attribute. Check it out?
 namespace MPS{
-    class Matrix{};
-    class MatrixDescriptor{};
+    class Matrix;
+    class MatrixDescriptor;
     // class Image{};
     typedef NS::Array* MPSImageBatch;
     class NDArrayDescriptor: NS::Referencing<NDArrayDescriptor>{
@@ -27,7 +27,8 @@ namespace MPS{
         void reshapeWithDimensionCount(NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes);
         void reshapeWithShape(NS::Array* shape);
     };
-    class Kernel{};
+    class Kernel;
+    class NDArray;
     // should I put NS::Referencing?????
     class NDArrayAllocator: public NS::Copying<NDArrayAllocator>{
         static MPS::NDArrayAllocator* alloc();
@@ -81,10 +82,10 @@ _MPS_INLINE void MPS::NDArrayDescriptor::transposeDimension(NS::UInteger dimensi
 _MPS_INLINE vector_uchar16 MPS::NDArrayDescriptor::dimensionOrder(){
     return Object::sendMessage<vector_uchar16>(this, _MPS_PRIVATE_SEL(dimensionOrder));
 }
-_MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType, NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes){
+_MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType dataType, NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes){
     return Object::sendMessage<MPS::NDArrayDescriptor*>(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_), dataType, numberOfDimensions, dimensionSizes);
 }
-_MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType, NS::Array* shape){
+_MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType dataType, NS::Array* shape){
     return Object::sendMessage<MPS::NDArrayDescriptor*>(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_), dataType, shape);
 }
 _MPS_INLINE void MPS::NDArrayDescriptor::reshapeWithDimensionCount(NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes){

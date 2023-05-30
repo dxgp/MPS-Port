@@ -98,7 +98,7 @@ namespace MPS{
         MPSImageCoordinate size;        /**<    The size {pixels, pixels, channels} of the subregion */
     }MPSImageRegion;
 
-    const MTL::Region RectNoClip;
+    // const MTL::Region RectNoClip;
 
     // @protocol   MPSDeviceProvider
     //     /*! @abstract   Return the device to use when making MPSKernel subclasses from the NSCoder */

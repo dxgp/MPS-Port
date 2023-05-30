@@ -33,7 +33,7 @@ namespace MPS::Private
 {
     template <typename _Type>
     inline _Type const LoadSymbol(const char* pSymbol){
-        const _Type* pAssress = static_cast<_Type*>(dlsym(RTLD_DEFAULT, pSymbol));
+        const _Type* pAddress = static_cast<_Type*>(dlsym(RTLD_DEFAULT, pSymbol));
         return pAddress ? *pAddress : nullptr;
     }
 } // MPS::Private
