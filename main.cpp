@@ -9,8 +9,8 @@
 #include "metal-cpp/Metal/Metal.hpp"
 #include "metal-cpp/QuartzCore/QuartzCore.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp"
+#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp"
 
 int main(){
-    MPS::NDArrayDescriptor* allocator = new MPS::NDArrayDescriptor();
     return 0;
 }

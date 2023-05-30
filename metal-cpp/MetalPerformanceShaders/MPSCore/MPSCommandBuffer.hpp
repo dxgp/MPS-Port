@@ -32,7 +32,7 @@ namespace MPS
         MPS::CommandBuffer* initWithCommandBuffer(MTL::CommandBuffer* commandBuffer);
         void commitAndContinue();
         void prefetchHeapForWorkloadSize(size_t size);
-    }
+    };
 }
 
 _MPS_INLINE MTL::Buffer* MPS::Predicate::predicateBuffer() const{

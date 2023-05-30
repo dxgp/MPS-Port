@@ -13,7 +13,6 @@ namespace MPS::Private::Class
     //MPSCommandBuffer
     _MPS_PRIVATE_DEF_CLS(MPSPredicate);
     _MPS_PRIVATE_DEF_CLS(MPSCommandBuffer);
-    _MPS_PRIVATE_DEF_CLS(MPSCommandBuffer);
 }
 
 namespace MPS::Private::Protocol
