@@ -10,6 +10,7 @@
 #include "metal-cpp/QuartzCore/QuartzCore.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp"
+#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp"
 
 int main(){
     return 0;

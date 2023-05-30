@@ -31,14 +31,32 @@
 
 namespace NS
 {
+    /*
+FOUNDATION_EXPORT NSNotificationName const NSBundleDidLoadNotification;
+FOUNDATION_EXPORT NSString * const NSLoadedClasses;	// notification key
+FOUNDATION_EXPORT NSNotificationName const NSBundleResourceRequestLowDiskSpaceNotification API_AVAILABLE(ios(9.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos);
+FOUNDATION_EXPORT double const NSBundleResourceRequestLoadingPriorityUrgent API_AVAILABLE(ios(9.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos);
+*/
 _NS_CONST(NotificationName, BundleDidLoadNotification);
 _NS_CONST(NotificationName, BundleResourceRequestLowDiskSpaceNotification);
 
+/*
+#define NSLocalizedString(key, comment) \
+	    [NSBundle.mainBundle localizedStringForKey:(key) value:@"" table:nil]
+#define NSLocalizedStringFromTable(key, tbl, comment) \
+	    [NSBundle.mainBundle localizedStringForKey:(key) value:@"" table:(tbl)]
+#define NSLocalizedStringFromTableInBundle(key, tbl, bundle, comment) \
+	    [bundle localizedStringForKey:(key) value:@"" table:(tbl)]
+#define NSLocalizedStringWithDefaultValue(key, tbl, bundle, val, comment) \
+	    [bundle localizedStringForKey:(key) value:(val) table:(tbl)]
+
+
+*/
 class String* LocalizedString(const String* pKey, const String*);
 class String* LocalizedStringFromTable(const String* pKey, const String* pTbl, const String*);
 class String* LocalizedStringFromTableInBundle(const String* pKey, const String* pTbl, const class Bundle* pBdle, const String*);
 class String* LocalizedStringWithDefaultValue(const String* pKey, const String* pTbl, const class Bundle* pBdle, const String* pVal, const String*);
-
+// NORMAL CLASS TRANSLATION
 class Bundle : public Referencing<Bundle>
 {
 public:
@@ -94,7 +112,12 @@ public:
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+/*
+FOUNDATION_EXPORT NSNotificationName const NSBundleDidLoadNotification;
+FOUNDATION_EXPORT NSString * const NSLoadedClasses;	// notification key
+FOUNDATION_EXPORT NSNotificationName const NSBundleResourceRequestLowDiskSpaceNotification API_AVAILABLE(ios(9.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos);
+FOUNDATION_EXPORT double const NSBundleResourceRequestLoadingPriorityUrgent API_AVAILABLE(ios(9.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos);
+*/
 _NS_PRIVATE_DEF_CONST(NS::NotificationName, BundleDidLoadNotification);
 _NS_PRIVATE_DEF_CONST(NS::NotificationName, BundleResourceRequestLowDiskSpaceNotification);
 

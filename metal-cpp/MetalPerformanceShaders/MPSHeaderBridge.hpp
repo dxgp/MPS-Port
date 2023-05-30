@@ -13,6 +13,10 @@ namespace MPS::Private::Class
     //MPSCommandBuffer
     _MPS_PRIVATE_DEF_CLS(MPSPredicate);
     _MPS_PRIVATE_DEF_CLS(MPSCommandBuffer);
+
+    //MPSKernel
+    _MPS_PRIVATE_DEF_CLS(MPSKernel);
+
 }
 
 namespace MPS::Private::Protocol
@@ -70,5 +74,8 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(commitAndContinue, "commitAndContinue");
     _MPS_PRIVATE_DEF_SEL(prefetchHeapForWorkloadSize_, "prefetchHeapForWorkloadSize:");
 
-
+    //MPSKernel
+    _MPS_PRIVATE_DEF_SEL(options, "options");
+    _MPS_PRIVATE_DEF_SEL(initWithCoder_, "initWithCoder");
+    
 }
