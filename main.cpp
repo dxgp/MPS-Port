@@ -11,5 +11,6 @@
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp"
 
 int main(){
+    MPS::NDArrayDescriptor* allocator = new MPS::NDArrayDescriptor();
     return 0;
 }
