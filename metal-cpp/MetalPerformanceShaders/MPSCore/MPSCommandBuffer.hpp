@@ -35,6 +35,7 @@ namespace MPS
     };
 }
 
+//class Predicate
 _MPS_INLINE MTL::Buffer* MPS::Predicate::predicateBuffer() const{
     return Object::sendMessage<MTL::Buffer*>(this, _MPS_PRIVATE_SEL(predicateBuffer));
 }
@@ -58,6 +59,8 @@ _MPS_INLINE MTL::Heap* MPS::HeapProvider::newHeapWithDescriptor(MTL::HeapDescrip
 _MPS_INLINE void MPS::HeapProvider::retireHeap(MTL::Heap* heap, double seconds){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(retireHeap_), heap, seconds);
 }
+
+//class CommandBuffer
 _MPS_INLINE MTL::CommandBuffer* MPS::CommandBuffer::commandBuffer() const{
     return Object::sendMessage<MTL::CommandBuffer*>(this, _MPS_PRIVATE_SEL(commandBuffer));
 }
