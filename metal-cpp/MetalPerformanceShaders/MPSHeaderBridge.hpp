@@ -114,6 +114,20 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(temporaryVectorWithCommandBuffer_descriptor_, "temporaryVectorWithCommandBuffer:descriptor:");
     _MPS_PRIVATE_DEF_SEL(prefetchStorageWithCommandBuffer_descriptorList_, "prefetchStorageWithCommandBuffer:descriptorList:");
 
+    //MPSMatrixTypes
+    _MPS_PRIVATE_DEF_SEL(sourceMatrixOrigin, "sourceMatrixOrigin");
+    _MPS_PRIVATE_DEF_SEL(resultMatrixOrigin, "resultMatrixOrigin");
+    _MPS_PRIVATE_DEF_SEL(batchStart, "batchStart");
+    _MPS_PRIVATE_DEF_SEL(batchSize, "batchSize");
+    _MPS_PRIVATE_DEF_SEL(primarySourceMatrixOrigin, "primarySourceMatrixOrigin");
+    _MPS_PRIVATE_DEF_SEL(secondarySourceMatrixOrigin, "secondarySourceMatrixOrigin");
 
-
+    //MPSMatrixMultiplication
+    _MPS_PRIVATE_DEF_SEL(leftMatrixOrigin, "leftMatrixOrigin");
+    _MPS_PRIVATE_DEF_SEL(rightMatrixOrigin, "rightMatrixOrigin");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_transposeLeft_transposeRight_resultRows_resultColumns_interiorColumns_alpha_beta_, "initWithDevice:transposeLeft:transposeRight:resultRows:resultColumns:interiorColumns:alpha:beta:");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_rows_columns_, "initWithDevice:rows:columns:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_leftMatrix_rightMatrix_resultMatrix_, "encodeToCommandBuffer:leftMatrix:rightMatrix:resultMatrix:");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_transpose_rows_columns_alpha_beta_, "initWithDevice:transpose:rows:columns:alpha:beta:");
+    
 }

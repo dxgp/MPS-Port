@@ -1,0 +1,71 @@
+#pragma once
+#include "../MPSCore/MPSKernel.hpp"
+#include "../MPSCore/MPSNDArray.hpp"
+#include "MPSMatrixTypes.hpp"
+
+namespace MPS{
+    class MatrixMultiplication: public NS::Referencing<MPS::Kernel>{
+        MTL::Origin resultMatrixOrigin();
+        MTL::Origin leftMatrixOrigin();
+        MTL::Origin rightMatrixOrigin();
+        NS::UInteger batchStart();
+        NS::UInteger batchSize();
+        MPS::MatrixMultiplication* initWithDevice(MTL::Device* device, bool transposeLeft, bool transposeRight, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns, double alpha, double beta);
+        MPS::MatrixMultiplication* initWithDevice(MTL::Device* device, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns);
+        void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* leftMatrix, MPS::Matrix* rightMatrix, MPS::Matrix* resultMatrix);
+    };
+    class MatrixVectorMultiplication: public NS::Referencing<MPS::MatrixBinaryKernel>{
+        MPS::MatrixVectorMultiplication* initWithDevice(MTL::Device* device, bool transpose, NS::UInteger rows, NS::UInteger columns, double alpha, double beta);
+        MPS::MatrixVectorMultiplication* initWithDevice(MTL::Device* device, NS::UInteger rows, NS::UInteger columns);
+        void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Vector* inputVector, MPS::Vector* resultVector);
+    };
+}
+
+_MPS_INLINE MTL::Origin MPS::MatrixMultiplication::resultMatrixOrigin(){
+    return Object::sendMessage<MTL::Origin>(this, _MPS_PRIVATE_SEL(resultMatrixOrigin));
+}
+
+
+_MPS_INLINE MTL::Origin MPS::MatrixMultiplication::leftMatrixOrigin(){
+    return Object::sendMessage<MTL::Origin>(this, _MPS_PRIVATE_SEL(leftMatrixOrigin));
+}
+
+
+_MPS_INLINE MTL::Origin MPS::MatrixMultiplication::rightMatrixOrigin(){
+    return Object::sendMessage<MTL::Origin>(this, _MPS_PRIVATE_SEL(rightMatrixOrigin));
+}
+
+
+_MPS_INLINE NS::UInteger MPS::MatrixMultiplication::batchStart(){
+    return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(batchStart));
+}
+
+
+_MPS_INLINE NS::UInteger MPS::MatrixMultiplication::batchSize(){
+    return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(batchSize));
+}
+
+
+_MPS_INLINE MPS::MatrixMultiplication* MPS::MatrixMultiplication::initWithDevice(MTL::Device* device, bool transposeLeft, bool transposeRight, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns, double alpha, double beta){
+    return Object::sendMessage<MPS::MatrixMultiplication*>(this, _MPS_PRIVATE_SEL(initWithDevice_transposeLeft_transposeRight_resultRows_resultColumns_interiorColumns_alpha_beta_), device, transposeLeft, transposeRight, resultRows, resultColumns, interiorColumns, alpha, beta);
+}
+
+
+_MPS_INLINE MPS::MatrixMultiplication* MPS::MatrixMultiplication::initWithDevice(MTL::Device* device, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns){
+    return Object::sendMessage<MPS::MatrixMultiplication*>(this, _MPS_PRIVATE_SEL(initWithDevice_rows_columns_), device, resultRows, resultColumns, interiorColumns);
+}
+
+
+_MPS_INLINE void MPS::MatrixMultiplication::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* leftMatrix, MPS::Matrix* rightMatrix, MPS::Matrix* resultMatrix){
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_leftMatrix_rightMatrix_resultMatrix_), commandBuffer, leftMatrix, rightMatrix, resultMatrix);
+}
+
+
+_MPS_INLINE MPS::MatrixVectorMultiplication* MPS::MatrixVectorMultiplication::initWithDevice(MTL::Device* device, bool transpose, NS::UInteger rows, NS::UInteger columns, double alpha, double beta){
+    return Object::sendMessage<MPS::MatrixVectorMultiplication*>(this, _MPS_PRIVATE_SEL(initWithDevice_transpose_rows_columns_alpha_beta_), device, transpose, rows, columns, alpha, beta);
+}
+
+_MPS_INLINE MPS::MatrixVectorMultiplication* MPS::MatrixVectorMultiplication::initWithDevice(MTL::Device* device, NS::UInteger rows, NS::UInteger columns){
+    return Object::sendMessage<MPS::MatrixVectorMultiplication*>(this, _MPS_PRIVATE_SEL(initWithDevice_rows_columns_), device, rows, columns);
+}
+
