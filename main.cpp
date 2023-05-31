@@ -11,7 +11,7 @@
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernelTypes.hpp"
-
+#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
 
 int main(){
     return 0;

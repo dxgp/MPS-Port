@@ -51,7 +51,6 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(label, "label");
     _MPS_PRIVATE_DEF_SEL(dataType, "dataType");
     _MPS_PRIVATE_DEF_SEL(dataTypeSize, "dataTypeSize");
-    _MPS_PRIVATE_DEF_SEL(lengthOfDimension_, "lengthOfDimension:");
     _MPS_PRIVATE_DEF_SEL(device, "device");
     _MPS_PRIVATE_DEF_SEL(descriptor, "descriptor");
     _MPS_PRIVATE_DEF_SEL(initWithDevice_descriptor_, "initWithDevice:descriptor:");

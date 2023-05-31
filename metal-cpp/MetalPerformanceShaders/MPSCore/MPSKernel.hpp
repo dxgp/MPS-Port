@@ -1,8 +1,9 @@
+#pragma once
 #include "MPSCoreTypes.hpp"
 #include "MPSCommandBuffer.hpp"
 
 namespace MPS{
-    class Kernel: NS::Copying<Kernel>{
+    class Kernel: public NS::Copying<Kernel>{
         static MPS::Kernel* alloc();
         MPS::Kernel* init();
         MPS::KernelOptions options();
