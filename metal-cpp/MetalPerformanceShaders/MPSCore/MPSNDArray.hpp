@@ -12,9 +12,10 @@ namespace MPS{
     class MatrixDescriptor;
     // class Image{};
     typedef NS::Array* MPSImageBatch;
-    class NDArrayDescriptor: NS::Referencing<NDArrayDescriptor>{
+    class NDArrayDescriptor: public NS::Referencing<NDArrayDescriptor>{
         MPS::DataType dataType();
         NS::UInteger numberOfDimensions();
+        NS::UInteger lengthOfDimension(NS::UInteger dimensionIndex);
         MPS::DimensionSlice sliceRangeForDimension(NS::UInteger dimensionIndex);
         void  sliceDimension(NS::UInteger dimsionIndex, MPS::DimensionSlice subRange);
         void transposeDimension(NS::UInteger dimensionIndex, NS::UInteger dimensionIndex2);
@@ -58,7 +59,8 @@ namespace MPS{
     }; 
     class TemporaryNDArray: NS::Referencing<MPS::NDArray>{
         static MPS::NDArrayAllocator* defaultAllocator();
-        static MPS::TemporaryNDArray* initWithDevice(MTL::Device* device, MPS::NDArrayDescriptor* descriptor);
+        static MPS::TemporaryNDArray* temporaryNDArrayWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::NDArrayDescriptor* descriptor);
+        //static MPS::TemporaryNDArray* initWithDevice(MTL::Device* device, MPS::NDArrayDescriptor* descriptor);
         NS::UInteger readCount();
     };
 }
@@ -70,26 +72,29 @@ _MPS_INLINE MPS::DataType MPS::NDArrayDescriptor::dataType(){
 _MPS_INLINE NS::UInteger MPS::NDArrayDescriptor::numberOfDimensions(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(numberOfDimensions));
 }
+_MPS_INLINE NS::UInteger MPS::NDArrayDescriptor::lengthOfDimension(NS::UInteger dimensionIndex){
+    return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(lengthOfDimension_), dimensionIndex);
+}
 _MPS_INLINE MPS::DimensionSlice MPS::NDArrayDescriptor::sliceRangeForDimension(NS::UInteger dimensionIndex){
     return Object::sendMessage<MPS::DimensionSlice>(this, _MPS_PRIVATE_SEL(sliceRangeForDimension_), dimensionIndex);
 }
 _MPS_INLINE void MPS::NDArrayDescriptor::sliceDimension(NS::UInteger dimensionIndex, MPS::DimensionSlice subRange){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(sliceDimension_), dimensionIndex, subRange);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(sliceDimension_withSubrange_), dimensionIndex, subRange);
 }
 _MPS_INLINE void MPS::NDArrayDescriptor::transposeDimension(NS::UInteger dimensionIndex, NS::UInteger dimensionIndex2){
-    Object::sendMessage<void>(this,_MPS_PRIVATE_SEL(transposeDimension_), dimensionIndex, dimensionIndex2);
+    Object::sendMessage<void>(this,_MPS_PRIVATE_SEL(transposeDimension_withDimension_), dimensionIndex, dimensionIndex2);
 }
 _MPS_INLINE vector_uchar16 MPS::NDArrayDescriptor::dimensionOrder(){
     return Object::sendMessage<vector_uchar16>(this, _MPS_PRIVATE_SEL(dimensionOrder));
 }
 _MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType dataType, NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes){
-    return Object::sendMessage<MPS::NDArrayDescriptor*>(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_), dataType, numberOfDimensions, dimensionSizes);
+    return Object::sendMessage<MPS::NDArrayDescriptor*>(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_dimensionCount_dimensionSizes_), dataType, numberOfDimensions, dimensionSizes);
 }
 _MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType dataType, NS::Array* shape){
-    return Object::sendMessage<MPS::NDArrayDescriptor*>(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_), dataType, shape);
+    return Object::sendMessage<MPS::NDArrayDescriptor*>(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_shape_), dataType, shape);
 }
 _MPS_INLINE void MPS::NDArrayDescriptor::reshapeWithDimensionCount(NS::UInteger numberOfDimensions, NS::UInteger* dimensionSizes){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(reshapeWithDimension_), numberOfDimensions, dimensionSizes);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(reshapeWithDimensionCount_dimensionSizes_), numberOfDimensions, dimensionSizes);
 }
 _MPS_INLINE void MPS::NDArrayDescriptor::reshapeWithShape(NS::Array* shape){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(reshapeWithShape_), shape);
@@ -105,7 +110,7 @@ _MPS_INLINE MPS::NDArrayAllocator* MPS::NDArrayAllocator::init(){
     return NS::Object::init<MPS::NDArrayAllocator>();
 }
 _MPS_INLINE MPS::NDArray* MPS::NDArrayAllocator::arrayForCommandBuffer(MTL::CommandBuffer* cmdBuf, MPS::NDArrayDescriptor* descriptor, MPS::Kernel* kernel){
-    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(arrayForCommandBuffer_), cmdBuf, descriptor, kernel);
+    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(arrayForCommandBuffer_arrayDescriptor_kernel_), cmdBuf, descriptor, kernel);
 }
 
 //class NDArray
@@ -134,31 +139,31 @@ _MPS_INLINE MPS::NDArrayDescriptor* MPS::NDArray::descriptor(){
     return Object::sendMessage<MPS::NDArrayDescriptor*>(this, _MPS_PRIVATE_SEL(descriptor));
 }
 _MPS_INLINE MPS::NDArray* MPS::NDArray::initWithDevice(MTL::Device* device, NDArrayDescriptor* descriptor){
-    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device, descriptor);
+    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(initWithDevice_descriptor_), device, descriptor);
 }
 _MPS_INLINE MPS::NDArray* MPS::NDArray::initWithDevice(MTL::Device* device, double value){
-    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device, value);
+    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(initWithDevice_scalar_), device, value);
 }
 _MPS_INLINE NS::UInteger MPS::NDArray::resourceSize(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(resourceSize));
 }
 _MPS_INLINE MPS::NDArray* MPS::NDArray::arrayViewWithCommandBuffer(MTL::CommandBuffer* cmdBuf, MPS::NDArrayDescriptor* descriptor, MPS::AliasingStrategy aliasing){
-    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(arrayViewWithCommandBuffer_), cmdBuf, descriptor, aliasing);
+    return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(arrayViewWithCommandBuffer_descriptor_aliasing_), cmdBuf, descriptor, aliasing);
 }
 _MPS_INLINE MPS::NDArray* MPS::NDArray::parent() const{
     return Object::sendMessage<MPS::NDArray*>(this, _MPS_PRIVATE_SEL(parent));
 }
 _MPS_INLINE void MPS::NDArray::exportDataWithCommandBuffer(MTL::CommandBuffer* cmdBuf, MTL::Buffer* buffer, MPS::DataType destinationDataType, NS::UInteger offset, NS::Integer* rowStrides){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(exportDataWithCommandBuffer_), cmdBuf, buffer, destinationDataType, offset, rowStrides);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(exportDataWithCommandBuffer_toBuffer_destinationDataType_offset_rowStrides_), cmdBuf, buffer, destinationDataType, offset, rowStrides);
 }
 _MPS_INLINE void MPS::NDArray::importDataWithCommandBuffer(MTL::CommandBuffer* cmdBuf, MTL::Buffer* buffer, MPS::DataType sourceDataType, NS::UInteger offset, NS::Integer* rowStrides){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(importDataWithCommandBuffer_), cmdBuf, buffer, sourceDataType, offset, rowStrides);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(importDataWithCommandBuffer_fromBuffer_sourceDataType_offset_rowStrides_), cmdBuf, buffer, sourceDataType, offset, rowStrides);
 }
 _MPS_INLINE void MPS::NDArray::readBytes(void* buffer, NS::Integer* strideBytesPerDimension){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(readBytes_), buffer, strideBytesPerDimension);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(readBytes_strideBytes_), buffer, strideBytesPerDimension);
 }
 _MPS_INLINE void MPS::NDArray::writeBytes(void* buffer, NS::Integer* strideBytesPerDimension){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(writeBytes_), buffer, strideBytesPerDimension);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(writeBytes_strideBytes_), buffer, strideBytesPerDimension);
 }
 _MPS_INLINE void MPS::NDArray::synchronizeOnCommandBuffer(MTL::CommandBuffer* commandBuffer){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(synchronizeOnCommandBuffer_), commandBuffer);
@@ -168,10 +173,13 @@ _MPS_INLINE void MPS::NDArray::synchronizeOnCommandBuffer(MTL::CommandBuffer* co
 _MPS_INLINE MPS::NDArrayAllocator* MPS::TemporaryNDArray::defaultAllocator(){
     return Object::sendMessage<MPS::NDArrayAllocator*>(_MPS_PRIVATE_CLS(MPSTemporaryNDArray), _MPS_PRIVATE_SEL(defaultAllocator));
 }
-_MPS_INLINE MPS::TemporaryNDArray* MPS::TemporaryNDArray::initWithDevice(MTL::Device* device, MPS::NDArrayDescriptor* descriptor){
-    return Object::sendMessage<MPS::TemporaryNDArray*>(_MPS_PRIVATE_CLS(MPSTemporaryNDArray), _MPS_PRIVATE_SEL(initWithDevice_), device, descriptor);
-}
+// _MPS_INLINE MPS::TemporaryNDArray* MPS::TemporaryNDArray::initWithDevice(MTL::Device* device, MPS::NDArrayDescriptor* descriptor){
+//     return Object::sendMessage<MPS::TemporaryNDArray*>(_MPS_PRIVATE_CLS(MPSTemporaryNDArray), _MPS_PRIVATE_SEL(initWithDevice_), device, descriptor);
+// } USE INIT WITH CMD BUF INSTEAD
 _MPS_INLINE NS::UInteger MPS::TemporaryNDArray::readCount(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(readCount));
 }
 
+_MPS_INLINE MPS::TemporaryNDArray* MPS::TemporaryNDArray::temporaryNDArrayWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::NDArrayDescriptor* descriptor){
+    return Object::sendMessage<MPS::TemporaryNDArray*>(_MPS_PRIVATE_CLS(MPSTemporaryNDArray), _MPS_PRIVATE_SEL(temporaryNDArrayWithCommandBuffer_descriptor_), commandBuffer, descriptor);
+}

@@ -43,10 +43,10 @@ _MPS_INLINE NS::UInteger MPS::Predicate::predicateOffset() const{
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(predicateOffset));
 }
 _MPS_INLINE MPS::Predicate* MPS::Predicate::predicateWithBuffer(MTL::Buffer* buffer, NS::UInteger offset){
-    return Object::sendMessage<MPS::Predicate*>(_MPS_PRIVATE_CLS(MPSPredicate), _MPS_PRIVATE_SEL(predicateWithBuffer_), buffer, offset);
+    return Object::sendMessage<MPS::Predicate*>(_MPS_PRIVATE_CLS(MPSPredicate), _MPS_PRIVATE_SEL(predicateWithBuffer_offset_), buffer, offset);
 }
 _MPS_INLINE MPS::Predicate* MPS::Predicate::initWithBuffer(MTL::Buffer* buffer, NS::UInteger offset){
-    return Object::sendMessage<MPS::Predicate*>(this, _MPS_PRIVATE_SEL(initWithBuffer_), buffer, offset);
+    return Object::sendMessage<MPS::Predicate*>(this, _MPS_PRIVATE_SEL(initWithBuffer_offset_), buffer, offset);
 }
 _MPS_INLINE MPS::Predicate* MPS::Predicate::initWithDevice(MTL::Device* device){
     return Object::sendMessage<MPS::Predicate*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device);
@@ -57,7 +57,7 @@ _MPS_INLINE MTL::Heap* MPS::HeapProvider::newHeapWithDescriptor(MTL::HeapDescrip
     return Object::sendMessage<MTL::Heap*>(this, _MPS_PRIVATE_SEL(newHeapWithDescriptor_), descriptor);
 }
 _MPS_INLINE void MPS::HeapProvider::retireHeap(MTL::Heap* heap, double seconds){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(retireHeap_), heap, seconds);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(retireHeap_cacheDelay_), heap, seconds);
 }
 
 //class CommandBuffer

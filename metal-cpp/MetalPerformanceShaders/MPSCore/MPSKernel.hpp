@@ -36,5 +36,5 @@ _MPS_INLINE MPS::Kernel* MPS::Kernel::initWithCoder(NS::Coder* aDecoder){
     return Object::sendMessage<MPS::Kernel*>(this, _MPS_PRIVATE_SEL(initWithCoder_), aDecoder);
 }
 _MPS_INLINE MPS::Kernel* MPS::Kernel::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
-    return Object::sendMessage<MPS::Kernel*>(this, _MPS_PRIVATE_SEL(initWithCoder_), aDecoder, device);
+    return Object::sendMessage<MPS::Kernel*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_), aDecoder, device);
 }
