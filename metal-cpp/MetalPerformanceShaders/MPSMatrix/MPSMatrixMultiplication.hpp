@@ -1,6 +1,5 @@
 #pragma once
 #include "../MPSCore/MPSKernel.hpp"
-#include "../MPSCore/MPSNDArray.hpp"
 #include "MPSMatrixTypes.hpp"
 
 namespace MPS{

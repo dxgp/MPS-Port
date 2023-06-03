@@ -8,10 +8,10 @@
 #include "metal-cpp/Foundation/Foundation.hpp"
 #include "metal-cpp/Metal/Metal.hpp"
 #include "metal-cpp/QuartzCore/QuartzCore.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernelTypes.hpp"
+
 #include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
+
+#include "doctest.h"
 void printMTLBuffer(MTL::Buffer *buf, std::string name){
     std::cout<<name<<":"<<"<";
     float *ptr = (float*)buf->contents();
@@ -36,14 +36,6 @@ int main(){
     MTL::Buffer* buf_mat2 = dev->newBuffer(512, MTL::ResourceStorageModeShared);
     MTL::Buffer* buf_rmat = dev->newBuffer(512, MTL::ResourceStorageModeShared);
     // putting data in mat1 and mat2
-    generateRandomFloatData(buf_mat1);
-    generateRandomFloatData(buf_mat2);
-    uint32_t *m1 = (uint32_t *)buf_mat1->contents();
-    uint32_t *m2 = (uint32_t *)buf_mat2->contents();
-    for(int i=0;i<16;i++){
-        m1[i] = (rand() % 10) + 1;
-        m2[i] = (rand() % 10) + 1;
-    }
     // dummy data work done
     MPS::Matrix* mat1 = MPS::Matrix::alloc();
     mat1->initWithBuffer(buf_mat1, mat1_des);
