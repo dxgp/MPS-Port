@@ -5,6 +5,7 @@
 
 namespace MPS{
     class MatrixDescriptor: public NS::Referencing<MPS::MatrixDescriptor>{
+        public:
         NS::UInteger rows();
         NS::UInteger columns();
         NS::UInteger matrices() const;
@@ -18,6 +19,7 @@ namespace MPS{
         static size_t rowBytesForColumns(NS::UInteger columns, MPS::DataType dataType);
     };
     class VectorDescriptor: public NS::Referencing<MPS::VectorDescriptor>{
+        public:
         NS::UInteger length();
         NS::UInteger vectors() const;
         MPS::DataType dataType();
@@ -27,6 +29,8 @@ namespace MPS{
         static size_t vectorBytesForLength(NS::UInteger length, MPS::DataType dataType);
     };
     class Matrix: public NS::Referencing<MPS::Matrix>{
+        public:
+        static MPS::Matrix* alloc();
         MTL::Device* device() const;
         NS::UInteger rows() const;
         NS::UInteger columns() const;
@@ -43,6 +47,7 @@ namespace MPS{
         NS::UInteger resourceSize();
     };
     class Vector: public NS::Referencing<MPS::Vector>{
+        public:
         MTL::Device* device() const;
         NS::UInteger length() const;
         NS::UInteger vectors() const;
@@ -57,16 +62,21 @@ namespace MPS{
         NS::UInteger resourceSize();
     };
     class TemporaryMatrix: public NS::Referencing<MPS::Matrix>{
+        public:
         static MPS::TemporaryMatrix* temporaryMatrixWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::MatrixDescriptor* matrixDescriptor);
         static void prefetchStorageWithCommandBuffer(MTL::CommandBuffer* commandBuffer, NS::Array* descriptorList);
         // (UNAVAILABLE) MPS::TemporaryMatrix* initWithBuffer(MTL::Buffer* buffer, MPS::MatrixDescriptor* descriptor);
         NS::UInteger readCount();
     };
     class TemporaryVector: public NS::Referencing<MPS::Vector>{
+        public:
         static MPS::TemporaryVector* temporaryVectorWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::VectorDescriptor* descriptor);
         static void prefetchStorageWithCommandBuffer(MTL::CommandBuffer* commandBuffer, NS::Array* descriptorList);
         NS::UInteger readCount();
     };
+}
+_MPS_INLINE MPS::Matrix* MPS::Matrix::alloc(){
+    return NS::Object::alloc<MPS::Matrix>(_MPS_PRIVATE_CLS(MPSMatrix));
 }
 
 _MPS_INLINE NS::UInteger MPS::MatrixDescriptor::rows(){

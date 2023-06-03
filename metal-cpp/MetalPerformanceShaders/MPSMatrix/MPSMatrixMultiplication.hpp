@@ -5,6 +5,8 @@
 
 namespace MPS{
     class MatrixMultiplication: public NS::Referencing<MPS::Kernel>{
+        public:
+        static MPS::MatrixMultiplication* alloc();
         MTL::Origin resultMatrixOrigin();
         MTL::Origin leftMatrixOrigin();
         MTL::Origin rightMatrixOrigin();
@@ -15,10 +17,15 @@ namespace MPS{
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* leftMatrix, MPS::Matrix* rightMatrix, MPS::Matrix* resultMatrix);
     };
     class MatrixVectorMultiplication: public NS::Referencing<MPS::MatrixBinaryKernel>{
+        public:
         MPS::MatrixVectorMultiplication* initWithDevice(MTL::Device* device, bool transpose, NS::UInteger rows, NS::UInteger columns, double alpha, double beta);
         MPS::MatrixVectorMultiplication* initWithDevice(MTL::Device* device, NS::UInteger rows, NS::UInteger columns);
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Vector* inputVector, MPS::Vector* resultVector);
     };
+}
+
+_MPS_INLINE MPS::MatrixMultiplication* MPS::MatrixMultiplication::alloc(){
+    return NS::Object::alloc<MPS::MatrixMultiplication>(_MPS_PRIVATE_CLS(MPSMatrixMultiplication));
 }
 
 _MPS_INLINE MTL::Origin MPS::MatrixMultiplication::resultMatrixOrigin(){
@@ -52,7 +59,7 @@ _MPS_INLINE MPS::MatrixMultiplication* MPS::MatrixMultiplication::initWithDevice
 
 
 _MPS_INLINE MPS::MatrixMultiplication* MPS::MatrixMultiplication::initWithDevice(MTL::Device* device, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns){
-    return Object::sendMessage<MPS::MatrixMultiplication*>(this, _MPS_PRIVATE_SEL(initWithDevice_rows_columns_), device, resultRows, resultColumns, interiorColumns);
+    return Object::sendMessage<MPS::MatrixMultiplication*>(this, _MPS_PRIVATE_SEL(initWithDevice_resultRows_resultColumns_interiorColumns_), device, resultRows, resultColumns, interiorColumns);
 }
 
 
