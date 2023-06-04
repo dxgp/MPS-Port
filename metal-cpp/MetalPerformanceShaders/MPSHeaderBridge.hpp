@@ -28,7 +28,9 @@ namespace MPS::Private::Class
     _MPS_PRIVATE_DEF_CLS(MPSMatrixVectorMultiplication);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixFindTopK);
     // _MPS_PRIVATE_DEF_CLS()
-
+    //MPSMatrixDecomposition
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixDecompositionLU);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixDecompositionCholesky);
 }
 
 namespace MPS::Private::Protocol
@@ -144,4 +146,10 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(numberOfTopKValues, "numberOfTopKValues");
     _MPS_PRIVATE_DEF_SEL(initWithDevice_numberOfTopKValues_, "initWithDevice:numberOfTopKValues:");
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_inputMatrix_resultIndexMatrix_resultValueMatrix_, "encodeToCommandBuffer:inputMatrix:resultIndexMatrix:resultValueMatrix:");
+
+
+    //MPSMatrixDecomposition
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_sourceMatrix_resultMatrix_pivotIndices_status_, "encodeToCommandBuffer:sourceMatrix:resultMatrix:pivotIndices:status:");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_lower_order_, "initWithDevice:lower:order:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_sourceMatrix_resultMatrix_status_, "encodeToCommandBuffer:sourceMatrix:resultMatrix:status:");
 }
