@@ -16,6 +16,7 @@ namespace MPS{
         //(DEPRECATED) static MPS::MatrixDescriptor* matrixDescriptorWithDimensions(NS::UInteger rows, NS::UInteger columns, NS::UInteger rowBytes, MPS::DataType dataType);
         static MPS::MatrixDescriptor* matrixDescriptorWithRows(NS::UInteger rows, NS::UInteger columns, NS::UInteger rowBytes, MPS::DataType dataType);
         static MPS::MatrixDescriptor* matrixDescriptorWithRows(NS::UInteger rows, NS::UInteger columns, NS::UInteger matrices, NS::UInteger rowBytes, NS::UInteger matrixBytes, MPS::DataType dataType);
+        // #TODO implement testing for rowBytesForColumns
         static size_t rowBytesForColumns(NS::UInteger columns, MPS::DataType dataType);
     };
     class VectorDescriptor: public NS::Referencing<MPS::VectorDescriptor>{
@@ -48,6 +49,7 @@ namespace MPS{
     };
     class Vector: public NS::Referencing<MPS::Vector>{
         public:
+        static MPS::Vector* alloc();
         MTL::Device* device() const;
         NS::UInteger length() const;
         NS::UInteger vectors() const;
@@ -60,19 +62,6 @@ namespace MPS{
         MPS::Vector* initWithDevice(MTL::Device* device, MPS::VectorDescriptor* descriptor);
         void synchronizeOnCommandBuffer(MTL::CommandBuffer* commandBuffer);
         NS::UInteger resourceSize();
-    };
-    class TemporaryMatrix: public NS::Referencing<MPS::Matrix>{
-        public:
-        static MPS::TemporaryMatrix* temporaryMatrixWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::MatrixDescriptor* matrixDescriptor);
-        static void prefetchStorageWithCommandBuffer(MTL::CommandBuffer* commandBuffer, NS::Array* descriptorList);
-        // (UNAVAILABLE) MPS::TemporaryMatrix* initWithBuffer(MTL::Buffer* buffer, MPS::MatrixDescriptor* descriptor);
-        NS::UInteger readCount();
-    };
-    class TemporaryVector: public NS::Referencing<MPS::Vector>{
-        public:
-        static MPS::TemporaryVector* temporaryVectorWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::VectorDescriptor* descriptor);
-        static void prefetchStorageWithCommandBuffer(MTL::CommandBuffer* commandBuffer, NS::Array* descriptorList);
-        NS::UInteger readCount();
     };
 }
 _MPS_INLINE MPS::Matrix* MPS::Matrix::alloc(){
@@ -174,6 +163,9 @@ _MPS_INLINE NS::UInteger MPS::Matrix::resourceSize(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(resourceSize));
 }
 // class Vector
+_MPS_INLINE MPS::Vector* MPS::Vector::alloc(){
+    return NS::Object::alloc<MPS::Vector>(_MPS_PRIVATE_CLS(MPSVector));
+}
 _MPS_INLINE MTL::Device* MPS::Vector::device() const{
     return Object::sendMessage<MTL::Device*>(this, _MPS_PRIVATE_SEL(device));
 }
@@ -210,23 +202,5 @@ _MPS_INLINE void MPS::Vector::synchronizeOnCommandBuffer(MTL::CommandBuffer* com
 _MPS_INLINE NS::UInteger MPS::Vector::resourceSize(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(resourceSize));
 }
-// class TemporaryMatrix
-_MPS_INLINE MPS::TemporaryMatrix* MPS::TemporaryMatrix::temporaryMatrixWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::MatrixDescriptor* descriptor){
-    return Object::sendMessage<MPS::TemporaryMatrix*>(_MPS_PRIVATE_CLS(MPSTemporaryMatrix), _MPS_PRIVATE_SEL(temporaryMatrixWithCommandBuffer_matrixDescriptor_), commandBuffer, descriptor);
-}
-_MPS_INLINE void MPS::TemporaryMatrix::prefetchStorageWithCommandBuffer(MTL::CommandBuffer* commandBuffer, NS::Array* descriptorList){
-    Object::sendMessage<void>(_MPS_PRIVATE_CLS(MPSTemporaryMatrix), _MPS_PRIVATE_SEL(prefetchStorageWithCommandBuffer_matrixDescriptorList_), commandBuffer, descriptorList);
-}
-_MPS_INLINE NS::UInteger MPS::TemporaryMatrix::readCount(){
-    return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(readCount));
-}
-// class TemporaryVector
-_MPS_INLINE MPS::TemporaryVector* MPS::TemporaryVector::temporaryVectorWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::VectorDescriptor* descriptor){
-    return Object::sendMessage<MPS::TemporaryVector*>(_MPS_PRIVATE_CLS(MPSTemporaryVector), _MPS_PRIVATE_SEL(temporaryVectorWithCommandBuffer_descriptor_), commandBuffer, descriptor);
-}
-_MPS_INLINE void MPS::TemporaryVector::prefetchStorageWithCommandBuffer(MTL::CommandBuffer* commandBuffer, NS::Array* descriptorList){
-    Object::sendMessage<void>(_MPS_PRIVATE_CLS(MPSTemporaryVector), _MPS_PRIVATE_SEL(prefetchStorageWithCommandBuffer_descriptorList_), commandBuffer, descriptorList);
-}
-_MPS_INLINE NS::UInteger MPS::TemporaryVector::readCount(){
-    return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(readCount));
-}
+
+

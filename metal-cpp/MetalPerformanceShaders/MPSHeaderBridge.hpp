@@ -19,10 +19,9 @@ namespace MPS::Private::Class
 
     //MPSMatrix
     _MPS_PRIVATE_DEF_CLS(MPSMatrix);
+    _MPS_PRIVATE_DEF_CLS(MPSVector);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixDescriptor);
     _MPS_PRIVATE_DEF_CLS(MPSVectorDescriptor);
-    _MPS_PRIVATE_DEF_CLS(MPSTemporaryMatrix);
-    _MPS_PRIVATE_DEF_CLS(MPSTemporaryVector);
 
     //MPSMatrixMultiplication
     _MPS_PRIVATE_DEF_CLS(MPSMatrixMultiplication);
