@@ -13,7 +13,7 @@ namespace MPS{
         NS::UInteger numberOfTopKValues();
         MPS::MatrixFindTopK* initWithDevice(MTL::Device* device, NS::UInteger numberOfTopKValues);
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Matrix* resultIndexMatrix, MPS::Matrix* resultValueMatrix);
-        MPS::MatrixFindTopK* initWithCoder(NS::Coder* aDecoder, MTL::Device* device);
+        // MPS::MatrixFindTopK* initWithCoder(NS::Coder* aDecoder, MTL::Device* device); this is for using byte streams as input data
         // one more zone function, skipped
     };
 }
@@ -38,6 +38,6 @@ _MPS_INLINE MPS::MatrixFindTopK* MPS::MatrixFindTopK::initWithDevice(MTL::Device
 _MPS_INLINE void MPS::MatrixFindTopK::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Matrix* resultIndexMatrix, MPS::Matrix* resultValueMatrix){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_resultIndexMatrix_resultValueMatrix_), commandBuffer, inputMatrix, resultIndexMatrix, resultValueMatrix);
 }
-_MPS_INLINE MPS::MatrixFindTopK* MPS::MatrixFindTopK::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
-    return Object::sendMessage<MPS::MatrixFindTopK*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_), aDecoder, device);
-}
+// _MPS_INLINE MPS::MatrixFindTopK* MPS::MatrixFindTopK::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
+//     return Object::sendMessage<MPS::MatrixFindTopK*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_), aDecoder, device);
+// }

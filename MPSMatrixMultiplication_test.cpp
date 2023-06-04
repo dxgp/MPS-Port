@@ -14,6 +14,7 @@
 #include "metal-cpp/QuartzCore/QuartzCore.hpp"
 
 #include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
+#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
@@ -52,7 +53,7 @@ TEST_CASE("MatrixDescriptor creation"){
     CHECK(matrix_des->rows() == 30);
     CHECK(matrix_des->columns() == 45);
     CHECK(matrix_des->rowBytes() == 180);
-    CHECK(matrix_des->matrixBytes() == 5400); 
+    CHECK(matrix_des->matrixBytes() == 5400);
 }
 //test for creating a VectorDescriptor
 TEST_CASE("VectorDescriptor creation"){
