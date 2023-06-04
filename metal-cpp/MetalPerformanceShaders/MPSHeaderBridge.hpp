@@ -26,6 +26,7 @@ namespace MPS::Private::Class
     //MPSMatrixMultiplication
     _MPS_PRIVATE_DEF_CLS(MPSMatrixMultiplication);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixVectorMultiplication);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixFindTopK);
     // _MPS_PRIVATE_DEF_CLS()
 
 }
@@ -135,4 +136,12 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_leftMatrix_rightMatrix_resultMatrix_, "encodeToCommandBuffer:leftMatrix:rightMatrix:resultMatrix:");
     _MPS_PRIVATE_DEF_SEL(initWithDevice_transpose_rows_columns_alpha_beta_, "initWithDevice:transpose:rows:columns:alpha:beta:");
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_inputMatrix_inputVector_resultVector_, "encodeToCommandBuffer:inputMatrix:inputVector:resultVector:");
+
+    //MPSMatrixFindTopK
+    _MPS_PRIVATE_DEF_SEL(sourceRows, "sourceRows");
+    _MPS_PRIVATE_DEF_SEL(sourceColumns, "sourceColumns");
+    _MPS_PRIVATE_DEF_SEL(indexOffset, "indexOffset");
+    _MPS_PRIVATE_DEF_SEL(numberOfTopKValues, "numberOfTopKValues");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_numberOfTopKValues_, "initWithDevice:numberOfTopKValues:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_inputMatrix_resultIndexMatrix_resultValueMatrix_, "encodeToCommandBuffer:inputMatrix:resultIndexMatrix:resultValueMatrix:");
 }

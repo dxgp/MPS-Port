@@ -17,7 +17,7 @@
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-
+// ================================================= START: MISC. FUNCTIONS =================================================
 bool areEqual(float a, float b) {
     return (fabs(a - b) <= FLT_EPSILON * std::max(1.0f, std::max(a, b)));
 }
@@ -40,7 +40,11 @@ void generateRandomFloatData(MTL::Buffer *buffer){
         dataptr[index] = ((float)rand() / float(RAND_MAX))*10;
     }
 }
+// ================================================= END: MISC. FUNCTIONS =================================================
 
+
+
+// =========================================== START: MATRIX & VECTOR CREATION ============================================
 MTL::Device* dev = MTL::CreateSystemDefaultDevice();
 //test for creating MatrixDescriptor
 TEST_CASE("MatrixDescriptor creation"){
@@ -131,6 +135,12 @@ TEST_CASE("Creating a matrix multiplication object"){
         CHECK(mps_matmul!=nullptr);
     }
 }
+
+
+// =========================================== END: MATRIX & VECTOR CREATION ============================================
+
+
+// =========================================== START: MATRIX & VECTOR MULT. ============================================
 TEST_CASE("Performing a matrix-matrix multiplication"){
     MPS::MatrixMultiplication* mps_matmul = MPS::MatrixMultiplication::alloc();
     SUBCASE("4x4 with 4x4"){
@@ -223,3 +233,9 @@ TEST_CASE("Testing matrix-vector multiplication"){
         CHECK(matmul_verify(matrix->data(), vector->data(), result_vec->data(), 3, 1, 5));
     }
 }
+// =========================================== END: MATRIX & VECTOR MULT. ============================================
+
+
+
+
+
