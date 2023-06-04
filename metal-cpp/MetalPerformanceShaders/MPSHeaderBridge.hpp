@@ -27,7 +27,7 @@ namespace MPS::Private::Class
     _MPS_PRIVATE_DEF_CLS(MPSMatrixMultiplication);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixVectorMultiplication);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixFindTopK);
-    // _MPS_PRIVATE_DEF_CLS()
+    
     //MPSMatrixDecomposition
     _MPS_PRIVATE_DEF_CLS(MPSMatrixDecompositionLU);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixDecompositionCholesky);
