@@ -25,6 +25,7 @@ namespace MPS::Private::Class
 
     //MPSMatrixMultiplication
     _MPS_PRIVATE_DEF_CLS(MPSMatrixMultiplication);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixVectorMultiplication);
     // _MPS_PRIVATE_DEF_CLS()
 
 }
@@ -133,5 +134,5 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(initWithDevice_rows_columns_, "initWithDevice:rows:columns:");
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_leftMatrix_rightMatrix_resultMatrix_, "encodeToCommandBuffer:leftMatrix:rightMatrix:resultMatrix:");
     _MPS_PRIVATE_DEF_SEL(initWithDevice_transpose_rows_columns_alpha_beta_, "initWithDevice:transpose:rows:columns:alpha:beta:");
-    
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_inputMatrix_inputVector_resultVector_, "encodeToCommandBuffer:inputMatrix:inputVector:resultVector:");
 }

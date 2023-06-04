@@ -11,12 +11,16 @@ namespace MPS{
         MTL::Origin rightMatrixOrigin();
         NS::UInteger batchStart();
         NS::UInteger batchSize();
+        // interior columns refers to the number of columns of the left input matrix i.e. the common thread in the two matrices.
+        // this is the op being performed: C = alpha * op(A) * op(B) + beta * C
         MPS::MatrixMultiplication* initWithDevice(MTL::Device* device, bool transposeLeft, bool transposeRight, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns, double alpha, double beta);
+        //default alpha is 1.0 and beta is 0.0
         MPS::MatrixMultiplication* initWithDevice(MTL::Device* device, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns);
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* leftMatrix, MPS::Matrix* rightMatrix, MPS::Matrix* resultMatrix);
     };
     class MatrixVectorMultiplication: public NS::Referencing<MPS::MatrixBinaryKernel>{
         public:
+        static MPS::MatrixVectorMultiplication* alloc();
         MPS::MatrixVectorMultiplication* initWithDevice(MTL::Device* device, bool transpose, NS::UInteger rows, NS::UInteger columns, double alpha, double beta);
         MPS::MatrixVectorMultiplication* initWithDevice(MTL::Device* device, NS::UInteger rows, NS::UInteger columns);
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Vector* inputVector, MPS::Vector* resultVector);
@@ -25,6 +29,9 @@ namespace MPS{
 
 _MPS_INLINE MPS::MatrixMultiplication* MPS::MatrixMultiplication::alloc(){
     return NS::Object::alloc<MPS::MatrixMultiplication>(_MPS_PRIVATE_CLS(MPSMatrixMultiplication));
+}
+_MPS_INLINE MPS::MatrixVectorMultiplication* MPS::MatrixVectorMultiplication::alloc(){
+    return NS::Object::alloc<MPS::MatrixVectorMultiplication>(_MPS_PRIVATE_CLS(MPSMatrixVectorMultiplication));
 }
 
 _MPS_INLINE MTL::Origin MPS::MatrixMultiplication::resultMatrixOrigin(){
@@ -74,4 +81,6 @@ _MPS_INLINE MPS::MatrixVectorMultiplication* MPS::MatrixVectorMultiplication::in
 _MPS_INLINE MPS::MatrixVectorMultiplication* MPS::MatrixVectorMultiplication::initWithDevice(MTL::Device* device, NS::UInteger rows, NS::UInteger columns){
     return Object::sendMessage<MPS::MatrixVectorMultiplication*>(this, _MPS_PRIVATE_SEL(initWithDevice_rows_columns_), device, rows, columns);
 }
-
+_MPS_INLINE void MPS::MatrixVectorMultiplication::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Vector* inputVector, MPS::Vector* resultVector){
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_inputVector_resultVector_), commandBuffer, inputMatrix, inputVector, resultVector);
+}

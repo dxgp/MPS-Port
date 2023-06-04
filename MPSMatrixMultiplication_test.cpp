@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <Accelerate/Accelerate.h>
 #define NS_PRIVATE_IMPLEMENTATION
 #define CA_PRIVATE_IMPLEMENTATION
 #define MTL_PRIVATE_IMPLEMENTATION
@@ -13,14 +14,22 @@
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-void printMTLBuffer(MTL::Buffer *buf, std::string name){
-    std::cout<<name<<":"<<"<";
-    float *ptr = (float*)buf->contents();
-    for(int i=0;i<16 - 1;i++){
-        std::cout<<ptr[i]<<",";
+
+bool areEqual(float a, float b) {
+    return (fabs(a - b) <= FLT_EPSILON * std::max(1.0f, std::max(a, b)));
+}
+bool matmul_verify(MTL::Buffer* mat1, MTL::Buffer* mat2, MTL::Buffer* rmat, int M, int N, int K){
+    float *fmat1 = (float *)mat1->contents();
+    float *fmat2 = (float *)mat2->contents();
+    float *frmat = (float *)rmat->contents();
+    float *rvals = new float[rmat->length()/sizeof(float)];
+    vDSP_mmul(fmat1, 1, fmat2, 1, rvals, 1, M, N, K);
+    for(int i=0; i<M*N; i++){
+        if(!areEqual(frmat[i], rvals[i])){
+            return false;
+        }
     }
-    std::cout<<ptr[16 - 1]<<">";
-    std::cout<<std::endl;
+    return true;
 }
 void generateRandomFloatData(MTL::Buffer *buffer){
     float *dataptr = (float *)buffer->contents();
@@ -49,7 +58,6 @@ TEST_CASE("VectorDescriptor creation"){
 TEST_CASE("Matrix Creation"){
     MPS::MatrixDescriptor* matrix_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(30, 45, 180, MPS::MPSDataTypeFloat32);
     // min size of buffer (descriptor.rows-1) * descriptor.rowBytes + descriptor.columns * (element size)
-    
     SUBCASE("Using initWithBuffer, no offser"){
         MTL::Buffer* buf = dev->newBuffer((matrix_des->rows() - 1)*matrix_des->rowBytes() + matrix_des->columns()*4, MTL::ResourceStorageModeShared);
         MPS::Matrix* matrix = MPS::Matrix::alloc();
@@ -70,7 +78,7 @@ TEST_CASE("Matrix Creation"){
         CHECK(matrix->offset() == 1);
     }
     SUBCASE("Using initWithDevice"){
-        MTL::Buffer* buf = dev->newBuffer((matrix_des->rows() - 1)*matrix_des->rowBytes() + matrix_des->columns()*4, MTL::ResourceStorageModeShared);
+        // MTL::Buffer* buf = dev->newBuffer((matrix_des->rows() - 1)*matrix_des->rowBytes() + matrix_des->columns()*4, MTL::ResourceStorageModeShared);
         MPS::Matrix* matrix = MPS::Matrix::alloc();
         matrix->initWithDevice(dev, matrix_des);
         CHECK(matrix->rows() == 30);
@@ -109,46 +117,106 @@ TEST_CASE("Vector Creation"){
         CHECK(vector->vectorBytes() == 400);
     }
 }
-//test for creating a VectorDescriptor
-//test for creating a Matrix
-//test for creating a Vector
-//test for creating a TemporaryMatrix
-//test for creating a TemporaryVector
-//test for creating a MatrixMultiplication object
-//test for creating a MatrixVectorMulti plication object
-//test for performing a matrix-matrix multiplication
-//test for performing a matrix-vector multiplication
+TEST_CASE("Creating a matrix multiplication object"){
+    MPS::MatrixMultiplication* mps_matmul = MPS::MatrixMultiplication::alloc();
+    SUBCASE("Initializing with alpha and beta"){
+        mps_matmul->initWithDevice(dev, false, false, 30, 90, 45, 1.0, 0.0);
+        CHECK(mps_matmul!=nullptr);
+    }
+    SUBCASE("Initializing without alpha and beta"){
+        mps_matmul->initWithDevice(dev, 30, 90, 45);
+        CHECK(mps_matmul!=nullptr);
+    }
+}
+TEST_CASE("Performing a matrix-matrix multiplication"){
+    MPS::MatrixMultiplication* mps_matmul = MPS::MatrixMultiplication::alloc();
+    SUBCASE("4x4 with 4x4"){
+        MPS::MatrixDescriptor* mat1_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeFloat32);
+        MPS::MatrixDescriptor* mat2_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeFloat32);
+        MPS::MatrixDescriptor* rmat_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeFloat32);
+        MPS::Matrix* mat1 = MPS::Matrix::alloc(); mat1->initWithDevice(dev, mat1_des);
+        MPS::Matrix* mat2 = MPS::Matrix::alloc(); mat2->initWithDevice(dev, mat2_des);
+        MPS::Matrix* rmat = MPS::Matrix::alloc(); rmat->initWithDevice(dev, rmat_des);
+        generateRandomFloatData(mat1->data());
+        generateRandomFloatData(mat2->data());
+        MTL::CommandQueue* cmdQueue = dev->newCommandQueue();
+        MTL::CommandBuffer* cmdBuf = cmdQueue->commandBuffer();
+        mps_matmul->initWithDevice(dev, 4, 4, 4);
+        mps_matmul->encodeToCommandBuffer(cmdBuf, mat1, mat2, rmat);
+        cmdBuf->commit();
+        cmdBuf->waitUntilCompleted();
+        CHECK(matmul_verify(mat1->data(), mat2->data(), rmat->data(), 4, 4, 4) == true);
+    }
+    SUBCASE("4x3 with 3x5"){
+        MPS::MatrixDescriptor* mat1_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 3, 12, MPS::MPSDataTypeFloat32);
+        MPS::MatrixDescriptor* mat2_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(3, 5, 20, MPS::MPSDataTypeFloat32);
+        MPS::MatrixDescriptor* rmat_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 5, 20, MPS::MPSDataTypeFloat32);
+        MPS::Matrix* mat1 = MPS::Matrix::alloc(); mat1->initWithDevice(dev, mat1_des);
+        MPS::Matrix* mat2 = MPS::Matrix::alloc(); mat2->initWithDevice(dev, mat2_des);
+        MPS::Matrix* rmat = MPS::Matrix::alloc(); rmat->initWithDevice(dev, rmat_des);
+        generateRandomFloatData(mat1->data());
+        generateRandomFloatData(mat2->data());
+        MTL::CommandQueue* cmdQueue = dev->newCommandQueue();
+        MTL::CommandBuffer* cmdBuf = cmdQueue->commandBuffer();
+        mps_matmul->initWithDevice(dev, 4, 5, 3);
+        mps_matmul->encodeToCommandBuffer(cmdBuf, mat1, mat2, rmat);
+        cmdBuf->commit();
+        cmdBuf->waitUntilCompleted();
+        CHECK(matmul_verify(mat1->data(), mat2->data(), rmat->data(), 4, 5, 3));
+    }
+    SUBCASE("4x1 with 1x5"){
+        MPS::MatrixDescriptor* mat1_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 1, 4, MPS::MPSDataTypeFloat32);
+        MPS::MatrixDescriptor* mat2_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(1, 5, 20, MPS::MPSDataTypeFloat32);
+        MPS::MatrixDescriptor* rmat_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 5, 20, MPS::MPSDataTypeFloat32);
+        MPS::Matrix* mat1 = MPS::Matrix::alloc(); mat1->initWithDevice(dev, mat1_des);
+        MPS::Matrix* mat2 = MPS::Matrix::alloc(); mat2->initWithDevice(dev, mat2_des);
+        MPS::Matrix* rmat = MPS::Matrix::alloc(); rmat->initWithDevice(dev, rmat_des);
+        generateRandomFloatData(mat1->data());
+        generateRandomFloatData(mat2->data());
+        MTL::CommandQueue* cmdQueue = dev->newCommandQueue();
+        MTL::CommandBuffer* cmdBuf = cmdQueue->commandBuffer();
+        mps_matmul->initWithDevice(dev, 4, 5, 1);
+        mps_matmul->encodeToCommandBuffer(cmdBuf, mat1, mat2, rmat);
+        cmdBuf->commit();
+        cmdBuf->waitUntilCompleted();
+        CHECK(matmul_verify(mat1->data(), mat2->data(), rmat->data(), 4, 5, 1));
+    }
+}
 
-// int main(){
-//     MTL::Device* dev = MTL::CreateSystemDefaultDevice();
-//     MPS::MatrixDescriptor* mat1_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeFloat32);  
-//     MPS::MatrixDescriptor* mat2_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeFloat32);
-//     MPS::MatrixDescriptor* rmat_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeFloat32);  
-//     MTL::Buffer* buf_mat1 = dev->newBuffer(512, MTL::ResourceStorageModeShared);
-//     MTL::Buffer* buf_mat2 = dev->newBuffer(512, MTL::ResourceStorageModeShared);
-//     MTL::Buffer* buf_rmat = dev->newBuffer(512, MTL::ResourceStorageModeShared);
-//     // putting data in mat1 and mat2
-//     // dummy data work done
-//     MPS::Matrix* mat1 = MPS::Matrix::alloc();
-//     mat1->initWithBuffer(buf_mat1, mat1_des);
-//     MPS::Matrix* mat2 = MPS::Matrix::alloc();
-//     mat2->initWithBuffer(buf_mat2, mat2_des);
-//     MPS::Matrix* rmat = MPS::Matrix::alloc();
-//     rmat->initWithBuffer(buf_rmat, rmat_des);
-//     generateRandomFloatData(mat1->data());
-//     generateRandomFloatData(mat2->data());
-//     printMTLBuffer(mat1->data(), "MAT1");
-//     printMTLBuffer(mat2->data(), "MAT2");
-//     std::cout<<"matrixBytes:"<<mat1->matrixBytes()<<std::endl;
-//     // MPS::Matrix* mat2 = MPS::Matrix::initWithBuffer(buf_mat2, mat2_des);
-//     // MPS::Matrix* rmat = MPS::Matrix::initWithBuffer(buf_rmat, rmat_des);
-//     MPS::MatrixMultiplication* mps_matmul = MPS::MatrixMultiplication::alloc();
-//     mps_matmul->initWithDevice(dev, 4, 4, 4);
-//     MTL::CommandQueue* cmdq = dev->newCommandQueue();
-//     MTL::CommandBuffer* cmdbuf = cmdq->commandBuffer();
-//     mps_matmul->encodeToCommandBuffer(cmdbuf, mat1, mat2, rmat);
-//     cmdbuf->commit();
-//     cmdbuf->waitUntilCompleted();
-//     printMTLBuffer(buf_rmat, "RESULT:");
-//     return 0;
-// }
+TEST_CASE("Testing matrix-vector multiplication"){
+    MPS::MatrixVectorMultiplication* matvec_mul = MPS::MatrixVectorMultiplication::alloc();
+    SUBCASE("Square matrix (5x5) with vector (5x1)"){
+        MPS::MatrixDescriptor* mat_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(5, 5, 20, MPS::MPSDataTypeFloat32);
+        MPS::VectorDescriptor* vector_des = MPS::VectorDescriptor::vectorDescriptorWithLength(5, MPS::MPSDataTypeFloat32);
+        MPS::VectorDescriptor* rvec_des = MPS::VectorDescriptor::vectorDescriptorWithLength(5, MPS::MPSDataTypeFloat32);
+        MPS::Matrix* matrix = MPS::Matrix::alloc();matrix->initWithDevice(dev, mat_des);
+        MPS::Vector* vector = MPS::Vector::alloc();vector->initWithDevice(dev, vector_des);
+        MPS::Vector* result_vec = MPS::Vector::alloc();result_vec->initWithDevice(dev, rvec_des);
+        generateRandomFloatData(matrix->data());
+        generateRandomFloatData(vector->data());
+        MTL::CommandQueue* cmdQueue = dev->newCommandQueue();
+        MTL::CommandBuffer* cmdBuf = cmdQueue->commandBuffer();
+        matvec_mul->initWithDevice(dev, 5, 5);
+        matvec_mul->encodeToCommandBuffer(cmdBuf, matrix, vector, result_vec);
+        cmdBuf->commit();
+        cmdBuf->waitUntilCompleted();
+        CHECK(matmul_verify(matrix->data(), vector->data(), result_vec->data(), 5, 1, 5));
+    }
+    SUBCASE("Rectangular matrix (3x5) with vector (5x1)"){
+        MPS::MatrixDescriptor* mat_des = MPS::MatrixDescriptor::matrixDescriptorWithRows(3, 5, 20, MPS::MPSDataTypeFloat32);
+        MPS::VectorDescriptor* vector_des = MPS::VectorDescriptor::vectorDescriptorWithLength(5, MPS::MPSDataTypeFloat32);
+        MPS::VectorDescriptor* rvec_des = MPS::VectorDescriptor::vectorDescriptorWithLength(3, MPS::MPSDataTypeFloat32);
+        MPS::Matrix* matrix = MPS::Matrix::alloc();matrix->initWithDevice(dev, mat_des);
+        MPS::Vector* vector = MPS::Vector::alloc();vector->initWithDevice(dev, vector_des);
+        MPS::Vector* result_vec = MPS::Vector::alloc();result_vec->initWithDevice(dev, rvec_des);
+        generateRandomFloatData(matrix->data());
+        generateRandomFloatData(vector->data());
+        MTL::CommandQueue* cmdQueue = dev->newCommandQueue();
+        MTL::CommandBuffer* cmdBuf = cmdQueue->commandBuffer();
+        matvec_mul->initWithDevice(dev, 3, 5);
+        matvec_mul->encodeToCommandBuffer(cmdBuf, matrix, vector, result_vec);
+        cmdBuf->commit();
+        cmdBuf->waitUntilCompleted();
+        CHECK(matmul_verify(matrix->data(), vector->data(), result_vec->data(), 3, 1, 5));
+    }
+}
