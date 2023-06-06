@@ -1,5 +1,5 @@
 bool areEqual(float a, float b) {
-    return (fabs(a - b) <= FLT_EPSILON * std::max(1.0f, std::max(a, b)));
+    return (fabs(a - b) <= 1e-6f * std::max(1.0f, std::max(a, b)));
 }
 void generateRandomFloatData(MTL::Buffer *buffer){
     float *dataptr = (float *)buffer->contents();

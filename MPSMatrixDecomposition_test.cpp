@@ -28,6 +28,17 @@
 
 MTL::Device* device = MTL::CreateSystemDefaultDevice();
 
+bool verifyDecompositionResult(MTL::Buffer* buffer, float* matrix_val){
+    float* buffer_vals = (float*) buffer->contents();
+    for(int i=0;i<(buffer->length()/4); i++){
+        if(!areEqual(buffer_vals[i], matrix_val[i])){
+            std::cout<<buffer_vals[i]<<" ---- "<<matrix_val[i]<<std::endl;
+            return false;
+        }
+    }
+    return true;
+}
+
 TEST_CASE("Testing LU Decomposition"){
     SUBCASE("Square Matrix Decomposition (5x5)"){
         rand();
@@ -35,8 +46,6 @@ TEST_CASE("Testing LU Decomposition"){
 
 
         std::vector<float> data;
-        // Eigen::MatrixXf sourceMatrix;
-        
 
         // sourceMatrix = Eigen::Map<Eigen::MatrixXf>(&data[0], 3, 3).transpose();
         MPS::Matrix* source_mat = MPS::Matrix::alloc();source_mat->initWithDevice(device, MPS::MatrixDescriptor::matrixDescriptorWithRows(5, 5, 20, MPS::MPSDataTypeFloat32));
@@ -49,23 +58,13 @@ TEST_CASE("Testing LU Decomposition"){
         generateRandomFloatData(source_mat->data(), data);
 
         //eigen part
-        Eigen::MatrixXf sourceMatrix = Eigen::Map<Eigen::MatrixXf>(data.data(), 5, 5);
-        Eigen::FullPivLU<Eigen::MatrixXf> luDecomp(sourceMatrix);
+        Eigen::MatrixXf sourceMatrix = Eigen::Map<Eigen::MatrixXf>(data.data(), 5, 5).transpose();
+        Eigen::PartialPivLU<Eigen::MatrixXf> luDecomp(sourceMatrix);
         Eigen::MatrixXf lowerTriangularMatrix = luDecomp.matrixLU().triangularView<Eigen::Lower>();
-        Eigen::MatrixXf upperTriangularMatrix = luDecomp.matrixLU().triangularView<Eigen::Upper>();
+        Eigen::MatrixXf upperTriangularMatrix = luDecomp.matrixLU().triangularView<Eigen::StrictlyUpper>();
         Eigen::PermutationMatrix<Eigen::Dynamic, Eigen::Dynamic> permutationMatrix = luDecomp.permutationP();
         Eigen::VectorXi permutationIndices = permutationMatrix.indices();
 
-        // for(int i=0;i<data.size();i++){
-        //     std::cout<<data[i]<<std::endl;
-        // }
-
-
-        std::cout<<"Lower triang mat:"<<std::endl;
-        std::cout<<lowerTriangularMatrix<<std::endl;
-        std::cout<<"Upper triang mat:"<<std::endl;
-        std::cout<<upperTriangularMatrix<<std::endl;
-        
 
         // metal part
         MTL::CommandQueue* cmdQueue = device->newCommandQueue();
@@ -76,10 +75,8 @@ TEST_CASE("Testing LU Decomposition"){
         cmdBuffer->commit();
         cmdBuffer->waitUntilCompleted();
 
-
-        // printMTLBuffer(source_mat->data(), "Source");
-        printMTLBuffer(result_mat->data(), "Result");
-        // printMTLBufferInt32(result_mat->data(), "Indices");
+        Eigen::MatrixXf eigen_result = (upperTriangularMatrix + lowerTriangularMatrix).transpose();
+        CHECK(verifyDecompositionResult(result_mat->data(), eigen_result.data()));
     }
     SUBCASE("Rectangular Matrix Decomposition"){
 
