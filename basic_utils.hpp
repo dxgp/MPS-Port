@@ -25,3 +25,11 @@ void printMTLBuffer(MTL::Buffer *buf, std::string name){
     std::cout<<ptr[buf->length()/sizeof(float) - 1]<<">";
     std::cout<<std::endl;
 }
+void generateRandomFloatData(MTL::Buffer *buffer, std::vector<float>& data){
+    float *dataptr = (float *)buffer->contents();
+    for(uint64_t index = 0; index<buffer->length()/sizeof(float);index++){
+        float gen_num = ((float)rand() / float(RAND_MAX))*10;
+        dataptr[index] = gen_num;
+        data.push_back(gen_num);
+    }
+}

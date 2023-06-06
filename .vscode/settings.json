@@ -71,6 +71,11 @@
         "map": "cpp",
         "set": "cpp",
         "unordered_set": "cpp",
-        "lu": "cpp"
+        "lu": "cpp",
+        "*.tcc": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "memory_resource": "cpp",
+        "utility": "cpp"
     }
 }
