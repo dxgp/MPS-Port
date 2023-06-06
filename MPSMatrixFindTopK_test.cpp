@@ -16,38 +16,17 @@
 #include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
+#include "basic_utils.hpp"
+
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-void printMTLBuffer(MTL::Buffer *buf, std::string name){
-    std::cout<<name<<":"<<"<";
-    float *ptr = (float*)buf->contents();
-    for(int i=0;i<buf->length()/sizeof(float) - 1;i++){
-        std::cout<<ptr[i]<<",";
-    }
-    std::cout<<ptr[buf->length()/sizeof(float) - 1]<<">";
-    std::cout<<std::endl;
-}
-void printMTLBufferInt32(MTL::Buffer* buf, std::string name){
-    std::cout<<name<<":"<<"<";
-    uint32_t *ptr = (uint32_t*)buf->contents();
-    for(int i=0;i<buf->length()/4 - 1;i++){
-        std::cout<<ptr[i]<<",";
-    }
-    std::cout<<ptr[buf->length()/4 - 1]<<">";
-    std::cout<<std::endl;
-}
+
 MTL::Device* dev = MTL::CreateSystemDefaultDevice();
 TEST_CASE("Creating the MPSMatrixFindTopK Object"){
     MPS::MatrixFindTopK* findtopk_obj = MPS::MatrixFindTopK::alloc();
     findtopk_obj->initWithDevice(dev, 4);
     CHECK(findtopk_obj->numberOfTopKValues() == 4);
-}
-void generateRandomFloatData(MTL::Buffer *buffer){
-    float32_t *dataptr = (float32_t *)buffer->contents();
-    for(uint64_t index = 0; index<buffer->length()/4;index++){
-        dataptr[index] = ((float32_t)rand() / float(RAND_MAX))*10;
-    }
 }
 TEST_CASE("Finding the top K values"){
     MPS::MatrixFindTopK* findtopk_obj = MPS::MatrixFindTopK::alloc();

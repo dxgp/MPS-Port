@@ -11,7 +11,7 @@ namespace MPS{
     };
     class MatrixDecompositionLU: public NS::Referencing<MPS::MatrixUnaryKernel>{
         public:
-        MPS::MatrixDecompositionLU* alloc();
+        static MPS::MatrixDecompositionLU* alloc();
         MPS::MatrixDecompositionLU* initWithDevice(MTL::Device* device, NS::UInteger rows, NS::UInteger columns);
         // pivot indices matrix must be of types MPSDataTypeUInt32 and must also have enough space to hold an array of size 1xmin(rows, columns)
         // source matrix must have enough space to contain rows*columns elements
@@ -19,7 +19,7 @@ namespace MPS{
     };
     class MatrixDecompositionCholesky: public NS::Referencing<MPS::MatrixUnaryKernel>{
         public:
-        MPS::MatrixDecompositionCholesky* alloc();
+        static MPS::MatrixDecompositionCholesky* alloc();
         MPS::MatrixDecompositionCholesky* initWithDevice(MTL::Device* device, bool lower, NS::UInteger order);
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* sourceMatrix, MPS::Matrix* resultMatrix, MTL::Buffer* status);
     };

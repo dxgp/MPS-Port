@@ -18,10 +18,8 @@
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-// ================================================= START: MISC. FUNCTIONS =================================================
-bool areEqual(float a, float b) {
-    return (fabs(a - b) <= FLT_EPSILON * std::max(1.0f, std::max(a, b)));
-}
+#include "basic_utils.hpp"
+
 bool matmul_verify(MTL::Buffer* mat1, MTL::Buffer* mat2, MTL::Buffer* rmat, int M, int N, int K){
     float *fmat1 = (float *)mat1->contents();
     float *fmat2 = (float *)mat2->contents();
@@ -35,15 +33,6 @@ bool matmul_verify(MTL::Buffer* mat1, MTL::Buffer* mat2, MTL::Buffer* rmat, int 
     }
     return true;
 }
-void generateRandomFloatData(MTL::Buffer *buffer){
-    float *dataptr = (float *)buffer->contents();
-    for(uint64_t index = 0; index<buffer->length()/sizeof(float);index++){
-        dataptr[index] = ((float)rand() / float(RAND_MAX))*10;
-    }
-}
-// ================================================= END: MISC. FUNCTIONS =================================================
-
-
 
 // =========================================== START: MATRIX & VECTOR CREATION ============================================
 MTL::Device* dev = MTL::CreateSystemDefaultDevice();
