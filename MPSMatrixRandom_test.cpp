@@ -94,87 +94,87 @@ TEST_CASE("Creating a random MTGP32 matrix"){
         CHECK(computed_max<=10.0);
     }
     SUBCASE("Creation with a normal distribution descriptor without min and max"){
-        MPS::Matrix* mat = MPS::Matrix::alloc();mat->initWithDevice(device, MPS::MatrixDescriptor::matrixDescriptorWithRows(100, 100, 400, MPS::MPSDataTypeFloat32));
+        MPS::Matrix* mat = MPS::Matrix::alloc();mat->initWithDevice(device, MPS::MatrixDescriptor::matrixDescriptorWithRows(1000, 100, 400, MPS::MPSDataTypeFloat32));
         MTL::CommandQueue* cmdQueue = device->newCommandQueue();
         MTL::CommandBuffer* commandBuffer = cmdQueue->commandBuffer();
         MPS::MatrixRandomMTGP32* mtgp32_mat = MPS::MatrixRandomMTGP32::alloc();
-        mtgp32_mat->initWithDevice(device, MPS::MPSDataTypeFloat32, 23, MPS::MatrixRandomDistributionDescriptor::normalDistributionDescriptorWithMean(3.0, 0.5, 1.0, 6.0));
-        mtgp32_mat->synchronizeStateOnCommandBuffer(commandBuffer);
+        // TREAD VERY CAREFULLY HERE. IF IT CAN'T GENERATE NUMBERS BETWEEN THAT RANGE, IT MAY IGNORE IT. SO, MAKE SURE YOU GIVE IT A WIDE ENOUGH RANGE.
+        // IT WOULD BE INTERESTING TO EXPLORE THE LIMITS OF THIS THING
+        mtgp32_mat->initWithDevice(device, MPS::MPSDataTypeFloat32, 23, MPS::MatrixRandomDistributionDescriptor::normalDistributionDescriptorWithMean(10.0, 1));
         mtgp32_mat->encodeToCommandBuffer(commandBuffer, mat);
+        mtgp32_mat->synchronizeStateOnCommandBuffer(commandBuffer);
         commandBuffer->commit();
         commandBuffer->waitUntilCompleted();
-        std::cout<<computeMean((float*)((mat->data())->contents()), 1000)<<" ---- "<<3.0<<std::endl;
-        float computed_mean = computeMean((float*)((mat->data())->contents()), 1000);
-        float computed_std = computeStd((float*)(mat->data()->contents()), 1000, computed_mean);
-        CHECK(areEqualLowPrecision(computed_mean, 3.0));
-        CHECK(areEqualLowPrecision(computed_std, 0.5));
-    }
-    SUBCASE("Creation with a normal distribution descriptor with min and max"){
-        SUBCASE("initWithDevice"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed, distributionDescriptor"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed"){
-
-        }
-    }
-    SUBCASE("Creation with a default descriptor"){
-        SUBCASE("initWithDevice"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed, distributionDescriptor"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed"){
-
-        }
+        std::cout<<computeMean((float*)((mat->data())->contents()), 100000)<<" ---- "<<3.0<<std::endl;
+        float computed_mean = computeMean((float*)((mat->data())->contents()), 100000);
+        float computed_std = computeStd((float*)(mat->data()->contents()), 100000, computed_mean);
+        float computed_min = computeMin((float*)((mat->data())->contents()), 100000);
+        float computed_max = computeMax((float*)((mat->data())->contents()), 100000);
+        CHECK(areEqualLowPrecision(computed_mean, 10.0));
+        CHECK(areEqualLowPrecision(computed_std, 1));
     }
 }
 TEST_CASE("Creating a random Philox matrix"){
-    SUBCASE("Creation with a uniform distribution descriptor"){
         SUBCASE("initWithDevice"){
+        // interesting how the number of requested results must be a multiple of 4!
+        MPS::Matrix* mat = MPS::Matrix::alloc();mat->initWithDevice(device, MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeUInt32));
+        MTL::CommandQueue* cmdQueue = device->newCommandQueue();
+        MTL::CommandBuffer* commandBuffer = cmdQueue->commandBuffer();
+        MPS::MatrixRandomPhilox* philox_mat = MPS::MatrixRandomPhilox::alloc();
+        philox_mat->initWithDevice(device);
+        philox_mat->encodeToCommandBuffer(commandBuffer, mat);
+        commandBuffer->commit();
+        commandBuffer->waitUntilCompleted();
+        // printMTLBufferInt32(mat->data(), "Generated data");
 
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed, distributionDescriptor"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed"){
-
-        }
     }
-    SUBCASE("Creation with a normal distribution descriptor"){
-        SUBCASE("initWithDevice"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed, distributionDescriptor"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed"){
-
-        }
+    SUBCASE("initWithDevice with destinationDataType, seed"){
+        MPS::Matrix* mat = MPS::Matrix::alloc();mat->initWithDevice(device, MPS::MatrixDescriptor::matrixDescriptorWithRows(4, 4, 16, MPS::MPSDataTypeUInt32));
+        MTL::CommandQueue* cmdQueue = device->newCommandQueue();
+        MTL::CommandBuffer* commandBuffer = cmdQueue->commandBuffer();
+        MPS::MatrixRandomPhilox* philox_mat = MPS::MatrixRandomPhilox::alloc();
+        philox_mat->initWithDevice(device, MPS::MPSDataTypeUInt32, 23);
+        philox_mat->encodeToCommandBuffer(commandBuffer, mat);
+        commandBuffer->commit();
+        commandBuffer->waitUntilCompleted();
+        // printMTLBufferInt32(mat->data(), "Generated data");
     }
-    SUBCASE("Creation with a normal distribution descriptor with min and max"){
-        SUBCASE("initWithDevice"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed, distributionDescriptor"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed"){
-
-        }
+    SUBCASE("initWithDevice with a normal distribution descriptor with min and max"){
+        MPS::Matrix* mat = MPS::Matrix::alloc();mat->initWithDevice(device, MPS::MatrixDescriptor::matrixDescriptorWithRows(1000, 100, 400, MPS::MPSDataTypeFloat32));
+        MTL::CommandQueue* cmdQueue = device->newCommandQueue();
+        MTL::CommandBuffer* commandBuffer = cmdQueue->commandBuffer();
+        MPS::MatrixRandomPhilox* philox_mat = MPS::MatrixRandomPhilox::alloc();
+        // TREAD VERY CAREFULLY HERE. IF IT CAN'T GENERATE NUMBERS BETWEEN THAT RANGE, IT MAY IGNORE IT. SO, MAKE SURE YOU GIVE IT A WIDE ENOUGH RANGE.
+        // IT WOULD BE INTERESTING TO EXPLORE THE LIMITS OF THIS THING
+        philox_mat->initWithDevice(device, MPS::MPSDataTypeFloat32, 23, MPS::MatrixRandomDistributionDescriptor::normalDistributionDescriptorWithMean(10.0, 1, -10, 10));
+        philox_mat->encodeToCommandBuffer(commandBuffer, mat);
+        commandBuffer->commit();
+        commandBuffer->waitUntilCompleted();
+        std::cout<<computeMean((float*)((mat->data())->contents()), 100000)<<" ---- "<<3.0<<std::endl;
+        float computed_mean = computeMean((float*)((mat->data())->contents()), 100000);
+        float computed_std = computeStd((float*)(mat->data()->contents()), 100000, computed_mean);
+        float computed_min = computeMin((float*)((mat->data())->contents()), 100000);
+        float computed_max = computeMax((float*)((mat->data())->contents()), 100000);
+        CHECK(areEqualLowPrecision(computed_mean, 10.0));
+        CHECK(areEqualLowPrecision(computed_std, 1));
+        CHECK(computed_min>=-10);
+        CHECK(computed_max<=10.0);
     }
-    SUBCASE("Creation with a default descriptor"){
-        SUBCASE("initWithDevice"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed, distributionDescriptor"){
-
-        }
-        SUBCASE("initWithDevice with destinationDataType, seed"){
-
-        }
+    SUBCASE("Creation with a normal distribution descriptor without min and max"){
+        MPS::Matrix* mat = MPS::Matrix::alloc();mat->initWithDevice(device, MPS::MatrixDescriptor::matrixDescriptorWithRows(1000, 100, 400, MPS::MPSDataTypeFloat32));
+        MTL::CommandQueue* cmdQueue = device->newCommandQueue();
+        MTL::CommandBuffer* commandBuffer = cmdQueue->commandBuffer();
+        MPS::MatrixRandomPhilox* philox_mat = MPS::MatrixRandomPhilox::alloc();
+        philox_mat->initWithDevice(device, MPS::MPSDataTypeFloat32, 23, MPS::MatrixRandomDistributionDescriptor::normalDistributionDescriptorWithMean(10.0, 1));
+        philox_mat->encodeToCommandBuffer(commandBuffer, mat);
+        commandBuffer->commit();
+        commandBuffer->waitUntilCompleted();
+        std::cout<<computeMean((float*)((mat->data())->contents()), 100000)<<" ---- "<<3.0<<std::endl;
+        float computed_mean = computeMean((float*)((mat->data())->contents()), 100000);
+        float computed_std = computeStd((float*)(mat->data()->contents()), 100000, computed_mean);
+        float computed_min = computeMin((float*)((mat->data())->contents()), 100000);
+        float computed_max = computeMax((float*)((mat->data())->contents()), 100000);
+        CHECK(areEqualLowPrecision(computed_mean, 10.0));
+        CHECK(areEqualLowPrecision(computed_std, 1));
     }
 }
