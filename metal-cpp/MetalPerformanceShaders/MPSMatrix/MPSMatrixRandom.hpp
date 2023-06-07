@@ -8,6 +8,8 @@ namespace MPS{
         MatrixRandomDistributionNormal = 3U
     };
     class MatrixRandomDistributionDescriptor: public NS::Copying<MPS::MatrixRandomDistributionDescriptor>{
+        public:
+        // do I need this alloc and init? While it is importand because NS::Copying requires it, do I need it?
         static MPS::MatrixRandomDistributionDescriptor* alloc();
         MPS::MatrixRandomDistributionDescriptor* init();
         MPS::MatrixRandomDistribution distributionType();
@@ -25,6 +27,7 @@ namespace MPS{
     added to both the subclasses to make this work. Otherwise, they won't even have these functions
     */
     class MatrixRandom: public NS::Referencing<MPS::Kernel>{
+        public:
         static MPS::MatrixRandom* alloc();
         MPS::DataType destinationDataType() const;
         MPS::MatrixRandomDistribution distributionType() const;
@@ -35,6 +38,7 @@ namespace MPS{
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* destinationMatrix);
     };
     class MatrixRandomMTGP32: public NS::Referencing<MPS::MatrixRandom>{
+        public:
         static MPS::MatrixRandomMTGP32* alloc();
         MPS::DataType destinationDataType() const;
         MPS::MatrixRandomDistribution distributionType() const;
@@ -50,6 +54,7 @@ namespace MPS{
     };
     // philox does not have a synchronize on command buffer function. Interesting.
     class MatrixRandomPhilox: public NS::Referencing<MPS::MatrixRandom>{
+        public:
         static MPS::MatrixRandomPhilox* alloc();
         MPS::DataType destinationDataType() const;
         MPS::MatrixRandomDistribution distributionType() const;
