@@ -31,6 +31,12 @@ namespace MPS::Private::Class
     //MPSMatrixDecomposition
     _MPS_PRIVATE_DEF_CLS(MPSMatrixDecompositionLU);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixDecompositionCholesky);
+
+    //MPSMatrixRandom
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixRandomDistributionDescriptor);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixRandomMTGP32);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixRandomPhilox);
+
 }
 
 namespace MPS::Private::Protocol
@@ -152,4 +158,22 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_sourceMatrix_resultMatrix_pivotIndices_status_, "encodeToCommandBuffer:sourceMatrix:resultMatrix:pivotIndices:status:");
     _MPS_PRIVATE_DEF_SEL(initWithDevice_lower_order_, "initWithDevice:lower:order:");
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_sourceMatrix_resultMatrix_status_, "encodeToCommandBuffer:sourceMatrix:resultMatrix:status:");
+
+    //MPSMatrixRandom
+    _MPS_PRIVATE_DEF_SEL(distributionType, "distributionType");
+    _MPS_PRIVATE_DEF_SEL(minimum, "minimum");
+    _MPS_PRIVATE_DEF_SEL(maximum, "maximum");
+    _MPS_PRIVATE_DEF_SEL(mean, "mean");
+    _MPS_PRIVATE_DEF_SEL(standardDeviation, "standardDeviation");
+    _MPS_PRIVATE_DEF_SEL(uniformDistributionDescriptorWithMinimum_maximum_, "uniformDistributionDescriptorWithMinimum:maximum:");
+    _MPS_PRIVATE_DEF_SEL(normalDistributionDescriptorWithMean_standardDeviation_, "normalDistributionDescriptorWithMean:standardDeviation:");
+    _MPS_PRIVATE_DEF_SEL(normalDistributionDescriptorWithMean_standardDeviation_minimum_maximum_, "normalDistributionDescriptorWithMean:standardDeviation:minimum:maximum:");
+    _MPS_PRIVATE_DEF_SEL(defaultDistributionDescriptor, "defaultDistributionDescriptor");
+    _MPS_PRIVATE_DEF_SEL(destinationDataType, "destinationDataType");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_destinationDataType_seed_distributionDescriptor_, "initWithDevice:destinationDataType:seed:distributionDescriptor:");
+    _MPS_PRIVATE_DEF_SEL(synchronizeStateOnCommandBuffer_, "synchronizeStateOnCommandBuffer:");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_destinationDataType_seed_, "initWithDevice:destinationDataType:seed:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_destinationVector_, "encodeToCommandBuffer:destinationVector:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_destinationMatrix_, "encodeToCommandBuffer:destinationMatrix:");
+
 }

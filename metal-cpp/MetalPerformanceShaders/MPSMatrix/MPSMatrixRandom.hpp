@@ -97,24 +97,6 @@ _MPS_INLINE MPS::MatrixRandomDistributionDescriptor* MPS::MatrixRandomDistributi
     return Object::sendMessage<MPS::MatrixRandomDistributionDescriptor*>(_MPS_PRIVATE_CLS(MPSMatrixRandomDistributionDescriptor), _MPS_PRIVATE_SEL(defaultDistributionDescriptor));
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 _MPS_INLINE MPS::MatrixRandomMTGP32* MPS::MatrixRandomMTGP32::alloc(){
     return NS::Object::alloc<MPS::MatrixRandomMTGP32>(_MPS_PRIVATE_CLS(MPSMatrixRandomMTGP32));
 }
