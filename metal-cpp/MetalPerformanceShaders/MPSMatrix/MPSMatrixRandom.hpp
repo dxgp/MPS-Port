@@ -44,11 +44,12 @@ namespace MPS{
         MPS::MatrixRandomDistribution distributionType() const;
         NS::UInteger batchStart();
         NS::UInteger batchSize();
-        MPS::MatrixRandomMTGP32* initWithDevice(MTL::Device* device);
-        MPS::MatrixRandomMTGP32* initWithDevice(MTL::Device* device, MPS::DataType destinationDataType, NS::UInteger seed, MPS::MatrixRandomDistributionDescriptor* distributionDescriptor);
-        void synchronizeStateOnCommandBuffer(MTL::CommandBuffer* commandBuffer);
-        MPS::MatrixRandomMTGP32* initWithDevice(MTL::Device* device, MPS::DataType destinationDataType, NS::UInteger seed);
+        // the two initWithDevice calls below use the defaultDistributionDescriptor...
+        MPS::MatrixRandomMTGP32* initWithDevice(MTL::Device* device); // generates a random distribution with a data type of UInt32
+        MPS::MatrixRandomMTGP32* initWithDevice(MTL::Device* device, MPS::DataType destinationDataType, NS::UInteger seed); // generates a random distribution with a data type of UInt32 with seed
+        MPS::MatrixRandomMTGP32* initWithDevice(MTL::Device* device, MPS::DataType destinationDataType, NS::UInteger seed, MPS::MatrixRandomDistributionDescriptor* distributionDescriptor); 
         MPS::MatrixRandomMTGP32* initWithCoder(NS::Coder* aDecoder, MTL::Device* device);
+        void synchronizeStateOnCommandBuffer(MTL::CommandBuffer* commandBuffer);
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Vector* destinationVector);
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* destinationMatrix);
     };

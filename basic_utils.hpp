@@ -1,3 +1,4 @@
+#include <cmath>
 bool areEqual(float a, float b) {
     return (fabs(a - b) <= 1e-6f * std::max(1.0f, std::max(a, b)));
 }
@@ -32,4 +33,46 @@ void generateRandomFloatData(MTL::Buffer *buffer, std::vector<float>& data){
         dataptr[index] = gen_num;
         data.push_back(gen_num);
     }
+}
+float computeMean(const float* array, size_t size) {
+    float sum = 0.0f;
+    for (size_t i = 0; i < size; ++i) {
+        sum += array[i];
+    }
+    return sum / static_cast<float>(size);
+}
+bool areEqualLowPrecision(float a, float b) {
+    float precision = 1.0f;
+    float diff = a - b;
+    return (diff >= -precision) && (diff <= precision);
+}
+
+float computeStd(const float* array, size_t size, float mean) {
+    float sumSq = 0.0f;
+
+    for (size_t i = 0; i < size; ++i) {
+        float diff = array[i] - mean;
+        sumSq += diff * diff;
+    }
+
+    float variance = sumSq / static_cast<float>(size);
+    return std::sqrt(variance);
+}
+float computeMin(const float* array, size_t size){
+    float minVal = array[0];
+    for(size_t i=1; i<size; i++){
+        if(array[i]<minVal){
+            minVal = array[i];
+        }
+    }
+    return minVal;
+}
+float computeMax(const float* array, size_t size){
+    float maxVal = array[0];
+    for(size_t i=1; i<size; i++){
+        if(array[i]>maxVal){
+            maxVal = array[i];
+        }
+    }
+    return maxVal;
 }
