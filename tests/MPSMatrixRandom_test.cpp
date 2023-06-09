@@ -1,5 +1,5 @@
 #include "common_test.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp"
 
 MTL::Device* device = MTL::CreateSystemDefaultDevice();
 

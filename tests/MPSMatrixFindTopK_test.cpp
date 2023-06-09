@@ -1,5 +1,5 @@
 #include "common_test.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp"
 
 MTL::Device* dev = MTL::CreateSystemDefaultDevice();
 TEST_CASE("Creating the MPSMatrixFindTopK Object"){

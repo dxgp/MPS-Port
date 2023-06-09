@@ -1,24 +1,7 @@
-#include <iostream>
-#include <fstream>
+#include "bench_common.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
 
-
-#include <Accelerate/Accelerate.h>
-
-#define NS_PRIVATE_IMPLEMENTATION
-#define CA_PRIVATE_IMPLEMENTATION
-#define MTL_PRIVATE_IMPLEMENTATION
-#define MPS_PRIVATE_IMPLEMENTATION
-
-#include "metal-cpp/Foundation/Foundation.hpp"
-#include "metal-cpp/Metal/Metal.hpp"
-#include "metal-cpp/QuartzCore/QuartzCore.hpp"
-
-
-
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
-#include "basic_utils.hpp"
-#include <fstream>
 
 typedef std::chrono::microseconds time_unit;
 auto unit_name = "microseconds";
@@ -59,17 +42,11 @@ int main(){
         float* arrayM1 = (float *) (mat1->data()->contents());
         float* arrayM2 = (float *) (mat2->data()->contents());
         float* arrayR = (float *) (rmat->data()->contents());
+        auto start = std::chrono::high_resolution_clock::now();
+        auto stop = std::chrono::high_resolution_clock::now();
+        auto duration = std::chrono::duration_cast<time_unit>(stop-start).count();
         MTL::CommandQueue* cmdQueue = device->newCommandQueue();
         for(int i=0; i<repeats;i++){
-            MTL::CommandBuffer* cmdBuffer = cmdQueue->commandBuffer();
-            mps_matmul->initWithDevice(device, size, size, size);
-            mps_matmul->encodeToCommandBuffer(cmdBuffer, mat1, mat2, rmat);
-            auto start = std::chrono::high_resolution_clock::now();
-            cmdBuffer->commit();
-            cmdBuffer->waitUntilCompleted();
-            auto stop = std::chrono::high_resolution_clock::now();
-            auto duration = std::chrono::duration_cast<time_unit>(stop-start).count();
-            durations[i] = duration;
             start = std::chrono::high_resolution_clock::now();
             cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, size, size, size, 1.0, arrayM1, size, arrayM2, size, 0.0, arrayR, size);
             stop = std::chrono::high_resolution_clock::now();
@@ -80,6 +57,15 @@ int main(){
             stop = std::chrono::high_resolution_clock::now();
             duration = std::chrono::duration_cast<time_unit>(stop-start).count();
             durations_vdsp[i] = duration;
+            MTL::CommandBuffer* cmdBuffer = cmdQueue->commandBuffer();
+            mps_matmul->initWithDevice(device, size, size, size);
+            mps_matmul->encodeToCommandBuffer(cmdBuffer, mat1, mat2, rmat);
+            start = std::chrono::high_resolution_clock::now();
+            cmdBuffer->commit();
+            cmdBuffer->waitUntilCompleted();
+            stop = std::chrono::high_resolution_clock::now();
+            duration = std::chrono::duration_cast<time_unit>(stop-start).count();
+            durations[i] = duration;
         }
         float array_mean;
         float array_std;

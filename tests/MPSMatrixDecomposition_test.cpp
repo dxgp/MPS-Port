@@ -6,8 +6,8 @@
 #include "common_test.hpp"
 #include <Eigen/Dense>
 #include <Eigen/LU>
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
 
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN

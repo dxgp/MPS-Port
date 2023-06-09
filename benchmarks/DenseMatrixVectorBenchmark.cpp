@@ -9,15 +9,15 @@
 #define MTL_PRIVATE_IMPLEMENTATION
 #define MPS_PRIVATE_IMPLEMENTATION
 
-#include "metal-cpp/Foundation/Foundation.hpp"
-#include "metal-cpp/Metal/Metal.hpp"
-#include "metal-cpp/QuartzCore/QuartzCore.hpp"
+#include "../metal-cpp/Foundation/Foundation.hpp"
+#include "../metal-cpp/Metal/Metal.hpp"
+#include "../metal-cpp/QuartzCore/QuartzCore.hpp"
 
 
 
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
-#include "basic_utils.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
+#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
+#include "../basic_utils.hpp"
 #include <fstream>
 
 typedef std::chrono::microseconds time_unit;
