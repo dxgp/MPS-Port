@@ -3,24 +3,11 @@
 #undef __ARM_NEON
 #undef __ARM_NEON__
 #endif
-// the block ends here
-#include <iostream>
-#include <fstream>
-#include <Accelerate/Accelerate.h>
-#define NS_PRIVATE_IMPLEMENTATION
-#define CA_PRIVATE_IMPLEMENTATION
-#define MTL_PRIVATE_IMPLEMENTATION
-#define MPS_PRIVATE_IMPLEMENTATION
-#include "metal-cpp/Foundation/Foundation.hpp"
-#include "metal-cpp/Metal/Metal.hpp"
-#include "metal-cpp/QuartzCore/QuartzCore.hpp"
-
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp"
-#include "basic_utils.hpp"
+#include "common_test.hpp"
 #include <Eigen/Dense>
 #include <Eigen/LU>
+#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp"
+#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
 
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN

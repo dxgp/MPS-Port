@@ -1,24 +1,5 @@
-#include <iostream>
-#include <fstream>
-
-
-#include <Accelerate/Accelerate.h>
-
-#define NS_PRIVATE_IMPLEMENTATION
-#define CA_PRIVATE_IMPLEMENTATION
-#define MTL_PRIVATE_IMPLEMENTATION
-#define MPS_PRIVATE_IMPLEMENTATION
-
-#include "metal-cpp/Foundation/Foundation.hpp"
-#include "metal-cpp/Metal/Metal.hpp"
-#include "metal-cpp/QuartzCore/QuartzCore.hpp"
-
+#include "common_test.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
-
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-#include "basic_utils.hpp"
 
 MTL::Device* device = MTL::CreateSystemDefaultDevice();
 
@@ -83,7 +64,7 @@ TEST_CASE("Creating a random MTGP32 matrix"){
         mtgp32_mat->synchronizeStateOnCommandBuffer(commandBuffer);
         commandBuffer->commit();
         commandBuffer->waitUntilCompleted();
-        std::cout<<computeMean((float*)((mat->data())->contents()), 100000)<<" ---- "<<3.0<<std::endl;
+        
         float computed_mean = computeMean((float*)((mat->data())->contents()), 100000);
         float computed_std = computeStd((float*)(mat->data()->contents()), 100000, computed_mean);
         float computed_min = computeMin((float*)((mat->data())->contents()), 100000);
@@ -105,7 +86,7 @@ TEST_CASE("Creating a random MTGP32 matrix"){
         mtgp32_mat->synchronizeStateOnCommandBuffer(commandBuffer);
         commandBuffer->commit();
         commandBuffer->waitUntilCompleted();
-        std::cout<<computeMean((float*)((mat->data())->contents()), 100000)<<" ---- "<<3.0<<std::endl;
+        
         float computed_mean = computeMean((float*)((mat->data())->contents()), 100000);
         float computed_std = computeStd((float*)(mat->data()->contents()), 100000, computed_mean);
         float computed_min = computeMin((float*)((mat->data())->contents()), 100000);
@@ -150,7 +131,7 @@ TEST_CASE("Creating a random Philox matrix"){
         philox_mat->encodeToCommandBuffer(commandBuffer, mat);
         commandBuffer->commit();
         commandBuffer->waitUntilCompleted();
-        std::cout<<computeMean((float*)((mat->data())->contents()), 100000)<<" ---- "<<3.0<<std::endl;
+        
         float computed_mean = computeMean((float*)((mat->data())->contents()), 100000);
         float computed_std = computeStd((float*)(mat->data()->contents()), 100000, computed_mean);
         float computed_min = computeMin((float*)((mat->data())->contents()), 100000);
@@ -169,7 +150,7 @@ TEST_CASE("Creating a random Philox matrix"){
         philox_mat->encodeToCommandBuffer(commandBuffer, mat);
         commandBuffer->commit();
         commandBuffer->waitUntilCompleted();
-        std::cout<<computeMean((float*)((mat->data())->contents()), 100000)<<" ---- "<<3.0<<std::endl;
+        
         float computed_mean = computeMean((float*)((mat->data())->contents()), 100000);
         float computed_std = computeStd((float*)(mat->data()->contents()), 100000, computed_mean);
         float computed_min = computeMin((float*)((mat->data())->contents()), 100000);

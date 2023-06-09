@@ -1,25 +1,5 @@
-#include <iostream>
-#include <fstream>
-
-
-#include <Accelerate/Accelerate.h>
-
-#define NS_PRIVATE_IMPLEMENTATION
-#define CA_PRIVATE_IMPLEMENTATION
-#define MTL_PRIVATE_IMPLEMENTATION
-#define MPS_PRIVATE_IMPLEMENTATION
-
-#include "metal-cpp/Foundation/Foundation.hpp"
-#include "metal-cpp/Metal/Metal.hpp"
-#include "metal-cpp/QuartzCore/QuartzCore.hpp"
-
-
+#include "common_test.hpp"
 #include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
-
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-#include "basic_utils.hpp"
 
 MTL::Device* device = MTL::CreateSystemDefaultDevice();
 TEST_CASE("Using MatrixSoftMax"){
@@ -32,8 +12,6 @@ TEST_CASE("Using MatrixSoftMax"){
     softmax_mat->encodeToCommandBuffer(cmdBuffer, input_mat, result_mat);
     cmdBuffer->commit();
     cmdBuffer->waitUntilCompleted();
-    printMTLBuffer(input_mat->data(), "Input:");
-    printMTLBuffer(result_mat->data(), "Result");
 }
 TEST_CASE("MatrixLogSoftMax"){
     MPS::MatrixLogSoftMax* softmax_mat = MPS::MatrixLogSoftMax::alloc(); softmax_mat->initWithDevice(device);
@@ -45,11 +23,9 @@ TEST_CASE("MatrixLogSoftMax"){
     softmax_mat->encodeToCommandBuffer(cmdBuffer, input_mat, result_mat);
     cmdBuffer->commit();
     cmdBuffer->waitUntilCompleted();
-    printMTLBuffer(input_mat->data(), "Input:");
-    printMTLBuffer(result_mat->data(), "Result");
 }
 TEST_CASE("MatrixSoftMaxGradient"){
-    
+
 }
 TEST_CASE("MatrixLogSoftMaxGradient"){
 
