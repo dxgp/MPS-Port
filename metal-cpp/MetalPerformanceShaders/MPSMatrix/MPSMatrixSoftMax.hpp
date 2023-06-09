@@ -4,6 +4,7 @@
 
 namespace MPS{
     class MatrixSoftMax: public NS::Referencing<MPS::MatrixUnaryKernel>{
+        public:
         static MPS::MatrixSoftMax* alloc();
         NS::UInteger sourceRows();
         NS::UInteger sourceColumns();
@@ -13,6 +14,7 @@ namespace MPS{
         // another zone function here
     };
     class MatrixLogSoftMax: NS::Referencing<MPS::MatrixSoftMax>{
+        public:
         static MPS::MatrixLogSoftMax* alloc();
         NS::UInteger sourceRows();
         NS::UInteger sourceColumns();
@@ -21,6 +23,7 @@ namespace MPS{
         MPS::MatrixLogSoftMax* initWithCoder(NS::Coder* aDecoder, MTL::Device* device);
     };
     class MatrixSoftMaxGradient: NS::Referencing<MPS::MatrixBinaryKernel>{
+        public:
         static MPS::MatrixSoftMaxGradient* alloc();
         NS::UInteger sourceRows();
         NS::UInteger sourceColumns();
@@ -30,6 +33,7 @@ namespace MPS{
         // another zone function here
     };
     class MatrixLogSoftMaxGradient: NS::Referencing<MPS::MatrixSoftMaxGradient>{
+        public:
         static MPS::MatrixLogSoftMaxGradient* alloc();
         NS::UInteger sourceRows();
         NS::UInteger sourceColumns();
@@ -51,7 +55,7 @@ _MPS_INLINE MPS::MatrixSoftMax* MPS::MatrixSoftMax::initWithDevice(MTL::Device* 
     return Object::sendMessage<MPS::MatrixSoftMax*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device);
 }
 _MPS_INLINE void MPS::MatrixSoftMax::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Matrix* resultMatrix){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_resultmatrix_),commandBuffer, inputMatrix, resultMatrix);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_resultMatrix_),commandBuffer, inputMatrix, resultMatrix);
 }
 _MPS_INLINE MPS::MatrixSoftMax* MPS::MatrixSoftMax::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
     return Object::sendMessage<MPS::MatrixSoftMax*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_),aDecoder, device);
@@ -70,7 +74,7 @@ _MPS_INLINE MPS::MatrixLogSoftMax* MPS::MatrixLogSoftMax::initWithDevice(MTL::De
     return Object::sendMessage<MPS::MatrixLogSoftMax*>(this, _MPS_PRIVATE_SEL(initWithDevice_), device);
 }
 _MPS_INLINE void MPS::MatrixLogSoftMax::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Matrix* resultMatrix){
-    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_resultmatrix_),commandBuffer, inputMatrix, resultMatrix);
+    Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_resultMatrix_),commandBuffer, inputMatrix, resultMatrix);
 }
 _MPS_INLINE MPS::MatrixLogSoftMax* MPS::MatrixLogSoftMax::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
     return Object::sendMessage<MPS::MatrixLogSoftMax*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_), aDecoder, device);

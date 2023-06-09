@@ -37,6 +37,12 @@ namespace MPS::Private::Class
     _MPS_PRIVATE_DEF_CLS(MPSMatrixRandomMTGP32);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixRandomPhilox);
 
+    //MPSMatrixSoftMax
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixSoftMax);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixLogSoftMax);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixSoftMaxGradient);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixLogSoftMaxGradient);
+
 }
 
 namespace MPS::Private::Protocol
@@ -176,4 +182,7 @@ namespace MPS::Private::Selector
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_destinationVector_, "encodeToCommandBuffer:destinationVector:");
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_destinationMatrix_, "encodeToCommandBuffer:destinationMatrix:");
 
+    //MPSMatrixSoftMax
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_inputMatrix_resultMatrix_, "encodeToCommandBuffer:inputMatrix:resultMatrix:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_gradientMatrix_forwardOutputMatrix_resultMatrix_, "encodeToCommandBuffer:gradientMatrix:forwardOutputMatrix:resultMatrix:");
 }

@@ -3,9 +3,13 @@ bool areEqual(float a, float b) {
     return (fabs(a - b) <= 1e-6f * std::max(1.0f, std::max(a, b)));
 }
 void generateRandomFloatData(MTL::Buffer *buffer){
+    rand();
+    rand();
+    rand();
+    rand();
     float *dataptr = (float *)buffer->contents();
     for(uint64_t index = 0; index<buffer->length()/sizeof(float);index++){
-        dataptr[index] = ((float)rand() / float(RAND_MAX))*10;
+        dataptr[index] = ((float)rand() / float(RAND_MAX));
     }
 }
 void printMTLBufferInt32(MTL::Buffer* buf, std::string name){
