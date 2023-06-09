@@ -12,6 +12,17 @@ void generateRandomFloatData(MTL::Buffer *buffer){
         dataptr[index] = ((float)rand() / float(RAND_MAX));
     }
 }
+void generateRandomFloat16Data(MTL::Buffer *buffer){
+    rand();
+    rand();
+    rand();
+    rand();
+    float16_t *dataptr = (float16_t *)buffer->contents();
+    for(uint64_t index = 0; index<buffer->length()/sizeof(float16_t);index++){
+        dataptr[index] = ((float16_t)rand() / float16_t(RAND_MAX));
+    }
+}
+
 void printMTLBufferInt32(MTL::Buffer* buf, std::string name){
     std::cout<<name<<":"<<"<";
     uint32_t *ptr = (uint32_t*)buf->contents();
