@@ -43,6 +43,11 @@ namespace MPS::Private::Class
     _MPS_PRIVATE_DEF_CLS(MPSMatrixSoftMaxGradient);
     _MPS_PRIVATE_DEF_CLS(MPSMatrixLogSoftMaxGradient);
 
+    //MPSMatrixSolve
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixSolveTriangular);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixSolveLU);
+    _MPS_PRIVATE_DEF_CLS(MPSMatrixSolveCholesky);
+
 }
 
 namespace MPS::Private::Protocol
@@ -185,4 +190,12 @@ namespace MPS::Private::Selector
     //MPSMatrixSoftMax
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_inputMatrix_resultMatrix_, "encodeToCommandBuffer:inputMatrix:resultMatrix:");
     _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_gradientMatrix_forwardOutputMatrix_resultMatrix_, "encodeToCommandBuffer:gradientMatrix:forwardOutputMatrix:resultMatrix:");
+
+    //MPSMatrixSolve
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_right_upper_transpose_unit_order_numberOfRightHandSides_alpha_, "initWithDevice:right:upper:transpose:unit:order:numberOfRightHandSides:alpha:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_solutionMatrix_, "encodeToCommandBuffer:sourceMatrix:rightHandSideMatrix:solutionMatrix:");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_transpose_order_numberOfRightHandSides_, "initWithDevice:transpose:order:numberOfRightHandSides:");
+    _MPS_PRIVATE_DEF_SEL(encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_pivotIndices_solutionMatrix_, "encodeToCommandBuffer:sourceMatrix:rightHandSideMatrix:pivotIndices:solutionMatrix:");
+    _MPS_PRIVATE_DEF_SEL(initWithDevice_upper_order_numberOfRightHandSides_, "initWithDevice:upper:order:numberOfRightHandSides:");
+
 }
