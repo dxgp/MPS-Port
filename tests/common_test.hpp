@@ -9,13 +9,15 @@
 #define MTL_PRIVATE_IMPLEMENTATION
 #define MPS_PRIVATE_IMPLEMENTATION
 
-#include "../metal-cpp/Foundation/Foundation.hpp"
-#include "../metal-cpp/Metal/Metal.hpp"
-#include "../metal-cpp/QuartzCore/QuartzCore.hpp"
+#include "Foundation/Foundation.hpp"
+#include "Metal/Metal.hpp"
+#include "QuartzCore/QuartzCore.hpp"
 
 
 
-#include "../metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
+#include "MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp"
+#include "MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp"
+
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"

@@ -1,5 +1,5 @@
 #include "common_test.hpp"
-#include "metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp"
+
 
 MTL::Device* device = MTL::CreateSystemDefaultDevice();
 TEST_CASE("Triangular Solve"){

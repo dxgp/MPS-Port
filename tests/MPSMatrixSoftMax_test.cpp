@@ -1,5 +1,5 @@
 #include "common_test.hpp"
-#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp"
+
 
 MTL::Device* device = MTL::CreateSystemDefaultDevice();
 TEST_CASE("Using MatrixSoftMax"){

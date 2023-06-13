@@ -1,5 +1,5 @@
 #include"common_test.hpp"
-#include "../metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"
+
 
 bool matmul_verify(MTL::Buffer* mat1, MTL::Buffer* mat2, MTL::Buffer* rmat, int M, int N, int K){
     float *fmat1 = (float *)mat1->contents();
