@@ -41,6 +41,14 @@ void printMTLBuffer(MTL::Buffer *buf, std::string name){
     std::cout<<ptr[buf->length()/sizeof(float) - 1]<<">";
     std::cout<<std::endl;
 }
+void printFloatArray(float* arr, std::string name, int length){
+    std::cout<<name<<":"<<"<";
+    for(int i=0;i<length - 1;i++){
+        std::cout<<arr[i]<<",";
+    }
+    std::cout<<arr[length - 1]<<">";
+    std::cout<<std::endl;
+}
 void generateRandomFloatData(MTL::Buffer *buffer, std::vector<float>& data){
     float *dataptr = (float *)buffer->contents();
     for(uint64_t index = 0; index<buffer->length()/sizeof(float);index++){

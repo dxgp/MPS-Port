@@ -49,6 +49,6 @@ _MPS_INLINE MPS::MatrixSolveCholesky* MPS::MatrixSolveCholesky::alloc(){
 _MPS_INLINE MPS::MatrixSolveCholesky* MPS::MatrixSolveCholesky::initWithDevice(MTL::Device* device, bool upper, NS::UInteger order, NS::UInteger numberOfRightHandSides){
     return Object::sendMessage<MPS::MatrixSolveCholesky*>(this, _MPS_PRIVATE_SEL(initWithDevice_upper_order_numberOfRightHandSides_),device, upper, order, numberOfRightHandSides);
 }
-_MPS_INLINE void MPS::MatrixSolveCholesky::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matsrix* sourceMatrix, MPS::Matrix* rightHandSideMatrix, MPS::Matrix* solutionMatrix){
+_MPS_INLINE void MPS::MatrixSolveCholesky::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* sourceMatrix, MPS::Matrix* rightHandSideMatrix, MPS::Matrix* solutionMatrix){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_solutionMatrix_),commandBuffer, sourceMatrix, rightHandSideMatrix, solutionMatrix);
 }
