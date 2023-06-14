@@ -37,8 +37,6 @@ Here's the documentation. It's just enough to get you started. I'll add more to 
 ## Creating Matrices
 To create a matrix, you need `MPS::MatrixDescriptor` objects. You must create a descriptor for a matrix, which is later used to actually create the matrix. For e.g.To create a descriptor for a 5x4 matrix with with float32 datatype:
 
-<!--         static MPS::MatrixDescriptor* matrixDescriptorWithRows(NS::UInteger rows, NS::UInteger columns, NS::UInteger rowBytes, MPS::DataType dataType);
-        static MPS::MatrixDescriptor* matrixDescriptorWithRows(NS::UInteger rows, NS::UInteger columns, NS::UInteger matrices, NS::UInteger rowBytes, NS::UInteger matrixBytes, MPS::DataType dataType); -->
 ```cpp
 MPS::MatrixDescriptor* mps_matdes = MPS::MatrixDescriptor::matrixDescriptorWithRows(5, 4, 4*4, MPS::MPSDataTypeFloat32);
 ```
@@ -51,6 +49,23 @@ MPS::MatrixDescriptor* mps_matdes = MPS::MatrixDescriptor::matrixDescriptorWithR
 MPS::Matrix* matrix = MPS::Matrix::alloc(); matrix->initWithDevice(device, mps_matdes);
 ```
 
+To actually put the data inside the matrix, one method would be to use `matrix->data()` which just returns a pointer to the `MTL::Buffer` containing the data (row major order). Then, just loop through it and add your data.
+
+We can also initialize the matrix with an array. To initialize it with an array that contains your data, you need to initialize a buffer with that array and then initialize the matrix with that buffer (easy, huh? array->buffer->matrix) . Still, the cleanest way to write this would be:
+
+```cpp
+float data[] = {yourdatahere};
+MTL::Buffer* buf = device->newBuffer(data,bufferSizeInBytes,MTL::ResourceStorageModeShared);
+MPS::MatrixDescriptor* matdes = MPS::MatrixDescriptor::matrixDescriptorWithRows(...);
+MPS::Matrix* mat = MPS::Matrix::alloc();mat->initWithBuffer(buf,matdes);
+```
+
+If you already have a `float` array, it makes more sense to do this than to copy the data into the buffer.
+
+When in doubt, just open the header file corresponding to the operation you want to perform or the data structure you want to know more about.
+
+
+## Matrix Multiplication
 Now, here's a complete example that declares and then multiplies two 3x3 matrices:
 
 ```cpp
@@ -125,6 +140,8 @@ int main(){
 }
 
 ```
+
+
 
 
 
