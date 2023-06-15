@@ -7,8 +7,10 @@
 #include "MPSCoreTypes.hpp"
 #include "../../Metal/MTLBuffer.hpp"
 
+
 namespace MPS
 {
+    
     class Predicate : public NS::Referencing<MPS::Predicate>{
         public:
         MTL::Buffer* predicateBuffer() const;
@@ -35,6 +37,7 @@ namespace MPS
     };
 }
 
+/// @{ @private
 //class Predicate
 _MPS_INLINE MTL::Buffer* MPS::Predicate::predicateBuffer() const{
     return Object::sendMessage<MTL::Buffer*>(this, _MPS_PRIVATE_SEL(predicateBuffer));
@@ -88,6 +91,8 @@ _MPS_INLINE void MPS::CommandBuffer::commitAndContinue(){
 _MPS_INLINE void MPS::CommandBuffer::prefetchHeapForWorkloadSize(size_t size){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(prefetchHeapForWorkloadSize_), size);
 }
+
+/// @}
 
 
 

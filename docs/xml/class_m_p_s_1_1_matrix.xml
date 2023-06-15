@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix" kind="class" language="C++" prot="public">
+    <compoundname>MPS::Matrix</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::Matrix &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a60a94b01aa9399dd49d0a311663f0a16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+        <definition>_MPS_INLINE MPS::Matrix * MPS::Matrix::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::Matrix::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="69" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1aafbc1b8918d58245a6d2b72ab8f75b00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Device *</type>
+        <definition>_MPS_INLINE MTL::Device * MPS::Matrix::device</definition>
+        <argsstring>() const</argsstring>
+        <name>device</name>
+        <qualifiedname>MPS::Matrix::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="70" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a92928a434283258f1f40f9628316ce07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Matrix::rows</definition>
+        <argsstring>() const</argsstring>
+        <name>rows</name>
+        <qualifiedname>MPS::Matrix::rows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="71" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="168" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a11908e9eebe5583e7e6f1e17373a8005" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Matrix::columns</definition>
+        <argsstring>() const</argsstring>
+        <name>columns</name>
+        <qualifiedname>MPS::Matrix::columns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="72" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a0e36c8ba7fe6a6429b425e7baa53fdbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Matrix::matrices</definition>
+        <argsstring>() const</argsstring>
+        <name>matrices</name>
+        <qualifiedname>MPS::Matrix::matrices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="73" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a27cf13c9510a3d13a9c13e07c084a1d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MPS::DataType</type>
+        <definition>_MPS_INLINE MPS::DataType MPS::Matrix::dataType</definition>
+        <argsstring>() const</argsstring>
+        <name>dataType</name>
+        <qualifiedname>MPS::Matrix::dataType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="74" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="177" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a0bbf362b4ec874b6363c6692f9059f0b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Matrix::rowBytes</definition>
+        <argsstring>() const</argsstring>
+        <name>rowBytes</name>
+        <qualifiedname>MPS::Matrix::rowBytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="75" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="180" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1abee4295df908c4f694f5a0fd6aa4ae5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Matrix::matrixBytes</definition>
+        <argsstring>() const</argsstring>
+        <name>matrixBytes</name>
+        <qualifiedname>MPS::Matrix::matrixBytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="76" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a21f888ae717f1387f767811b683d59db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Matrix::offset</definition>
+        <argsstring>() const</argsstring>
+        <name>offset</name>
+        <qualifiedname>MPS::Matrix::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="77" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a9fdf2a2b1e3568fa004a4f7ba26f586a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Buffer *</type>
+        <definition>_MPS_INLINE MTL::Buffer * MPS::Matrix::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>MPS::Matrix::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="78" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1ab73e06b6aa8ee8c4b4b0e3e0c68bfcdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+        <definition>_MPS_INLINE MPS::Matrix * MPS::Matrix::initWithBuffer</definition>
+        <argsstring>(MTL::Buffer *buffer, MPS::MatrixDescriptor *descriptor)</argsstring>
+        <name>initWithBuffer</name>
+        <qualifiedname>MPS::Matrix::initWithBuffer</qualifiedname>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix_descriptor" kindref="compound">MPS::MatrixDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="79" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a19d243988fbb2b444accef3b9d428ff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+        <definition>_MPS_INLINE MPS::Matrix * MPS::Matrix::initWithBuffer</definition>
+        <argsstring>(MTL::Buffer *buffer, NS::UInteger offset, MPS::MatrixDescriptor *descriptor)</argsstring>
+        <name>initWithBuffer</name>
+        <qualifiedname>MPS::Matrix::initWithBuffer</qualifiedname>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix_descriptor" kindref="compound">MPS::MatrixDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="80" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1ac97bc44bb5c26ddb0913482210bc3b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+        <definition>_MPS_INLINE MPS::Matrix * MPS::Matrix::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, MPS::MatrixDescriptor *descriptor)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::Matrix::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix_descriptor" kindref="compound">MPS::MatrixDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="81" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="198" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a39982edd40134bdc59a2d3cc9cb26ac2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::Matrix::synchronizeOnCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer)</argsstring>
+        <name>synchronizeOnCommandBuffer</name>
+        <qualifiedname>MPS::Matrix::synchronizeOnCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="82" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_1a1259550359a1e917782768d1c8548179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Matrix::resourceSize</definition>
+        <argsstring>()</argsstring>
+        <name>resourceSize</name>
+        <qualifiedname>MPS::Matrix::resourceSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="83" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="204" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::Matrix</label>
+        <link refid="class_m_p_s_1_1_matrix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Matrix &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::Matrix</label>
+        <link refid="class_m_p_s_1_1_matrix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Matrix &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="67" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="67" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_1a60a94b01aa9399dd49d0a311663f0a16" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a11908e9eebe5583e7e6f1e17373a8005" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>columns</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a9fdf2a2b1e3568fa004a4f7ba26f586a" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>data</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a27cf13c9510a3d13a9c13e07c084a1d8" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>dataType</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1aafbc1b8918d58245a6d2b72ab8f75b00" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>device</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1ab73e06b6aa8ee8c4b4b0e3e0c68bfcdd" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>initWithBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a19d243988fbb2b444accef3b9d428ff3" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>initWithBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1ac97bc44bb5c26ddb0913482210bc3b66" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a0e36c8ba7fe6a6429b425e7baa53fdbe" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>matrices</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1abee4295df908c4f694f5a0fd6aa4ae5c" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>matrixBytes</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a21f888ae717f1387f767811b683d59db" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>offset</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a1259550359a1e917782768d1c8548179" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>resourceSize</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a0bbf362b4ec874b6363c6692f9059f0b" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>rowBytes</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a92928a434283258f1f40f9628316ce07" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>rows</name></member>
+      <member refid="class_m_p_s_1_1_matrix_1a39982edd40134bdc59a2d3cc9cb26ac2" prot="public" virt="non-virtual"><scope>MPS::Matrix</scope><name>synchronizeOnCommandBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

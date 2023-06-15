@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_soft_max" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixSoftMax</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_1aa00c262852ecdd5ebecaa48030fd7ea0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_soft_max" kindref="compound">MPS::MatrixSoftMax</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSoftMax * MPS::MatrixSoftMax::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixSoftMax::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="8" column="35" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_1a2a25862290865a3e85f413aec348d297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixSoftMax::sourceRows</definition>
+        <argsstring>()</argsstring>
+        <name>sourceRows</name>
+        <qualifiedname>MPS::MatrixSoftMax::sourceRows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="9" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_1ad96e952ba51eab3083b31697077369a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixSoftMax::sourceColumns</definition>
+        <argsstring>()</argsstring>
+        <name>sourceColumns</name>
+        <qualifiedname>MPS::MatrixSoftMax::sourceColumns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="10" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_1a701c509e28a61ff863ec5705610f1edc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_soft_max" kindref="compound">MPS::MatrixSoftMax</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSoftMax * MPS::MatrixSoftMax::initWithDevice</definition>
+        <argsstring>(MTL::Device *device)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixSoftMax::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="11" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_1a3d6182d0bfc1e3cb6b9455002c05fbe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixSoftMax::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *inputMatrix, MPS::Matrix *resultMatrix)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixSoftMax::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>inputMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>resultMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="12" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_1aaa2761e59bb777fb4ca50c7ed26f10d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_soft_max" kindref="compound">MPS::MatrixSoftMax</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSoftMax * MPS::MatrixSoftMax::initWithCoder</definition>
+        <argsstring>(NS::Coder *aDecoder, MTL::Device *device)</argsstring>
+        <name>initWithCoder</name>
+        <qualifiedname>MPS::MatrixSoftMax::initWithCoder</qualifiedname>
+        <param>
+          <type>NS::Coder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="13" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixSoftMax</label>
+        <link refid="class_m_p_s_1_1_matrix_soft_max"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixSoftMax</label>
+        <link refid="class_m_p_s_1_1_matrix_soft_max"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="6" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="6" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_1aa00c262852ecdd5ebecaa48030fd7ea0" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMax</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_1a3d6182d0bfc1e3cb6b9455002c05fbe0" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMax</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_1aaa2761e59bb777fb4ca50c7ed26f10d0" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMax</scope><name>initWithCoder</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_1a701c509e28a61ff863ec5705610f1edc" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMax</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_1ad96e952ba51eab3083b31697077369a5" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMax</scope><name>sourceColumns</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_1a2a25862290865a3e85f413aec348d297" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMax</scope><name>sourceRows</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

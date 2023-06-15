@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_m_p_s_1_1_region" kind="struct" language="C++" prot="public">
+    <compoundname>MPS::Region</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_s_1_1_region_1acbde2ab1aa3fc028aebe21d892cb0ccd" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_p_s_1_1_origin" kindref="compound">MPSOrigin</ref></type>
+        <definition>MPSOrigin MPS::Region::origin</definition>
+        <argsstring></argsstring>
+        <name>origin</name>
+        <qualifiedname>MPS::Region::origin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="80" column="25" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_region_1a12475d9efd2165025aeb190d5b0afc05" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_p_s_1_1_size" kindref="compound">MPSSize</ref></type>
+        <definition>MPSSize MPS::Region::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>MPS::Region::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="81" column="25" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>MPS::Origin</label>
+        <link refid="struct_m_p_s_1_1_origin"/>
+      </node>
+      <node id="1">
+        <label>MPS::Region</label>
+        <link refid="struct_m_p_s_1_1_region"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>origin</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MPS::Size</label>
+        <link refid="struct_m_p_s_1_1_size"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="79" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="79" bodyend="82"/>
+    <listofallmembers>
+      <member refid="struct_m_p_s_1_1_region_1acbde2ab1aa3fc028aebe21d892cb0ccd" prot="public" virt="non-virtual"><scope>MPS::Region</scope><name>origin</name></member>
+      <member refid="struct_m_p_s_1_1_region_1a12475d9efd2165025aeb190d5b0afc05" prot="public" virt="non-virtual"><scope>MPS::Region</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

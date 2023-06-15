@@ -26,7 +26,7 @@ namespace MPS{
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Vector* inputVector, MPS::Vector* resultVector);
     };
 }
-
+/// @{ @private
 _MPS_INLINE MPS::MatrixMultiplication* MPS::MatrixMultiplication::alloc(){
     return NS::Object::alloc<MPS::MatrixMultiplication>(_MPS_PRIVATE_CLS(MPSMatrixMultiplication));
 }
@@ -84,3 +84,5 @@ _MPS_INLINE MPS::MatrixVectorMultiplication* MPS::MatrixVectorMultiplication::in
 _MPS_INLINE void MPS::MatrixVectorMultiplication::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* inputMatrix, MPS::Vector* inputVector, MPS::Vector* resultVector){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_inputVector_resultVector_), commandBuffer, inputMatrix, inputVector, resultVector);
 }
+
+/// @}

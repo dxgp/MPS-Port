@@ -1,0 +1,343 @@
+
+Full API
+--------
+
+Namespaces
+**********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_MPS.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_NS.rst
+
+Classes and Structs
+*******************
+
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_dimension_slice.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_image_coordinate.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_image_region.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_m_p_s_offset.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_origin.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_region.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_scale_transform.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   struct_m_p_s_1_1_size.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_command_buffer.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_device_provider.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_heap_provider.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_kernel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_binary_kernel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_decomposition_cholesky.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_decomposition_l_u.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_descriptor.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_find_top_k.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_log_soft_max.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_log_soft_max_gradient.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_multiplication.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_random.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_random_distribution_descriptor.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_random_m_t_g_p32.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_random_philox.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_soft_max.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_soft_max_gradient.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_solve_cholesky.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_solve_l_u.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_solve_triangular.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_unary_kernel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_matrix_vector_multiplication.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_n_d_array.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_n_d_array_allocator.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_n_d_array_descriptor.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_predicate.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_temporary_n_d_array.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_vector.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_m_p_s_1_1_vector_descriptor.rst
+
+Functions
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   function__m_p_s_core_types_8hpp_1afaa696e71cfa78a5e28e99373de8196b.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__m_p_s_core_types_8hpp_1a4e2691b53dd3221a829347735bfc6f00.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__m_p_s_core_types_8hpp_1a76f091e51e9531524488f3c3a5792f7f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__m_p_s_matrix_decomposition_8hpp_1a6e6bf242421564b6af131e6fc64efed8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__m_p_s_core_types_8hpp_1a01dbcc05c66f7b274fe6d6db1d560172.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__m_p_s_core_types_8hpp_1a3ca3790f4ec024d64c17a330bd33bd3a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__m_p_s_matrix_random_8hpp_1ad30d259dafe7fa0697397a9a93934180.rst
+
+Defines
+*******
+
+
+.. toctree::
+   :maxdepth: 5
+
+   define__m_p_s_function_constant_indices_8hpp_1a70d356ef5d6004a239f7576a1314e1e5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define__m_p_s_function_constant_indices_8hpp_1aed6056a7232660f6460cee53a756ba92.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define__m_p_s_function_constant_indices_8hpp_1a767a2bd6820390f88acac77d3e4505f2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define__m_p_s_function_constant_indices_8hpp_1a5672df2f828d9cdbcf072408f7d37758.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define__m_p_s_function_constant_indices_8hpp_1a8bcba04f7224c579f38c6de5036ac371.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define__m_p_s_function_constant_indices_8hpp_1a45752efcc85d60289a613189bc485ddd.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define__m_p_s_function_constant_indices_8hpp_1a7bec81c7fee8965b976dc52df1a5572b.rst
+
+Typedefs
+********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1aa702c40c811dacd614a7bf95229eda4e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_n_d_array_8hpp_1a3813b5bd83b576bc3074d61308e05b19.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1a54f461b516f24d50ddbce1017fa79051.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1a0388d3584adb526627f0ec66d91f2910.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1a45abcf62f809fd150d9049286f8722c5.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1acd141aedb96dc0d717d5f46357818d1f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1a4ac70c491e434f127881bc332103b9af.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1a61600ba4e9159f7fabe743647f80c463.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef__m_p_s_core_types_8hpp_1a0caa47f6afe951c9d4fe05d914d451af.rst

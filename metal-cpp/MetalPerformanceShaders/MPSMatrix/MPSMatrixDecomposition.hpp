@@ -3,12 +3,6 @@
 
 
 namespace MPS{
-    _NS_ENUM(int, MatrixDecompositionStatus){
-        MatrixDecompositionStatusSuccess = 0,
-        MatrixDecompositionStatusFailure = -1,
-        MatrixDecompositionStatusSingular = -2,
-        MatrixDecompositionStatusNonPositiveDefinite = -3,
-    };
     class MatrixDecompositionLU: public NS::Referencing<MPS::MatrixUnaryKernel>{
         public:
         static MPS::MatrixDecompositionLU* alloc();
@@ -24,6 +18,7 @@ namespace MPS{
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* sourceMatrix, MPS::Matrix* resultMatrix, MTL::Buffer* status);
     };
 }
+/// @{ @private
 _MPS_INLINE MPS::MatrixDecompositionLU* MPS::MatrixDecompositionLU::alloc(){
     return NS::Object::alloc<MPS::MatrixDecompositionLU>(_MPS_PRIVATE_CLS(MPSMatrixDecompositionLU));
 }
@@ -42,3 +37,4 @@ _MPS_INLINE MPS::MatrixDecompositionCholesky* MPS::MatrixDecompositionCholesky::
 _MPS_INLINE void MPS::MatrixDecompositionCholesky::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* sourceMatrix, MPS::Matrix* resultMatrix, MTL::Buffer* status){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_sourceMatrix_resultMatrix_status_), commandBuffer, sourceMatrix, resultMatrix, status);
 }
+/// @}

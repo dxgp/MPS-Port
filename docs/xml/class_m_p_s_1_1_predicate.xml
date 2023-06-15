@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_predicate" kind="class" language="C++" prot="public">
+    <compoundname>MPS::Predicate</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::Predicate &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_predicate_1a53768abd4d3da2ff6622bcb88ee673b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Buffer *</type>
+        <definition>_MPS_INLINE MTL::Buffer * MPS::Predicate::predicateBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>predicateBuffer</name>
+        <qualifiedname>MPS::Predicate::predicateBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="16" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_predicate_1a69a23bd51d859bf253f36b2ba92e7bd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Predicate::predicateOffset</definition>
+        <argsstring>() const</argsstring>
+        <name>predicateOffset</name>
+        <qualifiedname>MPS::Predicate::predicateOffset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="17" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_predicate_1a593c79937c78d20e0cc1e221808cd0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_predicate" kindref="compound">MPS::Predicate</ref> *</type>
+        <definition>_MPS_INLINE MPS::Predicate * MPS::Predicate::initWithBuffer</definition>
+        <argsstring>(MTL::Buffer *buffer, NS::UInteger offset)</argsstring>
+        <name>initWithBuffer</name>
+        <qualifiedname>MPS::Predicate::initWithBuffer</qualifiedname>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="19" column="24" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_predicate_1a53d353e8ab5bdff3497559afd8e61c24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_predicate" kindref="compound">MPS::Predicate</ref> *</type>
+        <definition>_MPS_INLINE MPS::Predicate * MPS::Predicate::initWithDevice</definition>
+        <argsstring>(MTL::Device *device)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::Predicate::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="20" column="24" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_predicate_1ac737d7c1244fdc7489f105b726d5d831" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_predicate" kindref="compound">MPS::Predicate</ref> *</type>
+        <definition>_MPS_INLINE MPS::Predicate * MPS::Predicate::predicateWithBuffer</definition>
+        <argsstring>(MTL::Buffer *buffer, NS::UInteger offset)</argsstring>
+        <name>predicateWithBuffer</name>
+        <qualifiedname>MPS::Predicate::predicateWithBuffer</qualifiedname>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="18" column="31" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::Predicate</label>
+        <link refid="class_m_p_s_1_1_predicate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Predicate &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::Predicate</label>
+        <link refid="class_m_p_s_1_1_predicate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Predicate &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="14" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="14" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_predicate_1a593c79937c78d20e0cc1e221808cd0da" prot="public" virt="non-virtual"><scope>MPS::Predicate</scope><name>initWithBuffer</name></member>
+      <member refid="class_m_p_s_1_1_predicate_1a53d353e8ab5bdff3497559afd8e61c24" prot="public" virt="non-virtual"><scope>MPS::Predicate</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_predicate_1a53768abd4d3da2ff6622bcb88ee673b4" prot="public" virt="non-virtual"><scope>MPS::Predicate</scope><name>predicateBuffer</name></member>
+      <member refid="class_m_p_s_1_1_predicate_1a69a23bd51d859bf253f36b2ba92e7bd0" prot="public" virt="non-virtual"><scope>MPS::Predicate</scope><name>predicateOffset</name></member>
+      <member refid="class_m_p_s_1_1_predicate_1ac737d7c1244fdc7489f105b726d5d831" prot="public" virt="non-virtual"><scope>MPS::Predicate</scope><name>predicateWithBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

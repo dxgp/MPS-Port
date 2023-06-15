@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="basic__utils_8hpp" kind="file" language="C++">
+    <compoundname>basic_utils.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/basic_utils.hpp</label>
+        <link refid="basic__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="basic__utils_8hpp_1ae9cb87ce811bed82cfd12f7cc35f242e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool areEqual</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>areEqual</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="2" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="2" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1a430291ad909fc498554eb64de4450661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void generateRandomFloatData</definition>
+        <argsstring>(MTL::Buffer *buffer)</argsstring>
+        <name>generateRandomFloatData</name>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="5" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="5" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1a2413bf59fdfe2617ef3c2b46ed8a681b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void generateRandomFloat16Data</definition>
+        <argsstring>(MTL::Buffer *buffer)</argsstring>
+        <name>generateRandomFloat16Data</name>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="15" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="15" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1a991788ced949d052fecb385bf896acf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printMTLBufferInt32</definition>
+        <argsstring>(MTL::Buffer *buf, std::string name)</argsstring>
+        <name>printMTLBufferInt32</name>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="26" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="26" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1aa3637ee9fead60ac43b7316bb6afe1f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printMTLBuffer</definition>
+        <argsstring>(MTL::Buffer *buf, std::string name)</argsstring>
+        <name>printMTLBuffer</name>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="35" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="35" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1aa91f85562e256564d54752ec6dffd08d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printFloatArray</definition>
+        <argsstring>(float *arr, std::string name, int length)</argsstring>
+        <name>printFloatArray</name>
+        <param>
+          <type>float *</type>
+          <declname>arr</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="44" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1acfd5af8d41b0021b8c962563fb336af7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void generateRandomFloatData</definition>
+        <argsstring>(MTL::Buffer *buffer, std::vector&lt; float &gt; &amp;data)</argsstring>
+        <name>generateRandomFloatData</name>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="52" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="52" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1a1daed357edd0bd5d94482d01751e2a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float computeMean</definition>
+        <argsstring>(const float *array, size_t size)</argsstring>
+        <name>computeMean</name>
+        <param>
+          <type>const float *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="60" column="7" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1a926a4ac5fafe4c021782310ce5b90403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool areEqualLowPrecision</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>areEqualLowPrecision</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="67" column="6" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1a58009c286659eaad77a1e284a0bf1373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float computeStd</definition>
+        <argsstring>(const float *array, size_t size, float mean)</argsstring>
+        <name>computeStd</name>
+        <param>
+          <type>const float *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mean</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="73" column="7" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="73" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1acf5aaf6711a6a1f9b86ad2ea213f294d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float computeMin</definition>
+        <argsstring>(const float *array, size_t size)</argsstring>
+        <name>computeMin</name>
+        <param>
+          <type>const float *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="84" column="7" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="84" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="basic__utils_8hpp_1a5d49ce3d70bfa21b9178c8ce42b2a23a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float computeMax</definition>
+        <argsstring>(const float *array, size_t size)</argsstring>
+        <name>computeMax</name>
+        <param>
+          <type>const float *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" line="93" column="7" bodyfile="/Users/gunjanpayal/MPS-Port/basic_utils.hpp" bodystart="93" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>areEqual(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(fabs(a<sp/>-<sp/>b)<sp/>&lt;=<sp/>1e-6f<sp/>*<sp/>std::max(1.0f,<sp/>std::max(a,<sp/>b)));</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>generateRandomFloatData(MTL::Buffer<sp/>*buffer){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dataptr<sp/>=<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*)buffer-&gt;contents();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint64_t<sp/>index<sp/>=<sp/>0;<sp/>index&lt;buffer-&gt;length()/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(float);index++){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dataptr[index]<sp/>=<sp/>((float)rand()<sp/>/<sp/>float(RAND_MAX));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>generateRandomFloat16Data(MTL::Buffer<sp/>*buffer){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>rand();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>float16_t<sp/>*dataptr<sp/>=<sp/>(float16_t<sp/>*)buffer-&gt;contents();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint64_t<sp/>index<sp/>=<sp/>0;<sp/>index&lt;buffer-&gt;length()/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(float16_t);index++){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dataptr[index]<sp/>=<sp/>((float16_t)rand()<sp/>/<sp/>float16_t(RAND_MAX));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>printMTLBufferInt32(MTL::Buffer*<sp/>buf,<sp/>std::string<sp/>name){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;name&lt;&lt;</highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">&lt;&lt;</highlight><highlight class="stringliteral">&quot;&lt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*ptr<sp/>=<sp/>(uint32_t*)buf-&gt;contents();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;buf-&gt;length()/4<sp/>-<sp/>1;i++){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;ptr[i]&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;ptr[buf-&gt;length()/4<sp/>-<sp/>1]&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>printMTLBuffer(MTL::Buffer<sp/>*buf,<sp/>std::string<sp/>name){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;name&lt;&lt;</highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">&lt;&lt;</highlight><highlight class="stringliteral">&quot;&lt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*ptr<sp/>=<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*)buf-&gt;contents();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;buf-&gt;length()/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(float)<sp/>-<sp/>1;i++){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;ptr[i]&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;ptr[buf-&gt;length()/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(float)<sp/>-<sp/>1]&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>printFloatArray(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>arr,<sp/>std::string<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;name&lt;&lt;</highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">&lt;&lt;</highlight><highlight class="stringliteral">&quot;&lt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;length<sp/>-<sp/>1;i++){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;arr[i]&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;arr[length<sp/>-<sp/>1]&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>generateRandomFloatData(MTL::Buffer<sp/>*buffer,<sp/>std::vector&lt;float&gt;&amp;<sp/>data){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dataptr<sp/>=<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*)buffer-&gt;contents();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint64_t<sp/>index<sp/>=<sp/>0;<sp/>index&lt;buffer-&gt;length()/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(float);index++){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gen_num<sp/>=<sp/>((float)rand()<sp/>/<sp/>float(RAND_MAX))*10;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dataptr[index]<sp/>=<sp/>gen_num;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.push_back(gen_num);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>computeMean(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>array,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>array[i];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(size);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>areEqualLowPrecision(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>precision<sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/>a<sp/>-<sp/>b;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(diff<sp/>&gt;=<sp/>-precision)<sp/>&amp;&amp;<sp/>(diff<sp/>&lt;=<sp/>precision);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>computeStd(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>array,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mean)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sumSq<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/>array[i]<sp/>-<sp/>mean;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sumSq<sp/>+=<sp/>diff<sp/>*<sp/>diff;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>variance<sp/>=<sp/>sumSq<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(size);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::sqrt(variance);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>computeMin(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>array,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minVal<sp/>=<sp/>array[0];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=1;<sp/>i&lt;size;<sp/>i++){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(array[i]&lt;minVal){</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minVal<sp/>=<sp/>array[i];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>minVal;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>computeMax(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>array,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxVal<sp/>=<sp/>array[0];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=1;<sp/>i&lt;size;<sp/>i++){</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(array[i]&gt;maxVal){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxVal<sp/>=<sp/>array[i];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maxVal;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/basic_utils.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_soft_max_gradient" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixSoftMaxGradient</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_gradient_1af6200242a8aaa09215283010a496081a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_soft_max_gradient" kindref="compound">MPS::MatrixSoftMaxGradient</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSoftMaxGradient * MPS::MatrixSoftMaxGradient::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixSoftMaxGradient::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="27" column="43" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_gradient_1ab10ed0c4731d2503b42d498272eab4dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixSoftMaxGradient::sourceRows</definition>
+        <argsstring>()</argsstring>
+        <name>sourceRows</name>
+        <qualifiedname>MPS::MatrixSoftMaxGradient::sourceRows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="28" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_gradient_1a4958de53d0237ec2e14edcd5880c0fc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixSoftMaxGradient::sourceColumns</definition>
+        <argsstring>()</argsstring>
+        <name>sourceColumns</name>
+        <qualifiedname>MPS::MatrixSoftMaxGradient::sourceColumns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="29" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_gradient_1a68a39069578d97ffe7892b11da4f6816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_soft_max_gradient" kindref="compound">MPS::MatrixSoftMaxGradient</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSoftMaxGradient * MPS::MatrixSoftMaxGradient::initWithDevice</definition>
+        <argsstring>(MTL::Device *device)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixSoftMaxGradient::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="30" column="36" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_gradient_1a5b870b653beb459e5550cb84856e0a35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixSoftMaxGradient::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *gradientMatrix, MPS::Matrix *forwardOutputMatrix, MPS::Matrix *resultMatrix)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixSoftMaxGradient::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>gradientMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>forwardOutputMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>resultMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="31" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_soft_max_gradient_1a66c51941cf174da21ff8589bd4dd9a71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_soft_max_gradient" kindref="compound">MPS::MatrixSoftMaxGradient</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSoftMaxGradient * MPS::MatrixSoftMaxGradient::initWithCoder</definition>
+        <argsstring>(NS::Coder *aDecoder, MTL::Device *device)</argsstring>
+        <name>initWithCoder</name>
+        <qualifiedname>MPS::MatrixSoftMaxGradient::initWithCoder</qualifiedname>
+        <param>
+          <type>NS::Coder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="32" column="36" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixSoftMaxGradient</label>
+        <link refid="class_m_p_s_1_1_matrix_soft_max_gradient"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixSoftMaxGradient</label>
+        <link refid="class_m_p_s_1_1_matrix_soft_max_gradient"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" line="25" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp" bodystart="25" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1af6200242a8aaa09215283010a496081a" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMaxGradient</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a5b870b653beb459e5550cb84856e0a35" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMaxGradient</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a66c51941cf174da21ff8589bd4dd9a71" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMaxGradient</scope><name>initWithCoder</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a68a39069578d97ffe7892b11da4f6816" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMaxGradient</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a4958de53d0237ec2e14edcd5880c0fc8" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMaxGradient</scope><name>sourceColumns</name></member>
+      <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1ab10ed0c4731d2503b42d498272eab4dc" prot="public" virt="non-virtual"><scope>MPS::MatrixSoftMaxGradient</scope><name>sourceRows</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

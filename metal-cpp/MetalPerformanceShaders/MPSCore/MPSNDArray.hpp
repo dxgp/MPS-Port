@@ -64,7 +64,7 @@ namespace MPS{
         NS::UInteger readCount();
     };
 }
-
+/// @{ @private
 // class NDArrayDescriptor
 _MPS_INLINE MPS::DataType MPS::NDArrayDescriptor::dataType(){
     return Object::sendMessage<MPS::DataType>(this,_MPS_PRIVATE_SEL(dataType));
@@ -183,3 +183,5 @@ _MPS_INLINE NS::UInteger MPS::TemporaryNDArray::readCount(){
 _MPS_INLINE MPS::TemporaryNDArray* MPS::TemporaryNDArray::temporaryNDArrayWithCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::NDArrayDescriptor* descriptor){
     return Object::sendMessage<MPS::TemporaryNDArray*>(_MPS_PRIVATE_CLS(MPSTemporaryNDArray), _MPS_PRIVATE_SEL(temporaryNDArrayWithCommandBuffer_descriptor_), commandBuffer, descriptor);
 }
+
+/// @}

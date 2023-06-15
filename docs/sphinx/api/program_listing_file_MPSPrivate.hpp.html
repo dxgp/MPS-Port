@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File MPSPrivate.hpp &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">MetalPerformanceShaders C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File MPSPrivate.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file_MPSPrivate.hpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-mpsprivate-hpp">
+<span id="program-listing-file-mpsprivate-hpp"></span><h1>Program Listing for File MPSPrivate.hpp<a class="headerlink" href="#program-listing-for-file-mpsprivate-hpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_MPSPrivate.hpp.html#file-mpsprivate-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">MPSPrivate.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MPSDefines.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;objc/runtime.h&gt;</span>
+
+<span class="cp">#define _MPS_PRIVATE_CLS( symbol )                 ( Private::Class::s_k ## symbol )</span>
+<span class="cp">#define _MPS_PRIVATE_SEL( accessor )                 ( Private::Selector::s_k ## accessor )</span>
+
+<span class="cp">#if defined( MPS_PRIVATE_IMPLEMENTATION )</span>
+
+<span class="cp">#define _MPS_PRIVATE_VISIBILITY                     __attribute__( ( visibility( &quot;default&quot; ) ) )</span>
+<span class="cp">#define _MPS_PRIVATE_IMPORT                       __attribute__( ( weak_import ) )</span>
+
+<span class="cp">#ifdef __OBJC__</span>
+<span class="cp">#define  _MPS_PRIVATE_OBJC_LOOKUP_CLASS( symbol  )   ( ( __bridge void* ) objc_lookUpClass( # symbol ) )</span>
+<span class="cp">#define _MPS_PRIVATE_OBJC_GET_PROTOCOL( symbol )  ( ( __bridge void* ) objc_getProtocol( # symbol ) )</span>
+<span class="cp">#else</span>
+<span class="cp">#define  _MPS_PRIVATE_OBJC_LOOKUP_CLASS( symbol  )   objc_lookUpClass( # symbol )</span>
+<span class="cp">#define _MPS_PRIVATE_OBJC_GET_PROTOCOL( symbol )  objc_getProtocol( # symbol )</span>
+
+<span class="cp">#endif </span><span class="c1">// __OBJC__</span>
+
+<span class="cp">#define _MPS_PRIVATE_DEF_CLS( symbol )  void*   s_k ## symbol   _MPS_PRIVATE_VISIBILITY = _MPS_PRIVATE_OBJC_LOOKUP_CLASS( symbol )</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_PRO(symbol) void* s_k ## symbol _MPS_PRIVATE_VISIBILITY = _MPS_PRIVATE_OBJC_GET_PROTOCOL(symbol)</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_SEL( accessor, symbol )     SEL     s_k ## accessor     _MPS_PRIVATE_VISIBILITY = sel_registerName( symbol )</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;dlfcn.h&gt;</span>
+<span class="cp">#define MPS_DEF_FUNC( name,signature ) \</span>
+<span class="cp">    using Fn##name = signature; \</span>
+<span class="cp">    Fn##name name = reinterpret_cast&lt; Fn##name &gt;( dlsym( RTLD_DEFAULT, #name) )</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span><span class="o">::</span><span class="nn">Private</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">_Type</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="n">_Type</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">LoadSymbol</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pSymbol</span><span class="p">){</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">_Type</span><span class="o">*</span><span class="w"> </span><span class="n">pAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">_Type</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">dlsym</span><span class="p">(</span><span class="n">RTLD_DEFAULT</span><span class="p">,</span><span class="w"> </span><span class="n">pSymbol</span><span class="p">));</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">pAddress</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="o">*</span><span class="n">pAddress</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// MPS::Private</span>
+
+<span class="cp">#define _MPS_PRIVATE_DEF_STR(type,symbol)       \</span>
+<span class="cp">    _MPS_EXTERN type const MPS##symbol _MPS_PRIVATE_IMPORT; \</span>
+<span class="cp">    type const MPS::symbol = (nullptr!=&amp;MPS##symbol)?MPS##symbol : nullptr</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_CONST(type, symbol)    \</span>
+<span class="cp">    _MPS_EXTERN type const MPS##symbol _MPS_PRIVATE_IMPORT; \</span>
+<span class="cp">    type const MPS::symbol = (nullptr!=&amp;MPS##symbol)?MPS##symbol : nullptr</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_WEAK_CONST(type,symbol)    \</span>
+<span class="cp">    _MPS_EXTERN type const MPS##symbol; \</span>
+<span class="cp">    type const MPS::symbol = Private::LoadSymbol&lt;type&gt;(&quot;MPS&quot; #symbol)</span>
+
+<span class="cp">#else</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_CLS(symbol) extern void* s_k##symbol</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_PRO(symbol) extern void* s_k##symbol</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_SEL(accessor, symbol) extern SEL s_k##accessor</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_STR(type,symbol) extern type const MPS::symbol</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_CONST(type,symbol) extern type const MPS::symbol</span>
+<span class="cp">#define _MPS_PRIVATE_DEF_WEAK_CONST(type,symbol) extern type const MTL::symbol</span>
+
+<span class="cp">#endif </span><span class="c1">// MPS_PRIVATE_IMPLEMENTATION</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Private</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Class</span>
+<span class="w">        </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Private</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Protocol</span>
+<span class="w">        </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Private</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Selector</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">beginScope</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;beginScope&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">endScope</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;endScope&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

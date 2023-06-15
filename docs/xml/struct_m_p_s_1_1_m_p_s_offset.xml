@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_m_p_s_1_1_m_p_s_offset" kind="struct" language="C++" prot="public">
+    <compoundname>MPS::MPSOffset</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_s_1_1_m_p_s_offset_1a9bdd76eb4d11e5db58c2417d690b1dde" prot="public" static="no" mutable="no">
+        <type>NS::Integer</type>
+        <definition>NS::Integer MPS::MPSOffset::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>MPS::MPSOffset::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="60" column="25" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_m_p_s_offset_1a939adb9bc30232a73da821c71e53d3a3" prot="public" static="no" mutable="no">
+        <type>NS::Integer</type>
+        <definition>NS::Integer MPS::MPSOffset::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>MPS::MPSOffset::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="61" column="25" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_m_p_s_offset_1ad2395f823c54caa619a5229b4dd4d124" prot="public" static="no" mutable="no">
+        <type>NS::Integer</type>
+        <definition>NS::Integer MPS::MPSOffset::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>MPS::MPSOffset::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="62" column="25" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="59" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="59" bodyend="63"/>
+    <listofallmembers>
+      <member refid="struct_m_p_s_1_1_m_p_s_offset_1a9bdd76eb4d11e5db58c2417d690b1dde" prot="public" virt="non-virtual"><scope>MPS::MPSOffset</scope><name>x</name></member>
+      <member refid="struct_m_p_s_1_1_m_p_s_offset_1a939adb9bc30232a73da821c71e53d3a3" prot="public" virt="non-virtual"><scope>MPS::MPSOffset</scope><name>y</name></member>
+      <member refid="struct_m_p_s_1_1_m_p_s_offset_1ad2395f823c54caa619a5229b4dd4d124" prot="public" virt="non-virtual"><scope>MPS::MPSOffset</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_m_p_s_matrix_multiplication_8hpp" kind="file" language="C++">
+    <compoundname>MPSMatrixMultiplication.hpp</compoundname>
+    <includes refid="_m_p_s_kernel_8hpp" local="yes">../MPSCore/MPSKernel.hpp</includes>
+    <includes refid="_m_p_s_matrix_types_8hpp" local="yes">MPSMatrixTypes.hpp</includes>
+    <includedby refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>../../Foundation/NSObject.hpp</label>
+      </node>
+      <node id="10">
+        <label>../../Metal/MTLBuffer.hpp</label>
+      </node>
+      <node id="5">
+        <label>../../Metal/Metal.hpp</label>
+      </node>
+      <node id="8">
+        <label>../MPSDefines.hpp</label>
+      </node>
+      <node id="9">
+        <label>../MPSHeaderBridge.hpp</label>
+      </node>
+      <node id="6">
+        <label>../MPSPrivate.hpp</label>
+      </node>
+      <node id="7">
+        <label>MPSCommandBuffer.hpp</label>
+        <link refid="_m_p_s_command_buffer_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MPSCoreTypes.hpp</label>
+        <link refid="_m_p_s_core_types_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>MPSFunctionConstantIndices.hpp</label>
+        <link refid="_m_p_s_function_constant_indices_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>../MPSCore/MPSKernel.hpp</label>
+        <link refid="_m_p_s_kernel_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../MPSCore/MPSKernelTypes.hpp</label>
+        <link refid="_m_p_s_kernel_types_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../MPSCore/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_core_2_m_p_s_matrix_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp</label>
+        <link refid="_m_p_s_matrix_multiplication_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>MPSMatrixTypes.hpp</label>
+        <link refid="_m_p_s_matrix_types_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>simd/simd.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp</label>
+        <link refid="_m_p_s_matrix_multiplication_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_m_p_s_1_1_matrix_multiplication" prot="public">MPS::MatrixMultiplication</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_vector_multiplication" prot="public">MPS::MatrixVectorMultiplication</innerclass>
+    <innernamespace refid="namespace_m_p_s">MPS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../MPSCore/MPSKernel.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSMatrixTypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS{</highlight></codeline>
+<codeline lineno="6" refid="class_m_p_s_1_1_matrix_multiplication" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MatrixMultiplication</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::Kernel&gt;{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTL::Origin<sp/>resultMatrixOrigin();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTL::Origin<sp/>leftMatrixOrigin();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTL::Origin<sp/>rightMatrixOrigin();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchStart();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchSize();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interior<sp/>columns<sp/>refers<sp/>to<sp/>the<sp/>number<sp/>of<sp/>columns<sp/>of<sp/>the<sp/>left<sp/>input<sp/>matrix<sp/>i.e.<sp/>the<sp/>common<sp/>thread<sp/>in<sp/>the<sp/>two<sp/>matrices.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>the<sp/>op<sp/>being<sp/>performed:<sp/>C<sp/>=<sp/>alpha<sp/>*<sp/>op(A)<sp/>*<sp/>op(B)<sp/>+<sp/>beta<sp/>*<sp/>C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transposeLeft,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transposeRight,<sp/>NS::UInteger<sp/>resultRows,<sp/>NS::UInteger<sp/>resultColumns,<sp/>NS::UInteger<sp/>interiorColumns,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>beta);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>alpha<sp/>is<sp/>1.0<sp/>and<sp/>beta<sp/>is<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>NS::UInteger<sp/>resultRows,<sp/>NS::UInteger<sp/>resultColumns,<sp/>NS::UInteger<sp/>interiorColumns);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>leftMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>resultMatrix);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21" refid="class_m_p_s_1_1_matrix_vector_multiplication" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MatrixVectorMultiplication</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::MatrixBinaryKernel&gt;{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transpose,<sp/>NS::UInteger<sp/>rows,<sp/>NS::UInteger<sp/>columns,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>beta);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>NS::UInteger<sp/>rows,<sp/>NS::UInteger<sp/>columns);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>inputMatrix,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>inputVector,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>resultVector);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref>*<sp/>MPS::MatrixMultiplication::alloc(){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixMultiplication&gt;(_MPS_PRIVATE_CLS(MPSMatrixMultiplication));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref>*<sp/>MPS::MatrixVectorMultiplication::alloc(){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixVectorMultiplication&gt;(_MPS_PRIVATE_CLS(MPSMatrixVectorMultiplication));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">_MPS_INLINE<sp/>MTL::Origin<sp/>MPS::MatrixMultiplication::resultMatrixOrigin(){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MTL::Origin&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(resultMatrixOrigin));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">_MPS_INLINE<sp/>MTL::Origin<sp/>MPS::MatrixMultiplication::leftMatrixOrigin(){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MTL::Origin&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(leftMatrixOrigin));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">_MPS_INLINE<sp/>MTL::Origin<sp/>MPS::MatrixMultiplication::rightMatrixOrigin(){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MTL::Origin&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(rightMatrixOrigin));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixMultiplication::batchStart(){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(batchStart));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixMultiplication::batchSize(){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(batchSize));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref>*<sp/>MPS::MatrixMultiplication::initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transposeLeft,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transposeRight,<sp/>NS::UInteger<sp/>resultRows,<sp/>NS::UInteger<sp/>resultColumns,<sp/>NS::UInteger<sp/>interiorColumns,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>beta){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixMultiplication*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_transposeLeft_transposeRight_resultRows_resultColumns_interiorColumns_alpha_beta_),<sp/>device,<sp/>transposeLeft,<sp/>transposeRight,<sp/>resultRows,<sp/>resultColumns,<sp/>interiorColumns,<sp/>alpha,<sp/>beta);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref>*<sp/>MPS::MatrixMultiplication::initWithDevice(MTL::Device*<sp/>device,<sp/>NS::UInteger<sp/>resultRows,<sp/>NS::UInteger<sp/>resultColumns,<sp/>NS::UInteger<sp/>interiorColumns){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixMultiplication*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_resultRows_resultColumns_interiorColumns_),<sp/>device,<sp/>resultRows,<sp/>resultColumns,<sp/>interiorColumns);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixMultiplication::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>leftMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>resultMatrix){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_leftMatrix_rightMatrix_resultMatrix_),<sp/>commandBuffer,<sp/>leftMatrix,<sp/>rightMatrix,<sp/>resultMatrix);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref>*<sp/>MPS::MatrixVectorMultiplication::initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transpose,<sp/>NS::UInteger<sp/>rows,<sp/>NS::UInteger<sp/>columns,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>beta){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixVectorMultiplication*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_transpose_rows_columns_alpha_beta_),<sp/>device,<sp/>transpose,<sp/>rows,<sp/>columns,<sp/>alpha,<sp/>beta);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref>*<sp/>MPS::MatrixVectorMultiplication::initWithDevice(MTL::Device*<sp/>device,<sp/>NS::UInteger<sp/>rows,<sp/>NS::UInteger<sp/>columns){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixVectorMultiplication*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_rows_columns_),<sp/>device,<sp/>rows,<sp/>columns);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixVectorMultiplication::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>inputMatrix,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>inputVector,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>resultVector){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_inputVector_resultVector_),<sp/>commandBuffer,<sp/>inputMatrix,<sp/>inputVector,<sp/>resultVector);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_m_p_s_private_8hpp" kind="file" language="C++">
+    <compoundname>MPSPrivate.hpp</compoundname>
+    <includes refid="_m_p_s_defines_8hpp" local="yes">MPSDefines.hpp</includes>
+    <includes local="no">objc/runtime.h</includes>
+    <includedby refid="_m_p_s_command_buffer_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp</includedby>
+    <includedby refid="_m_p_s_core_types_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp</includedby>
+    <includedby refid="_m_p_s_core_2_m_p_s_matrix_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp</includedby>
+    <includedby refid="_m_p_s_header_bridge_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp</includedby>
+    <includedby refid="_metal_performance_shaders_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MetalPerformanceShaders.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../Foundation/NSDefines.hpp</label>
+      </node>
+      <node id="2">
+        <label>MPSDefines.hpp</label>
+        <link refid="_m_p_s_defines_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp</label>
+        <link refid="_m_p_s_private_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>objc/runtime.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp</label>
+        <link refid="_m_p_s_command_buffer_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp</label>
+        <link refid="_m_p_s_core_types_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp</label>
+        <link refid="_m_p_s_kernel_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_core_2_m_p_s_matrix_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp</label>
+        <link refid="_m_p_s_n_d_array_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp</label>
+        <link refid="_m_p_s_header_bridge_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp</label>
+        <link refid="_m_p_s_matrix_decomposition_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp</label>
+        <link refid="_m_p_s_matrix_find_top_k_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp</label>
+        <link refid="_m_p_s_matrix_multiplication_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp</label>
+        <link refid="_m_p_s_matrix_random_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp</label>
+        <link refid="_m_p_s_matrix_soft_max_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp</label>
+        <link refid="_m_p_s_matrix_solve_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp</label>
+        <link refid="_m_p_s_matrix_types_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp</label>
+        <link refid="_m_p_s_private_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MetalPerformanceShaders.hpp</label>
+        <link refid="_metal_performance_shaders_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_m_p_s">MPS</innernamespace>
+    <innernamespace refid="namespace_m_p_s_1_1_private">MPS::Private</innernamespace>
+    <innernamespace refid="namespace_m_p_s_1_1_private_1_1_class">MPS::Private::Class</innernamespace>
+    <innernamespace refid="namespace_m_p_s_1_1_private_1_1_protocol">MPS::Private::Protocol</innernamespace>
+    <innernamespace refid="namespace_m_p_s_1_1_private_1_1_selector">MPS::Private::Selector</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1a2986cabc5a9ec53428151949c0369602" prot="public" static="no">
+        <name>_MPS_PRIVATE_CLS</name>
+        <param><defname>symbol</defname></param>
+        <initializer>( Private::Class::s_k ## symbol )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="6" column="9" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1a10e733259894b7fddd11f46b9eabfe5f" prot="public" static="no">
+        <name>_MPS_PRIVATE_SEL</name>
+        <param><defname>accessor</defname></param>
+        <initializer>( Private::Selector::s_k ## accessor )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="7" column="9" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1a9f1aeec80a0d2116b2801dbad5fb52e0" prot="public" static="no">
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <param><defname>symbol</defname></param>
+        <initializer>extern void* s_k##symbol</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="52" column="10" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1aa772f8fce38d5499714156798c4070f5" prot="public" static="no">
+        <name>_MPS_PRIVATE_DEF_PRO</name>
+        <param><defname>symbol</defname></param>
+        <initializer>extern void* s_k##symbol</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="53" column="9" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1ad79d83025a67451d9a9f2f75624ff7a2" prot="public" static="no">
+        <name>_MPS_PRIVATE_DEF_SEL</name>
+        <param><defname>accessor</defname></param>
+        <param><defname>symbol</defname></param>
+        <initializer>extern SEL s_k##accessor</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="54" column="9" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1a91a20b868749f337763c9687333a156d" prot="public" static="no">
+        <name>_MPS_PRIVATE_DEF_STR</name>
+        <param><defname>type</defname></param>
+        <param><defname>symbol</defname></param>
+        <initializer>extern type const MPS::symbol</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="55" column="9" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1ac57017758ccd303888a22a3b9cfc0503" prot="public" static="no">
+        <name>_MPS_PRIVATE_DEF_CONST</name>
+        <param><defname>type</defname></param>
+        <param><defname>symbol</defname></param>
+        <initializer>extern type const MPS::symbol</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="56" column="9" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_m_p_s_private_8hpp_1a6467ce40bd8403351b9539fbc826eb43" prot="public" static="no">
+        <name>_MPS_PRIVATE_DEF_WEAK_CONST</name>
+        <param><defname>type</defname></param>
+        <param><defname>symbol</defname></param>
+        <initializer>extern type const MTL::symbol</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" line="57" column="9" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSDefines.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;objc/runtime.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_CLS(<sp/>symbol<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>Private::Class::s_k<sp/>##<sp/>symbol<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_SEL(<sp/>accessor<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>Private::Selector::s_k<sp/>##<sp/>accessor<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(<sp/>MPS_PRIVATE_IMPLEMENTATION<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_VISIBILITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__(<sp/>(<sp/>visibility(<sp/>&quot;default&quot;</highlight><highlight class="normal"><sp/>)<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_IMPORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__(<sp/>(<sp/>weak_import<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__OBJC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>_MPS_PRIVATE_OBJC_LOOKUP_CLASS(<sp/>symbol<sp/><sp/>)<sp/><sp/><sp/>(<sp/>(<sp/>__bridge<sp/>void*<sp/>)<sp/>objc_lookUpClass(<sp/>#<sp/>symbol<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_OBJC_GET_PROTOCOL(<sp/>symbol<sp/>)<sp/><sp/>(<sp/>(<sp/>__bridge<sp/>void*<sp/>)<sp/>objc_getProtocol(<sp/>#<sp/>symbol<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>_MPS_PRIVATE_OBJC_LOOKUP_CLASS(<sp/>symbol<sp/><sp/>)<sp/><sp/><sp/>objc_lookUpClass(<sp/>#<sp/>symbol<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_OBJC_GET_PROTOCOL(<sp/>symbol<sp/>)<sp/><sp/>objc_getProtocol(<sp/>#<sp/>symbol<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__OBJC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_CLS(<sp/>symbol<sp/>)<sp/><sp/>void*<sp/><sp/><sp/>s_k<sp/>##<sp/>symbol<sp/><sp/><sp/>_MPS_PRIVATE_VISIBILITY<sp/>=<sp/>_MPS_PRIVATE_OBJC_LOOKUP_CLASS(<sp/>symbol<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_PRO(symbol)<sp/>void*<sp/>s_k<sp/>##<sp/>symbol<sp/>_MPS_PRIVATE_VISIBILITY<sp/>=<sp/>_MPS_PRIVATE_OBJC_GET_PROTOCOL(symbol)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_SEL(<sp/>accessor,<sp/>symbol<sp/>)<sp/><sp/><sp/><sp/><sp/>SEL<sp/><sp/><sp/><sp/><sp/>s_k<sp/>##<sp/>accessor<sp/><sp/><sp/><sp/><sp/>_MPS_PRIVATE_VISIBILITY<sp/>=<sp/>sel_registerName(<sp/>symbol<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dlfcn.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPS_DEF_FUNC(<sp/>name,signature<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>Fn##name<sp/>=<sp/>signature;<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>Fn##name<sp/>name<sp/>=<sp/>reinterpret_cast&lt;<sp/>Fn##name<sp/>&gt;(<sp/>dlsym(<sp/>RTLD_DEFAULT,<sp/>#name)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS::Private</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_Type&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>_Type<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LoadSymbol(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pSymbol){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>_Type*<sp/>pAddress<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">_Type*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dlsym(RTLD_DEFAULT,<sp/>pSymbol));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pAddress<sp/>?<sp/>*pAddress<sp/>:<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>MPS::Private</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_STR(type,symbol)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_MPS_EXTERN<sp/>type<sp/>const<sp/>MPS##symbol<sp/>_MPS_PRIVATE_IMPORT;<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>type<sp/>const<sp/>MPS::symbol<sp/>=<sp/>(nullptr!=&amp;MPS##symbol)?MPS##symbol<sp/>:<sp/>nullptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_CONST(type,<sp/>symbol)<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_MPS_EXTERN<sp/>type<sp/>const<sp/>MPS##symbol<sp/>_MPS_PRIVATE_IMPORT;<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>type<sp/>const<sp/>MPS::symbol<sp/>=<sp/>(nullptr!=&amp;MPS##symbol)?MPS##symbol<sp/>:<sp/>nullptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_WEAK_CONST(type,symbol)<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_MPS_EXTERN<sp/>type<sp/>const<sp/>MPS##symbol;<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>type<sp/>const<sp/>MPS::symbol<sp/>=<sp/>Private::LoadSymbol&lt;type&gt;(&quot;MPS&quot;</highlight><highlight class="normal"><sp/>#symbol)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_CLS(symbol)<sp/>extern<sp/>void*<sp/>s_k##symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_PRO(symbol)<sp/>extern<sp/>void*<sp/>s_k##symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_SEL(accessor,<sp/>symbol)<sp/>extern<sp/>SEL<sp/>s_k##accessor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_STR(type,symbol)<sp/>extern<sp/>type<sp/>const<sp/>MPS::symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_CONST(type,symbol)<sp/>extern<sp/>type<sp/>const<sp/>MPS::symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPS_PRIVATE_DEF_WEAK_CONST(type,symbol)<sp/>extern<sp/>type<sp/>const<sp/>MTL::symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MPS_PRIVATE_IMPLEMENTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Private</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Class</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Private</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Protocol</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Private</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Selector</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_MPS_PRIVATE_DEF_SEL(beginScope,<sp/></highlight><highlight class="stringliteral">&quot;beginScope&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_MPS_PRIVATE_DEF_SEL(endScope,<sp/></highlight><highlight class="stringliteral">&quot;endScope&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSPrivate.hpp"/>
+  </compounddef>
+</doxygen>

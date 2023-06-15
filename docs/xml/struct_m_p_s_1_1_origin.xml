@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_m_p_s_1_1_origin" kind="struct" language="C++" prot="public">
+    <compoundname>MPS::Origin</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_s_1_1_origin_1a3932272030b9ad6e000de47bec00bd0b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::Origin::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>MPS::Origin::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="65" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_origin_1a3244c9fb6d50c32e91dc11187ab52bc3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::Origin::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>MPS::Origin::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="66" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_origin_1a12ff97d3e670267bee073750977ee6b3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::Origin::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>MPS::Origin::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="67" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="64" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="64" bodyend="68"/>
+    <listofallmembers>
+      <member refid="struct_m_p_s_1_1_origin_1a3932272030b9ad6e000de47bec00bd0b" prot="public" virt="non-virtual"><scope>MPS::Origin</scope><name>x</name></member>
+      <member refid="struct_m_p_s_1_1_origin_1a3244c9fb6d50c32e91dc11187ab52bc3" prot="public" virt="non-virtual"><scope>MPS::Origin</scope><name>y</name></member>
+      <member refid="struct_m_p_s_1_1_origin_1a12ff97d3e670267bee073750977ee6b3" prot="public" virt="non-virtual"><scope>MPS::Origin</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

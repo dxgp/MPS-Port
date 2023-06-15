@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_m_p_s_kernel_8hpp" kind="file" language="C++">
+    <compoundname>MPSKernel.hpp</compoundname>
+    <includes refid="_m_p_s_core_types_8hpp" local="yes">MPSCoreTypes.hpp</includes>
+    <includes refid="_m_p_s_command_buffer_8hpp" local="yes">MPSCommandBuffer.hpp</includes>
+    <includedby refid="_m_p_s_matrix_find_top_k_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp</includedby>
+    <includedby refid="_m_p_s_matrix_multiplication_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp</includedby>
+    <includedby refid="_m_p_s_matrix_types_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../../Foundation/NSObject.hpp</label>
+      </node>
+      <node id="9">
+        <label>../../Metal/MTLBuffer.hpp</label>
+      </node>
+      <node id="4">
+        <label>../../Metal/Metal.hpp</label>
+      </node>
+      <node id="7">
+        <label>../MPSDefines.hpp</label>
+      </node>
+      <node id="8">
+        <label>../MPSHeaderBridge.hpp</label>
+      </node>
+      <node id="5">
+        <label>../MPSPrivate.hpp</label>
+      </node>
+      <node id="6">
+        <label>MPSCommandBuffer.hpp</label>
+        <link refid="_m_p_s_command_buffer_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MPSCoreTypes.hpp</label>
+        <link refid="_m_p_s_core_types_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp</label>
+        <link refid="_m_p_s_kernel_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp</label>
+        <link refid="_m_p_s_kernel_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp</label>
+        <link refid="_m_p_s_matrix_decomposition_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp</label>
+        <link refid="_m_p_s_matrix_find_top_k_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp</label>
+        <link refid="_m_p_s_matrix_multiplication_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp</label>
+        <link refid="_m_p_s_matrix_random_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSoftMax.hpp</label>
+        <link refid="_m_p_s_matrix_soft_max_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp</label>
+        <link refid="_m_p_s_matrix_solve_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp</label>
+        <link refid="_m_p_s_matrix_types_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_m_p_s_1_1_kernel" prot="public">MPS::Kernel</innerclass>
+    <innernamespace refid="namespace_m_p_s">MPS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSCoreTypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSCommandBuffer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS{</highlight></codeline>
+<codeline lineno="6" refid="class_m_p_s_1_1_kernel" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_kernel" kindref="compound">Kernel</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Copying&lt;Kernel&gt;{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>init();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::KernelOptions<sp/>options();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTL::Device*<sp/>device()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::String*<sp/>label();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//MPS::Kernel<sp/>copyWithZone(NS::Zone<sp/>)<sp/>Skipping<sp/>all<sp/>zone<sp/>related<sp/>functions.<sp/>If<sp/>it<sp/>doesn&apos;t<sp/>work<sp/>out,<sp/>then<sp/>I&apos;ll<sp/>look<sp/>into<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>initWithCoder(NS::Coder*<sp/>aDecoder);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>MPS::Kernel::alloc(){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::Kernel&gt;(_MPS_PRIVATE_CLS(MPSKernel));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>MPS::Kernel::init(){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::init&lt;MPS::Kernel&gt;();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">_MPS_INLINE<sp/>MPS::KernelOptions<sp/>MPS::Kernel::options(){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::KernelOptions&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(options));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">_MPS_INLINE<sp/>MTL::Device*<sp/>MPS::Kernel::device()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MTL::Device*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(device));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">_MPS_INLINE<sp/>NS::String*<sp/>MPS::Kernel::label(){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::String*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(label));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>MPS::Kernel::initWithDevice(MTL::Device*<sp/>device){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::Kernel*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_),<sp/>device);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>MPS::Kernel::initWithCoder(NS::Coder*<sp/>aDecoder){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::Kernel*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithCoder_),<sp/>aDecoder);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>MPS::Kernel::initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::Kernel*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithCoder_device_),<sp/>aDecoder,<sp/>device);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp"/>
+  </compounddef>
+</doxygen>

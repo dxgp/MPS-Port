@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File MPSCoreTypes.hpp &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">MetalPerformanceShaders C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File MPSCoreTypes.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file_MPSCore_MPSCoreTypes.hpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-mpscoretypes-hpp">
+<span id="program-listing-file-mpscore-mpscoretypes-hpp"></span><h1>Program Listing for File MPSCoreTypes.hpp<a class="headerlink" href="#program-listing-for-file-mpscoretypes-hpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_MPSCore_MPSCoreTypes.hpp.html#file-mpscore-mpscoretypes-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">MPSCore/MPSCoreTypes.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../../Foundation/NSObject.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../../Metal/Metal.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../MPSPrivate.hpp&quot;</span>
+
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span><span class="p">{</span>
+<span class="w">    </span><span class="n">_NS_OPTIONS</span><span class="p">(</span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="p">,</span><span class="w"> </span><span class="n">KernelOptions</span><span class="p">){</span>
+<span class="w">        </span><span class="n">MPSKernelOptionsNone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSKernelOptionsSkipAPIValidation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1U</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSKernelOptionsAllowReducedPrecision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1U</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSKernelOptionsInsertDebugGroups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1U</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSKernelOptionsVerbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1U</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="n">_NS_ENUM</span><span class="p">(</span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="p">,</span><span class="w"> </span><span class="n">ImageEditMode</span><span class="p">){</span>
+<span class="w">        </span><span class="n">MPSImageEdgeModeZero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSImageEdgeModeClamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSImageEdgeModeMirror</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSImageEdgeModeMirrorWithEdge</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSImageEdgeModeConstant</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="n">_NS_ENUM</span><span class="p">(</span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="p">,</span><span class="w"> </span><span class="n">ImageFeatureChannelFormat</span><span class="p">){</span>
+<span class="w">            </span><span class="n">MPSImageFeatureChannelFormatNone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="n">MPSImageFeatureChannelFormatUnorm8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="n">MPSImageFeatureChannelFormatUnorm16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">            </span><span class="n">MPSImageFeatureChannelFormatFloat16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">            </span><span class="n">MPSImageFeatureChannelFormatFloat32</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">            </span><span class="n">MPSImageFeatureChannelFormat_reserved0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">            </span><span class="n">MPSImageFeatureChannelFormatCount</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="n">_NS_ENUM</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">,</span><span class="w"> </span><span class="n">DataType</span><span class="p">){</span>
+<span class="w">        </span><span class="n">MPSDataTypeInvalid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeFloatBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x10000000</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeFloat32</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeFloatBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeFloat16</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeFloatBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeSignedBit</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">0x20000000</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeInt8</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeSignedBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeInt16</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeSignedBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeInt32</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeSignedBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeInt64</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeSignedBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeUInt8</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeUInt16</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeUInt32</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeUInt64</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeNormalizedBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x40000000</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeUnorm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeNormalizedBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSDataTypeUnorm8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPSDataTypeNormalizedBit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="n">_NS_OPTIONS</span><span class="p">(</span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="p">,</span><span class="w"> </span><span class="n">AliasingStrategy</span><span class="p">){</span>
+<span class="w">        </span><span class="n">MPSAliasingStrategyDefault</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSAliasingStrategyDontCare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPSAliasingStrategyDefault</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSAliasingStrategyShallAlias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1UL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSAliasingStrategyShallNotAlias</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1UL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSAliasingStrategyAliasingReserved</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPSAliasingStrategyShallAlias</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MPSAliasingStrategyShallNotAlias</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSAliasingStrategyPreferTemporaryMemory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1UL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MPSAliasingStrategyPreferNonTemporaryMemory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1UL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="p">{</span>
+<span class="w">            </span><span class="n">NS</span><span class="o">::</span><span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">            </span><span class="n">NS</span><span class="o">::</span><span class="n">Integer</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">NS</span><span class="o">::</span><span class="n">Integer</span><span class="w"> </span><span class="n">z</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSOffset</span><span class="p">;</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Origin</span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">z</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSOrigin</span><span class="p">;</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Size</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">width</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">height</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">depth</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSSize</span><span class="p">;</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">DimensionSlice</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="w">        </span><span class="n">start</span><span class="p">;</span>
+<span class="w">        </span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="w">        </span><span class="n">length</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSDimensionSlice</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Region</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">MPSOrigin</span><span class="w">       </span><span class="n">origin</span><span class="p">;</span>
+<span class="w">        </span><span class="n">MPSSize</span><span class="w">         </span><span class="n">size</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSRegion</span><span class="p">;</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ScaleTransform</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">scaleX</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">scaleY</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">translateX</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w">  </span><span class="n">translateY</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSScaleTransform</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ImageCoordinate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="n">NS</span><span class="o">::</span><span class="n">UInteger</span><span class="w"> </span><span class="n">channel</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSImageCoordinate</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ImageRegion</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">MPSImageCoordinate</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+<span class="w">        </span><span class="n">MPSImageCoordinate</span><span class="w"> </span><span class="n">size</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="n">MPSImageRegion</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// const MTL::Region RectNoClip;</span>
+
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">DeviceProvider</span><span class="p">{</span>
+<span class="w">        </span><span class="k">public</span><span class="o">:</span>
+<span class="w">            </span><span class="n">MTL</span><span class="o">::</span><span class="n">Device</span><span class="o">*</span><span class="w"> </span><span class="n">mpsMTLDevice</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// For future reference, the original definition was typedef NSArray&lt;NSNumber*&gt; MPSShape; i.e. MPSShape is an array of NS::Numbers.</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">NS</span><span class="o">::</span><span class="n">Array</span><span class="o">*</span><span class="w"> </span><span class="n">Shape</span><span class="p">;</span><span class="w"> </span><span class="c1">// wtf</span>
+
+<span class="w">    </span><span class="c1">// **************************************************************************************************************** MPS DEVICE PROVIDER ADD HEREE ****************************************************************************************************************</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

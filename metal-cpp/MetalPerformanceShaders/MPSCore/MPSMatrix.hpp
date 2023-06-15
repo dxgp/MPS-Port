@@ -4,6 +4,10 @@
 #include "../MPSPrivate.hpp"
 
 namespace MPS{
+    /**
+     * @brief A class for creating a matrix descriptor, which is then used when the matrix is created.
+     * 
+     */
     class MatrixDescriptor: public NS::Referencing<MPS::MatrixDescriptor>{
         public:
         NS::UInteger rows();
@@ -13,12 +17,43 @@ namespace MPS{
         NS::UInteger rowBytes();
         NS::UInteger matrixBytes() const;
         
-        //(DEPRECATED) static MPS::MatrixDescriptor* matrixDescriptorWithDimensions(NS::UInteger rows, NS::UInteger columns, NS::UInteger rowBytes, MPS::DataType dataType);
+        
+        /**
+         * @brief Create a matrix descriptor with specified arguments.
+         * 
+         * @param rows  Number of rows in the matrix
+         * @param columns Number of columns in the matrix
+         * @param rowBytes Number of bytes in each row. Given by (number of columns * size of data type)
+         * @param dataType Data type of the elements being stored.
+         * @return MPS::MatrixDescriptor* 
+         */
         static MPS::MatrixDescriptor* matrixDescriptorWithRows(NS::UInteger rows, NS::UInteger columns, NS::UInteger rowBytes, MPS::DataType dataType);
+        /**
+         * @brief Create a matrix descriptor for multiple matrices (an MPS::Matrix object can store multiple matrices).
+         * 
+         * @param rows Number of rows
+         * @param columns Number of columns
+         * @param matrices Number of matrices
+         * @param rowBytes Number of bytes in each row. Given by (number of columns * size of data type)
+         * @param matrixBytes Number of bytes in each matrix.
+         * @param dataType Data type of the elements being stored.
+         * @return MPS::MatrixDescriptor* 
+         */
         static MPS::MatrixDescriptor* matrixDescriptorWithRows(NS::UInteger rows, NS::UInteger columns, NS::UInteger matrices, NS::UInteger rowBytes, NS::UInteger matrixBytes, MPS::DataType dataType);
         // #TODO implement testing for rowBytesForColumns
+        /**
+         * @brief Returns the optimal row stride for the matrix (which is not always necessarily equal to the number of columns). Using it is not necessary.
+         * 
+         * @param columns Number of columns in the matrix
+         * @param dataType Data type of the elements being stored.
+         * @return size_t 
+         */
         static size_t rowBytesForColumns(NS::UInteger columns, MPS::DataType dataType);
     };
+    /**
+     * @brief Class that creates a vector descriptor, which is used when creating an MPS::Vector.
+     * 
+     */
     class VectorDescriptor: public NS::Referencing<MPS::VectorDescriptor>{
         public:
         NS::UInteger length();
@@ -64,6 +99,9 @@ namespace MPS{
         NS::UInteger resourceSize();
     };
 }
+
+/// @{ @private
+
 _MPS_INLINE MPS::Matrix* MPS::Matrix::alloc(){
     return NS::Object::alloc<MPS::Matrix>(_MPS_PRIVATE_CLS(MPSMatrix));
 }
@@ -120,6 +158,10 @@ _MPS_INLINE size_t MPS::VectorDescriptor::vectorBytesForLength(NS::UInteger leng
 }
 
 //Class Matrix
+
+
+
+
 _MPS_INLINE MTL::Device* MPS::Matrix::device() const{
     return Object::sendMessage<MTL::Device*>(this, _MPS_PRIVATE_SEL(device));
 }
@@ -202,5 +244,7 @@ _MPS_INLINE void MPS::Vector::synchronizeOnCommandBuffer(MTL::CommandBuffer* com
 _MPS_INLINE NS::UInteger MPS::Vector::resourceSize(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(resourceSize));
 }
+
+/// @}
 
 

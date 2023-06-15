@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_solve_cholesky" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixSolveCholesky</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_solve_cholesky_1aca381a1a68ebc95162848d8c43a384f2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_solve_cholesky" kindref="compound">MPS::MatrixSolveCholesky</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSolveCholesky * MPS::MatrixSolveCholesky::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixSolveCholesky::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="19" column="41" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_solve_cholesky_1aac6e1e912c0fcf4ed69cda6f065824a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_solve_cholesky" kindref="compound">MPS::MatrixSolveCholesky</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSolveCholesky * MPS::MatrixSolveCholesky::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, bool upper, NS::UInteger order, NS::UInteger numberOfRightHandSides)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixSolveCholesky::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>upper</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>numberOfRightHandSides</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="20" column="34" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_solve_cholesky_1a78c4fbe9a635401681dbdf0496a1d603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixSolveCholesky::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *sourceMatrix, MPS::Matrix *rightHandSideMatrix, MPS::Matrix *solutionMatrix)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixSolveCholesky::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>sourceMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>rightHandSideMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>solutionMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="21" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixSolveCholesky</label>
+        <link refid="class_m_p_s_1_1_matrix_solve_cholesky"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixSolveCholesky</label>
+        <link refid="class_m_p_s_1_1_matrix_solve_cholesky"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="17" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="17" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_solve_cholesky_1aca381a1a68ebc95162848d8c43a384f2" prot="public" virt="non-virtual"><scope>MPS::MatrixSolveCholesky</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_solve_cholesky_1a78c4fbe9a635401681dbdf0496a1d603" prot="public" virt="non-virtual"><scope>MPS::MatrixSolveCholesky</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_solve_cholesky_1aac6e1e912c0fcf4ed69cda6f065824a8" prot="public" virt="non-virtual"><scope>MPS::MatrixSolveCholesky</scope><name>initWithDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

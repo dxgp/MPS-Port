@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="en-US">
+  <compound refid="class_m_p_s_1_1_command_buffer" kind="class"><name>MPS::CommandBuffer</name>
+    <member refid="class_m_p_s_1_1_command_buffer_1a9bdad9b821c0200e6468d895fa6b6f53" kind="function"><name>commandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1a9cec36a9e185243a3508b06d767e1697" kind="function"><name>rootCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1aa72baa999bc7965630d07af945aa7d66" kind="function"><name>predicate</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1a677e3ae2692399167ab85df7b5fb0da5" kind="function"><name>heapProvider</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1a171e25e3c74dc80a62b4a2ccc918a5af" kind="function"><name>initWithCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1ae02d36066f0d306bb6ba3c012382913c" kind="function"><name>commitAndContinue</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1aee5bb27200c0103346a7e6265acca2f4" kind="function"><name>prefetchHeapForWorkloadSize</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1ac0b0a17a2466200bdbe41481da408b65" kind="function"><name>commandBufferWithCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_command_buffer_1a28cb9100b57672ffd444b9a1adf2d3aa" kind="function"><name>commandBufferFromCommandQueue</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_device_provider" kind="class"><name>MPS::DeviceProvider</name>
+    <member refid="class_m_p_s_1_1_device_provider_1a5989ca9d147add42c2ff3bc2be18f403" kind="variable"><name>mpsMTLDevice</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_dimension_slice" kind="struct"><name>MPS::DimensionSlice</name>
+    <member refid="struct_m_p_s_1_1_dimension_slice_1a47f3c8976320c652386a42a400899000" kind="variable"><name>start</name></member>
+    <member refid="struct_m_p_s_1_1_dimension_slice_1a623de1211d1acb038e82657cf8b9a05a" kind="variable"><name>length</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_heap_provider" kind="class"><name>MPS::HeapProvider</name>
+    <member refid="class_m_p_s_1_1_heap_provider_1ab495234cec814191868b31288a48b787" kind="function"><name>newHeapWithDescriptor</name></member>
+    <member refid="class_m_p_s_1_1_heap_provider_1a4481cc3ea23277be30ff825ee8bf8d62" kind="function"><name>retireHeap</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_image_coordinate" kind="struct"><name>MPS::ImageCoordinate</name>
+    <member refid="struct_m_p_s_1_1_image_coordinate_1aeed3f66e4a7d237b3105803d4a3be03d" kind="variable"><name>x</name></member>
+    <member refid="struct_m_p_s_1_1_image_coordinate_1a4d81f8b090b2bbbcc6d0c41a629f11e3" kind="variable"><name>y</name></member>
+    <member refid="struct_m_p_s_1_1_image_coordinate_1a2dc4b654d94078ddf33e7310035fbffb" kind="variable"><name>channel</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_image_region" kind="struct"><name>MPS::ImageRegion</name>
+    <member refid="struct_m_p_s_1_1_image_region_1a1dc2de5ece0fad99bd2a5a20a143242a" kind="variable"><name>offset</name></member>
+    <member refid="struct_m_p_s_1_1_image_region_1a37862cc1323809e32d4ceb3f1f9974b3" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_kernel" kind="class"><name>MPS::Kernel</name>
+    <member refid="class_m_p_s_1_1_kernel_1acd16592542cf80020da54abca202cf44" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_kernel_1abc7038241f425623ac6b1f574768c8e1" kind="function"><name>init</name></member>
+    <member refid="class_m_p_s_1_1_kernel_1afdbd9158c90dbb24feff65b929dc27da" kind="function"><name>options</name></member>
+    <member refid="class_m_p_s_1_1_kernel_1a343ab829a17062f851c4955c4921e048" kind="function"><name>device</name></member>
+    <member refid="class_m_p_s_1_1_kernel_1a86ce54e56dcec2cc3a012ee68db9b3ca" kind="function"><name>label</name></member>
+    <member refid="class_m_p_s_1_1_kernel_1a10ea82d1b0dc7351d0b44cf58851ce96" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_kernel_1a9f7f097e800fab5dd16f5fef565b6519" kind="function"><name>initWithCoder</name></member>
+    <member refid="class_m_p_s_1_1_kernel_1accff762e632d7aef85d7a7b73db55a52" kind="function"><name>initWithCoder</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix" kind="class"><name>MPS::Matrix</name>
+    <member refid="class_m_p_s_1_1_matrix_1a60a94b01aa9399dd49d0a311663f0a16" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1aafbc1b8918d58245a6d2b72ab8f75b00" kind="function"><name>device</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a92928a434283258f1f40f9628316ce07" kind="function"><name>rows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a11908e9eebe5583e7e6f1e17373a8005" kind="function"><name>columns</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a0e36c8ba7fe6a6429b425e7baa53fdbe" kind="function"><name>matrices</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a27cf13c9510a3d13a9c13e07c084a1d8" kind="function"><name>dataType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a0bbf362b4ec874b6363c6692f9059f0b" kind="function"><name>rowBytes</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1abee4295df908c4f694f5a0fd6aa4ae5c" kind="function"><name>matrixBytes</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a21f888ae717f1387f767811b683d59db" kind="function"><name>offset</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a9fdf2a2b1e3568fa004a4f7ba26f586a" kind="function"><name>data</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1ab73e06b6aa8ee8c4b4b0e3e0c68bfcdd" kind="function"><name>initWithBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a19d243988fbb2b444accef3b9d428ff3" kind="function"><name>initWithBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1ac97bc44bb5c26ddb0913482210bc3b66" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a39982edd40134bdc59a2d3cc9cb26ac2" kind="function"><name>synchronizeOnCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_1a1259550359a1e917782768d1c8548179" kind="function"><name>resourceSize</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_binary_kernel" kind="class"><name>MPS::MatrixBinaryKernel</name>
+    <member refid="class_m_p_s_1_1_matrix_binary_kernel_1a2ec0949622fa21478897a906c6a9f4bc" kind="function"><name>primarySourceMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_binary_kernel_1a146ba400095d0e0673ceeb27d457d7f3" kind="function"><name>secondarySourceMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_binary_kernel_1ae70962df505773269ac33a7133649d03" kind="function"><name>resultMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_binary_kernel_1af18296c3eca9a50305afe5f854433a13" kind="function"><name>batchStart</name></member>
+    <member refid="class_m_p_s_1_1_matrix_binary_kernel_1a29f4012d12ad30ea318d4d6ea3a12e64" kind="function"><name>batchSize</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_decomposition_cholesky" kind="class"><name>MPS::MatrixDecompositionCholesky</name>
+    <member refid="class_m_p_s_1_1_matrix_decomposition_cholesky_1ad0d84e19711ff6cc045727163e0aae42" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_decomposition_cholesky_1aa86103be4b0e7577e0b41b522abe3dba" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_decomposition_cholesky_1afe8ce3906d37423f9e3fc58dbc11616f" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_decomposition_l_u" kind="class"><name>MPS::MatrixDecompositionLU</name>
+    <member refid="class_m_p_s_1_1_matrix_decomposition_l_u_1ade84b61e205790dbad829d0d14b07b54" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_decomposition_l_u_1afa45a2f66c77cb509f3348b2bb4b5bf2" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_decomposition_l_u_1af36fe33b8a2cf1a4cc9dc8b44ab4705b" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_descriptor" kind="class"><name>MPS::MatrixDescriptor</name>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1ac113d2e3b706398bab07d3b7981e9fd5" kind="function"><name>rows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1ad8c0e9f20e641514bbc6b07e2a568d42" kind="function"><name>columns</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1a3ff5be466db28ce04dc23901ca53348c" kind="function"><name>matrices</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1a9287b9f28ec2b90de0f15def39e8d9cd" kind="function"><name>dataType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1aa057cc9695cfdd1c5e46fdc55069d5fc" kind="function"><name>rowBytes</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1a85cf1e1259a1a91afc231a4ab63c220d" kind="function"><name>matrixBytes</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1a5a5608079695d61d97c26e9b9842402f" kind="function"><name>matrixDescriptorWithRows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1a39e4e8f73ea7b15c1d9c379ab3d81bc6" kind="function"><name>matrixDescriptorWithRows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_descriptor_1ac39b6491bccd821d0db986969b6668f5" kind="function"><name>rowBytesForColumns</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_find_top_k" kind="class"><name>MPS::MatrixFindTopK</name>
+    <member refid="class_m_p_s_1_1_matrix_find_top_k_1a294daa364b51f2d6ad3e79c0a695988c" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_find_top_k_1a9845476e5ef02a074d11f8689e0d53a3" kind="function"><name>sourceRows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_find_top_k_1a262d695a2d6b2c22f0683d0de81ed25f" kind="function"><name>sourceColumns</name></member>
+    <member refid="class_m_p_s_1_1_matrix_find_top_k_1a23a4e7d54bd19f142508fc1188d2c85f" kind="function"><name>indexOffset</name></member>
+    <member refid="class_m_p_s_1_1_matrix_find_top_k_1ab94a66230835ecd8c46656fd24208039" kind="function"><name>numberOfTopKValues</name></member>
+    <member refid="class_m_p_s_1_1_matrix_find_top_k_1adeb4bc1d4db260f18faffbe3c816065b" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_find_top_k_1a80cf04d95359563e80d28a1bd392a980" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_log_soft_max" kind="class"><name>MPS::MatrixLogSoftMax</name>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_1a916c00bb59c473e8f759732ebb79607a" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_1afaab81873bfa6c0d576ea1a3dd28b26b" kind="function"><name>sourceRows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_1ae2f0f9fd18d35bb10e50f40306ceb7e2" kind="function"><name>sourceColumns</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_1adfd30e119528c85ec4febb77105f23f1" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_1a486c40a4c3404dbcb15341d04078cb75" kind="function"><name>encodeToCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_1a07a8406b458c40c1dd83e5e6878d4e7d" kind="function"><name>initWithCoder</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_log_soft_max_gradient" kind="class"><name>MPS::MatrixLogSoftMaxGradient</name>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_gradient_1a372ca797f4216e9b94fa4e17974c0a06" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_gradient_1aa54e2fe479a68af0719185a204ef3a5f" kind="function"><name>sourceRows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_gradient_1a93ccff22b6fa4f82c1f50be4b4f3ca6b" kind="function"><name>sourceColumns</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_gradient_1ab37f96d1a06d29062a1aa9563e7e61c2" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_gradient_1a0a422dfa30f27baee5463d6bff3ce338" kind="function"><name>encodeToCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_log_soft_max_gradient_1ac9fea64d081623afafbf891a0e58f634" kind="function"><name>initWithCoder</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_multiplication" kind="class"><name>MPS::MatrixMultiplication</name>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1a300c30a223097e65a3b5f19bb75998fd" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1a8ee895f55f30cba0e4610ff2aadd39ea" kind="function"><name>resultMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1af500007ea8f837ebd2e810a7e159a698" kind="function"><name>leftMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1a35120f854158c3f00d883061a4fe7f28" kind="function"><name>rightMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1a5f7d08b492bfda8cbda4531d4babf87e" kind="function"><name>batchStart</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1a0c1e93befcfdca90fefb9cc294b39a00" kind="function"><name>batchSize</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1ad57c281873c73d7ca808a067d01bf563" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1a605245cf3f6862f96fb2aa90eb6c9c9d" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_multiplication_1a3bd6a148b0510a4ea9b60d167eb08bb4" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_random" kind="class"><name>MPS::MatrixRandom</name>
+    <member refid="class_m_p_s_1_1_matrix_random_1a8484bccb08417b8950ef4129ee9bb87f" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_1a46526a744f723d733e0af8e64df88622" kind="function"><name>destinationDataType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_1ae962f09d7ec4bb8920578fc527eb636e" kind="function"><name>distributionType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_1a0ee083ae1fd518764b3065511b067f00" kind="function"><name>batchStart</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_1a1f415c761bcef3c86b30c18c86fedd85" kind="function"><name>batchSize</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_1a441dcedc829c2cde9efb12d6b6c54c14" kind="function"><name>encodeToCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_1a57100e6c02bfa657f1e4c5b40d7b7788" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kind="class"><name>MPS::MatrixRandomDistributionDescriptor</name>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1abeefbba2598663a727c5011a0239c5ef" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1af935d2c0f3268791b815f3c1e34469e5" kind="function"><name>uniformDistributionDescriptorWithMinimum</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1a23842688c699d55dde0f3670e1d70c12" kind="function"><name>normalDistributionDescriptorWithMean</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1aa6783686ceb004cb415cc90a8ba4fbad" kind="function"><name>normalDistributionDescriptorWithMean</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1ac83ac2aebb39ee8062e0cfee560dd636" kind="function"><name>defaultDistributionDescriptor</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1ae8ee2c289d82e203f9d899568c8c18f6" kind="function"><name>init</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1a8ea62c7df468ed084b7a8b400a82b2b3" kind="function"><name>distributionType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1a364ff50d36a0f8283d3c957715d36e5b" kind="function"><name>minimum</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1ad02280ec46f7d92d9ba257400864212f" kind="function"><name>maximum</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1ab8adc105deccf6bf326009ac88e7fb87" kind="function"><name>mean</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_distribution_descriptor_1afbc1187666f5a834cef88c2254056ed8" kind="function"><name>standardDeviation</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kind="class"><name>MPS::MatrixRandomMTGP32</name>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a90637c54a1588c429b0310df27a6a0db" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a81564521640ff5c566268c24b10469e3" kind="function"><name>destinationDataType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1ada802e02d39ff8189c849feda3832a7b" kind="function"><name>distributionType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a483fb4930ed4584ebbbb4f232d10600c" kind="function"><name>batchStart</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1ad2c07ad65f08f8f1c51a6eb1fcd1ab70" kind="function"><name>batchSize</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a66def62d3f9ba6fee52266e687669ecb" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a6fe91de9d34ad30a1b7fd9874ac82260" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1ab55b86150f6f9f75c50daa3668ab3747" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a2e28d5b6121544963e66b68223775b0b" kind="function"><name>initWithCoder</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1acd58664670491ee2714dd10d514047a8" kind="function"><name>synchronizeStateOnCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a3c84c080bb95e51016726bc871422cda" kind="function"><name>encodeToCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_m_t_g_p32_1a733637483b167363fe0c765b9b9f4246" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_random_philox" kind="class"><name>MPS::MatrixRandomPhilox</name>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1aa6bbf7be4d7e5b21352faf3f90e7df84" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1ab9778ebe88f41087e8225f6901dd34e6" kind="function"><name>destinationDataType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1a15d7975b5d7ac949013f8f0032c7b4c0" kind="function"><name>distributionType</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1ad3486e365fc7353f3d778b251efa2360" kind="function"><name>batchStart</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1af84b667c75c4d51a5125fd031ce7a63e" kind="function"><name>batchSize</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1a9bcdb509231d04aac4903e02e427fd5c" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1ae63f99f5208379e52073645c1d55ee7b" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1a42511227086c081e0d54088cc368290e" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1ae6c77f0cf669cc6f009055a20de1e203" kind="function"><name>initWithCoder</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1a33d1b61ff42e5999c23fbf98e7c0aa56" kind="function"><name>encodeToCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_random_philox_1a6cda2489fd0dc16b5b6e017da227c2fd" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_soft_max" kind="class"><name>MPS::MatrixSoftMax</name>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_1aa00c262852ecdd5ebecaa48030fd7ea0" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_1a2a25862290865a3e85f413aec348d297" kind="function"><name>sourceRows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_1ad96e952ba51eab3083b31697077369a5" kind="function"><name>sourceColumns</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_1a701c509e28a61ff863ec5705610f1edc" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_1a3d6182d0bfc1e3cb6b9455002c05fbe0" kind="function"><name>encodeToCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_1aaa2761e59bb777fb4ca50c7ed26f10d0" kind="function"><name>initWithCoder</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_soft_max_gradient" kind="class"><name>MPS::MatrixSoftMaxGradient</name>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1af6200242a8aaa09215283010a496081a" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1ab10ed0c4731d2503b42d498272eab4dc" kind="function"><name>sourceRows</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a4958de53d0237ec2e14edcd5880c0fc8" kind="function"><name>sourceColumns</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a68a39069578d97ffe7892b11da4f6816" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a5b870b653beb459e5550cb84856e0a35" kind="function"><name>encodeToCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_matrix_soft_max_gradient_1a66c51941cf174da21ff8589bd4dd9a71" kind="function"><name>initWithCoder</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_solve_cholesky" kind="class"><name>MPS::MatrixSolveCholesky</name>
+    <member refid="class_m_p_s_1_1_matrix_solve_cholesky_1aca381a1a68ebc95162848d8c43a384f2" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_solve_cholesky_1aac6e1e912c0fcf4ed69cda6f065824a8" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_solve_cholesky_1a78c4fbe9a635401681dbdf0496a1d603" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_solve_l_u" kind="class"><name>MPS::MatrixSolveLU</name>
+    <member refid="class_m_p_s_1_1_matrix_solve_l_u_1abcc9855ae810f1de9086e4f05a6f1177" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_solve_l_u_1a6d5bd26aed4fc9b3eedab34d18a6a210" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_solve_l_u_1add74c22e4724745530fdd67f91fd2cd5" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_solve_triangular" kind="class"><name>MPS::MatrixSolveTriangular</name>
+    <member refid="class_m_p_s_1_1_matrix_solve_triangular_1a81cb68319d1e6e930d955a916d6efede" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_solve_triangular_1afa31b1a4895d1d5b6b88ac78a082d4e0" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_solve_triangular_1ab64f1ce812f25628707f483fbb2ded29" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_unary_kernel" kind="class"><name>MPS::MatrixUnaryKernel</name>
+    <member refid="class_m_p_s_1_1_matrix_unary_kernel_1a0d2798970855f5fceb77afdc903c39e0" kind="function"><name>sourceMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_unary_kernel_1ab20f9e77920625914af108d697e318e1" kind="function"><name>resultMatrixOrigin</name></member>
+    <member refid="class_m_p_s_1_1_matrix_unary_kernel_1a7892a3befdf4fdbb8ed2c14cd039813d" kind="function"><name>batchStart</name></member>
+    <member refid="class_m_p_s_1_1_matrix_unary_kernel_1a1f878c485419ac3e8c75092ee5930fcb" kind="function"><name>batchSize</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_matrix_vector_multiplication" kind="class"><name>MPS::MatrixVectorMultiplication</name>
+    <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a01b27f502e11fbfaa732dbb8d9effa96" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a3e6ebacf8763a1ff39c484d702c07ee2" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a09011981a7b086da81664493894902c8" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a4fd21cee701fa3e48bd57b406aa743c7" kind="function"><name>encodeToCommandBuffer</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_m_p_s_offset" kind="struct"><name>MPS::MPSOffset</name>
+    <member refid="struct_m_p_s_1_1_m_p_s_offset_1a9bdd76eb4d11e5db58c2417d690b1dde" kind="variable"><name>x</name></member>
+    <member refid="struct_m_p_s_1_1_m_p_s_offset_1a939adb9bc30232a73da821c71e53d3a3" kind="variable"><name>y</name></member>
+    <member refid="struct_m_p_s_1_1_m_p_s_offset_1ad2395f823c54caa619a5229b4dd4d124" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_n_d_array" kind="class"><name>MPS::NDArray</name>
+    <member refid="class_m_p_s_1_1_n_d_array_1aaabaf6cebf9795e265c6ffc1aaf7a965" kind="function"><name>defaultAllocator</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a1abe5bf8f8cff5455f7f8ca2bee3bc1c" kind="function"><name>label</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a374a0f8e72335ed7d42b66184592b67a" kind="function"><name>dataType</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1adba7f866fd1d81973e41889947d91a59" kind="function"><name>dataTypeSize</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a44a87e22e7ef960c7fc544642e4fdc92" kind="function"><name>numberOfDimensions</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a01c1aa5d50ce2d36157761a799ad06b4" kind="function"><name>lengthOfDimension</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a65f92d3b00f2de8a81557ec50b7f2f2c" kind="function"><name>device</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a74c730768fdbd74b88282d143ee86cf2" kind="function"><name>descriptor</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a3819fdddd1b7b946e7b807c525eaca31" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a7f00fab0b1232e1f0f9e2f3d1730f273" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1ad7baddf07d0786255003405549988e5d" kind="function"><name>resourceSize</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1ad16060583f686d4037e77c246dd28526" kind="function"><name>arrayViewWithCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1af1ca230ce35140c3fe8a2a670fc111f2" kind="function"><name>parent</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a70813a5e7e99eb7183b17a2b32df8810" kind="function"><name>exportDataWithCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a9c7e3ce8b11a064960969555a0c606a4" kind="function"><name>importDataWithCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a9eed7115ecf164ed8488212794a28c9f" kind="function"><name>readBytes</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1a0d7ed0f747d2d1cbd896cac880a7fc8d" kind="function"><name>writeBytes</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_1afc0c63f9195b6be7cf161268570ea2b9" kind="function"><name>synchronizeOnCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_n_d_array_allocator" kind="class"><name>MPS::NDArrayAllocator</name>
+    <member refid="class_m_p_s_1_1_n_d_array_allocator_1aa3014a4df18bb95cf00f0ce709421031" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_allocator_1a044c10929b330ed01fb9a08cb2dc017e" kind="function"><name>init</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_allocator_1a3498d4e48eb1ff59507ca3e50d4a066e" kind="function"><name>arrayForCommandBuffer</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_n_d_array_descriptor" kind="class"><name>MPS::NDArrayDescriptor</name>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1aec21d72e47b1facb487adbdba3cd5413" kind="function"><name>dataType</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a55d3993006b1946c34203e6245343223" kind="function"><name>numberOfDimensions</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a3cce38044257bbfd6a7ba0b1d343baa9" kind="function"><name>lengthOfDimension</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a428bcbd38b8a31814291faab211cc9b9" kind="function"><name>sliceRangeForDimension</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1adf0a8d67bb5354eecac3ba4a2892bf35" kind="function"><name>sliceDimension</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a692b354eea50ed02cf276ed141e61e14" kind="function"><name>transposeDimension</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a568ba9ecb7882ccc8a2ca8b7078f9055" kind="function"><name>dimensionOrder</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a4bffebde06baebea45675c50d73db4d6" kind="function"><name>reshapeWithDimensionCount</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a2d5f90f15c7c5fb3a1e8e90d7836369b" kind="function"><name>reshapeWithShape</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1a474540d49619fb8746854cb93af4c0c5" kind="function"><name>descriptorWithDataType</name></member>
+    <member refid="class_m_p_s_1_1_n_d_array_descriptor_1ac3c541e4699ee91f1dc9e6337c37e7c5" kind="function"><name>descriptorWithDataType</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_origin" kind="struct"><name>MPS::Origin</name>
+    <member refid="struct_m_p_s_1_1_origin_1a3932272030b9ad6e000de47bec00bd0b" kind="variable"><name>x</name></member>
+    <member refid="struct_m_p_s_1_1_origin_1a3244c9fb6d50c32e91dc11187ab52bc3" kind="variable"><name>y</name></member>
+    <member refid="struct_m_p_s_1_1_origin_1a12ff97d3e670267bee073750977ee6b3" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_predicate" kind="class"><name>MPS::Predicate</name>
+    <member refid="class_m_p_s_1_1_predicate_1a53768abd4d3da2ff6622bcb88ee673b4" kind="function"><name>predicateBuffer</name></member>
+    <member refid="class_m_p_s_1_1_predicate_1a69a23bd51d859bf253f36b2ba92e7bd0" kind="function"><name>predicateOffset</name></member>
+    <member refid="class_m_p_s_1_1_predicate_1a593c79937c78d20e0cc1e221808cd0da" kind="function"><name>initWithBuffer</name></member>
+    <member refid="class_m_p_s_1_1_predicate_1a53d353e8ab5bdff3497559afd8e61c24" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_predicate_1ac737d7c1244fdc7489f105b726d5d831" kind="function"><name>predicateWithBuffer</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_region" kind="struct"><name>MPS::Region</name>
+    <member refid="struct_m_p_s_1_1_region_1acbde2ab1aa3fc028aebe21d892cb0ccd" kind="variable"><name>origin</name></member>
+    <member refid="struct_m_p_s_1_1_region_1a12475d9efd2165025aeb190d5b0afc05" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_scale_transform" kind="struct"><name>MPS::ScaleTransform</name>
+    <member refid="struct_m_p_s_1_1_scale_transform_1afefb0eaa9acf54b66f7a158d0eb40dcd" kind="variable"><name>scaleX</name></member>
+    <member refid="struct_m_p_s_1_1_scale_transform_1aded7c62ab254f388835b14642977fdfd" kind="variable"><name>scaleY</name></member>
+    <member refid="struct_m_p_s_1_1_scale_transform_1a46f810e5d9b9e9658a84716af604fd3e" kind="variable"><name>translateX</name></member>
+    <member refid="struct_m_p_s_1_1_scale_transform_1af5e1af5afe94c53e3fce31f3f57c2c8c" kind="variable"><name>translateY</name></member>
+  </compound>
+  <compound refid="struct_m_p_s_1_1_size" kind="struct"><name>MPS::Size</name>
+    <member refid="struct_m_p_s_1_1_size_1aef3046e3572828bd587edac65d3f76ae" kind="variable"><name>width</name></member>
+    <member refid="struct_m_p_s_1_1_size_1afe1fe7a85ac8a0d6b3656b82ae5e2ce7" kind="variable"><name>height</name></member>
+    <member refid="struct_m_p_s_1_1_size_1a28c641eb4f92455cd510519bfc8769a6" kind="variable"><name>depth</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_temporary_n_d_array" kind="class"><name>MPS::TemporaryNDArray</name>
+    <member refid="class_m_p_s_1_1_temporary_n_d_array_1af950897e0773f2b06929bd353ad87f50" kind="function"><name>defaultAllocator</name></member>
+    <member refid="class_m_p_s_1_1_temporary_n_d_array_1a783acd2ce26c26460487c06475e80317" kind="function"><name>temporaryNDArrayWithCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_temporary_n_d_array_1acb6829027e5421cbea3d1ad808811697" kind="function"><name>readCount</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_vector" kind="class"><name>MPS::Vector</name>
+    <member refid="class_m_p_s_1_1_vector_1abc0cc5ad1650115d9b2cdadbf7e8892c" kind="function"><name>alloc</name></member>
+    <member refid="class_m_p_s_1_1_vector_1a059e6b430f9ebe18ddcc31822830adf3" kind="function"><name>device</name></member>
+    <member refid="class_m_p_s_1_1_vector_1ad7380d0ad16f75e02b4551563d49020d" kind="function"><name>length</name></member>
+    <member refid="class_m_p_s_1_1_vector_1a9a2515c06d66a56b3df21ca52f4a07f9" kind="function"><name>vectors</name></member>
+    <member refid="class_m_p_s_1_1_vector_1af1dbb617ea6ce01736c99b0bc7ebb3b0" kind="function"><name>dataType</name></member>
+    <member refid="class_m_p_s_1_1_vector_1a97ce2fbe81a64c53a7b6bb10cca16d43" kind="function"><name>vectorBytes</name></member>
+    <member refid="class_m_p_s_1_1_vector_1a9be940444e59d982e4a246eb6ecb31bb" kind="function"><name>offset</name></member>
+    <member refid="class_m_p_s_1_1_vector_1aa24bc3f3966c771c48c4c80c5d0668b8" kind="function"><name>data</name></member>
+    <member refid="class_m_p_s_1_1_vector_1a8b0371cb666da25b98c4382b898d070f" kind="function"><name>initWithBuffer</name></member>
+    <member refid="class_m_p_s_1_1_vector_1a0beb22f78f6c27af9e94e9b5874f5c83" kind="function"><name>initWithBuffer</name></member>
+    <member refid="class_m_p_s_1_1_vector_1ad46ef21f6cce7a1f6a975434c671740c" kind="function"><name>initWithDevice</name></member>
+    <member refid="class_m_p_s_1_1_vector_1a4a8836fc0eb9e8cd542a9df0537c1b9e" kind="function"><name>synchronizeOnCommandBuffer</name></member>
+    <member refid="class_m_p_s_1_1_vector_1ab8f0e0327731a587fa64d7b6a4744ab4" kind="function"><name>resourceSize</name></member>
+  </compound>
+  <compound refid="class_m_p_s_1_1_vector_descriptor" kind="class"><name>MPS::VectorDescriptor</name>
+    <member refid="class_m_p_s_1_1_vector_descriptor_1a86d7fab130c3ac5bcb85d017bb06824f" kind="function"><name>length</name></member>
+    <member refid="class_m_p_s_1_1_vector_descriptor_1aae60538c12732aba5c374a52a2a63d93" kind="function"><name>vectors</name></member>
+    <member refid="class_m_p_s_1_1_vector_descriptor_1ab4c3a2c7a59fd71b27639097f83bd583" kind="function"><name>dataType</name></member>
+    <member refid="class_m_p_s_1_1_vector_descriptor_1a8c9843f143f7e7bf4ab2c4848d14f2c5" kind="function"><name>vectorBytes</name></member>
+    <member refid="class_m_p_s_1_1_vector_descriptor_1ad1e75549a7ec81ef1b152b927ca4f49b" kind="function"><name>vectorDescriptorWithLength</name></member>
+    <member refid="class_m_p_s_1_1_vector_descriptor_1a7404844ced6c7219d1436ca4ae185a3c" kind="function"><name>vectorDescriptorWithLength</name></member>
+    <member refid="class_m_p_s_1_1_vector_descriptor_1a76a99de19f7ee382818b40fb8b384b21" kind="function"><name>vectorBytesForLength</name></member>
+  </compound>
+  <compound refid="namespace_m_p_s" kind="namespace"><name>MPS</name>
+    <member refid="_m_p_s_core_types_8hpp_1a45abcf62f809fd150d9049286f8722c5" kind="typedef"><name>MPSOrigin</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a61600ba4e9159f7fabe743647f80c463" kind="typedef"><name>MPSSize</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1aa702c40c811dacd614a7bf95229eda4e" kind="typedef"><name>MPSDimensionSlice</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1acd141aedb96dc0d717d5f46357818d1f" kind="typedef"><name>MPSRegion</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a4ac70c491e434f127881bc332103b9af" kind="typedef"><name>MPSScaleTransform</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a54f461b516f24d50ddbce1017fa79051" kind="typedef"><name>MPSImageCoordinate</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a0388d3584adb526627f0ec66d91f2910" kind="typedef"><name>MPSImageRegion</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a0caa47f6afe951c9d4fe05d914d451af" kind="typedef"><name>Shape</name></member>
+    <member refid="_m_p_s_n_d_array_8hpp_1a3813b5bd83b576bc3074d61308e05b19" kind="typedef"><name>MPSImageBatch</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a01dbcc05c66f7b274fe6d6db1d560172" kind="function"><name>_NS_OPTIONS</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1afaa696e71cfa78a5e28e99373de8196b" kind="function"><name>_NS_ENUM</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a4e2691b53dd3221a829347735bfc6f00" kind="function"><name>_NS_ENUM</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a76f091e51e9531524488f3c3a5792f7f" kind="function"><name>_NS_ENUM</name></member>
+    <member refid="_m_p_s_core_types_8hpp_1a3ca3790f4ec024d64c17a330bd33bd3a" kind="function"><name>_NS_OPTIONS</name></member>
+    <member refid="_m_p_s_matrix_decomposition_8hpp_1a6e6bf242421564b6af131e6fc64efed8" kind="function"><name>_NS_ENUM</name></member>
+    <member refid="_m_p_s_matrix_random_8hpp_1ad30d259dafe7fa0697397a9a93934180" kind="function"><name>_NS_OPTIONS</name></member>
+  </compound>
+  <compound refid="namespace_n_s" kind="namespace"><name>NS</name>
+  </compound>
+  <compound refid="_m_p_s_command_buffer_8hpp" kind="file"><name>MPSCommandBuffer.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_core_types_8hpp" kind="file"><name>MPSCoreTypes.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_function_constant_indices_8hpp" kind="file"><name>MPSFunctionConstantIndices.hpp</name>
+    <member refid="_m_p_s_function_constant_indices_8hpp_1aed6056a7232660f6460cee53a756ba92" kind="define"><name>MPSDeviceCapsIndex</name></member>
+    <member refid="_m_p_s_function_constant_indices_8hpp_1a767a2bd6820390f88acac77d3e4505f2" kind="define"><name>MPSFunctionConstantIndex</name></member>
+    <member refid="_m_p_s_function_constant_indices_8hpp_1a70d356ef5d6004a239f7576a1314e1e5" kind="define"><name>MPSBatchSizeIndex</name></member>
+    <member refid="_m_p_s_function_constant_indices_8hpp_1a7bec81c7fee8965b976dc52df1a5572b" kind="define"><name>MPSUserConstantIndex</name></member>
+    <member refid="_m_p_s_function_constant_indices_8hpp_1a8bcba04f7224c579f38c6de5036ac371" kind="define"><name>MPSNDArrayConstantIndex</name></member>
+    <member refid="_m_p_s_function_constant_indices_8hpp_1a5672df2f828d9cdbcf072408f7d37758" kind="define"><name>MPSFunctionConstantIndexReserved</name></member>
+    <member refid="_m_p_s_function_constant_indices_8hpp_1a45752efcc85d60289a613189bc485ddd" kind="define"><name>MPSUserAvailableFunctionConstantStartIndex</name></member>
+  </compound>
+  <compound refid="_m_p_s_kernel_8hpp" kind="file"><name>MPSKernel.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_kernel_types_8hpp" kind="file"><name>MPSKernelTypes.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_core_2_m_p_s_matrix_8hpp" kind="file"><name>MPSMatrix.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp" kind="file"><name>MPSMatrix.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_n_d_array_8hpp" kind="file"><name>MPSNDArray.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_decomposition_8hpp" kind="file"><name>MPSMatrixDecomposition.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_find_top_k_8hpp" kind="file"><name>MPSMatrixFindTopK.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_multiplication_8hpp" kind="file"><name>MPSMatrixMultiplication.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_random_8hpp" kind="file"><name>MPSMatrixRandom.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_soft_max_8hpp" kind="file"><name>MPSMatrixSoftMax.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_solve_8hpp" kind="file"><name>MPSMatrixSolve.hpp</name>
+  </compound>
+  <compound refid="_m_p_s_matrix_types_8hpp" kind="file"><name>MPSMatrixTypes.hpp</name>
+  </compound>
+  <compound refid="dir_0741b0a09b37aca82d2f02c0c49b25d8" kind="dir"><name>/Users/gunjanpayal/MPS-Port/metal-cpp</name>
+  </compound>
+  <compound refid="dir_98b3951f25067ccd3458923169298bd5" kind="dir"><name>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders</name>
+  </compound>
+  <compound refid="dir_9132dcc987293b032672f871067800e6" kind="dir"><name>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore</name>
+  </compound>
+  <compound refid="dir_7d38864aa6bbbac92271f9981dd555bc" kind="dir"><name>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix</name>
+  </compound>
+</doxygenindex>

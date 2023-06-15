@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_m_p_s_matrix_solve_8hpp" kind="file" language="C++">
+    <compoundname>MPSMatrixSolve.hpp</compoundname>
+    <includes refid="_m_p_s_matrix_types_8hpp" local="yes">MPSMatrixTypes.hpp</includes>
+    <includedby refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>../../Foundation/NSObject.hpp</label>
+      </node>
+      <node id="11">
+        <label>../../Metal/MTLBuffer.hpp</label>
+      </node>
+      <node id="6">
+        <label>../../Metal/Metal.hpp</label>
+      </node>
+      <node id="9">
+        <label>../MPSDefines.hpp</label>
+      </node>
+      <node id="10">
+        <label>../MPSHeaderBridge.hpp</label>
+      </node>
+      <node id="7">
+        <label>../MPSPrivate.hpp</label>
+      </node>
+      <node id="8">
+        <label>MPSCommandBuffer.hpp</label>
+        <link refid="_m_p_s_command_buffer_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MPSCoreTypes.hpp</label>
+        <link refid="_m_p_s_core_types_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>MPSFunctionConstantIndices.hpp</label>
+        <link refid="_m_p_s_function_constant_indices_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>../MPSCore/MPSKernel.hpp</label>
+        <link refid="_m_p_s_kernel_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../MPSCore/MPSKernelTypes.hpp</label>
+        <link refid="_m_p_s_kernel_types_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../MPSCore/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_core_2_m_p_s_matrix_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp</label>
+        <link refid="_m_p_s_matrix_solve_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MPSMatrixTypes.hpp</label>
+        <link refid="_m_p_s_matrix_types_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>simd/simd.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp</label>
+        <link refid="_m_p_s_matrix_solve_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_m_p_s_1_1_matrix_solve_triangular" prot="public">MPS::MatrixSolveTriangular</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_solve_l_u" prot="public">MPS::MatrixSolveLU</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_solve_cholesky" prot="public">MPS::MatrixSolveCholesky</innerclass>
+    <innernamespace refid="namespace_m_p_s">MPS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSMatrixTypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS{</highlight></codeline>
+<codeline lineno="5" refid="class_m_p_s_1_1_matrix_solve_triangular" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_solve_triangular" kindref="compound">MatrixSolveTriangular</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::MatrixBinaryKernel&gt;{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_solve_triangular" kindref="compound">MPS::MatrixSolveTriangular</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_solve_triangular" kindref="compound">MPS::MatrixSolveTriangular</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>right,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>upper,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transpose,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>unit,<sp/>NS::UInteger<sp/>order,<sp/>NS::UInteger<sp/>numberOfRightHandSides,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>sourceMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightHandSideMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>solutionMatrix);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="11" refid="class_m_p_s_1_1_matrix_solve_l_u" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_solve_l_u" kindref="compound">MatrixSolveLU</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::MatrixBinaryKernel&gt;{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_solve_l_u" kindref="compound">MPS::MatrixSolveLU</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_solve_l_u" kindref="compound">MPS::MatrixSolveLU</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transpose,<sp/>NS::UInteger<sp/>order,<sp/>NS::UInteger<sp/>numberOfRightHandSides);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>sourceMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightHandSideMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>pivotIndices,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>solutionMatrix);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="17" refid="class_m_p_s_1_1_matrix_solve_cholesky" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_solve_cholesky" kindref="compound">MatrixSolveCholesky</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::MatrixBinaryKernel&gt;{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_solve_cholesky" kindref="compound">MPS::MatrixSolveCholesky</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_solve_cholesky" kindref="compound">MPS::MatrixSolveCholesky</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>upper,<sp/>NS::UInteger<sp/>order,<sp/>NS::UInteger<sp/>numberOfRightHandSides);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>sourceMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightHandSideMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>solutionMatrix);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_solve_triangular" kindref="compound">MPS::MatrixSolveTriangular</ref>*<sp/>MPS::MatrixSolveTriangular::alloc(){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixSolveTriangular&gt;(_MPS_PRIVATE_CLS(MPSMatrixSolveTriangular));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_solve_triangular" kindref="compound">MPS::MatrixSolveTriangular</ref>*<sp/>MPS::MatrixSolveTriangular::initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>right,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>upper,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transpose,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>unit,<sp/>NS::UInteger<sp/>order,<sp/>NS::UInteger<sp/>numberOfRightHandSides,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixSolveTriangular*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_right_upper_transpose_unit_order_numberOfRightHandSides_alpha_),device,<sp/>right,<sp/>upper,<sp/>transpose,<sp/>unit,<sp/>order,<sp/>numberOfRightHandSides,<sp/>alpha);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixSolveTriangular::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>sourceMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightHandSideMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>solutionMatrix){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_solutionMatrix_),commandBuffer,<sp/>sourceMatrix,<sp/>rightHandSideMatrix,<sp/>solutionMatrix);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_solve_l_u" kindref="compound">MPS::MatrixSolveLU</ref>*<sp/>MPS::MatrixSolveLU::alloc(){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixSolveLU&gt;(_MPS_PRIVATE_CLS(MPSMatrixSolveLU));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_solve_l_u" kindref="compound">MPS::MatrixSolveLU</ref>*<sp/>MPS::MatrixSolveLU::initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>transpose,<sp/>NS::UInteger<sp/>order,<sp/>NS::UInteger<sp/>numberOfRightHandSides){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixSolveLU*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_transpose_order_numberOfRightHandSides_),device,<sp/>transpose,<sp/>order,<sp/>numberOfRightHandSides);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixSolveLU::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>sourceMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightHandSideMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>pivotIndices,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>solutionMatrix){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_pivotIndices_solutionMatrix_),commandBuffer,<sp/>sourceMatrix,<sp/>rightHandSideMatrix,<sp/>pivotIndices,<sp/>solutionMatrix);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_solve_cholesky" kindref="compound">MPS::MatrixSolveCholesky</ref>*<sp/>MPS::MatrixSolveCholesky::alloc(){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixSolveCholesky&gt;(_MPS_PRIVATE_CLS(MPSMatrixSolveCholesky));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_solve_cholesky" kindref="compound">MPS::MatrixSolveCholesky</ref>*<sp/>MPS::MatrixSolveCholesky::initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>upper,<sp/>NS::UInteger<sp/>order,<sp/>NS::UInteger<sp/>numberOfRightHandSides){</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixSolveCholesky*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_upper_order_numberOfRightHandSides_),device,<sp/>upper,<sp/>order,<sp/>numberOfRightHandSides);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixSolveCholesky::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>sourceMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>rightHandSideMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>solutionMatrix){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_solutionMatrix_),commandBuffer,<sp/>sourceMatrix,<sp/>rightHandSideMatrix,<sp/>solutionMatrix);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp"/>
+  </compounddef>
+</doxygen>

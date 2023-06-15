@@ -83,5 +83,6 @@
         "span": "cpp",
         "filesystem": "cpp",
         "format": "cpp"
-    }
+    },
+    "esbonio.sphinx.confDir": ""
 }

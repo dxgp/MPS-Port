@@ -42,6 +42,7 @@ namespace MPS{
         MPS::MatrixLogSoftMaxGradient* initWithCoder(NS::Coder* aDecoder, MTL::Device* device);
     };
 }
+/// @{ @private
 _MPS_INLINE MPS::MatrixSoftMax* MPS::MatrixSoftMax::alloc(){
     return NS::Object::alloc<MPS::MatrixSoftMax>(_MPS_PRIVATE_CLS(MPSMatrixSoftMax));
 }
@@ -119,6 +120,7 @@ _MPS_INLINE void MPS::MatrixLogSoftMaxGradient::encodeToCommandBuffer(MTL::Comma
 _MPS_INLINE MPS::MatrixLogSoftMaxGradient* MPS::MatrixLogSoftMaxGradient::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
     return Object::sendMessage<MPS::MatrixLogSoftMaxGradient*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_),aDecoder, device);
 }
+/// @}
 
 
 

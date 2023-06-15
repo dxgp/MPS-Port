@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_m_p_s_matrix_find_top_k_8hpp" kind="file" language="C++">
+    <compoundname>MPSMatrixFindTopK.hpp</compoundname>
+    <includes refid="_m_p_s_kernel_8hpp" local="yes">../MPSCore/MPSKernel.hpp</includes>
+    <includes refid="_m_p_s_matrix_types_8hpp" local="yes">MPSMatrixTypes.hpp</includes>
+    <includedby refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>../../Foundation/NSObject.hpp</label>
+      </node>
+      <node id="10">
+        <label>../../Metal/MTLBuffer.hpp</label>
+      </node>
+      <node id="5">
+        <label>../../Metal/Metal.hpp</label>
+      </node>
+      <node id="8">
+        <label>../MPSDefines.hpp</label>
+      </node>
+      <node id="9">
+        <label>../MPSHeaderBridge.hpp</label>
+      </node>
+      <node id="6">
+        <label>../MPSPrivate.hpp</label>
+      </node>
+      <node id="7">
+        <label>MPSCommandBuffer.hpp</label>
+        <link refid="_m_p_s_command_buffer_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MPSCoreTypes.hpp</label>
+        <link refid="_m_p_s_core_types_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>MPSFunctionConstantIndices.hpp</label>
+        <link refid="_m_p_s_function_constant_indices_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>../MPSCore/MPSKernel.hpp</label>
+        <link refid="_m_p_s_kernel_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../MPSCore/MPSKernelTypes.hpp</label>
+        <link refid="_m_p_s_kernel_types_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../MPSCore/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_core_2_m_p_s_matrix_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp</label>
+        <link refid="_m_p_s_matrix_find_top_k_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>MPSMatrixTypes.hpp</label>
+        <link refid="_m_p_s_matrix_types_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>simd/simd.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp</label>
+        <link refid="_m_p_s_matrix_find_top_k_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_m_p_s_1_1_matrix_find_top_k" prot="public">MPS::MatrixFindTopK</innerclass>
+    <innernamespace refid="namespace_m_p_s">MPS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../MPSCore/MPSKernel.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSMatrixTypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//only<sp/>compatible<sp/>with<sp/>float32<sp/>and<sp/>float16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_m_p_s_1_1_matrix_find_top_k" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_find_top_k" kindref="compound">MatrixFindTopK</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::MatrixUnaryKernel&gt;{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_find_top_k" kindref="compound">MPS::MatrixFindTopK</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>sourceRows();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>sourceColumns();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>indexOffset();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>numberOfTopKValues();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_find_top_k" kindref="compound">MPS::MatrixFindTopK</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>NS::UInteger<sp/>numberOfTopKValues);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>inputMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>resultIndexMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>resultValueMatrix);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MPS::MatrixFindTopK*<sp/>initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device);<sp/>this<sp/>is<sp/>for<sp/>using<sp/>byte<sp/>streams<sp/>as<sp/>input<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>one<sp/>more<sp/>zone<sp/>function,<sp/>skipped</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_find_top_k" kindref="compound">MPS::MatrixFindTopK</ref>*<sp/>MPS::MatrixFindTopK::alloc(){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixFindTopK&gt;(_MPS_PRIVATE_CLS(MPSMatrixFindTopK));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixFindTopK::sourceRows(){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(sourceRows));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixFindTopK::sourceColumns(){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(sourceColumns));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixFindTopK::indexOffset(){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(indexOffset));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixFindTopK::numberOfTopKValues(){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(numberOfTopKValues));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_find_top_k" kindref="compound">MPS::MatrixFindTopK</ref>*<sp/>MPS::MatrixFindTopK::initWithDevice(MTL::Device*<sp/>device,<sp/>NS::UInteger<sp/>numberOfTopKValues){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixFindTopK*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_numberOfTopKValues_),<sp/>device,<sp/>numberOfTopKValues);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixFindTopK::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>inputMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>resultIndexMatrix,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>resultValueMatrix){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_inputMatrix_resultIndexMatrix_resultValueMatrix_),<sp/>commandBuffer,<sp/>inputMatrix,<sp/>resultIndexMatrix,<sp/>resultValueMatrix);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_MPS_INLINE<sp/>MPS::MatrixFindTopK*<sp/>MPS::MatrixFindTopK::initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>Object::sendMessage&lt;MPS::MatrixFindTopK*&gt;(this,<sp/>_MPS_PRIVATE_SEL(initWithCoder_device_),<sp/>aDecoder,<sp/>device);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp"/>
+  </compounddef>
+</doxygen>

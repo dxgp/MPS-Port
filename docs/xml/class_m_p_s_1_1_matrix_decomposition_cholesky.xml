@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_decomposition_cholesky" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixDecompositionCholesky</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_decomposition_cholesky_1ad0d84e19711ff6cc045727163e0aae42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_decomposition_cholesky" kindref="compound">MPS::MatrixDecompositionCholesky</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixDecompositionCholesky * MPS::MatrixDecompositionCholesky::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixDecompositionCholesky::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="22" column="49" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_decomposition_cholesky_1aa86103be4b0e7577e0b41b522abe3dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_decomposition_cholesky" kindref="compound">MPS::MatrixDecompositionCholesky</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixDecompositionCholesky * MPS::MatrixDecompositionCholesky::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, bool lower, NS::UInteger order)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixDecompositionCholesky::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="23" column="42" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_decomposition_cholesky_1afe8ce3906d37423f9e3fc58dbc11616f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixDecompositionCholesky::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *sourceMatrix, MPS::Matrix *resultMatrix, MTL::Buffer *status)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixDecompositionCholesky::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>sourceMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>resultMatrix</declname>
+        </param>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="24" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixDecompositionCholesky</label>
+        <link refid="class_m_p_s_1_1_matrix_decomposition_cholesky"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixDecompositionCholesky</label>
+        <link refid="class_m_p_s_1_1_matrix_decomposition_cholesky"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="20" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="20" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_decomposition_cholesky_1ad0d84e19711ff6cc045727163e0aae42" prot="public" virt="non-virtual"><scope>MPS::MatrixDecompositionCholesky</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_decomposition_cholesky_1afe8ce3906d37423f9e3fc58dbc11616f" prot="public" virt="non-virtual"><scope>MPS::MatrixDecompositionCholesky</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_decomposition_cholesky_1aa86103be4b0e7577e0b41b522abe3dba" prot="public" virt="non-virtual"><scope>MPS::MatrixDecompositionCholesky</scope><name>initWithDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

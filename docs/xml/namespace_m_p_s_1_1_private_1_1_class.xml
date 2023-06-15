@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_m_p_s_1_1_private_1_1_class" kind="namespace" language="C++">
+    <compoundname>MPS::Private::Class</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a6adacdbbb2a96da2d6b24ce9d5fc91db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSNDArrayAllocator)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSNDArrayAllocator</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="8" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="8" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a5c973adf19a14c0b326f27cc15634c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSNDArray)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSNDArray</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="9" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="9" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a69f7b426b118ef1184363da1f95a653b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSNDArrayDescriptor)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSNDArrayDescriptor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="10" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="10" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1aefa67e1260d0c9690fcb896a98ceebaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSTemporaryNDArray)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSTemporaryNDArray</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="11" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="11" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1ab2dd290dfc7c7e13086f9a6b22151f6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSPredicate)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSPredicate</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="14" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="14" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a98b2b4deea6a2fe3387f1f40ca8cd0e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSCommandBuffer)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSCommandBuffer</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="15" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="15" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a6e304d1117771bff1808b60abcd390c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSKernel)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSKernel</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="18" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="18" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1abf579adbdc1ad77c57ce23a2cf1a31cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrix)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrix</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="21" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="21" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1ad729af0272e8fb17851ba7f182f52221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSVector)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSVector</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="22" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="22" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a3949739ba23f77aa1c9489a81f17ed05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixDescriptor)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixDescriptor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="23" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="23" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a0596afbef4d0f432622d30526d79566e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSVectorDescriptor)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSVectorDescriptor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="24" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="24" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a5bf46f1aec101603ddd0c510c614ab55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixMultiplication)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixMultiplication</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="27" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="27" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1ad37569bbce84904e8364b0b5e1b29d02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixVectorMultiplication)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixVectorMultiplication</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="28" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="28" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a17b1e465d62a0e467fb8f4fdc89b3213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixFindTopK)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixFindTopK</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="29" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="29" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a07c78488ef7cbc36e249e0e37972089a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixDecompositionLU)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixDecompositionLU</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="32" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="32" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a368f586b3d7560c7884cd55719ff9413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixDecompositionCholesky)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixDecompositionCholesky</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="33" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="33" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1ae5aa82a357189376c67fe2f81de02b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixRandomDistributionDescriptor)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixRandomDistributionDescriptor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="36" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="36" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a75e6bcee6ecd6aca56b8cccabfb06835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixRandomMTGP32)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixRandomMTGP32</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="37" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="37" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1aeaff3384900c0b86d583aca9aae9e2cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixRandomPhilox)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixRandomPhilox</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="38" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="38" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a2208eda1c9641366fd144f6da327a674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixSoftMax)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixSoftMax</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="41" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="41" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a73020f5e7f3d81bbc4dad56bbbbc1a33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixLogSoftMax)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixLogSoftMax</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="42" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="42" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a9b3c43e8acd90f2b3a8331e3a8d13a2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixSoftMaxGradient)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixSoftMaxGradient</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="43" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="43" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1ad8f9c27781272a4d967b90b80cee3fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixLogSoftMaxGradient)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixLogSoftMaxGradient</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="44" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="44" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a6e467ceea4441645d6f2c450ab50f464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixSolveTriangular)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixSolveTriangular</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="47" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="47" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1a601198f2cd101a74ce445ee3869f96e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixSolveLU)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixSolveLU</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="48" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="48" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_header_bridge_8hpp_1aa2eec5c87de2afe2eb69e9f5d966c6f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</definition>
+        <argsstring>(MPSMatrixSolveCholesky)</argsstring>
+        <name>_MPS_PRIVATE_DEF_CLS</name>
+        <qualifiedname>MPS::Private::Class::_MPS_PRIVATE_DEF_CLS</qualifiedname>
+        <param>
+          <type>MPSMatrixSolveCholesky</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="49" column="5" declfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" declline="49" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="4" column="1"/>
+  </compounddef>
+</doxygen>

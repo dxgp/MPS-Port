@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_binary_kernel" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixBinaryKernel</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::Kernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_binary_kernel_1a2ec0949622fa21478897a906c6a9f4bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Origin</type>
+        <definition>_MPS_INLINE MTL::Origin MPS::MatrixBinaryKernel::primarySourceMatrixOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>primarySourceMatrixOrigin</name>
+        <qualifiedname>MPS::MatrixBinaryKernel::primarySourceMatrixOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" line="17" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_binary_kernel_1a146ba400095d0e0673ceeb27d457d7f3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Origin</type>
+        <definition>_MPS_INLINE MTL::Origin MPS::MatrixBinaryKernel::secondarySourceMatrixOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>secondarySourceMatrixOrigin</name>
+        <qualifiedname>MPS::MatrixBinaryKernel::secondarySourceMatrixOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" line="18" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_binary_kernel_1ae70962df505773269ac33a7133649d03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Origin</type>
+        <definition>_MPS_INLINE MTL::Origin MPS::MatrixBinaryKernel::resultMatrixOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>resultMatrixOrigin</name>
+        <qualifiedname>MPS::MatrixBinaryKernel::resultMatrixOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" line="19" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_binary_kernel_1af18296c3eca9a50305afe5f854433a13" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixBinaryKernel::batchStart</definition>
+        <argsstring>()</argsstring>
+        <name>batchStart</name>
+        <qualifiedname>MPS::MatrixBinaryKernel::batchStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" line="20" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_binary_kernel_1a29f4012d12ad30ea318d4d6ea3a12e64" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixBinaryKernel::batchSize</definition>
+        <argsstring>()</argsstring>
+        <name>batchSize</name>
+        <qualifiedname>MPS::MatrixBinaryKernel::batchSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" line="21" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixBinaryKernel</label>
+        <link refid="class_m_p_s_1_1_matrix_binary_kernel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Kernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixBinaryKernel</label>
+        <link refid="class_m_p_s_1_1_matrix_binary_kernel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Kernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" line="16" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixTypes.hpp" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_binary_kernel_1a29f4012d12ad30ea318d4d6ea3a12e64" prot="private" virt="non-virtual"><scope>MPS::MatrixBinaryKernel</scope><name>batchSize</name></member>
+      <member refid="class_m_p_s_1_1_matrix_binary_kernel_1af18296c3eca9a50305afe5f854433a13" prot="private" virt="non-virtual"><scope>MPS::MatrixBinaryKernel</scope><name>batchStart</name></member>
+      <member refid="class_m_p_s_1_1_matrix_binary_kernel_1a2ec0949622fa21478897a906c6a9f4bc" prot="private" virt="non-virtual"><scope>MPS::MatrixBinaryKernel</scope><name>primarySourceMatrixOrigin</name></member>
+      <member refid="class_m_p_s_1_1_matrix_binary_kernel_1ae70962df505773269ac33a7133649d03" prot="private" virt="non-virtual"><scope>MPS::MatrixBinaryKernel</scope><name>resultMatrixOrigin</name></member>
+      <member refid="class_m_p_s_1_1_matrix_binary_kernel_1a146ba400095d0e0673ceeb27d457d7f3" prot="private" virt="non-virtual"><scope>MPS::MatrixBinaryKernel</scope><name>secondarySourceMatrixOrigin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

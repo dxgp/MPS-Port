@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_vector_descriptor" kind="class" language="C++" prot="public">
+    <compoundname>MPS::VectorDescriptor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::VectorDescriptor &gt;</basecompoundref>
+    <includes refid="_m_p_s_core_2_m_p_s_matrix_8hpp" local="no">MPSMatrix.hpp</includes>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_descriptor_1a86d7fab130c3ac5bcb85d017bb06824f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::VectorDescriptor::length</definition>
+        <argsstring>()</argsstring>
+        <name>length</name>
+        <qualifiedname>MPS::VectorDescriptor::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="59" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_descriptor_1aae60538c12732aba5c374a52a2a63d93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::VectorDescriptor::vectors</definition>
+        <argsstring>() const</argsstring>
+        <name>vectors</name>
+        <qualifiedname>MPS::VectorDescriptor::vectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="60" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_descriptor_1ab4c3a2c7a59fd71b27639097f83bd583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MPS::DataType</type>
+        <definition>_MPS_INLINE MPS::DataType MPS::VectorDescriptor::dataType</definition>
+        <argsstring>()</argsstring>
+        <name>dataType</name>
+        <qualifiedname>MPS::VectorDescriptor::dataType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="61" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_descriptor_1a8c9843f143f7e7bf4ab2c4848d14f2c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::VectorDescriptor::vectorBytes</definition>
+        <argsstring>() const</argsstring>
+        <name>vectorBytes</name>
+        <qualifiedname>MPS::VectorDescriptor::vectorBytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="62" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_descriptor_1ad1e75549a7ec81ef1b152b927ca4f49b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_vector_descriptor" kindref="compound">MPS::VectorDescriptor</ref> *</type>
+        <definition>_MPS_INLINE MPS::VectorDescriptor * MPS::VectorDescriptor::vectorDescriptorWithLength</definition>
+        <argsstring>(NS::UInteger length, MPS::DataType dataType)</argsstring>
+        <name>vectorDescriptorWithLength</name>
+        <qualifiedname>MPS::VectorDescriptor::vectorDescriptorWithLength</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>MPS::DataType</type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="63" column="38" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="150" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_descriptor_1a7404844ced6c7219d1436ca4ae185a3c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_vector_descriptor" kindref="compound">MPS::VectorDescriptor</ref> *</type>
+        <definition>_MPS_INLINE MPS::VectorDescriptor * MPS::VectorDescriptor::vectorDescriptorWithLength</definition>
+        <argsstring>(NS::UInteger length, NS::UInteger vectors, NS::UInteger vectorBytes, MPS::DataType dataType)</argsstring>
+        <name>vectorDescriptorWithLength</name>
+        <qualifiedname>MPS::VectorDescriptor::vectorDescriptorWithLength</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>vectors</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>vectorBytes</declname>
+        </param>
+        <param>
+          <type>MPS::DataType</type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="64" column="38" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_descriptor_1a76a99de19f7ee382818b40fb8b384b21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>_MPS_INLINE size_t MPS::VectorDescriptor::vectorBytesForLength</definition>
+        <argsstring>(NS::UInteger length, MPS::DataType dataType)</argsstring>
+        <name>vectorBytesForLength</name>
+        <qualifiedname>MPS::VectorDescriptor::vectorBytesForLength</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>MPS::DataType</type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="65" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that creates a vector descriptor, which is used when creating an <ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::VectorDescriptor</label>
+        <link refid="class_m_p_s_1_1_vector_descriptor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::VectorDescriptor &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::VectorDescriptor</label>
+        <link refid="class_m_p_s_1_1_vector_descriptor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::VectorDescriptor &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="57" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="57" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_vector_descriptor_1ab4c3a2c7a59fd71b27639097f83bd583" prot="public" virt="non-virtual"><scope>MPS::VectorDescriptor</scope><name>dataType</name></member>
+      <member refid="class_m_p_s_1_1_vector_descriptor_1a86d7fab130c3ac5bcb85d017bb06824f" prot="public" virt="non-virtual"><scope>MPS::VectorDescriptor</scope><name>length</name></member>
+      <member refid="class_m_p_s_1_1_vector_descriptor_1a8c9843f143f7e7bf4ab2c4848d14f2c5" prot="public" virt="non-virtual"><scope>MPS::VectorDescriptor</scope><name>vectorBytes</name></member>
+      <member refid="class_m_p_s_1_1_vector_descriptor_1a76a99de19f7ee382818b40fb8b384b21" prot="public" virt="non-virtual"><scope>MPS::VectorDescriptor</scope><name>vectorBytesForLength</name></member>
+      <member refid="class_m_p_s_1_1_vector_descriptor_1ad1e75549a7ec81ef1b152b927ca4f49b" prot="public" virt="non-virtual"><scope>MPS::VectorDescriptor</scope><name>vectorDescriptorWithLength</name></member>
+      <member refid="class_m_p_s_1_1_vector_descriptor_1a7404844ced6c7219d1436ca4ae185a3c" prot="public" virt="non-virtual"><scope>MPS::VectorDescriptor</scope><name>vectorDescriptorWithLength</name></member>
+      <member refid="class_m_p_s_1_1_vector_descriptor_1aae60538c12732aba5c374a52a2a63d93" prot="public" virt="non-virtual"><scope>MPS::VectorDescriptor</scope><name>vectors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

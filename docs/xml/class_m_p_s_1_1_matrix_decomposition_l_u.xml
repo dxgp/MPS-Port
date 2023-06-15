@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_decomposition_l_u" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixDecompositionLU</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_decomposition_l_u_1ade84b61e205790dbad829d0d14b07b54" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_decomposition_l_u" kindref="compound">MPS::MatrixDecompositionLU</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixDecompositionLU * MPS::MatrixDecompositionLU::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixDecompositionLU::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="14" column="43" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_decomposition_l_u_1afa45a2f66c77cb509f3348b2bb4b5bf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_decomposition_l_u" kindref="compound">MPS::MatrixDecompositionLU</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixDecompositionLU * MPS::MatrixDecompositionLU::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, NS::UInteger rows, NS::UInteger columns)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixDecompositionLU::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>columns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="15" column="36" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_decomposition_l_u_1af36fe33b8a2cf1a4cc9dc8b44ab4705b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixDecompositionLU::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *sourceMatrix, MPS::Matrix *resultMatrix, MPS::Matrix *pivotIndices, MTL::Buffer *status)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixDecompositionLU::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>sourceMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>resultMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>pivotIndices</declname>
+        </param>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="18" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixDecompositionLU</label>
+        <link refid="class_m_p_s_1_1_matrix_decomposition_l_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixDecompositionLU</label>
+        <link refid="class_m_p_s_1_1_matrix_decomposition_l_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="12" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="12" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_decomposition_l_u_1ade84b61e205790dbad829d0d14b07b54" prot="public" virt="non-virtual"><scope>MPS::MatrixDecompositionLU</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_decomposition_l_u_1af36fe33b8a2cf1a4cc9dc8b44ab4705b" prot="public" virt="non-virtual"><scope>MPS::MatrixDecompositionLU</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_decomposition_l_u_1afa45a2f66c77cb509f3348b2bb4b5bf2" prot="public" virt="non-virtual"><scope>MPS::MatrixDecompositionLU</scope><name>initWithDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

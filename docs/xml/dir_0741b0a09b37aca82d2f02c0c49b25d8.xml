@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_0741b0a09b37aca82d2f02c0c49b25d8" kind="dir">
+    <compoundname>/Users/gunjanpayal/MPS-Port/metal-cpp</compoundname>
+    <innerdir refid="dir_98b3951f25067ccd3458923169298bd5">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/"/>
+  </compounddef>
+</doxygen>

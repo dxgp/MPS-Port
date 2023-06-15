@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_random_philox" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixRandomPhilox</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixRandom &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1aa6bbf7be4d7e5b21352faf3f90e7df84" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixRandomPhilox * MPS::MatrixRandomPhilox::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="59" column="40" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1ab9778ebe88f41087e8225f6901dd34e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MPS::DataType</type>
+        <definition>_MPS_INLINE MPS::DataType MPS::MatrixRandomPhilox::destinationDataType</definition>
+        <argsstring>() const</argsstring>
+        <name>destinationDataType</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::destinationDataType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="60" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1a15d7975b5d7ac949013f8f0032c7b4c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MPS::MatrixRandomDistribution</type>
+        <definition>_MPS_INLINE MPS::MatrixRandomDistribution MPS::MatrixRandomPhilox::distributionType</definition>
+        <argsstring>() const</argsstring>
+        <name>distributionType</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::distributionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="61" column="39" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1ad3486e365fc7353f3d778b251efa2360" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixRandomPhilox::batchStart</definition>
+        <argsstring>()</argsstring>
+        <name>batchStart</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::batchStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="62" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1af84b667c75c4d51a5125fd031ce7a63e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixRandomPhilox::batchSize</definition>
+        <argsstring>()</argsstring>
+        <name>batchSize</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::batchSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="63" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1a9bcdb509231d04aac4903e02e427fd5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixRandomPhilox * MPS::MatrixRandomPhilox::initWithDevice</definition>
+        <argsstring>(MTL::Device *device)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="64" column="33" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1ae63f99f5208379e52073645c1d55ee7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixRandomPhilox * MPS::MatrixRandomPhilox::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, MPS::DataType destinationDataType, NS::UInteger seed, MPS::MatrixRandomDistributionDescriptor *distributionDescriptor)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>MPS::DataType</type>
+          <declname>destinationDataType</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref> *</type>
+          <declname>distributionDescriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="65" column="33" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="166" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1a42511227086c081e0d54088cc368290e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixRandomPhilox * MPS::MatrixRandomPhilox::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, MPS::DataType destinationDataType, NS::UInteger seed)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>MPS::DataType</type>
+          <declname>destinationDataType</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="66" column="33" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1ae6c77f0cf669cc6f009055a20de1e203" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixRandomPhilox * MPS::MatrixRandomPhilox::initWithCoder</definition>
+        <argsstring>(NS::Coder *aDecoder, MTL::Device *device)</argsstring>
+        <name>initWithCoder</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::initWithCoder</qualifiedname>
+        <param>
+          <type>NS::Coder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="67" column="33" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1a33d1b61ff42e5999c23fbf98e7c0aa56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixRandomPhilox::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Vector *destinationVector)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref> *</type>
+          <declname>destinationVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="68" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_random_philox_1a6cda2489fd0dc16b5b6e017da227c2fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixRandomPhilox::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *destinationMatrix)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixRandomPhilox::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>destinationMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="69" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="181" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixRandomPhilox</label>
+        <link refid="class_m_p_s_1_1_matrix_random_philox"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixRandom &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixRandomPhilox</label>
+        <link refid="class_m_p_s_1_1_matrix_random_philox"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixRandom &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="57" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="57" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1aa6bbf7be4d7e5b21352faf3f90e7df84" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1af84b667c75c4d51a5125fd031ce7a63e" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>batchSize</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1ad3486e365fc7353f3d778b251efa2360" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>batchStart</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1ab9778ebe88f41087e8225f6901dd34e6" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>destinationDataType</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1a15d7975b5d7ac949013f8f0032c7b4c0" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>distributionType</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1a33d1b61ff42e5999c23fbf98e7c0aa56" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1a6cda2489fd0dc16b5b6e017da227c2fd" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1ae6c77f0cf669cc6f009055a20de1e203" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>initWithCoder</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1a9bcdb509231d04aac4903e02e427fd5c" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1ae63f99f5208379e52073645c1d55ee7b" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_random_philox_1a42511227086c081e0d54088cc368290e" prot="public" virt="non-virtual"><scope>MPS::MatrixRandomPhilox</scope><name>initWithDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

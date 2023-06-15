@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_n_d_array_allocator" kind="class" language="C++" prot="public">
+    <compoundname>MPS::NDArrayAllocator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Copying&lt; NDArrayAllocator &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_allocator_1aa3014a4df18bb95cf00f0ce709421031" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArrayAllocator * MPS::NDArrayAllocator::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::NDArrayAllocator::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="35" column="38" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_allocator_1a044c10929b330ed01fb9a08cb2dc017e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArrayAllocator * MPS::NDArrayAllocator::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>MPS::NDArrayAllocator::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="36" column="31" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_allocator_1a3498d4e48eb1ff59507ca3e50d4a066e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArray * MPS::NDArrayAllocator::arrayForCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *cmdBuf, MPS::NDArrayDescriptor *descriptor, MPS::Kernel *kernel)</argsstring>
+        <name>arrayForCommandBuffer</name>
+        <qualifiedname>MPS::NDArrayAllocator::arrayForCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>cmdBuf</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref> *</type>
+          <declname>kernel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="37" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="112" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::NDArrayAllocator</label>
+        <link refid="class_m_p_s_1_1_n_d_array_allocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Copying&lt; NDArrayAllocator &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::NDArrayAllocator</label>
+        <link refid="class_m_p_s_1_1_n_d_array_allocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Copying&lt; NDArrayAllocator &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="34" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="34" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_n_d_array_allocator_1aa3014a4df18bb95cf00f0ce709421031" prot="private" virt="non-virtual"><scope>MPS::NDArrayAllocator</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_allocator_1a3498d4e48eb1ff59507ca3e50d4a066e" prot="private" virt="non-virtual"><scope>MPS::NDArrayAllocator</scope><name>arrayForCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_allocator_1a044c10929b330ed01fb9a08cb2dc017e" prot="private" virt="non-virtual"><scope>MPS::NDArrayAllocator</scope><name>init</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

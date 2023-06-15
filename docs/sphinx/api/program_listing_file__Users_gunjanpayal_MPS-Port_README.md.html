@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File README.md &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">MetalPerformanceShaders C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File README.md</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file__Users_gunjanpayal_MPS-Port_README.md.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-readme-md">
+<span id="program-listing-file-users-gunjanpayal-mps-port-readme-md"></span><h1>Program Listing for File README.md<a class="headerlink" href="#program-listing-for-file-readme-md" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file__Users_gunjanpayal_MPS-Port_README.md.html#file-users-gunjanpayal-mps-port-readme-md"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/Users/gunjanpayal/MPS-Port/README.md</span></code>)</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># MPS-Port</span>
+I created this project so that I could use Metal Performance Shaders with metal-cpp. Currently, it supports all &quot;MPSMatrix&quot; operations like decomposition, find top k elements, matrix multiplication, random matrix generation, softmax, matrix solve.
+
+The extension was written in the same style as metal-cpp. Just read the docs below to understand how to perform these operations because the syntax can be a little weird at times.
+
+All functions and class definitions are under the <span class="sb">`MPS`</span> namespace. So, if an objC call were <span class="sb">`MPSMatrixMultiplication`</span>, it would be written in C++ as <span class="sb">`MPS::MatrixMultiplication`</span>.
+
+
+<span class="gu">## Headers</span>
+Just include the <span class="sb">`MPSMatrix.hpp`</span> file in <span class="sb">`metal-cpp/MetalPerformanceShaders/MPSMatrix`</span> folder. As an example, here&#39;s how the headers look like for me:
+
+<span class="sb">```cpp</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Accelerate/Accelerate.h&gt;</span>
+
+<span class="cp">#define NS_PRIVATE_IMPLEMENTATION</span>
+<span class="cp">#define CA_PRIVATE_IMPLEMENTATION</span>
+<span class="cp">#define MTL_PRIVATE_IMPLEMENTATION</span>
+<span class="cp">#define MPS_PRIVATE_IMPLEMENTATION</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Foundation/Foundation.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Metal/Metal.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;QuartzCore/QuartzCore.hpp&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp&quot;</span>
+
+<span class="sb">```</span>
+The command I use to compile is:
+<span class="sb">```zsh</span>
+clang++<span class="w"> </span>-std<span class="o">=</span>c++17<span class="w"> </span>-stdlib<span class="o">=</span>libc++<span class="w"> </span>-O2<span class="w"> </span>-I../metal-cpp<span class="w"> </span>-I<span class="w"> </span>/opt<span class="w"> </span>-fno-objc-arc<span class="w"> </span>-framework<span class="w"> </span>Metal<span class="w"> </span>-framework<span class="w"> </span>Foundation<span class="w"> </span>-framework<span class="w"> </span>MetalKit<span class="w"> </span>-framework<span class="w"> </span>Accelerate<span class="w"> </span>-framework<span class="w"> </span>MetalPerformanceShaders<span class="w"> </span>-g<span class="w"> </span><span class="o">{</span>put<span class="w"> </span>your<span class="w"> </span>file<span class="w"> </span>name<span class="w"> </span>here<span class="o">}</span><span class="w">  </span>-o<span class="w"> </span>test.x
+<span class="sb">```</span>
+
+Make sure you update the <span class="sb">`-I`</span> argument to where your metal-cpp folder is located.
+
+Here&#39;s the documentation. It&#39;s just enough to get you started. I&#39;ll add more to the documentation including what works and what doesn&#39;t but until then:
+
+<span class="gu">## Creating Matrices</span>
+To create a matrix, you need <span class="sb">`MPS::MatrixDescriptor`</span> objects. You must create a descriptor for a matrix, which is later used to actually create the matrix. For e.g.To create a descriptor for a 5x4 matrix with with float32 datatype:
+
+<span class="sb">```cpp</span>
+<span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">*</span><span class="w"> </span><span class="n">mps_matdes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">::</span><span class="n">matrixDescriptorWithRows</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MPSDataTypeFloat32</span><span class="p">);</span>
+<span class="sb">```</span>
+The first argument is the number of rows, followed by the number of columns, followed by the number of bytes in a row i.e. <span class="sb">`numCols*dataTypeSize`</span>, followed by the actual data type.
+
+The actual matrix creation then works as follows (the <span class="sb">`alloc`</span> syntax does look like an eyesore. This is why the final goal is to create a wrapper around these operations):
+<span class="sb">```cpp</span>
+<span class="n">MTL</span><span class="o">::</span><span class="n">Device</span><span class="o">*</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MTL</span><span class="o">::</span><span class="n">CreateSystemDefaultDevice</span><span class="p">();</span>
+<span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">*</span><span class="w"> </span><span class="n">mps_matdes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">::</span><span class="n">matrixDescriptorWithRows</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MPSDataTypeFloat32</span><span class="p">);</span>
+<span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">*</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">::</span><span class="n">alloc</span><span class="p">();</span><span class="w"> </span><span class="n">matrix</span><span class="o">-&gt;</span><span class="n">initWithDevice</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="n">mps_matdes</span><span class="p">);</span>
+<span class="sb">```</span>
+
+To actually put the data inside the matrix, one method would be to use <span class="sb">`matrix-&gt;data()`</span> which just returns a pointer to the <span class="sb">`MTL::Buffer`</span> containing the data (row major order). Then, just loop through it and add your data.
+
+We can also initialize the matrix with an array. To initialize it with an array that contains your data, you need to initialize a buffer with that array and then initialize the matrix with that buffer (easy, huh? array-&gt;buffer-&gt;matrix) . Still, the cleanest way to write this would be:
+
+<span class="sb">```cpp</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">yourdatahere</span><span class="p">};</span>
+<span class="n">MTL</span><span class="o">::</span><span class="n">Buffer</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device</span><span class="o">-&gt;</span><span class="n">newBuffer</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">bufferSizeInBytes</span><span class="p">,</span><span class="n">MTL</span><span class="o">::</span><span class="n">ResourceStorageModeShared</span><span class="p">);</span>
+<span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">*</span><span class="w"> </span><span class="n">matdes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">::</span><span class="n">matrixDescriptorWithRows</span><span class="p">(...);</span>
+<span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">*</span><span class="w"> </span><span class="n">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">::</span><span class="n">alloc</span><span class="p">();</span><span class="n">mat</span><span class="o">-&gt;</span><span class="n">initWithBuffer</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="n">matdes</span><span class="p">);</span>
+<span class="sb">```</span>
+
+If you already have a <span class="sb">`float`</span> array, it makes more sense to do this than to copy the data into the buffer.
+
+When in doubt, just open the header file corresponding to the operation you want to perform or the data structure you want to know more about.
+
+
+<span class="gu">## Matrix Multiplication</span>
+Now, here&#39;s a complete example that declares and then multiplies two 3x3 matrices:
+
+<span class="sb">```cpp</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
+
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Accelerate/Accelerate.h&gt;</span>
+
+<span class="cp">#define NS_PRIVATE_IMPLEMENTATION</span>
+<span class="cp">#define CA_PRIVATE_IMPLEMENTATION</span>
+<span class="cp">#define MTL_PRIVATE_IMPLEMENTATION</span>
+<span class="cp">#define MPS_PRIVATE_IMPLEMENTATION</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Foundation/Foundation.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Metal/Metal.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;QuartzCore/QuartzCore.hpp&quot;</span>
+
+
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp&quot;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printMTLBuffer</span><span class="p">(</span><span class="n">MTL</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">){</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">name</span><span class="o">&lt;&lt;</span><span class="s">&quot;:&quot;</span><span class="o">&lt;&lt;</span><span class="s">&quot;&lt;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">buf</span><span class="o">-&gt;</span><span class="n">contents</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">buf</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">()</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ptr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="s">&quot;,&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ptr</span><span class="p">[</span><span class="n">buf</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">()</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="s">&quot;&gt;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">    </span><span class="c1">// add the data to an array</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mat1_data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6.0</span><span class="p">,</span><span class="w"> </span><span class="mf">7.0</span><span class="p">,</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span><span class="w"> </span><span class="mf">9.0</span><span class="p">};</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mat2_data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">9.0</span><span class="p">,</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span><span class="w"> </span><span class="mf">7.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">//declare the device, command buffer, command queue</span>
+<span class="w">    </span><span class="n">MTL</span><span class="o">::</span><span class="n">Device</span><span class="o">*</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MTL</span><span class="o">::</span><span class="n">CreateSystemDefaultDevice</span><span class="p">();</span>
+<span class="w">    </span><span class="n">MTL</span><span class="o">::</span><span class="n">CommandQueue</span><span class="o">*</span><span class="w"> </span><span class="n">cmdQueue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device</span><span class="o">-&gt;</span><span class="n">newCommandQueue</span><span class="p">();</span>
+<span class="w">    </span><span class="n">MTL</span><span class="o">::</span><span class="n">CommandBuffer</span><span class="o">*</span><span class="w"> </span><span class="n">cmdbuf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmdQueue</span><span class="o">-&gt;</span><span class="n">commandBuffer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//create buffers from the above data</span>
+<span class="w">    </span><span class="n">MTL</span><span class="o">::</span><span class="n">Buffer</span><span class="o">*</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device</span><span class="o">-&gt;</span><span class="n">newBuffer</span><span class="p">(</span><span class="n">mat1_data</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="n">MTL</span><span class="o">::</span><span class="n">ResourceStorageModeShared</span><span class="p">);</span>
+<span class="w">    </span><span class="n">MTL</span><span class="o">::</span><span class="n">Buffer</span><span class="o">*</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device</span><span class="o">-&gt;</span><span class="n">newBuffer</span><span class="p">(</span><span class="n">mat2_data</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="n">MTL</span><span class="o">::</span><span class="n">ResourceStorageModeShared</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//create matrix descriptors</span>
+<span class="w">    </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">*</span><span class="w"> </span><span class="n">m1_des</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">::</span><span class="n">matrixDescriptorWithRows</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">MPS</span><span class="o">::</span><span class="n">MPSDataTypeFloat32</span><span class="p">);</span>
+<span class="w">    </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">*</span><span class="w"> </span><span class="n">m2_des</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">::</span><span class="n">matrixDescriptorWithRows</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">MPS</span><span class="o">::</span><span class="n">MPSDataTypeFloat32</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//create matrices from their matrix descriptors</span>
+<span class="w">    </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">*</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">::</span><span class="n">alloc</span><span class="p">();</span><span class="w"> </span><span class="n">m1</span><span class="o">-&gt;</span><span class="n">initWithBuffer</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="n">m1_des</span><span class="p">);</span>
+<span class="w">    </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">*</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">::</span><span class="n">alloc</span><span class="p">();</span><span class="w"> </span><span class="n">m2</span><span class="o">-&gt;</span><span class="n">initWithBuffer</span><span class="p">(</span><span class="n">b2</span><span class="p">,</span><span class="w"> </span><span class="n">m2_des</span><span class="p">);</span>
+<span class="w">    </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">*</span><span class="w"> </span><span class="n">m_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">Matrix</span><span class="o">::</span><span class="n">alloc</span><span class="p">();</span><span class="w"> </span><span class="n">m_res</span><span class="o">-&gt;</span><span class="n">initWithDevice</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixDescriptor</span><span class="o">::</span><span class="n">matrixDescriptorWithRows</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">MPS</span><span class="o">::</span><span class="n">MPSDataTypeFloat32</span><span class="p">));</span>
+
+<span class="w">    </span><span class="c1">//allocate a matrix multiplication object</span>
+<span class="w">    </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixMultiplication</span><span class="o">*</span><span class="w"> </span><span class="n">mps_matmul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPS</span><span class="o">::</span><span class="n">MatrixMultiplication</span><span class="o">::</span><span class="n">alloc</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mps_matmul</span><span class="o">-&gt;</span><span class="n">initWithDevice</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//encode the matmul op. to the command buffer</span>
+<span class="w">    </span><span class="n">mps_matmul</span><span class="o">-&gt;</span><span class="n">encodeToCommandBuffer</span><span class="p">(</span><span class="n">cmdbuf</span><span class="p">,</span><span class="w"> </span><span class="n">m1</span><span class="p">,</span><span class="w"> </span><span class="n">m2</span><span class="p">,</span><span class="w"> </span><span class="n">m_res</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//commit command buffer</span>
+<span class="w">    </span><span class="n">cmdbuf</span><span class="o">-&gt;</span><span class="n">commit</span><span class="p">();</span>
+<span class="w">    </span><span class="n">cmdbuf</span><span class="o">-&gt;</span><span class="n">waitUntilCompleted</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// print the data</span>
+<span class="w">    </span><span class="n">printMTLBuffer</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;m1&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printMTLBuffer</span><span class="p">(</span><span class="n">b2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;m2&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printMTLBuffer</span><span class="p">(</span><span class="n">m_res</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;res&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="sb">```</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

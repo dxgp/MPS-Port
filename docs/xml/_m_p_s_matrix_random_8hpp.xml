@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_m_p_s_matrix_random_8hpp" kind="file" language="C++">
+    <compoundname>MPSMatrixRandom.hpp</compoundname>
+    <includes refid="_m_p_s_matrix_types_8hpp" local="yes">MPSMatrixTypes.hpp</includes>
+    <includedby refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp" local="yes">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>../../Foundation/NSObject.hpp</label>
+      </node>
+      <node id="11">
+        <label>../../Metal/MTLBuffer.hpp</label>
+      </node>
+      <node id="6">
+        <label>../../Metal/Metal.hpp</label>
+      </node>
+      <node id="9">
+        <label>../MPSDefines.hpp</label>
+      </node>
+      <node id="10">
+        <label>../MPSHeaderBridge.hpp</label>
+      </node>
+      <node id="7">
+        <label>../MPSPrivate.hpp</label>
+      </node>
+      <node id="8">
+        <label>MPSCommandBuffer.hpp</label>
+        <link refid="_m_p_s_command_buffer_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MPSCoreTypes.hpp</label>
+        <link refid="_m_p_s_core_types_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>MPSFunctionConstantIndices.hpp</label>
+        <link refid="_m_p_s_function_constant_indices_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>../MPSCore/MPSKernel.hpp</label>
+        <link refid="_m_p_s_kernel_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../MPSCore/MPSKernelTypes.hpp</label>
+        <link refid="_m_p_s_kernel_types_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../MPSCore/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_core_2_m_p_s_matrix_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp</label>
+        <link refid="_m_p_s_matrix_random_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MPSMatrixTypes.hpp</label>
+        <link refid="_m_p_s_matrix_types_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>simd/simd.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp</label>
+        <link refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp</label>
+        <link refid="_m_p_s_matrix_random_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" prot="public">MPS::MatrixRandomDistributionDescriptor</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_random" prot="public">MPS::MatrixRandom</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" prot="public">MPS::MatrixRandomMTGP32</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_random_philox" prot="public">MPS::MatrixRandomPhilox</innerclass>
+    <innernamespace refid="namespace_m_p_s">MPS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSMatrixTypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>_NS_OPTIONS(NS::UInteger,<sp/>MatrixRandomDistribution){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MatrixRandomDistributionDefault<sp/>=<sp/>1U,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MatrixRandomDistributionUniform<sp/>=<sp/>2U,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MatrixRandomDistributionNormal<sp/>=<sp/>3U</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="10" refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MatrixRandomDistributionDescriptor</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Copying&lt;MPS::MatrixRandomDistributionDescriptor&gt;{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>I<sp/>need<sp/>this<sp/>alloc<sp/>and<sp/>init?<sp/>While<sp/>it<sp/>is<sp/>importand<sp/>because<sp/>NS::Copying<sp/>requires<sp/>it,<sp/>do<sp/>I<sp/>need<sp/>it?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>init();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::MatrixRandomDistribution<sp/>distributionType();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minimum();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximum();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mean();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>standardDeviation();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>uniformDistributionDescriptorWithMinimum(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minimum,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximum);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>normalDistributionDescriptorWithMean(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mean,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>standardDeviation);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>normalDistributionDescriptorWithMean(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mean,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>standardDeviation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minimum,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximum);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>defaultDistributionDescriptor();<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/>since<sp/>you<sp/>can&apos;t<sp/>really<sp/>initialize<sp/>using<sp/>this<sp/>MatrixRandom<sp/>class,<sp/>the<sp/>functions<sp/>should<sp/>be<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>added<sp/>to<sp/>both<sp/>the<sp/>subclasses<sp/>to<sp/>make<sp/>this<sp/>work.<sp/>Otherwise,<sp/>they<sp/>won&apos;t<sp/>even<sp/>have<sp/>these<sp/>functions</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_m_p_s_1_1_matrix_random" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_random" kindref="compound">MatrixRandom</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::Kernel&gt;{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random" kindref="compound">MPS::MatrixRandom</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::DataType<sp/>destinationDataType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::MatrixRandomDistribution<sp/>distributionType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchStart();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchSize();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MPS::MatrixRandom*<sp/>initWithDevice(MTL::Device*<sp/>device);<sp/>use<sp/>one<sp/>of<sp/>the<sp/>subclasses<sp/>of<sp/>MatrixRandom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>destinationVector);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>destinationMatrix);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40" refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MatrixRandomMTGP32</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::MatrixRandom&gt;{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::DataType<sp/>destinationDataType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::MatrixRandomDistribution<sp/>distributionType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchStart();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchSize();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>two<sp/>initWithDevice<sp/>calls<sp/>below<sp/>use<sp/>the<sp/>defaultDistributionDescriptor...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device);<sp/></highlight><highlight class="comment">//<sp/>generates<sp/>a<sp/>random<sp/>distribution<sp/>with<sp/>a<sp/>data<sp/>type<sp/>of<sp/>UInt32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed);<sp/></highlight><highlight class="comment">//<sp/>generates<sp/>a<sp/>random<sp/>distribution<sp/>with<sp/>a<sp/>data<sp/>type<sp/>of<sp/>UInt32<sp/>with<sp/>seed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed,<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>distributionDescriptor);<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>synchronizeStateOnCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>destinationVector);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>destinationMatrix);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>philox<sp/>does<sp/>not<sp/>have<sp/>a<sp/>synchronize<sp/>on<sp/>command<sp/>buffer<sp/>function.<sp/>Interesting.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_m_p_s_1_1_matrix_random_philox" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MatrixRandomPhilox</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;MPS::MatrixRandom&gt;{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::DataType<sp/>destinationDataType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::MatrixRandomDistribution<sp/>distributionType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchStart();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>batchSize();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed,<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>distributionDescriptor);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>destinationVector);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>destinationMatrix);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>MPS::MatrixRandomDistributionDescriptor::alloc(){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixRandomDistributionDescriptor&gt;(_MPS_PRIVATE_CLS(MPSMatrixRandomDistributionDescriptor));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>MPS::MatrixRandomDistributionDescriptor::init(){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::init&lt;MPS::MatrixRandomDistributionDescriptor&gt;();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">_MPS_INLINE<sp/>MPS::MatrixRandomDistribution<sp/>MPS::MatrixRandomDistributionDescriptor::distributionType(){</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomDistribution&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(distributionType));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>MPS::MatrixRandomDistributionDescriptor::minimum(){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;float&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(minimum));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>MPS::MatrixRandomDistributionDescriptor::maximum(){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;float&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(maximum));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>MPS::MatrixRandomDistributionDescriptor::mean(){</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;float&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(mean));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>MPS::MatrixRandomDistributionDescriptor::standardDeviation(){</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;float&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(standardDeviation));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>MPS::MatrixRandomDistributionDescriptor::uniformDistributionDescriptorWithMinimum(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minimum,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximum){</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomDistributionDescriptor*&gt;(_MPS_PRIVATE_CLS(MPSMatrixRandomDistributionDescriptor),<sp/>_MPS_PRIVATE_SEL(uniformDistributionDescriptorWithMinimum_maximum_),<sp/>minimum,<sp/>maximum);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>MPS::MatrixRandomDistributionDescriptor::normalDistributionDescriptorWithMean(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mean,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>standardDeviation){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomDistributionDescriptor*&gt;(_MPS_PRIVATE_CLS(MPSMatrixRandomDistributionDescriptor),<sp/>_MPS_PRIVATE_SEL(normalDistributionDescriptorWithMean_standardDeviation_),<sp/>mean,<sp/>standardDeviation);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>MPS::MatrixRandomDistributionDescriptor::normalDistributionDescriptorWithMean(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mean,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>standardDeviation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minimum,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximum){</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomDistributionDescriptor*&gt;(_MPS_PRIVATE_CLS(MPSMatrixRandomDistributionDescriptor),<sp/>_MPS_PRIVATE_SEL(normalDistributionDescriptorWithMean_standardDeviation_minimum_maximum_),<sp/>mean,<sp/>standardDeviation,<sp/>minimum,<sp/>maximum);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>MPS::MatrixRandomDistributionDescriptor::defaultDistributionDescriptor(){</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomDistributionDescriptor*&gt;(_MPS_PRIVATE_CLS(MPSMatrixRandomDistributionDescriptor),<sp/>_MPS_PRIVATE_SEL(defaultDistributionDescriptor));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>MPS::MatrixRandomMTGP32::alloc(){</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixRandomMTGP32&gt;(_MPS_PRIVATE_CLS(MPSMatrixRandomMTGP32));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>MPS::MatrixRandomPhilox::alloc(){</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::MatrixRandomPhilox&gt;(_MPS_PRIVATE_CLS(MPSMatrixRandomPhilox));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//MatrixRandomMTGP32.<sp/>Don&apos;t<sp/>really<sp/>know<sp/>if<sp/>doing<sp/>this<sp/>will<sp/>work</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">_MPS_INLINE<sp/>MPS::DataType<sp/>MPS::MatrixRandomMTGP32::destinationDataType()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::DataType&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(destinationDataType));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">_MPS_INLINE<sp/>MPS::MatrixRandomDistribution<sp/>MPS::MatrixRandomMTGP32::distributionType()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomDistribution&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(distributionType));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixRandomMTGP32::batchStart(){</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(batchStart));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixRandomMTGP32::batchSize(){</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(batchSize));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>MPS::MatrixRandomMTGP32::initWithDevice(MTL::Device*<sp/>device){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomMTGP32*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_),<sp/>device);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>MPS::MatrixRandomMTGP32::initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed,<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>distributionDescriptor){</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomMTGP32*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_destinationDataType_seed_distributionDescriptor_),<sp/>device,<sp/>destinationDataType,<sp/>seed,<sp/>distributionDescriptor);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixRandomMTGP32::synchronizeStateOnCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer){</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(synchronizeStateOnCommandBuffer_),<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>MPS::MatrixRandomMTGP32::initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed){</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomMTGP32*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_destinationDataType_seed_),<sp/>device,<sp/>destinationDataType,<sp/>seed);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" kindref="compound">MPS::MatrixRandomMTGP32</ref>*<sp/>MPS::MatrixRandomMTGP32::initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device){</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomMTGP32*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithCoder_device_),<sp/>aDecoder,<sp/>device);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixRandomMTGP32::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>destinationVector){</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_destinationVector_),<sp/>commandBuffer,<sp/>destinationVector);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixRandomMTGP32::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>destinationMatrix){</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_destinationMatrix_),<sp/>commandBuffer,<sp/>destinationMatrix);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">_MPS_INLINE<sp/>MPS::DataType<sp/>MPS::MatrixRandomPhilox::destinationDataType()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::DataType&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(destinationDataType));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">_MPS_INLINE<sp/>MPS::MatrixRandomDistribution<sp/>MPS::MatrixRandomPhilox::distributionType()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomDistribution&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(distributionType));</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixRandomPhilox::batchStart(){</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(batchStart));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::MatrixRandomPhilox::batchSize(){</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(batchSize));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>MPS::MatrixRandomPhilox::initWithDevice(MTL::Device*<sp/>device){</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomPhilox*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_),<sp/>device);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>MPS::MatrixRandomPhilox::initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed,<sp/><ref refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" kindref="compound">MPS::MatrixRandomDistributionDescriptor</ref>*<sp/>distributionDescriptor){</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomPhilox*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_destinationDataType_seed_distributionDescriptor_),<sp/>device,<sp/>destinationDataType,<sp/>seed,<sp/>distributionDescriptor);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_MPS_INLINE<sp/>void<sp/>MPS::MatrixRandomPhilox::synchronizeStateOnCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(this,<sp/>_MPS_PRIVATE_SEL(synchronizeStateOnCommandBuffer_),<sp/>commandBuffer);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>MPS::MatrixRandomPhilox::initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>seed){</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomPhilox*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_destinationDataType_seed_),<sp/>device,<sp/>destinationDataType,<sp/>seed);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_matrix_random_philox" kindref="compound">MPS::MatrixRandomPhilox</ref>*<sp/>MPS::MatrixRandomPhilox::initWithCoder(NS::Coder*<sp/>aDecoder,<sp/>MTL::Device*<sp/>device){</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::MatrixRandomPhilox*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithCoder_device_),<sp/>aDecoder,<sp/>device);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixRandomPhilox::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref>*<sp/>destinationVector){</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_destinationVector_),<sp/>commandBuffer,<sp/>destinationVector);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::MatrixRandomPhilox::encodeToCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref>*<sp/>destinationMatrix){</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(encodeToCommandBuffer_destinationMatrix_),<sp/>commandBuffer,<sp/>destinationMatrix);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp"/>
+  </compounddef>
+</doxygen>

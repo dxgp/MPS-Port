@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_heap_provider" kind="class" language="C++" prot="public">
+    <compoundname>MPS::HeapProvider</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::HeapProvider &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_heap_provider_1ab495234cec814191868b31288a48b787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Heap *</type>
+        <definition>_MPS_INLINE MTL::Heap * MPS::HeapProvider::newHeapWithDescriptor</definition>
+        <argsstring>(MTL::HeapDescriptor *descriptor)</argsstring>
+        <name>newHeapWithDescriptor</name>
+        <qualifiedname>MPS::HeapProvider::newHeapWithDescriptor</qualifiedname>
+        <param>
+          <type>MTL::HeapDescriptor *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="24" column="19" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_heap_provider_1a4481cc3ea23277be30ff825ee8bf8d62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::HeapProvider::retireHeap</definition>
+        <argsstring>(MTL::Heap *heap, double seconds)</argsstring>
+        <name>retireHeap</name>
+        <qualifiedname>MPS::HeapProvider::retireHeap</qualifiedname>
+        <param>
+          <type>MTL::Heap *</type>
+          <declname>heap</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="25" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::HeapProvider</label>
+        <link refid="class_m_p_s_1_1_heap_provider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::HeapProvider &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::HeapProvider</label>
+        <link refid="class_m_p_s_1_1_heap_provider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::HeapProvider &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="22" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="22" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_heap_provider_1ab495234cec814191868b31288a48b787" prot="public" virt="non-virtual"><scope>MPS::HeapProvider</scope><name>newHeapWithDescriptor</name></member>
+      <member refid="class_m_p_s_1_1_heap_provider_1a4481cc3ea23277be30ff825ee8bf8d62" prot="public" virt="non-virtual"><scope>MPS::HeapProvider</scope><name>retireHeap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

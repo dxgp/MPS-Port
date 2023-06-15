@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Matrix &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class MatrixBinaryKernel" href="class_m_p_s_1_1_matrix_binary_kernel.html" />
+    <link rel="prev" title="Class Kernel" href="class_m_p_s_1_1_kernel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">MetalPerformanceShaders C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_dimension_slice.html">Struct DimensionSlice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_coordinate.html">Struct ImageCoordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_region.html">Struct ImageRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_m_p_s_offset.html">Struct MPSOffset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_origin.html">Struct Origin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_region.html">Struct Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_scale_transform.html">Struct ScaleTransform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_size.html">Struct Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html">Class CommandBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_device_provider.html">Class DeviceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html">Class HeapProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_kernel.html">Class Kernel</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class Matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html">Class MatrixBinaryKernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html">Class MatrixDecompositionCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html">Class MatrixDecompositionLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html">Class MatrixDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html">Class MatrixFindTopK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html">Class MatrixLogSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html">Class MatrixLogSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html">Class MatrixMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html">Class MatrixRandom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html">Class MatrixRandomDistributionDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html">Class MatrixRandomMTGP32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html">Class MatrixRandomPhilox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html">Class MatrixSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html">Class MatrixSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html">Class MatrixSolveCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html">Class MatrixSolveLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html">Class MatrixSolveTriangular</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html">Class MatrixUnaryKernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html">Class MatrixVectorMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html">Class NDArray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html">Class NDArrayAllocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html">Class NDArrayDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_predicate.html">Class Predicate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html">Class TemporaryNDArray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_vector.html">Class Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html">Class VectorDescriptor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">MetalPerformanceShaders C++ API</a></li>
+      <li class="breadcrumb-item active">Class Matrix</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/class_m_p_s_1_1_matrix.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-matrix">
+<span id="exhale-class-class-m-p-s-1-1-matrix"></span><h1>Class Matrix<a class="headerlink" href="#class-matrix" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_MPSCore_MPSMatrix.hpp.html#file-mpscore-mpsmatrix-hpp"><span class="std std-ref">File MPSMatrix.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NS::Referencing&lt;</span> <span class="pre">MPS::Matrix</span> <span class="pre">&gt;</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6MatrixE">
+<span id="_CPPv3N3MPS6MatrixE"></span><span id="_CPPv2N3MPS6MatrixE"></span><span id="MPS::Matrix"></span><span class="target" id="class_m_p_s_1_1_matrix"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Referencing</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6MatrixE" title="MPS::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3MPS6MatrixE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-unnamed-group">Unnamed Group</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Matrix5allocEv">
+<span id="_CPPv3N3MPS6Matrix5allocEv"></span><span id="_CPPv2N3MPS6Matrix5allocEv"></span><span id="MPS::Matrix::alloc"></span><span class="target" id="class_m_p_s_1_1_matrix_1a60a94b01aa9399dd49d0a311663f0a16"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6MatrixE" title="MPS::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">alloc</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Matrix5allocEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix6deviceEv">
+<span id="_CPPv3NK3MPS6Matrix6deviceEv"></span><span id="_CPPv2NK3MPS6Matrix6deviceEv"></span><span id="MPS::Matrix::deviceC"></span><span class="target" id="class_m_p_s_1_1_matrix_1aafbc1b8918d58245a6d2b72ab8f75b00"></span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Device</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">device</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix6deviceEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix4rowsEv">
+<span id="_CPPv3NK3MPS6Matrix4rowsEv"></span><span id="_CPPv2NK3MPS6Matrix4rowsEv"></span><span id="MPS::Matrix::rowsC"></span><span class="target" id="class_m_p_s_1_1_matrix_1a92928a434283258f1f40f9628316ce07"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rows</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix4rowsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix7columnsEv">
+<span id="_CPPv3NK3MPS6Matrix7columnsEv"></span><span id="_CPPv2NK3MPS6Matrix7columnsEv"></span><span id="MPS::Matrix::columnsC"></span><span class="target" id="class_m_p_s_1_1_matrix_1a11908e9eebe5583e7e6f1e17373a8005"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">columns</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix7columnsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix8matricesEv">
+<span id="_CPPv3NK3MPS6Matrix8matricesEv"></span><span id="_CPPv2NK3MPS6Matrix8matricesEv"></span><span id="MPS::Matrix::matricesC"></span><span class="target" id="class_m_p_s_1_1_matrix_1a0e36c8ba7fe6a6429b425e7baa53fdbe"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">matrices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix8matricesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix8dataTypeEv">
+<span id="_CPPv3NK3MPS6Matrix8dataTypeEv"></span><span id="_CPPv2NK3MPS6Matrix8dataTypeEv"></span><span id="MPS::Matrix::dataTypeC"></span><span class="target" id="class_m_p_s_1_1_matrix_1a27cf13c9510a3d13a9c13e07c084a1d8"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DataType</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dataType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix8dataTypeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix8rowBytesEv">
+<span id="_CPPv3NK3MPS6Matrix8rowBytesEv"></span><span id="_CPPv2NK3MPS6Matrix8rowBytesEv"></span><span id="MPS::Matrix::rowBytesC"></span><span class="target" id="class_m_p_s_1_1_matrix_1a0bbf362b4ec874b6363c6692f9059f0b"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rowBytes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix8rowBytesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix11matrixBytesEv">
+<span id="_CPPv3NK3MPS6Matrix11matrixBytesEv"></span><span id="_CPPv2NK3MPS6Matrix11matrixBytesEv"></span><span id="MPS::Matrix::matrixBytesC"></span><span class="target" id="class_m_p_s_1_1_matrix_1abee4295df908c4f694f5a0fd6aa4ae5c"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">matrixBytes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix11matrixBytesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix6offsetEv">
+<span id="_CPPv3NK3MPS6Matrix6offsetEv"></span><span id="_CPPv2NK3MPS6Matrix6offsetEv"></span><span id="MPS::Matrix::offsetC"></span><span class="target" id="class_m_p_s_1_1_matrix_1a21f888ae717f1387f767811b683d59db"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">offset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix6offsetEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Matrix4dataEv">
+<span id="_CPPv3NK3MPS6Matrix4dataEv"></span><span id="_CPPv2NK3MPS6Matrix4dataEv"></span><span id="MPS::Matrix::dataC"></span><span class="target" id="class_m_p_s_1_1_matrix_1a9fdf2a2b1e3568fa004a4f7ba26f586a"></span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Matrix4dataEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Matrix14initWithBufferEPN3MTL6BufferEPN3MPS16MatrixDescriptorE">
+<span id="_CPPv3N3MPS6Matrix14initWithBufferEPN3MTL6BufferEPN3MPS16MatrixDescriptorE"></span><span id="_CPPv2N3MPS6Matrix14initWithBufferEPN3MTL6BufferEPN3MPS16MatrixDescriptorE"></span><span id="MPS::Matrix::initWithBuffer__MTL::BufferP.MPS::MatrixDescriptorP"></span><span class="target" id="class_m_p_s_1_1_matrix_1ab73e06b6aa8ee8c4b4b0e3e0c68bfcdd"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6MatrixE" title="MPS::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">initWithBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html#_CPPv4N3MPS16MatrixDescriptorE" title="MPS::MatrixDescriptor"><span class="n"><span class="pre">MatrixDescriptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">descriptor</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Matrix14initWithBufferEPN3MTL6BufferEN2NS8UIntegerEPN3MPS16MatrixDescriptorE">
+<span id="_CPPv3N3MPS6Matrix14initWithBufferEPN3MTL6BufferEN2NS8UIntegerEPN3MPS16MatrixDescriptorE"></span><span id="_CPPv2N3MPS6Matrix14initWithBufferEPN3MTL6BufferEN2NS8UIntegerEPN3MPS16MatrixDescriptorE"></span><span id="MPS::Matrix::initWithBuffer__MTL::BufferP.NS::UInteger.MPS::MatrixDescriptorP"></span><span class="target" id="class_m_p_s_1_1_matrix_1a19d243988fbb2b444accef3b9d428ff3"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6MatrixE" title="MPS::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">initWithBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html#_CPPv4N3MPS16MatrixDescriptorE" title="MPS::MatrixDescriptor"><span class="n"><span class="pre">MatrixDescriptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">descriptor</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Matrix14initWithDeviceEPN3MTL6DeviceEPN3MPS16MatrixDescriptorE">
+<span id="_CPPv3N3MPS6Matrix14initWithDeviceEPN3MTL6DeviceEPN3MPS16MatrixDescriptorE"></span><span id="_CPPv2N3MPS6Matrix14initWithDeviceEPN3MTL6DeviceEPN3MPS16MatrixDescriptorE"></span><span id="MPS::Matrix::initWithDevice__MTL::DeviceP.MPS::MatrixDescriptorP"></span><span class="target" id="class_m_p_s_1_1_matrix_1ac97bc44bb5c26ddb0913482210bc3b66"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6MatrixE" title="MPS::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">initWithDevice</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Device</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">device</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html#_CPPv4N3MPS16MatrixDescriptorE" title="MPS::MatrixDescriptor"><span class="n"><span class="pre">MatrixDescriptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">descriptor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Matrix14initWithDeviceEPN3MTL6DeviceEPN3MPS16MatrixDescriptorE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Matrix26synchronizeOnCommandBufferEPN3MTL13CommandBufferE">
+<span id="_CPPv3N3MPS6Matrix26synchronizeOnCommandBufferEPN3MTL13CommandBufferE"></span><span id="_CPPv2N3MPS6Matrix26synchronizeOnCommandBufferEPN3MTL13CommandBufferE"></span><span id="MPS::Matrix::synchronizeOnCommandBuffer__MTL::CommandBufferP"></span><span class="target" id="class_m_p_s_1_1_matrix_1a39982edd40134bdc59a2d3cc9cb26ac2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">synchronizeOnCommandBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CommandBuffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">commandBuffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Matrix26synchronizeOnCommandBufferEPN3MTL13CommandBufferE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Matrix12resourceSizeEv">
+<span id="_CPPv3N3MPS6Matrix12resourceSizeEv"></span><span id="_CPPv2N3MPS6Matrix12resourceSizeEv"></span><span id="MPS::Matrix::resourceSize"></span><span class="target" id="class_m_p_s_1_1_matrix_1a1259550359a1e917782768d1c8548179"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resourceSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Matrix12resourceSizeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_m_p_s_1_1_kernel.html" class="btn btn-neutral float-left" title="Class Kernel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_m_p_s_1_1_matrix_binary_kernel.html" class="btn btn-neutral float-right" title="Class MatrixBinaryKernel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

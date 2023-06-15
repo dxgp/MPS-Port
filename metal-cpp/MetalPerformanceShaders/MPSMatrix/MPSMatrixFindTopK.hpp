@@ -17,6 +17,7 @@ namespace MPS{
         // one more zone function, skipped
     };
 }
+/// @{ @private
 _MPS_INLINE MPS::MatrixFindTopK* MPS::MatrixFindTopK::alloc(){
     return NS::Object::alloc<MPS::MatrixFindTopK>(_MPS_PRIVATE_CLS(MPSMatrixFindTopK));
 }
@@ -41,3 +42,4 @@ _MPS_INLINE void MPS::MatrixFindTopK::encodeToCommandBuffer(MTL::CommandBuffer* 
 // _MPS_INLINE MPS::MatrixFindTopK* MPS::MatrixFindTopK::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
 //     return Object::sendMessage<MPS::MatrixFindTopK*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_), aDecoder, device);
 // }
+/// @}

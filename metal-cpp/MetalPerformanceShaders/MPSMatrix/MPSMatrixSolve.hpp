@@ -21,6 +21,7 @@ namespace MPS{
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* sourceMatrix, MPS::Matrix* rightHandSideMatrix, MPS::Matrix* solutionMatrix);
     };
 }
+/// @{ @private
 _MPS_INLINE MPS::MatrixSolveTriangular* MPS::MatrixSolveTriangular::alloc(){
     return NS::Object::alloc<MPS::MatrixSolveTriangular>(_MPS_PRIVATE_CLS(MPSMatrixSolveTriangular));
 }
@@ -52,3 +53,5 @@ _MPS_INLINE MPS::MatrixSolveCholesky* MPS::MatrixSolveCholesky::initWithDevice(M
 _MPS_INLINE void MPS::MatrixSolveCholesky::encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* sourceMatrix, MPS::Matrix* rightHandSideMatrix, MPS::Matrix* solutionMatrix){
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_solutionMatrix_),commandBuffer, sourceMatrix, rightHandSideMatrix, solutionMatrix);
 }
+
+/// @}

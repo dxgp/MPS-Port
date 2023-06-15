@@ -21,6 +21,7 @@ namespace MPS{
         NS::UInteger batchSize();
     };
 }
+/// @{ @private
 _MPS_INLINE MTL::Origin MPS::MatrixUnaryKernel::sourceMatrixOrigin(){
     return Object::sendMessage<MTL::Origin>(this, _MPS_PRIVATE_SEL(sourceMatrixOrigin));
 }
@@ -48,3 +49,4 @@ _MPS_INLINE NS::UInteger MPS::MatrixBinaryKernel::batchStart(){
 _MPS_INLINE NS::UInteger MPS::MatrixBinaryKernel::batchSize(){
     return Object::sendMessage<NS::UInteger>(this, _MPS_PRIVATE_SEL(batchSize));
 }
+/// @}

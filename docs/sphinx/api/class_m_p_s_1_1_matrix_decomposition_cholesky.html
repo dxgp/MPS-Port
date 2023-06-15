@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class MatrixDecompositionCholesky &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class MatrixDecompositionLU" href="class_m_p_s_1_1_matrix_decomposition_l_u.html" />
+    <link rel="prev" title="Class MatrixBinaryKernel" href="class_m_p_s_1_1_matrix_binary_kernel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">MetalPerformanceShaders C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_dimension_slice.html">Struct DimensionSlice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_coordinate.html">Struct ImageCoordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_region.html">Struct ImageRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_m_p_s_offset.html">Struct MPSOffset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_origin.html">Struct Origin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_region.html">Struct Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_scale_transform.html">Struct ScaleTransform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_size.html">Struct Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html">Class CommandBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_device_provider.html">Class DeviceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html">Class HeapProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_kernel.html">Class Kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix.html">Class Matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html">Class MatrixBinaryKernel</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class MatrixDecompositionCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html">Class MatrixDecompositionLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html">Class MatrixDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html">Class MatrixFindTopK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html">Class MatrixLogSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html">Class MatrixLogSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html">Class MatrixMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html">Class MatrixRandom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html">Class MatrixRandomDistributionDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html">Class MatrixRandomMTGP32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html">Class MatrixRandomPhilox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html">Class MatrixSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html">Class MatrixSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html">Class MatrixSolveCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html">Class MatrixSolveLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html">Class MatrixSolveTriangular</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html">Class MatrixUnaryKernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html">Class MatrixVectorMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html">Class NDArray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html">Class NDArrayAllocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html">Class NDArrayDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_predicate.html">Class Predicate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html">Class TemporaryNDArray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_vector.html">Class Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html">Class VectorDescriptor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">MetalPerformanceShaders C++ API</a></li>
+      <li class="breadcrumb-item active">Class MatrixDecompositionCholesky</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/class_m_p_s_1_1_matrix_decomposition_cholesky.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-matrixdecompositioncholesky">
+<span id="exhale-class-class-m-p-s-1-1-matrix-decomposition-cholesky"></span><h1>Class MatrixDecompositionCholesky<a class="headerlink" href="#class-matrixdecompositioncholesky" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_MPSMatrix_MPSMatrixDecomposition.hpp.html#file-mpsmatrix-mpsmatrixdecomposition-hpp"><span class="std std-ref">File MPSMatrixDecomposition.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NS::Referencing&lt;</span> <span class="pre">MPS::MatrixUnaryKernel</span> <span class="pre">&gt;</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS27MatrixDecompositionCholeskyE">
+<span id="_CPPv3N3MPS27MatrixDecompositionCholeskyE"></span><span id="_CPPv2N3MPS27MatrixDecompositionCholeskyE"></span><span id="MPS::MatrixDecompositionCholesky"></span><span class="target" id="class_m_p_s_1_1_matrix_decomposition_cholesky"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatrixDecompositionCholesky</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Referencing</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html#_CPPv4N3MPS17MatrixUnaryKernelE" title="MPS::MatrixUnaryKernel"><span class="n"><span class="pre">MatrixUnaryKernel</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3MPS27MatrixDecompositionCholeskyE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-unnamed-group">Unnamed Group</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS27MatrixDecompositionCholesky5allocEv">
+<span id="_CPPv3N3MPS27MatrixDecompositionCholesky5allocEv"></span><span id="_CPPv2N3MPS27MatrixDecompositionCholesky5allocEv"></span><span id="MPS::MatrixDecompositionCholesky::alloc"></span><span class="target" id="class_m_p_s_1_1_matrix_decomposition_cholesky_1ad0d84e19711ff6cc045727163e0aae42"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS27MatrixDecompositionCholeskyE" title="MPS::MatrixDecompositionCholesky"><span class="n"><span class="pre">MatrixDecompositionCholesky</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">alloc</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS27MatrixDecompositionCholesky5allocEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS27MatrixDecompositionCholesky14initWithDeviceEPN3MTL6DeviceEbN2NS8UIntegerE">
+<span id="_CPPv3N3MPS27MatrixDecompositionCholesky14initWithDeviceEPN3MTL6DeviceEbN2NS8UIntegerE"></span><span id="_CPPv2N3MPS27MatrixDecompositionCholesky14initWithDeviceEPN3MTL6DeviceEbN2NS8UIntegerE"></span><span id="MPS::MatrixDecompositionCholesky::initWithDevice__MTL::DeviceP.b.NS::UInteger"></span><span class="target" id="class_m_p_s_1_1_matrix_decomposition_cholesky_1aa86103be4b0e7577e0b41b522abe3dba"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS27MatrixDecompositionCholeskyE" title="MPS::MatrixDecompositionCholesky"><span class="n"><span class="pre">MatrixDecompositionCholesky</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">initWithDevice</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Device</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">device</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lower</span></span>, <span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">order</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS27MatrixDecompositionCholesky14initWithDeviceEPN3MTL6DeviceEbN2NS8UIntegerE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS27MatrixDecompositionCholesky21encodeToCommandBufferEPN3MTL13CommandBufferEPN3MPS6MatrixEPN3MPS6MatrixEPN3MTL6BufferE">
+<span id="_CPPv3N3MPS27MatrixDecompositionCholesky21encodeToCommandBufferEPN3MTL13CommandBufferEPN3MPS6MatrixEPN3MPS6MatrixEPN3MTL6BufferE"></span><span id="_CPPv2N3MPS27MatrixDecompositionCholesky21encodeToCommandBufferEPN3MTL13CommandBufferEPN3MPS6MatrixEPN3MPS6MatrixEPN3MTL6BufferE"></span><span id="MPS::MatrixDecompositionCholesky::encodeToCommandBuffer__MTL::CommandBufferP.MPS::MatrixP.MPS::MatrixP.MTL::BufferP"></span><span class="target" id="class_m_p_s_1_1_matrix_decomposition_cholesky_1afe8ce3906d37423f9e3fc58dbc11616f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">encodeToCommandBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CommandBuffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">commandBuffer</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_matrix.html#_CPPv4N3MPS6MatrixE" title="MPS::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sourceMatrix</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_matrix.html#_CPPv4N3MPS6MatrixE" title="MPS::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">resultMatrix</span></span>, <span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS27MatrixDecompositionCholesky21encodeToCommandBufferEPN3MTL13CommandBufferEPN3MPS6MatrixEPN3MPS6MatrixEPN3MTL6BufferE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_m_p_s_1_1_matrix_binary_kernel.html" class="btn btn-neutral float-left" title="Class MatrixBinaryKernel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_m_p_s_1_1_matrix_decomposition_l_u.html" class="btn btn-neutral float-right" title="Class MatrixDecompositionLU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

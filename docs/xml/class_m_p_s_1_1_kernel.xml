@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_kernel" kind="class" language="C++" prot="public">
+    <compoundname>MPS::Kernel</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Copying&lt; Kernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1acd16592542cf80020da54abca202cf44" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref> *</type>
+        <definition>_MPS_INLINE MPS::Kernel * MPS::Kernel::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::Kernel::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="7" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1abc7038241f425623ac6b1f574768c8e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref> *</type>
+        <definition>_MPS_INLINE MPS::Kernel * MPS::Kernel::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>MPS::Kernel::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="8" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1afdbd9158c90dbb24feff65b929dc27da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MPS::KernelOptions</type>
+        <definition>_MPS_INLINE MPS::KernelOptions MPS::Kernel::options</definition>
+        <argsstring>()</argsstring>
+        <name>options</name>
+        <qualifiedname>MPS::Kernel::options</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="9" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1a343ab829a17062f851c4955c4921e048" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Device *</type>
+        <definition>_MPS_INLINE MTL::Device * MPS::Kernel::device</definition>
+        <argsstring>() const</argsstring>
+        <name>device</name>
+        <qualifiedname>MPS::Kernel::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="10" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1a86ce54e56dcec2cc3a012ee68db9b3ca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::String *</type>
+        <definition>_MPS_INLINE NS::String * MPS::Kernel::label</definition>
+        <argsstring>()</argsstring>
+        <name>label</name>
+        <qualifiedname>MPS::Kernel::label</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="11" column="20" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1a10ea82d1b0dc7351d0b44cf58851ce96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref> *</type>
+        <definition>_MPS_INLINE MPS::Kernel * MPS::Kernel::initWithDevice</definition>
+        <argsstring>(MTL::Device *device)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::Kernel::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="12" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1a9f7f097e800fab5dd16f5fef565b6519" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref> *</type>
+        <definition>_MPS_INLINE MPS::Kernel * MPS::Kernel::initWithCoder</definition>
+        <argsstring>(NS::Coder *aDecoder)</argsstring>
+        <name>initWithCoder</name>
+        <qualifiedname>MPS::Kernel::initWithCoder</qualifiedname>
+        <param>
+          <type>NS::Coder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="14" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_kernel_1accff762e632d7aef85d7a7b73db55a52" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref> *</type>
+        <definition>_MPS_INLINE MPS::Kernel * MPS::Kernel::initWithCoder</definition>
+        <argsstring>(NS::Coder *aDecoder, MTL::Device *device)</argsstring>
+        <name>initWithCoder</name>
+        <qualifiedname>MPS::Kernel::initWithCoder</qualifiedname>
+        <param>
+          <type>NS::Coder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="15" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::Kernel</label>
+        <link refid="class_m_p_s_1_1_kernel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Copying&lt; Kernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::Kernel</label>
+        <link refid="class_m_p_s_1_1_kernel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Copying&lt; Kernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" line="6" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSKernel.hpp" bodystart="6" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_kernel_1acd16592542cf80020da54abca202cf44" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_kernel_1a343ab829a17062f851c4955c4921e048" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>device</name></member>
+      <member refid="class_m_p_s_1_1_kernel_1abc7038241f425623ac6b1f574768c8e1" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>init</name></member>
+      <member refid="class_m_p_s_1_1_kernel_1a9f7f097e800fab5dd16f5fef565b6519" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>initWithCoder</name></member>
+      <member refid="class_m_p_s_1_1_kernel_1accff762e632d7aef85d7a7b73db55a52" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>initWithCoder</name></member>
+      <member refid="class_m_p_s_1_1_kernel_1a10ea82d1b0dc7351d0b44cf58851ce96" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_kernel_1a86ce54e56dcec2cc3a012ee68db9b3ca" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>label</name></member>
+      <member refid="class_m_p_s_1_1_kernel_1afdbd9158c90dbb24feff65b929dc27da" prot="private" virt="non-virtual"><scope>MPS::Kernel</scope><name>options</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

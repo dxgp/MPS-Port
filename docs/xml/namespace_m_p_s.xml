@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_m_p_s" kind="namespace" language="C++">
+    <compoundname>MPS</compoundname>
+    <innerclass refid="class_m_p_s_1_1_command_buffer" prot="public">MPS::CommandBuffer</innerclass>
+    <innerclass refid="class_m_p_s_1_1_device_provider" prot="public">MPS::DeviceProvider</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_dimension_slice" prot="public">MPS::DimensionSlice</innerclass>
+    <innerclass refid="class_m_p_s_1_1_heap_provider" prot="public">MPS::HeapProvider</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_image_coordinate" prot="public">MPS::ImageCoordinate</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_image_region" prot="public">MPS::ImageRegion</innerclass>
+    <innerclass refid="class_m_p_s_1_1_kernel" prot="public">MPS::Kernel</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix" prot="public">MPS::Matrix</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_binary_kernel" prot="public">MPS::MatrixBinaryKernel</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_decomposition_cholesky" prot="public">MPS::MatrixDecompositionCholesky</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_decomposition_l_u" prot="public">MPS::MatrixDecompositionLU</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_descriptor" prot="public">MPS::MatrixDescriptor</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_find_top_k" prot="public">MPS::MatrixFindTopK</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_log_soft_max" prot="public">MPS::MatrixLogSoftMax</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_log_soft_max_gradient" prot="public">MPS::MatrixLogSoftMaxGradient</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_multiplication" prot="public">MPS::MatrixMultiplication</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_random" prot="public">MPS::MatrixRandom</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_random_distribution_descriptor" prot="public">MPS::MatrixRandomDistributionDescriptor</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_random_m_t_g_p32" prot="public">MPS::MatrixRandomMTGP32</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_random_philox" prot="public">MPS::MatrixRandomPhilox</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_soft_max" prot="public">MPS::MatrixSoftMax</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_soft_max_gradient" prot="public">MPS::MatrixSoftMaxGradient</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_solve_cholesky" prot="public">MPS::MatrixSolveCholesky</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_solve_l_u" prot="public">MPS::MatrixSolveLU</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_solve_triangular" prot="public">MPS::MatrixSolveTriangular</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_unary_kernel" prot="public">MPS::MatrixUnaryKernel</innerclass>
+    <innerclass refid="class_m_p_s_1_1_matrix_vector_multiplication" prot="public">MPS::MatrixVectorMultiplication</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_m_p_s_offset" prot="public">MPS::MPSOffset</innerclass>
+    <innerclass refid="class_m_p_s_1_1_n_d_array" prot="public">MPS::NDArray</innerclass>
+    <innerclass refid="class_m_p_s_1_1_n_d_array_allocator" prot="public">MPS::NDArrayAllocator</innerclass>
+    <innerclass refid="class_m_p_s_1_1_n_d_array_descriptor" prot="public">MPS::NDArrayDescriptor</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_origin" prot="public">MPS::Origin</innerclass>
+    <innerclass refid="class_m_p_s_1_1_predicate" prot="public">MPS::Predicate</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_region" prot="public">MPS::Region</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_scale_transform" prot="public">MPS::ScaleTransform</innerclass>
+    <innerclass refid="struct_m_p_s_1_1_size" prot="public">MPS::Size</innerclass>
+    <innerclass refid="class_m_p_s_1_1_temporary_n_d_array" prot="public">MPS::TemporaryNDArray</innerclass>
+    <innerclass refid="class_m_p_s_1_1_vector" prot="public">MPS::Vector</innerclass>
+    <innerclass refid="class_m_p_s_1_1_vector_descriptor" prot="public">MPS::VectorDescriptor</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1a45abcf62f809fd150d9049286f8722c5" prot="public" static="no">
+        <type>struct <ref refid="struct_m_p_s_1_1_origin" kindref="compound">MPS::Origin</ref></type>
+        <definition>typedef struct MPS::Origin MPS::MPSOrigin</definition>
+        <argsstring></argsstring>
+        <name>MPSOrigin</name>
+        <qualifiedname>MPS::MPSOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="68" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1a61600ba4e9159f7fabe743647f80c463" prot="public" static="no">
+        <type>struct <ref refid="struct_m_p_s_1_1_size" kindref="compound">MPS::Size</ref></type>
+        <definition>typedef struct MPS::Size MPS::MPSSize</definition>
+        <argsstring></argsstring>
+        <name>MPSSize</name>
+        <qualifiedname>MPS::MPSSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="73" column="12"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1aa702c40c811dacd614a7bf95229eda4e" prot="public" static="no">
+        <type>struct <ref refid="struct_m_p_s_1_1_dimension_slice" kindref="compound">MPS::DimensionSlice</ref></type>
+        <definition>typedef struct MPS::DimensionSlice MPS::MPSDimensionSlice</definition>
+        <argsstring></argsstring>
+        <name>MPSDimensionSlice</name>
+        <qualifiedname>MPS::MPSDimensionSlice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="77" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1acd141aedb96dc0d717d5f46357818d1f" prot="public" static="no">
+        <type>struct <ref refid="struct_m_p_s_1_1_region" kindref="compound">MPS::Region</ref></type>
+        <definition>typedef struct MPS::Region MPS::MPSRegion</definition>
+        <argsstring></argsstring>
+        <name>MPSRegion</name>
+        <qualifiedname>MPS::MPSRegion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="82" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1a4ac70c491e434f127881bc332103b9af" prot="public" static="no">
+        <type>struct <ref refid="struct_m_p_s_1_1_scale_transform" kindref="compound">MPS::ScaleTransform</ref></type>
+        <definition>typedef struct MPS::ScaleTransform MPS::MPSScaleTransform</definition>
+        <argsstring></argsstring>
+        <name>MPSScaleTransform</name>
+        <qualifiedname>MPS::MPSScaleTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="88" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1a54f461b516f24d50ddbce1017fa79051" prot="public" static="no">
+        <type>struct <ref refid="struct_m_p_s_1_1_image_coordinate" kindref="compound">MPS::ImageCoordinate</ref></type>
+        <definition>typedef struct MPS::ImageCoordinate MPS::MPSImageCoordinate</definition>
+        <argsstring></argsstring>
+        <name>MPSImageCoordinate</name>
+        <qualifiedname>MPS::MPSImageCoordinate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="94" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1a0388d3584adb526627f0ec66d91f2910" prot="public" static="no">
+        <type>struct <ref refid="struct_m_p_s_1_1_image_region" kindref="compound">MPS::ImageRegion</ref></type>
+        <definition>typedef struct MPS::ImageRegion MPS::MPSImageRegion</definition>
+        <argsstring></argsstring>
+        <name>MPSImageRegion</name>
+        <qualifiedname>MPS::MPSImageRegion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="99" column="19"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_core_types_8hpp_1a0caa47f6afe951c9d4fe05d914d451af" prot="public" static="no">
+        <type>NS::Array *</type>
+        <definition>typedef NS::Array* MPS::Shape</definition>
+        <argsstring></argsstring>
+        <name>Shape</name>
+        <qualifiedname>MPS::Shape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="109" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_m_p_s_n_d_array_8hpp_1a3813b5bd83b576bc3074d61308e05b19" prot="public" static="no">
+        <type>NS::Array *</type>
+        <definition>typedef NS::Array* MPS::MPSImageBatch</definition>
+        <argsstring></argsstring>
+        <name>MPSImageBatch</name>
+        <qualifiedname>MPS::MPSImageBatch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="14" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_p_s_core_types_8hpp_1a01dbcc05c66f7b274fe6d6db1d560172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::_NS_OPTIONS</definition>
+        <argsstring>(NS::UInteger, KernelOptions)</argsstring>
+        <name>_NS_OPTIONS</name>
+        <qualifiedname>MPS::_NS_OPTIONS</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+        </param>
+        <param>
+          <type>KernelOptions</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="9" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_core_types_8hpp_1afaa696e71cfa78a5e28e99373de8196b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::_NS_ENUM</definition>
+        <argsstring>(NS::UInteger, ImageEditMode)</argsstring>
+        <name>_NS_ENUM</name>
+        <qualifiedname>MPS::_NS_ENUM</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+        </param>
+        <param>
+          <type>ImageEditMode</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="16" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_core_types_8hpp_1a4e2691b53dd3221a829347735bfc6f00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::_NS_ENUM</definition>
+        <argsstring>(NS::UInteger, ImageFeatureChannelFormat)</argsstring>
+        <name>_NS_ENUM</name>
+        <qualifiedname>MPS::_NS_ENUM</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+        </param>
+        <param>
+          <type>ImageFeatureChannelFormat</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="23" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="23" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_core_types_8hpp_1a76f091e51e9531524488f3c3a5792f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::_NS_ENUM</definition>
+        <argsstring>(uint32_t, DataType)</argsstring>
+        <name>_NS_ENUM</name>
+        <qualifiedname>MPS::_NS_ENUM</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+        </param>
+        <param>
+          <type>DataType</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="32" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="32" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_core_types_8hpp_1a3ca3790f4ec024d64c17a330bd33bd3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::_NS_OPTIONS</definition>
+        <argsstring>(NS::UInteger, AliasingStrategy)</argsstring>
+        <name>_NS_OPTIONS</name>
+        <qualifiedname>MPS::_NS_OPTIONS</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+        </param>
+        <param>
+          <type>AliasingStrategy</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="50" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_matrix_decomposition_8hpp_1a6e6bf242421564b6af131e6fc64efed8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::_NS_ENUM</definition>
+        <argsstring>(int, MatrixDecompositionStatus)</argsstring>
+        <name>_NS_ENUM</name>
+        <qualifiedname>MPS::_NS_ENUM</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>MatrixDecompositionStatus</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" line="6" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixDecomposition.hpp" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_p_s_matrix_random_8hpp_1ad30d259dafe7fa0697397a9a93934180" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPS::_NS_OPTIONS</definition>
+        <argsstring>(NS::UInteger, MatrixRandomDistribution)</argsstring>
+        <name>_NS_OPTIONS</name>
+        <qualifiedname>MPS::_NS_OPTIONS</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+        </param>
+        <param>
+          <type>MatrixRandomDistribution</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" line="5" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixRandom.hpp" bodystart="5" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

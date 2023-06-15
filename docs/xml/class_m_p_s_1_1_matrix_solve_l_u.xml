@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_solve_l_u" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixSolveLU</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_solve_l_u_1abcc9855ae810f1de9086e4f05a6f1177" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_solve_l_u" kindref="compound">MPS::MatrixSolveLU</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSolveLU * MPS::MatrixSolveLU::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixSolveLU::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="13" column="35" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_solve_l_u_1a6d5bd26aed4fc9b3eedab34d18a6a210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_solve_l_u" kindref="compound">MPS::MatrixSolveLU</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixSolveLU * MPS::MatrixSolveLU::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, bool transpose, NS::UInteger order, NS::UInteger numberOfRightHandSides)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixSolveLU::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>transpose</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>numberOfRightHandSides</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="14" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_solve_l_u_1add74c22e4724745530fdd67f91fd2cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixSolveLU::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *sourceMatrix, MPS::Matrix *rightHandSideMatrix, MPS::Matrix *pivotIndices, MPS::Matrix *solutionMatrix)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixSolveLU::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>sourceMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>rightHandSideMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>pivotIndices</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>solutionMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="15" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixSolveLU</label>
+        <link refid="class_m_p_s_1_1_matrix_solve_l_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixSolveLU</label>
+        <link refid="class_m_p_s_1_1_matrix_solve_l_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" line="11" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixSolve.hpp" bodystart="11" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_solve_l_u_1abcc9855ae810f1de9086e4f05a6f1177" prot="public" virt="non-virtual"><scope>MPS::MatrixSolveLU</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_solve_l_u_1add74c22e4724745530fdd67f91fd2cd5" prot="public" virt="non-virtual"><scope>MPS::MatrixSolveLU</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_solve_l_u_1a6d5bd26aed4fc9b3eedab34d18a6a210" prot="public" virt="non-virtual"><scope>MPS::MatrixSolveLU</scope><name>initWithDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

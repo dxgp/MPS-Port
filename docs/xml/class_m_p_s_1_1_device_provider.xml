@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_device_provider" kind="class" language="C++" prot="public">
+    <compoundname>MPS::DeviceProvider</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_m_p_s_1_1_device_provider_1a5989ca9d147add42c2ff3bc2be18f403" prot="public" static="no" mutable="no">
+        <type>MTL::Device *</type>
+        <definition>MTL::Device* MPS::DeviceProvider::mpsMTLDevice</definition>
+        <argsstring></argsstring>
+        <name>mpsMTLDevice</name>
+        <qualifiedname>MPS::DeviceProvider::mpsMTLDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="105" column="25" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="103" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="103" bodyend="106"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_device_provider_1a5989ca9d147add42c2ff3bc2be18f403" prot="public" virt="non-virtual"><scope>MPS::DeviceProvider</scope><name>mpsMTLDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

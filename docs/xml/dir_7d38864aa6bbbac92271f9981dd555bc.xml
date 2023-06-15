@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_7d38864aa6bbbac92271f9981dd555bc" kind="dir">
+    <compoundname>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix</compoundname>
+    <innerfile refid="_m_p_s_matrix_2_m_p_s_matrix_8hpp">MPSMatrix.hpp</innerfile>
+    <innerfile refid="_m_p_s_matrix_decomposition_8hpp">MPSMatrixDecomposition.hpp</innerfile>
+    <innerfile refid="_m_p_s_matrix_find_top_k_8hpp">MPSMatrixFindTopK.hpp</innerfile>
+    <innerfile refid="_m_p_s_matrix_multiplication_8hpp">MPSMatrixMultiplication.hpp</innerfile>
+    <innerfile refid="_m_p_s_matrix_random_8hpp">MPSMatrixRandom.hpp</innerfile>
+    <innerfile refid="_m_p_s_matrix_soft_max_8hpp">MPSMatrixSoftMax.hpp</innerfile>
+    <innerfile refid="_m_p_s_matrix_solve_8hpp">MPSMatrixSolve.hpp</innerfile>
+    <innerfile refid="_m_p_s_matrix_types_8hpp">MPSMatrixTypes.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/"/>
+  </compounddef>
+</doxygen>

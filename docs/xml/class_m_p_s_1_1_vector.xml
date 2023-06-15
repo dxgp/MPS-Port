@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_vector" kind="class" language="C++" prot="public">
+    <compoundname>MPS::Vector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::Vector &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1abc0cc5ad1650115d9b2cdadbf7e8892c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref> *</type>
+        <definition>_MPS_INLINE MPS::Vector * MPS::Vector::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::Vector::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="87" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1a059e6b430f9ebe18ddcc31822830adf3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Device *</type>
+        <definition>_MPS_INLINE MTL::Device * MPS::Vector::device</definition>
+        <argsstring>() const</argsstring>
+        <name>device</name>
+        <qualifiedname>MPS::Vector::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="88" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1ad7380d0ad16f75e02b4551563d49020d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Vector::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <qualifiedname>MPS::Vector::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="89" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="217" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1a9a2515c06d66a56b3df21ca52f4a07f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Vector::vectors</definition>
+        <argsstring>() const</argsstring>
+        <name>vectors</name>
+        <qualifiedname>MPS::Vector::vectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="90" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="214" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1af1dbb617ea6ce01736c99b0bc7ebb3b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MPS::DataType</type>
+        <definition>_MPS_INLINE MPS::DataType MPS::Vector::dataType</definition>
+        <argsstring>() const</argsstring>
+        <name>dataType</name>
+        <qualifiedname>MPS::Vector::dataType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="91" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="220" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1a97ce2fbe81a64c53a7b6bb10cca16d43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Vector::vectorBytes</definition>
+        <argsstring>() const</argsstring>
+        <name>vectorBytes</name>
+        <qualifiedname>MPS::Vector::vectorBytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="92" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="223" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1a9be940444e59d982e4a246eb6ecb31bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Vector::offset</definition>
+        <argsstring>() const</argsstring>
+        <name>offset</name>
+        <qualifiedname>MPS::Vector::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="93" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="226" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1aa24bc3f3966c771c48c4c80c5d0668b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Buffer *</type>
+        <definition>_MPS_INLINE MTL::Buffer * MPS::Vector::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>MPS::Vector::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="94" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="229" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1a8b0371cb666da25b98c4382b898d070f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref> *</type>
+        <definition>_MPS_INLINE MPS::Vector * MPS::Vector::initWithBuffer</definition>
+        <argsstring>(MTL::Buffer *buffer, MPS::VectorDescriptor *descriptor)</argsstring>
+        <name>initWithBuffer</name>
+        <qualifiedname>MPS::Vector::initWithBuffer</qualifiedname>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_vector_descriptor" kindref="compound">MPS::VectorDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="95" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="232" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1a0beb22f78f6c27af9e94e9b5874f5c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref> *</type>
+        <definition>_MPS_INLINE MPS::Vector * MPS::Vector::initWithBuffer</definition>
+        <argsstring>(MTL::Buffer *buffer, NS::UInteger offset, MPS::VectorDescriptor *descriptor)</argsstring>
+        <name>initWithBuffer</name>
+        <qualifiedname>MPS::Vector::initWithBuffer</qualifiedname>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_vector_descriptor" kindref="compound">MPS::VectorDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="96" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="235" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1ad46ef21f6cce7a1f6a975434c671740c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref> *</type>
+        <definition>_MPS_INLINE MPS::Vector * MPS::Vector::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, MPS::VectorDescriptor *descriptor)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::Vector::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_vector_descriptor" kindref="compound">MPS::VectorDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="97" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="238" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1a4a8836fc0eb9e8cd542a9df0537c1b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::Vector::synchronizeOnCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer)</argsstring>
+        <name>synchronizeOnCommandBuffer</name>
+        <qualifiedname>MPS::Vector::synchronizeOnCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="98" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="241" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_vector_1ab8f0e0327731a587fa64d7b6a4744ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::Vector::resourceSize</definition>
+        <argsstring>()</argsstring>
+        <name>resourceSize</name>
+        <qualifiedname>MPS::Vector::resourceSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="99" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="244" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::Vector</label>
+        <link refid="class_m_p_s_1_1_vector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Vector &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::Vector</label>
+        <link refid="class_m_p_s_1_1_vector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Vector &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" line="85" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSMatrix.hpp" bodystart="85" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_vector_1abc0cc5ad1650115d9b2cdadbf7e8892c" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_vector_1aa24bc3f3966c771c48c4c80c5d0668b8" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>data</name></member>
+      <member refid="class_m_p_s_1_1_vector_1af1dbb617ea6ce01736c99b0bc7ebb3b0" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>dataType</name></member>
+      <member refid="class_m_p_s_1_1_vector_1a059e6b430f9ebe18ddcc31822830adf3" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>device</name></member>
+      <member refid="class_m_p_s_1_1_vector_1a8b0371cb666da25b98c4382b898d070f" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>initWithBuffer</name></member>
+      <member refid="class_m_p_s_1_1_vector_1a0beb22f78f6c27af9e94e9b5874f5c83" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>initWithBuffer</name></member>
+      <member refid="class_m_p_s_1_1_vector_1ad46ef21f6cce7a1f6a975434c671740c" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_vector_1ad7380d0ad16f75e02b4551563d49020d" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>length</name></member>
+      <member refid="class_m_p_s_1_1_vector_1a9be940444e59d982e4a246eb6ecb31bb" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>offset</name></member>
+      <member refid="class_m_p_s_1_1_vector_1ab8f0e0327731a587fa64d7b6a4744ab4" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>resourceSize</name></member>
+      <member refid="class_m_p_s_1_1_vector_1a4a8836fc0eb9e8cd542a9df0537c1b9e" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>synchronizeOnCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_vector_1a97ce2fbe81a64c53a7b6bb10cca16d43" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>vectorBytes</name></member>
+      <member refid="class_m_p_s_1_1_vector_1a9a2515c06d66a56b3df21ca52f4a07f9" prot="public" virt="non-virtual"><scope>MPS::Vector</scope><name>vectors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

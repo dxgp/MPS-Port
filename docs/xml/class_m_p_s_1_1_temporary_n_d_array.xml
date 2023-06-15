@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_temporary_n_d_array" kind="class" language="C++" prot="public">
+    <compoundname>MPS::TemporaryNDArray</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">NS::Referencing&lt; MPS::NDArray &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_temporary_n_d_array_1af950897e0773f2b06929bd353ad87f50" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArrayAllocator * MPS::TemporaryNDArray::defaultAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>defaultAllocator</name>
+        <qualifiedname>MPS::TemporaryNDArray::defaultAllocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="61" column="38" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_temporary_n_d_array_1a783acd2ce26c26460487c06475e80317" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_temporary_n_d_array" kindref="compound">MPS::TemporaryNDArray</ref> *</type>
+        <definition>_MPS_INLINE MPS::TemporaryNDArray * MPS::TemporaryNDArray::temporaryNDArrayWithCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::NDArrayDescriptor *descriptor)</argsstring>
+        <name>temporaryNDArrayWithCommandBuffer</name>
+        <qualifiedname>MPS::TemporaryNDArray::temporaryNDArrayWithCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="62" column="38" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_temporary_n_d_array_1acb6829027e5421cbea3d1ad808811697" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::TemporaryNDArray::readCount</definition>
+        <argsstring>()</argsstring>
+        <name>readCount</name>
+        <qualifiedname>MPS::TemporaryNDArray::readCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="64" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="179" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::TemporaryNDArray</label>
+        <link refid="class_m_p_s_1_1_temporary_n_d_array"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::NDArray &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::TemporaryNDArray</label>
+        <link refid="class_m_p_s_1_1_temporary_n_d_array"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::NDArray &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="60" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="60" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_temporary_n_d_array_1af950897e0773f2b06929bd353ad87f50" prot="private" virt="non-virtual"><scope>MPS::TemporaryNDArray</scope><name>defaultAllocator</name></member>
+      <member refid="class_m_p_s_1_1_temporary_n_d_array_1acb6829027e5421cbea3d1ad808811697" prot="private" virt="non-virtual"><scope>MPS::TemporaryNDArray</scope><name>readCount</name></member>
+      <member refid="class_m_p_s_1_1_temporary_n_d_array_1a783acd2ce26c26460487c06475e80317" prot="private" virt="non-virtual"><scope>MPS::TemporaryNDArray</scope><name>temporaryNDArrayWithCommandBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

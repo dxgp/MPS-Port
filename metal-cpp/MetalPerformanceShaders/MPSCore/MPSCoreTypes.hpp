@@ -6,6 +6,18 @@
 
 
 namespace MPS{
+    _NS_OPTIONS(NS::UInteger, MatrixRandomDistribution){
+        MatrixRandomDistributionDefault = 1U,
+        MatrixRandomDistributionUniform = 2U,
+        MatrixRandomDistributionNormal = 3U
+    };
+    // _NS_ENUM(int, MatrixDecompositionStatus){
+    enum MatrixDecompositionStatus: int{
+        MatrixDecompositionStatusSuccess = 0,
+        MatrixDecompositionStatusFailure = -1,
+        MatrixDecompositionStatusSingular = -2,
+        MatrixDecompositionStatusNonPositiveDefinite = -3,
+    };
     _NS_OPTIONS(NS::UInteger, KernelOptions){
         MPSKernelOptionsNone = 0U,
         MPSKernelOptionsSkipAPIValidation = 1U << 0,
@@ -13,23 +25,26 @@ namespace MPS{
         MPSKernelOptionsInsertDebugGroups = 1U << 3,
         MPSKernelOptionsVerbose = 1U << 4,
     };
-    _NS_ENUM(NS::UInteger, ImageEditMode){
+    // _NS_ENUM(NS::UInteger, ImageEditMode){
+    enum ImageEditMode: NS::UInteger{
         MPSImageEdgeModeZero = 0,
         MPSImageEdgeModeClamp = 1,
         MPSImageEdgeModeMirror,
         MPSImageEdgeModeMirrorWithEdge,
         MPSImageEdgeModeConstant,
     };
-    _NS_ENUM(NS::UInteger, ImageFeatureChannelFormat){
-            MPSImageFeatureChannelFormatNone = 0,
-            MPSImageFeatureChannelFormatUnorm8 = 1,
-            MPSImageFeatureChannelFormatUnorm16 = 2,
-            MPSImageFeatureChannelFormatFloat16 = 3,
-            MPSImageFeatureChannelFormatFloat32  = 4,
-            MPSImageFeatureChannelFormat_reserved0 = 5,
-            MPSImageFeatureChannelFormatCount,
+    // _NS_ENUM(NS::UInteger, ImageFeatureChannelFormat){
+    enum ImageFeatureChannelFormat: NS::UInteger{
+        MPSImageFeatureChannelFormatNone = 0,
+        MPSImageFeatureChannelFormatUnorm8 = 1,
+        MPSImageFeatureChannelFormatUnorm16 = 2,
+        MPSImageFeatureChannelFormatFloat16 = 3,
+        MPSImageFeatureChannelFormatFloat32  = 4,
+        MPSImageFeatureChannelFormat_reserved0 = 5,
+        MPSImageFeatureChannelFormatCount,
     };
-    _NS_ENUM(uint32_t, DataType){
+    // _NS_ENUM(uint32_t, DataType){
+    enum DataType: uint32_t {
         MPSDataTypeInvalid = 0,
         MPSDataTypeFloatBit = 0x10000000,
         MPSDataTypeFloat32   = MPSDataTypeFloatBit | 32,
@@ -57,53 +72,49 @@ namespace MPS{
         MPSAliasingStrategyPreferNonTemporaryMemory = 1UL << 3,     
     };
     typedef struct{
-            NS::Integer x;    /**<    The horizontal component of the offset. Units: pixels   */
-            NS::Integer y;    /**<    The vertical component of the offset. Units: pixels     */
-            NS::Integer z;    /**<    The depth component of the offset. Units: pixels        */
+            NS::Integer x;    
+            NS::Integer y;    
+            NS::Integer z;    
     }MPSOffset;
     typedef struct Origin{
-        double  x;  /**< The x coordinate of the position       */
-        double  y;  /**< The y coordinate of the position       */
-        double  z;  /**< The z coordinate of the position       */
+        double  x;  
+        double  y;  
+        double  z;  
     }MPSOrigin;
     typedef struct Size {
-        double  width;      /**< The width of the region    */
-        double  height;     /**< The height of the region   */
-        double  depth;      /**< The depth of the region    */
+        double  width;      
+        double  height;     
+        double  depth;      
     }MPSSize;
     typedef struct DimensionSlice {
-        NS::UInteger        start;        /**< the position of the first element in the slice */
-        NS::UInteger        length;        /**< the number of elements in the slice. */
+        NS::UInteger        start;       
+        NS::UInteger        length;     
     }MPSDimensionSlice;
 
     typedef struct Region {
-        MPSOrigin       origin;     /**< The top left corner of the region.  Units: pixels  */
-        MPSSize         size;       /**< The size of the region. Units: pixels              */
+        MPSOrigin       origin;    
+        MPSSize         size;      
     }MPSRegion;
     typedef struct ScaleTransform {
-        double  scaleX;                         /**< horizontal scaling factor */
-        double  scaleY;                         /**< vertical scaling factor */
-        double  translateX;                     /**< horizontal translation */
-        double  translateY;                     /**< vertical translation */
+        double  scaleX;                        
+        double  scaleY;                        
+        double  translateX;                    
+        double  translateY;                   
     }MPSScaleTransform;
 
     typedef struct ImageCoordinate {
-        NS::UInteger x;           /**<    The horizontal component of the coordinate. Units: pixels      */
-        NS::UInteger y;           /**<    The vertical component of the coordinate. Units: pixels        */
-        NS::UInteger channel;     /**<    The index of the channel or feature channel within the pixel   */
+        NS::UInteger x;           
+        NS::UInteger y;           
+        NS::UInteger channel;     
     }MPSImageCoordinate;
 
     typedef struct ImageRegion {
-        MPSImageCoordinate offset;      /**<    The position of the top left corner of the subregion */
-        MPSImageCoordinate size;        /**<    The size {pixels, pixels, channels} of the subregion */
+        MPSImageCoordinate offset;      
+        MPSImageCoordinate size;       
     }MPSImageRegion;
 
     // const MTL::Region RectNoClip;
 
-    // @protocol   MPSDeviceProvider
-    //     /*! @abstract   Return the device to use when making MPSKernel subclasses from the NSCoder */
-    //     -(id <MTLDevice>) mpsMTLDevice;
-    // @end
     class DeviceProvider{
         public:
             MTL::Device* mpsMTLDevice;

@@ -1,0 +1,14 @@
+.. _exhale_define__m_p_s_private_8hpp_1a91a20b868749f337763c9687333a156d:
+
+Define _MPS_PRIVATE_DEF_STR
+===========================
+
+- Defined in :ref:`file_MPSPrivate.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: _MPS_PRIVATE_DEF_STR
+   :project: MPSCPP

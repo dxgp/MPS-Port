@@ -1,0 +1,21 @@
+
+File Hierarchy
+--------------
+
+- :ref:`file_MPSCore_MPSCommandBuffer.hpp`
+- :ref:`file_MPSCore_MPSCoreTypes.hpp`
+- :ref:`file_MPSCore_MPSFunctionConstantIndices.hpp`
+- :ref:`file_MPSCore_MPSKernel.hpp`
+- :ref:`file_MPSCore_MPSKernelTypes.hpp`
+- :ref:`file_MPSCore_MPSMatrix.hpp`
+- :ref:`file_MPSMatrix_MPSMatrix.hpp`
+- :ref:`file_MPSMatrix_MPSMatrixDecomposition.hpp`
+- :ref:`file_MPSMatrix_MPSMatrixFindTopK.hpp`
+- :ref:`file_MPSMatrix_MPSMatrixMultiplication.hpp`
+- :ref:`file_MPSMatrix_MPSMatrixRandom.hpp`
+- :ref:`file_MPSMatrix_MPSMatrixSoftMax.hpp`
+- :ref:`file_MPSMatrix_MPSMatrixSolve.hpp`
+- :ref:`file_MPSMatrix_MPSMatrixTypes.hpp`
+- :ref:`file_MPSCore_MPSNDArray.hpp`
+
+

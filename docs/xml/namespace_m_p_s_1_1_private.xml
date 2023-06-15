@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_m_p_s_1_1_private" kind="namespace" language="C++">
+    <compoundname>MPS::Private</compoundname>
+    <innernamespace refid="namespace_m_p_s_1_1_private_1_1_class">MPS::Private::Class</innernamespace>
+    <innernamespace refid="namespace_m_p_s_1_1_private_1_1_protocol">MPS::Private::Protocol</innernamespace>
+    <innernamespace refid="namespace_m_p_s_1_1_private_1_1_selector">MPS::Private::Selector</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSHeaderBridge.hpp" line="4" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Vector &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class VectorDescriptor" href="class_m_p_s_1_1_vector_descriptor.html" />
+    <link rel="prev" title="Class TemporaryNDArray" href="class_m_p_s_1_1_temporary_n_d_array.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">MetalPerformanceShaders C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_dimension_slice.html">Struct DimensionSlice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_coordinate.html">Struct ImageCoordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_region.html">Struct ImageRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_m_p_s_offset.html">Struct MPSOffset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_origin.html">Struct Origin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_region.html">Struct Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_scale_transform.html">Struct ScaleTransform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_size.html">Struct Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html">Class CommandBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_device_provider.html">Class DeviceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html">Class HeapProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_kernel.html">Class Kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix.html">Class Matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html">Class MatrixBinaryKernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html">Class MatrixDecompositionCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html">Class MatrixDecompositionLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html">Class MatrixDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html">Class MatrixFindTopK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html">Class MatrixLogSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html">Class MatrixLogSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html">Class MatrixMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html">Class MatrixRandom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html">Class MatrixRandomDistributionDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html">Class MatrixRandomMTGP32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html">Class MatrixRandomPhilox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html">Class MatrixSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html">Class MatrixSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html">Class MatrixSolveCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html">Class MatrixSolveLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html">Class MatrixSolveTriangular</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html">Class MatrixUnaryKernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html">Class MatrixVectorMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html">Class NDArray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html">Class NDArrayAllocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html">Class NDArrayDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_predicate.html">Class Predicate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html">Class TemporaryNDArray</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html">Class VectorDescriptor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">MetalPerformanceShaders C++ API</a></li>
+      <li class="breadcrumb-item active">Class Vector</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/class_m_p_s_1_1_vector.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-vector">
+<span id="exhale-class-class-m-p-s-1-1-vector"></span><h1>Class Vector<a class="headerlink" href="#class-vector" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_MPSCore_MPSMatrix.hpp.html#file-mpscore-mpsmatrix-hpp"><span class="std std-ref">File MPSMatrix.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NS::Referencing&lt;</span> <span class="pre">MPS::Vector</span> <span class="pre">&gt;</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6VectorE">
+<span id="_CPPv3N3MPS6VectorE"></span><span id="_CPPv2N3MPS6VectorE"></span><span id="MPS::Vector"></span><span class="target" id="class_m_p_s_1_1_vector"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vector</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Referencing</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6VectorE" title="MPS::Vector"><span class="n"><span class="pre">Vector</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3MPS6VectorE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-unnamed-group">Unnamed Group</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Vector5allocEv">
+<span id="_CPPv3N3MPS6Vector5allocEv"></span><span id="_CPPv2N3MPS6Vector5allocEv"></span><span id="MPS::Vector::alloc"></span><span class="target" id="class_m_p_s_1_1_vector_1abc0cc5ad1650115d9b2cdadbf7e8892c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6VectorE" title="MPS::Vector"><span class="n"><span class="pre">Vector</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">alloc</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Vector5allocEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Vector6deviceEv">
+<span id="_CPPv3NK3MPS6Vector6deviceEv"></span><span id="_CPPv2NK3MPS6Vector6deviceEv"></span><span id="MPS::Vector::deviceC"></span><span class="target" id="class_m_p_s_1_1_vector_1a059e6b430f9ebe18ddcc31822830adf3"></span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Device</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">device</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Vector6deviceEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Vector6lengthEv">
+<span id="_CPPv3NK3MPS6Vector6lengthEv"></span><span id="_CPPv2NK3MPS6Vector6lengthEv"></span><span id="MPS::Vector::lengthC"></span><span class="target" id="class_m_p_s_1_1_vector_1ad7380d0ad16f75e02b4551563d49020d"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Vector6lengthEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Vector7vectorsEv">
+<span id="_CPPv3NK3MPS6Vector7vectorsEv"></span><span id="_CPPv2NK3MPS6Vector7vectorsEv"></span><span id="MPS::Vector::vectorsC"></span><span class="target" id="class_m_p_s_1_1_vector_1a9a2515c06d66a56b3df21ca52f4a07f9"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vectors</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Vector7vectorsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Vector8dataTypeEv">
+<span id="_CPPv3NK3MPS6Vector8dataTypeEv"></span><span id="_CPPv2NK3MPS6Vector8dataTypeEv"></span><span id="MPS::Vector::dataTypeC"></span><span class="target" id="class_m_p_s_1_1_vector_1af1dbb617ea6ce01736c99b0bc7ebb3b0"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DataType</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dataType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Vector8dataTypeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Vector11vectorBytesEv">
+<span id="_CPPv3NK3MPS6Vector11vectorBytesEv"></span><span id="_CPPv2NK3MPS6Vector11vectorBytesEv"></span><span id="MPS::Vector::vectorBytesC"></span><span class="target" id="class_m_p_s_1_1_vector_1a97ce2fbe81a64c53a7b6bb10cca16d43"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vectorBytes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Vector11vectorBytesEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Vector6offsetEv">
+<span id="_CPPv3NK3MPS6Vector6offsetEv"></span><span id="_CPPv2NK3MPS6Vector6offsetEv"></span><span id="MPS::Vector::offsetC"></span><span class="target" id="class_m_p_s_1_1_vector_1a9be940444e59d982e4a246eb6ecb31bb"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">offset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Vector6offsetEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3MPS6Vector4dataEv">
+<span id="_CPPv3NK3MPS6Vector4dataEv"></span><span id="_CPPv2NK3MPS6Vector4dataEv"></span><span id="MPS::Vector::dataC"></span><span class="target" id="class_m_p_s_1_1_vector_1aa24bc3f3966c771c48c4c80c5d0668b8"></span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3MPS6Vector4dataEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Vector14initWithBufferEPN3MTL6BufferEPN3MPS16VectorDescriptorE">
+<span id="_CPPv3N3MPS6Vector14initWithBufferEPN3MTL6BufferEPN3MPS16VectorDescriptorE"></span><span id="_CPPv2N3MPS6Vector14initWithBufferEPN3MTL6BufferEPN3MPS16VectorDescriptorE"></span><span id="MPS::Vector::initWithBuffer__MTL::BufferP.MPS::VectorDescriptorP"></span><span class="target" id="class_m_p_s_1_1_vector_1a8b0371cb666da25b98c4382b898d070f"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6VectorE" title="MPS::Vector"><span class="n"><span class="pre">Vector</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">initWithBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html#_CPPv4N3MPS16VectorDescriptorE" title="MPS::VectorDescriptor"><span class="n"><span class="pre">VectorDescriptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">descriptor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Vector14initWithBufferEPN3MTL6BufferEPN3MPS16VectorDescriptorE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Vector14initWithBufferEPN3MTL6BufferEN2NS8UIntegerEPN3MPS16VectorDescriptorE">
+<span id="_CPPv3N3MPS6Vector14initWithBufferEPN3MTL6BufferEN2NS8UIntegerEPN3MPS16VectorDescriptorE"></span><span id="_CPPv2N3MPS6Vector14initWithBufferEPN3MTL6BufferEN2NS8UIntegerEPN3MPS16VectorDescriptorE"></span><span id="MPS::Vector::initWithBuffer__MTL::BufferP.NS::UInteger.MPS::VectorDescriptorP"></span><span class="target" id="class_m_p_s_1_1_vector_1a0beb22f78f6c27af9e94e9b5874f5c83"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6VectorE" title="MPS::Vector"><span class="n"><span class="pre">Vector</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">initWithBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html#_CPPv4N3MPS16VectorDescriptorE" title="MPS::VectorDescriptor"><span class="n"><span class="pre">VectorDescriptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">descriptor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Vector14initWithBufferEPN3MTL6BufferEN2NS8UIntegerEPN3MPS16VectorDescriptorE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Vector14initWithDeviceEPN3MTL6DeviceEPN3MPS16VectorDescriptorE">
+<span id="_CPPv3N3MPS6Vector14initWithDeviceEPN3MTL6DeviceEPN3MPS16VectorDescriptorE"></span><span id="_CPPv2N3MPS6Vector14initWithDeviceEPN3MTL6DeviceEPN3MPS16VectorDescriptorE"></span><span id="MPS::Vector::initWithDevice__MTL::DeviceP.MPS::VectorDescriptorP"></span><span class="target" id="class_m_p_s_1_1_vector_1ad46ef21f6cce7a1f6a975434c671740c"></span><span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3MPS6VectorE" title="MPS::Vector"><span class="n"><span class="pre">Vector</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">initWithDevice</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Device</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">device</span></span>, <span class="n"><span class="pre">MPS</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html#_CPPv4N3MPS16VectorDescriptorE" title="MPS::VectorDescriptor"><span class="n"><span class="pre">VectorDescriptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">descriptor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Vector14initWithDeviceEPN3MTL6DeviceEPN3MPS16VectorDescriptorE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Vector26synchronizeOnCommandBufferEPN3MTL13CommandBufferE">
+<span id="_CPPv3N3MPS6Vector26synchronizeOnCommandBufferEPN3MTL13CommandBufferE"></span><span id="_CPPv2N3MPS6Vector26synchronizeOnCommandBufferEPN3MTL13CommandBufferE"></span><span id="MPS::Vector::synchronizeOnCommandBuffer__MTL::CommandBufferP"></span><span class="target" id="class_m_p_s_1_1_vector_1a4a8836fc0eb9e8cd542a9df0537c1b9e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">synchronizeOnCommandBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MTL</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CommandBuffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">commandBuffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Vector26synchronizeOnCommandBufferEPN3MTL13CommandBufferE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3MPS6Vector12resourceSizeEv">
+<span id="_CPPv3N3MPS6Vector12resourceSizeEv"></span><span id="_CPPv2N3MPS6Vector12resourceSizeEv"></span><span id="MPS::Vector::resourceSize"></span><span class="target" id="class_m_p_s_1_1_vector_1ab8f0e0327731a587fa64d7b6a4744ab4"></span><span class="n"><span class="pre">NS</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UInteger</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resourceSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3MPS6Vector12resourceSizeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_m_p_s_1_1_temporary_n_d_array.html" class="btn btn-neutral float-left" title="Class TemporaryNDArray" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_m_p_s_1_1_vector_descriptor.html" class="btn btn-neutral float-right" title="Class VectorDescriptor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

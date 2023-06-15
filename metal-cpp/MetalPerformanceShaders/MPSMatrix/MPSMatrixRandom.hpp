@@ -2,11 +2,6 @@
 #include "MPSMatrixTypes.hpp"
 
 namespace MPS{
-    _NS_OPTIONS(NS::UInteger, MatrixRandomDistribution){
-        MatrixRandomDistributionDefault = 1U,
-        MatrixRandomDistributionUniform = 2U,
-        MatrixRandomDistributionNormal = 3U
-    };
     class MatrixRandomDistributionDescriptor: public NS::Copying<MPS::MatrixRandomDistributionDescriptor>{
         public:
         // do I need this alloc and init? While it is importand because NS::Copying requires it, do I need it?
@@ -69,6 +64,8 @@ namespace MPS{
         void encodeToCommandBuffer(MTL::CommandBuffer* commandBuffer, MPS::Matrix* destinationMatrix);
     };
 }
+
+/// @{ @private
 _MPS_INLINE MPS::MatrixRandomDistributionDescriptor* MPS::MatrixRandomDistributionDescriptor::alloc(){
     return NS::Object::alloc<MPS::MatrixRandomDistributionDescriptor>(_MPS_PRIVATE_CLS(MPSMatrixRandomDistributionDescriptor));
 }
@@ -180,3 +177,5 @@ _MPS_INLINE void MPS::MatrixRandomPhilox::encodeToCommandBuffer(MTL::CommandBuff
     Object::sendMessage<void>(this, _MPS_PRIVATE_SEL(encodeToCommandBuffer_destinationMatrix_), commandBuffer, destinationMatrix);
 }
 
+
+/// @}

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_98b3951f25067ccd3458923169298bd5" kind="dir">
+    <compoundname>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders</compoundname>
+    <innerdir refid="dir_9132dcc987293b032672f871067800e6">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore</innerdir>
+    <innerdir refid="dir_7d38864aa6bbbac92271f9981dd555bc">/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/"/>
+  </compounddef>
+</doxygen>

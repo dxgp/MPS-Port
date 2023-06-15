@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_9132dcc987293b032672f871067800e6" kind="dir">
+    <compoundname>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore</compoundname>
+    <innerfile refid="_m_p_s_command_buffer_8hpp">MPSCommandBuffer.hpp</innerfile>
+    <innerfile refid="_m_p_s_core_types_8hpp">MPSCoreTypes.hpp</innerfile>
+    <innerfile refid="_m_p_s_function_constant_indices_8hpp">MPSFunctionConstantIndices.hpp</innerfile>
+    <innerfile refid="_m_p_s_kernel_8hpp">MPSKernel.hpp</innerfile>
+    <innerfile refid="_m_p_s_kernel_types_8hpp">MPSKernelTypes.hpp</innerfile>
+    <innerfile refid="_m_p_s_core_2_m_p_s_matrix_8hpp">MPSMatrix.hpp</innerfile>
+    <innerfile refid="_m_p_s_n_d_array_8hpp">MPSNDArray.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/"/>
+  </compounddef>
+</doxygen>

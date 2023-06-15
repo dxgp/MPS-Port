@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_find_top_k" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixFindTopK</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_find_top_k_1a294daa364b51f2d6ad3e79c0a695988c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_find_top_k" kindref="compound">MPS::MatrixFindTopK</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixFindTopK * MPS::MatrixFindTopK::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixFindTopK::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="9" column="36" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_find_top_k_1a9845476e5ef02a074d11f8689e0d53a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixFindTopK::sourceRows</definition>
+        <argsstring>()</argsstring>
+        <name>sourceRows</name>
+        <qualifiedname>MPS::MatrixFindTopK::sourceRows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="10" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_find_top_k_1a262d695a2d6b2c22f0683d0de81ed25f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixFindTopK::sourceColumns</definition>
+        <argsstring>()</argsstring>
+        <name>sourceColumns</name>
+        <qualifiedname>MPS::MatrixFindTopK::sourceColumns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="11" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_find_top_k_1a23a4e7d54bd19f142508fc1188d2c85f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixFindTopK::indexOffset</definition>
+        <argsstring>()</argsstring>
+        <name>indexOffset</name>
+        <qualifiedname>MPS::MatrixFindTopK::indexOffset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="12" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_find_top_k_1ab94a66230835ecd8c46656fd24208039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixFindTopK::numberOfTopKValues</definition>
+        <argsstring>()</argsstring>
+        <name>numberOfTopKValues</name>
+        <qualifiedname>MPS::MatrixFindTopK::numberOfTopKValues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="13" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_find_top_k_1adeb4bc1d4db260f18faffbe3c816065b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_find_top_k" kindref="compound">MPS::MatrixFindTopK</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixFindTopK * MPS::MatrixFindTopK::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, NS::UInteger numberOfTopKValues)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixFindTopK::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>numberOfTopKValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="14" column="29" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_find_top_k_1a80cf04d95359563e80d28a1bd392a980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixFindTopK::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *inputMatrix, MPS::Matrix *resultIndexMatrix, MPS::Matrix *resultValueMatrix)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixFindTopK::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>inputMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>resultIndexMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>resultValueMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="15" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixFindTopK</label>
+        <link refid="class_m_p_s_1_1_matrix_find_top_k"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixFindTopK</label>
+        <link refid="class_m_p_s_1_1_matrix_find_top_k"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixUnaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" line="7" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixFindTopK.hpp" bodystart="7" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_find_top_k_1a294daa364b51f2d6ad3e79c0a695988c" prot="public" virt="non-virtual"><scope>MPS::MatrixFindTopK</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_find_top_k_1a80cf04d95359563e80d28a1bd392a980" prot="public" virt="non-virtual"><scope>MPS::MatrixFindTopK</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_find_top_k_1a23a4e7d54bd19f142508fc1188d2c85f" prot="public" virt="non-virtual"><scope>MPS::MatrixFindTopK</scope><name>indexOffset</name></member>
+      <member refid="class_m_p_s_1_1_matrix_find_top_k_1adeb4bc1d4db260f18faffbe3c816065b" prot="public" virt="non-virtual"><scope>MPS::MatrixFindTopK</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_find_top_k_1ab94a66230835ecd8c46656fd24208039" prot="public" virt="non-virtual"><scope>MPS::MatrixFindTopK</scope><name>numberOfTopKValues</name></member>
+      <member refid="class_m_p_s_1_1_matrix_find_top_k_1a262d695a2d6b2c22f0683d0de81ed25f" prot="public" virt="non-virtual"><scope>MPS::MatrixFindTopK</scope><name>sourceColumns</name></member>
+      <member refid="class_m_p_s_1_1_matrix_find_top_k_1a9845476e5ef02a074d11f8689e0d53a3" prot="public" virt="non-virtual"><scope>MPS::MatrixFindTopK</scope><name>sourceRows</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

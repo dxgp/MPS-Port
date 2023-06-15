@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MetalPerformanceShaders C++ API &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace MPS" href="namespace_MPS.html" />
+    <link rel="prev" title="Documentation example" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MetalPerformanceShaders C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-api">Full API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_MPS.html">Namespace MPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_NS.html">Namespace NS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_dimension_slice.html">Struct DimensionSlice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_coordinate.html">Struct ImageCoordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_image_region.html">Struct ImageRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_m_p_s_offset.html">Struct MPSOffset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_origin.html">Struct Origin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_region.html">Struct Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_scale_transform.html">Struct ScaleTransform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_m_p_s_1_1_size.html">Struct Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html">Class CommandBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_device_provider.html">Class DeviceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html">Class HeapProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_kernel.html">Class Kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix.html">Class Matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html">Class MatrixBinaryKernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html">Class MatrixDecompositionCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html">Class MatrixDecompositionLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html">Class MatrixDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html">Class MatrixFindTopK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html">Class MatrixLogSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html">Class MatrixLogSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html">Class MatrixMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html">Class MatrixRandom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html">Class MatrixRandomDistributionDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html">Class MatrixRandomMTGP32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html">Class MatrixRandomPhilox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html">Class MatrixSoftMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html">Class MatrixSoftMaxGradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html">Class MatrixSolveCholesky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html">Class MatrixSolveLU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html">Class MatrixSolveTriangular</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html">Class MatrixUnaryKernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html">Class MatrixVectorMultiplication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html">Class NDArray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html">Class NDArrayAllocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html">Class NDArrayDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_predicate.html">Class Predicate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html">Class TemporaryNDArray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_vector.html">Class Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html">Class VectorDescriptor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1afaa696e71cfa78a5e28e99373de8196b.html">Function MPS::_NS_ENUM(NS::UInteger, ImageEditMode)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a4e2691b53dd3221a829347735bfc6f00.html">Function MPS::_NS_ENUM(NS::UInteger, ImageFeatureChannelFormat)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a76f091e51e9531524488f3c3a5792f7f.html">Function MPS::_NS_ENUM(uint32_t, DataType)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function__m_p_s_matrix_decomposition_8hpp_1a6e6bf242421564b6af131e6fc64efed8.html">Function MPS::_NS_ENUM(int, MatrixDecompositionStatus)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a01dbcc05c66f7b274fe6d6db1d560172.html">Function MPS::_NS_OPTIONS(NS::UInteger, KernelOptions)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a3ca3790f4ec024d64c17a330bd33bd3a.html">Function MPS::_NS_OPTIONS(NS::UInteger, AliasingStrategy)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function__m_p_s_matrix_random_8hpp_1ad30d259dafe7fa0697397a9a93934180.html">Function MPS::_NS_OPTIONS(NS::UInteger, MatrixRandomDistribution)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a70d356ef5d6004a239f7576a1314e1e5.html">Define MPSBatchSizeIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1aed6056a7232660f6460cee53a756ba92.html">Define MPSDeviceCapsIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a767a2bd6820390f88acac77d3e4505f2.html">Define MPSFunctionConstantIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a5672df2f828d9cdbcf072408f7d37758.html">Define MPSFunctionConstantIndexReserved</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a8bcba04f7224c579f38c6de5036ac371.html">Define MPSNDArrayConstantIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a45752efcc85d60289a613189bc485ddd.html">Define MPSUserAvailableFunctionConstantStartIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a7bec81c7fee8965b976dc52df1a5572b.html">Define MPSUserConstantIndex</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1aa702c40c811dacd614a7bf95229eda4e.html">Typedef MPS::MPSDimensionSlice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_n_d_array_8hpp_1a3813b5bd83b576bc3074d61308e05b19.html">Typedef MPS::MPSImageBatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a54f461b516f24d50ddbce1017fa79051.html">Typedef MPS::MPSImageCoordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a0388d3584adb526627f0ec66d91f2910.html">Typedef MPS::MPSImageRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a45abcf62f809fd150d9049286f8722c5.html">Typedef MPS::MPSOrigin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1acd141aedb96dc0d717d5f46357818d1f.html">Typedef MPS::MPSRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a4ac70c491e434f127881bc332103b9af.html">Typedef MPS::MPSScaleTransform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a61600ba4e9159f7fabe743647f80c463.html">Typedef MPS::MPSSize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a0caa47f6afe951c9d4fe05d914d451af.html">Typedef MPS::Shape</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">MetalPerformanceShaders C++ API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/library_root.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="metalperformanceshaders-c-api">
+<h1>MetalPerformanceShaders C++ API<a class="headerlink" href="#metalperformanceshaders-c-api" title="Permalink to this headline"></a></h1>
+<section id="page-hierarchy">
+<h2>Page Hierarchy<a class="headerlink" href="#page-hierarchy" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="page_md__2_users_2gunjanpayal_2_m_p_s-_port_2_r_e_a_d_m_e.html#page-md-2-users-2gunjanpayal-2-m-p-s-port-2-r-e-a-d-m-e"><span class="std std-ref">MPS-Port</span></a></p></li>
+</ul>
+</section>
+<section id="class-hierarchy">
+<h2>Class Hierarchy<a class="headerlink" href="#class-hierarchy" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="namespace_MPS.html#namespace-mps"><span class="std std-ref">Namespace MPS</span></a></dt><dd><ul>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_dimension_slice.html#exhale-struct-struct-m-p-s-1-1-dimension-slice"><span class="std std-ref">Struct DimensionSlice</span></a></p></li>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_image_coordinate.html#exhale-struct-struct-m-p-s-1-1-image-coordinate"><span class="std std-ref">Struct ImageCoordinate</span></a></p></li>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_image_region.html#exhale-struct-struct-m-p-s-1-1-image-region"><span class="std std-ref">Struct ImageRegion</span></a></p></li>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_m_p_s_offset.html#exhale-struct-struct-m-p-s-1-1-m-p-s-offset"><span class="std std-ref">Struct MPSOffset</span></a></p></li>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_origin.html#exhale-struct-struct-m-p-s-1-1-origin"><span class="std std-ref">Struct Origin</span></a></p></li>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_region.html#exhale-struct-struct-m-p-s-1-1-region"><span class="std std-ref">Struct Region</span></a></p></li>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_scale_transform.html#exhale-struct-struct-m-p-s-1-1-scale-transform"><span class="std std-ref">Struct ScaleTransform</span></a></p></li>
+<li><p><a class="reference internal" href="struct_m_p_s_1_1_size.html#exhale-struct-struct-m-p-s-1-1-size"><span class="std std-ref">Struct Size</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html#exhale-class-class-m-p-s-1-1-command-buffer"><span class="std std-ref">Class CommandBuffer</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_device_provider.html#exhale-class-class-m-p-s-1-1-device-provider"><span class="std std-ref">Class DeviceProvider</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html#exhale-class-class-m-p-s-1-1-heap-provider"><span class="std std-ref">Class HeapProvider</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_kernel.html#exhale-class-class-m-p-s-1-1-kernel"><span class="std std-ref">Class Kernel</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix.html#exhale-class-class-m-p-s-1-1-matrix"><span class="std std-ref">Class Matrix</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html#exhale-class-class-m-p-s-1-1-matrix-binary-kernel"><span class="std std-ref">Class MatrixBinaryKernel</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html#exhale-class-class-m-p-s-1-1-matrix-decomposition-cholesky"><span class="std std-ref">Class MatrixDecompositionCholesky</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html#exhale-class-class-m-p-s-1-1-matrix-decomposition-l-u"><span class="std std-ref">Class MatrixDecompositionLU</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html#exhale-class-class-m-p-s-1-1-matrix-descriptor"><span class="std std-ref">Class MatrixDescriptor</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html#exhale-class-class-m-p-s-1-1-matrix-find-top-k"><span class="std std-ref">Class MatrixFindTopK</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html#exhale-class-class-m-p-s-1-1-matrix-log-soft-max"><span class="std std-ref">Class MatrixLogSoftMax</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html#exhale-class-class-m-p-s-1-1-matrix-log-soft-max-gradient"><span class="std std-ref">Class MatrixLogSoftMaxGradient</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html#exhale-class-class-m-p-s-1-1-matrix-multiplication"><span class="std std-ref">Class MatrixMultiplication</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html#exhale-class-class-m-p-s-1-1-matrix-random"><span class="std std-ref">Class MatrixRandom</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html#exhale-class-class-m-p-s-1-1-matrix-random-distribution-descriptor"><span class="std std-ref">Class MatrixRandomDistributionDescriptor</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html#exhale-class-class-m-p-s-1-1-matrix-random-m-t-g-p32"><span class="std std-ref">Class MatrixRandomMTGP32</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html#exhale-class-class-m-p-s-1-1-matrix-random-philox"><span class="std std-ref">Class MatrixRandomPhilox</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html#exhale-class-class-m-p-s-1-1-matrix-soft-max"><span class="std std-ref">Class MatrixSoftMax</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html#exhale-class-class-m-p-s-1-1-matrix-soft-max-gradient"><span class="std std-ref">Class MatrixSoftMaxGradient</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html#exhale-class-class-m-p-s-1-1-matrix-solve-cholesky"><span class="std std-ref">Class MatrixSolveCholesky</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html#exhale-class-class-m-p-s-1-1-matrix-solve-l-u"><span class="std std-ref">Class MatrixSolveLU</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html#exhale-class-class-m-p-s-1-1-matrix-solve-triangular"><span class="std std-ref">Class MatrixSolveTriangular</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html#exhale-class-class-m-p-s-1-1-matrix-unary-kernel"><span class="std std-ref">Class MatrixUnaryKernel</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html#exhale-class-class-m-p-s-1-1-matrix-vector-multiplication"><span class="std std-ref">Class MatrixVectorMultiplication</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html#exhale-class-class-m-p-s-1-1-n-d-array"><span class="std std-ref">Class NDArray</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html#exhale-class-class-m-p-s-1-1-n-d-array-allocator"><span class="std std-ref">Class NDArrayAllocator</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html#exhale-class-class-m-p-s-1-1-n-d-array-descriptor"><span class="std std-ref">Class NDArrayDescriptor</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_predicate.html#exhale-class-class-m-p-s-1-1-predicate"><span class="std std-ref">Class Predicate</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html#exhale-class-class-m-p-s-1-1-temporary-n-d-array"><span class="std std-ref">Class TemporaryNDArray</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_vector.html#exhale-class-class-m-p-s-1-1-vector"><span class="std std-ref">Class Vector</span></a></p></li>
+<li><p><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html#exhale-class-class-m-p-s-1-1-vector-descriptor"><span class="std std-ref">Class VectorDescriptor</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="file-hierarchy">
+<h2>File Hierarchy<a class="headerlink" href="#file-hierarchy" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_MPSCore_MPSCommandBuffer.hpp.html#file-mpscore-mpscommandbuffer-hpp"><span class="std std-ref">File MPSCommandBuffer.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSCore_MPSCoreTypes.hpp.html#file-mpscore-mpscoretypes-hpp"><span class="std std-ref">File MPSCoreTypes.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSCore_MPSFunctionConstantIndices.hpp.html#file-mpscore-mpsfunctionconstantindices-hpp"><span class="std std-ref">File MPSFunctionConstantIndices.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSCore_MPSKernel.hpp.html#file-mpscore-mpskernel-hpp"><span class="std std-ref">File MPSKernel.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSCore_MPSKernelTypes.hpp.html#file-mpscore-mpskerneltypes-hpp"><span class="std std-ref">File MPSKernelTypes.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSCore_MPSMatrix.hpp.html#file-mpscore-mpsmatrix-hpp"><span class="std std-ref">File MPSMatrix.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrix.hpp.html#file-mpsmatrix-mpsmatrix-hpp"><span class="std std-ref">File MPSMatrix.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrixDecomposition.hpp.html#file-mpsmatrix-mpsmatrixdecomposition-hpp"><span class="std std-ref">File MPSMatrixDecomposition.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrixFindTopK.hpp.html#file-mpsmatrix-mpsmatrixfindtopk-hpp"><span class="std std-ref">File MPSMatrixFindTopK.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrixMultiplication.hpp.html#file-mpsmatrix-mpsmatrixmultiplication-hpp"><span class="std std-ref">File MPSMatrixMultiplication.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrixRandom.hpp.html#file-mpsmatrix-mpsmatrixrandom-hpp"><span class="std std-ref">File MPSMatrixRandom.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrixSoftMax.hpp.html#file-mpsmatrix-mpsmatrixsoftmax-hpp"><span class="std std-ref">File MPSMatrixSoftMax.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrixSolve.hpp.html#file-mpsmatrix-mpsmatrixsolve-hpp"><span class="std std-ref">File MPSMatrixSolve.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSMatrix_MPSMatrixTypes.hpp.html#file-mpsmatrix-mpsmatrixtypes-hpp"><span class="std std-ref">File MPSMatrixTypes.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_MPSCore_MPSNDArray.hpp.html#file-mpscore-mpsndarray-hpp"><span class="std std-ref">File MPSNDArray.hpp</span></a></p></li>
+</ul>
+</section>
+<section id="full-api">
+<h2>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline"></a></h2>
+<section id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_MPS.html">Namespace MPS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_MPS.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_MPS.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_MPS.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_NS.html">Namespace NS</a></li>
+</ul>
+</div>
+</section>
+<section id="classes-and-structs">
+<h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this headline"></a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_dimension_slice.html">Struct DimensionSlice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_dimension_slice.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_image_coordinate.html">Struct ImageCoordinate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_image_coordinate.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_image_region.html">Struct ImageRegion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_image_region.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_m_p_s_offset.html">Struct MPSOffset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_m_p_s_offset.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_origin.html">Struct Origin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_origin.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_region.html">Struct Region</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_region.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_scale_transform.html">Struct ScaleTransform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_scale_transform.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_m_p_s_1_1_size.html">Struct Size</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_m_p_s_1_1_size.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html">Class CommandBuffer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_command_buffer.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_device_provider.html">Class DeviceProvider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_device_provider.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html">Class HeapProvider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_heap_provider.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_kernel.html">Class Kernel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_kernel.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_kernel.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_kernel.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix.html">Class Matrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html">Class MatrixBinaryKernel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_binary_kernel.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html">Class MatrixDecompositionCholesky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_cholesky.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html">Class MatrixDecompositionLU</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_decomposition_l_u.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html">Class MatrixDescriptor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_descriptor.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html">Class MatrixFindTopK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_find_top_k.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html">Class MatrixLogSoftMax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html">Class MatrixLogSoftMaxGradient</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_log_soft_max_gradient.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html">Class MatrixMultiplication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_multiplication.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html">Class MatrixRandom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html">Class MatrixRandomDistributionDescriptor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_distribution_descriptor.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html">Class MatrixRandomMTGP32</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_m_t_g_p32.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html">Class MatrixRandomPhilox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_random_philox.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html">Class MatrixSoftMax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html">Class MatrixSoftMaxGradient</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_soft_max_gradient.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html">Class MatrixSolveCholesky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_cholesky.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html">Class MatrixSolveLU</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_l_u.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html">Class MatrixSolveTriangular</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_solve_triangular.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html">Class MatrixUnaryKernel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_unary_kernel.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html">Class MatrixVectorMultiplication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_matrix_vector_multiplication.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html">Class NDArray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_n_d_array.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html">Class NDArrayAllocator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_allocator.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html">Class NDArrayDescriptor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_n_d_array_descriptor.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_predicate.html">Class Predicate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_predicate.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_predicate.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_predicate.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html">Class TemporaryNDArray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_temporary_n_d_array.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_vector.html">Class Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_vector.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_vector.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_vector.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html">Class VectorDescriptor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_m_p_s_1_1_vector_descriptor.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1afaa696e71cfa78a5e28e99373de8196b.html">Function MPS::_NS_ENUM(NS::UInteger, ImageEditMode)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1afaa696e71cfa78a5e28e99373de8196b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a4e2691b53dd3221a829347735bfc6f00.html">Function MPS::_NS_ENUM(NS::UInteger, ImageFeatureChannelFormat)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a4e2691b53dd3221a829347735bfc6f00.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a76f091e51e9531524488f3c3a5792f7f.html">Function MPS::_NS_ENUM(uint32_t, DataType)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a76f091e51e9531524488f3c3a5792f7f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function__m_p_s_matrix_decomposition_8hpp_1a6e6bf242421564b6af131e6fc64efed8.html">Function MPS::_NS_ENUM(int, MatrixDecompositionStatus)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function__m_p_s_matrix_decomposition_8hpp_1a6e6bf242421564b6af131e6fc64efed8.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a01dbcc05c66f7b274fe6d6db1d560172.html">Function MPS::_NS_OPTIONS(NS::UInteger, KernelOptions)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a01dbcc05c66f7b274fe6d6db1d560172.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a3ca3790f4ec024d64c17a330bd33bd3a.html">Function MPS::_NS_OPTIONS(NS::UInteger, AliasingStrategy)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function__m_p_s_core_types_8hpp_1a3ca3790f4ec024d64c17a330bd33bd3a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function__m_p_s_matrix_random_8hpp_1ad30d259dafe7fa0697397a9a93934180.html">Function MPS::_NS_OPTIONS(NS::UInteger, MatrixRandomDistribution)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function__m_p_s_matrix_random_8hpp_1ad30d259dafe7fa0697397a9a93934180.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="defines">
+<h3>Defines<a class="headerlink" href="#defines" title="Permalink to this headline"></a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a70d356ef5d6004a239f7576a1314e1e5.html">Define MPSBatchSizeIndex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a70d356ef5d6004a239f7576a1314e1e5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1aed6056a7232660f6460cee53a756ba92.html">Define MPSDeviceCapsIndex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1aed6056a7232660f6460cee53a756ba92.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a767a2bd6820390f88acac77d3e4505f2.html">Define MPSFunctionConstantIndex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a767a2bd6820390f88acac77d3e4505f2.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a5672df2f828d9cdbcf072408f7d37758.html">Define MPSFunctionConstantIndexReserved</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a5672df2f828d9cdbcf072408f7d37758.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a8bcba04f7224c579f38c6de5036ac371.html">Define MPSNDArrayConstantIndex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a8bcba04f7224c579f38c6de5036ac371.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a45752efcc85d60289a613189bc485ddd.html">Define MPSUserAvailableFunctionConstantStartIndex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a45752efcc85d60289a613189bc485ddd.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a7bec81c7fee8965b976dc52df1a5572b.html">Define MPSUserConstantIndex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define__m_p_s_function_constant_indices_8hpp_1a7bec81c7fee8965b976dc52df1a5572b.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline"></a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1aa702c40c811dacd614a7bf95229eda4e.html">Typedef MPS::MPSDimensionSlice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1aa702c40c811dacd614a7bf95229eda4e.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_n_d_array_8hpp_1a3813b5bd83b576bc3074d61308e05b19.html">Typedef MPS::MPSImageBatch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_n_d_array_8hpp_1a3813b5bd83b576bc3074d61308e05b19.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a54f461b516f24d50ddbce1017fa79051.html">Typedef MPS::MPSImageCoordinate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a54f461b516f24d50ddbce1017fa79051.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a0388d3584adb526627f0ec66d91f2910.html">Typedef MPS::MPSImageRegion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a0388d3584adb526627f0ec66d91f2910.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a45abcf62f809fd150d9049286f8722c5.html">Typedef MPS::MPSOrigin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a45abcf62f809fd150d9049286f8722c5.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1acd141aedb96dc0d717d5f46357818d1f.html">Typedef MPS::MPSRegion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1acd141aedb96dc0d717d5f46357818d1f.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a4ac70c491e434f127881bc332103b9af.html">Typedef MPS::MPSScaleTransform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a4ac70c491e434f127881bc332103b9af.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a61600ba4e9159f7fabe743647f80c463.html">Typedef MPS::MPSSize</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a61600ba4e9159f7fabe743647f80c463.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a0caa47f6afe951c9d4fe05d914d451af.html">Typedef MPS::Shape</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef__m_p_s_core_types_8hpp_1a0caa47f6afe951c9d4fe05d914d451af.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Documentation example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_MPS.html" class="btn btn-neutral float-right" title="Namespace MPS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

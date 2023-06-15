@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_m_p_s_1_1_image_region" kind="struct" language="C++" prot="public">
+    <compoundname>MPS::ImageRegion</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_s_1_1_image_region_1a1dc2de5ece0fad99bd2a5a20a143242a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_p_s_1_1_image_coordinate" kindref="compound">MPSImageCoordinate</ref></type>
+        <definition>MPSImageCoordinate MPS::ImageRegion::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>MPS::ImageRegion::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="97" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_image_region_1a37862cc1323809e32d4ceb3f1f9974b3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_p_s_1_1_image_coordinate" kindref="compound">MPSImageCoordinate</ref></type>
+        <definition>MPSImageCoordinate MPS::ImageRegion::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>MPS::ImageRegion::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="98" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>MPS::ImageCoordinate</label>
+        <link refid="struct_m_p_s_1_1_image_coordinate"/>
+      </node>
+      <node id="1">
+        <label>MPS::ImageRegion</label>
+        <link refid="struct_m_p_s_1_1_image_region"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>offset</edgelabel>
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="96" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="96" bodyend="99"/>
+    <listofallmembers>
+      <member refid="struct_m_p_s_1_1_image_region_1a1dc2de5ece0fad99bd2a5a20a143242a" prot="public" virt="non-virtual"><scope>MPS::ImageRegion</scope><name>offset</name></member>
+      <member refid="struct_m_p_s_1_1_image_region_1a37862cc1323809e32d4ceb3f1f9974b3" prot="public" virt="non-virtual"><scope>MPS::ImageRegion</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

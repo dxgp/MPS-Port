@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_n_d_array" kind="class" language="C++" prot="public">
+    <compoundname>MPS::NDArray</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; NDArray &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1aaabaf6cebf9795e265c6ffc1aaf7a965" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">NDArrayAllocator</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArrayAllocator * MPS::NDArray::defaultAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>defaultAllocator</name>
+        <qualifiedname>MPS::NDArray::defaultAllocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="40" column="33" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a1abe5bf8f8cff5455f7f8ca2bee3bc1c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::String *</type>
+        <definition>_MPS_INLINE NS::String * MPS::NDArray::label</definition>
+        <argsstring>()</argsstring>
+        <name>label</name>
+        <qualifiedname>MPS::NDArray::label</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="41" column="20" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a374a0f8e72335ed7d42b66184592b67a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MPS::DataType</type>
+        <definition>_MPS_INLINE MPS::DataType MPS::NDArray::dataType</definition>
+        <argsstring>() const</argsstring>
+        <name>dataType</name>
+        <qualifiedname>MPS::NDArray::dataType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="42" column="23" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1adba7f866fd1d81973e41889947d91a59" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>_MPS_INLINE size_t MPS::NDArray::dataTypeSize</definition>
+        <argsstring>() const</argsstring>
+        <name>dataTypeSize</name>
+        <qualifiedname>MPS::NDArray::dataTypeSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="43" column="16" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a44a87e22e7ef960c7fc544642e4fdc92" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::NDArray::numberOfDimensions</definition>
+        <argsstring>() const</argsstring>
+        <name>numberOfDimensions</name>
+        <qualifiedname>MPS::NDArray::numberOfDimensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="44" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a01c1aa5d50ce2d36157761a799ad06b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::NDArray::lengthOfDimension</definition>
+        <argsstring>(NS::UInteger dimensionIndex)</argsstring>
+        <name>lengthOfDimension</name>
+        <qualifiedname>MPS::NDArray::lengthOfDimension</qualifiedname>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>dimensionIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="45" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a65f92d3b00f2de8a81557ec50b7f2f2c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Device *</type>
+        <definition>_MPS_INLINE MTL::Device * MPS::NDArray::device</definition>
+        <argsstring>() const</argsstring>
+        <name>device</name>
+        <qualifiedname>MPS::NDArray::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="46" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a74c730768fdbd74b88282d143ee86cf2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArrayDescriptor * MPS::NDArray::descriptor</definition>
+        <argsstring>()</argsstring>
+        <name>descriptor</name>
+        <qualifiedname>MPS::NDArray::descriptor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="47" column="32" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a3819fdddd1b7b946e7b807c525eaca31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArray * MPS::NDArray::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, NDArrayDescriptor *descriptor)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::NDArray::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">NDArrayDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="48" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a7f00fab0b1232e1f0f9e2f3d1730f273" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArray * MPS::NDArray::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, double value)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::NDArray::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="49" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1ad7baddf07d0786255003405549988e5d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::NDArray::resourceSize</definition>
+        <argsstring>()</argsstring>
+        <name>resourceSize</name>
+        <qualifiedname>MPS::NDArray::resourceSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="50" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1ad16060583f686d4037e77c246dd28526" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArray * MPS::NDArray::arrayViewWithCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *cmdBuf, MPS::NDArrayDescriptor *descriptor, MPS::AliasingStrategy aliasing)</argsstring>
+        <name>arrayViewWithCommandBuffer</name>
+        <qualifiedname>MPS::NDArray::arrayViewWithCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>cmdBuf</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <param>
+          <type>MPS::AliasingStrategy</type>
+          <declname>aliasing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="51" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="150" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1af1ca230ce35140c3fe8a2a670fc111f2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref> *</type>
+        <definition>_MPS_INLINE MPS::NDArray * MPS::NDArray::parent</definition>
+        <argsstring>() const</argsstring>
+        <name>parent</name>
+        <qualifiedname>MPS::NDArray::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="52" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a70813a5e7e99eb7183b17a2b32df8810" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::NDArray::exportDataWithCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *cmdBuf, MTL::Buffer *buffer, MPS::DataType destinationDataType, NS::UInteger offset, NS::Integer *rowStrides)</argsstring>
+        <name>exportDataWithCommandBuffer</name>
+        <qualifiedname>MPS::NDArray::exportDataWithCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>cmdBuf</declname>
+        </param>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>MPS::DataType</type>
+          <declname>destinationDataType</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>NS::Integer *</type>
+          <declname>rowStrides</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="53" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a9c7e3ce8b11a064960969555a0c606a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::NDArray::importDataWithCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *cmdBuf, MTL::Buffer *buffer, MPS::DataType sourceDataType, NS::UInteger offset, NS::Integer *rowStrides)</argsstring>
+        <name>importDataWithCommandBuffer</name>
+        <qualifiedname>MPS::NDArray::importDataWithCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>cmdBuf</declname>
+        </param>
+        <param>
+          <type>MTL::Buffer *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>MPS::DataType</type>
+          <declname>sourceDataType</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>NS::Integer *</type>
+          <declname>rowStrides</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="54" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a9eed7115ecf164ed8488212794a28c9f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::NDArray::readBytes</definition>
+        <argsstring>(void *buffer, NS::Integer *strideBytesPerDimension)</argsstring>
+        <name>readBytes</name>
+        <qualifiedname>MPS::NDArray::readBytes</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>NS::Integer *</type>
+          <declname>strideBytesPerDimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="56" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1a0d7ed0f747d2d1cbd896cac880a7fc8d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::NDArray::writeBytes</definition>
+        <argsstring>(void *buffer, NS::Integer *strideBytesPerDimension)</argsstring>
+        <name>writeBytes</name>
+        <qualifiedname>MPS::NDArray::writeBytes</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>NS::Integer *</type>
+          <declname>strideBytesPerDimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="57" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_n_d_array_1afc0c63f9195b6be7cf161268570ea2b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::NDArray::synchronizeOnCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer)</argsstring>
+        <name>synchronizeOnCommandBuffer</name>
+        <qualifiedname>MPS::NDArray::synchronizeOnCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="58" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="168" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::NDArray</label>
+        <link refid="class_m_p_s_1_1_n_d_array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; NDArray &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::NDArray</label>
+        <link refid="class_m_p_s_1_1_n_d_array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; NDArray &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" line="39" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp" bodystart="39" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_n_d_array_1ad16060583f686d4037e77c246dd28526" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>arrayViewWithCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a374a0f8e72335ed7d42b66184592b67a" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>dataType</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1adba7f866fd1d81973e41889947d91a59" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>dataTypeSize</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1aaabaf6cebf9795e265c6ffc1aaf7a965" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>defaultAllocator</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a74c730768fdbd74b88282d143ee86cf2" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>descriptor</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a65f92d3b00f2de8a81557ec50b7f2f2c" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>device</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a70813a5e7e99eb7183b17a2b32df8810" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>exportDataWithCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a9c7e3ce8b11a064960969555a0c606a4" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>importDataWithCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a3819fdddd1b7b946e7b807c525eaca31" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a7f00fab0b1232e1f0f9e2f3d1730f273" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a1abe5bf8f8cff5455f7f8ca2bee3bc1c" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>label</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a01c1aa5d50ce2d36157761a799ad06b4" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>lengthOfDimension</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a44a87e22e7ef960c7fc544642e4fdc92" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>numberOfDimensions</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1af1ca230ce35140c3fe8a2a670fc111f2" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>parent</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a9eed7115ecf164ed8488212794a28c9f" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>readBytes</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1ad7baddf07d0786255003405549988e5d" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>resourceSize</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1afc0c63f9195b6be7cf161268570ea2b9" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>synchronizeOnCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_n_d_array_1a0d7ed0f747d2d1cbd896cac880a7fc8d" prot="private" virt="non-virtual"><scope>MPS::NDArray</scope><name>writeBytes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

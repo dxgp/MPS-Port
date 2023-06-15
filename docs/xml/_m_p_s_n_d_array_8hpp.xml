@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_m_p_s_n_d_array_8hpp" kind="file" language="C++">
+    <compoundname>MPSNDArray.hpp</compoundname>
+    <includes refid="_m_p_s_core_types_8hpp" local="yes">MPSCoreTypes.hpp</includes>
+    <includes local="yes">../../Metal/MTLBuffer.hpp</includes>
+    <includes local="no">simd/simd.h</includes>
+    <includes local="yes">../../Foundation/Foundation.hpp</includes>
+    <includes local="yes">../MPSHeaderBridge.hpp</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../../Foundation/Foundation.hpp</label>
+      </node>
+      <node id="3">
+        <label>../../Foundation/NSObject.hpp</label>
+      </node>
+      <node id="6">
+        <label>../../Metal/MTLBuffer.hpp</label>
+      </node>
+      <node id="4">
+        <label>../../Metal/Metal.hpp</label>
+      </node>
+      <node id="9">
+        <label>../MPSHeaderBridge.hpp</label>
+      </node>
+      <node id="5">
+        <label>../MPSPrivate.hpp</label>
+      </node>
+      <node id="2">
+        <label>MPSCoreTypes.hpp</label>
+        <link refid="_m_p_s_core_types_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp</label>
+        <link refid="_m_p_s_n_d_array_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>simd/simd.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_m_p_s_1_1_n_d_array_descriptor" prot="public">MPS::NDArrayDescriptor</innerclass>
+    <innerclass refid="class_m_p_s_1_1_n_d_array_allocator" prot="public">MPS::NDArrayAllocator</innerclass>
+    <innerclass refid="class_m_p_s_1_1_n_d_array" prot="public">MPS::NDArray</innerclass>
+    <innerclass refid="class_m_p_s_1_1_temporary_n_d_array" prot="public">MPS::TemporaryNDArray</innerclass>
+    <innernamespace refid="namespace_m_p_s">MPS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MPSCoreTypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Metal/MTLBuffer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;simd/simd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Foundation/Foundation.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../MPSHeaderBridge.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>note:<sp/>maybe<sp/>clang<sp/>can<sp/>use<sp/>the<sp/>_nonnull<sp/>attribute.<sp/>Check<sp/>it<sp/>out?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MPS{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Matrix;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MatrixDescriptor;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>class<sp/>Image{};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS::Array*<sp/>MPSImageBatch;</highlight></codeline>
+<codeline lineno="15" refid="class_m_p_s_1_1_n_d_array_descriptor" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">NDArrayDescriptor</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;NDArrayDescriptor&gt;{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::DataType<sp/>dataType();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>numberOfDimensions();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>lengthOfDimension(NS::UInteger<sp/>dimensionIndex);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_p_s_1_1_dimension_slice" kindref="compound">MPS::DimensionSlice</ref><sp/>sliceRangeForDimension(NS::UInteger<sp/>dimensionIndex);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>sliceDimension(NS::UInteger<sp/>dimsionIndex,<sp/><ref refid="struct_m_p_s_1_1_dimension_slice" kindref="compound">MPS::DimensionSlice</ref><sp/>subRange);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>transposeDimension(NS::UInteger<sp/>dimensionIndex,<sp/>NS::UInteger<sp/>dimensionIndex2);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector_uchar16<sp/>dimensionOrder();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>Replace<sp/>dimensionSizes<sp/>with<sp/>NS::Size::Make??<sp/>A<sp/>lot<sp/>easier.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptorWithDataType(MPS::DataType<sp/>dataType,<sp/>NS::UInteger<sp/>numberOfDimensions,<sp/>NS::UInteger*<sp/>dimensionSizes);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>THIS<sp/>IS<sp/>ALSO<sp/>A<sp/>LITTLE<sp/>DICEY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptorWithDataType(MPS::DataType<sp/>dataType,<sp/>NS::Array*<sp/>shape);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//static<sp/>NDArrayDescriptor*<sp/>descriptorWithDatType(MPS::DataType<sp/>dataType,<sp/>...)<sp/>While<sp/>cpp<sp/>11<sp/>does<sp/>support<sp/>varidic<sp/>args,<sp/>this<sp/>won&apos;t<sp/>work.<sp/>internal<sp/>implementational<sp/>details<sp/>will<sp/>differ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reshapeWithDimensionCount(NS::UInteger<sp/>numberOfDimensions,<sp/>NS::UInteger*<sp/>dimensionSizes);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reshapeWithShape(NS::Array*<sp/>shape);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_kernel" kindref="compound">Kernel</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">NDArray</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>should<sp/>I<sp/>put<sp/>NS::Referencing?????</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_m_p_s_1_1_n_d_array_allocator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">NDArrayAllocator</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Copying&lt;NDArrayAllocator&gt;{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref>*<sp/>alloc();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref>*<sp/>init();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>arrayForCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptor,<sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>kernel);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39" refid="class_m_p_s_1_1_n_d_array" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">NDArray</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>NS::Referencing&lt;NDArray&gt;{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">NDArrayAllocator</ref>*<sp/>defaultAllocator();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::String*<sp/>label();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPS::DataType<sp/>dataType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dataTypeSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>numberOfDimensions()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>lengthOfDimension(NS::UInteger<sp/>dimensionIndex);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTL::Device*<sp/>device()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptor();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">NDArrayDescriptor</ref>*<sp/>descriptor);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>resourceSize();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>arrayViewWithCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptor,<sp/>MPS::AliasingStrategy<sp/>aliasing);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>parent()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exportDataWithCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/>MTL::Buffer*<sp/>buffer,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>offset,<sp/>NS::Integer*<sp/>rowStrides);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>importDataWithCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/>MTL::Buffer*<sp/>buffer,<sp/>MPS::DataType<sp/>sourceDataType,<sp/>NS::UInteger<sp/>offset,<sp/>NS::Integer*<sp/>rowStrides);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>Left<sp/>two<sp/>more<sp/>initializers<sp/>related<sp/>to<sp/>images<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readBytes(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/>NS::Integer*<sp/>strideBytesPerDimension);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeBytes(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/>NS::Integer*<sp/>strideBytesPerDimension);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>synchronizeOnCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_m_p_s_1_1_temporary_n_d_array" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p_s_1_1_temporary_n_d_array" kindref="compound">TemporaryNDArray</ref>:<sp/>NS::Referencing&lt;MPS::NDArray&gt;{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref>*<sp/>defaultAllocator();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_m_p_s_1_1_temporary_n_d_array" kindref="compound">MPS::TemporaryNDArray</ref>*<sp/>temporaryNDArrayWithCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptor);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//static<sp/>MPS::TemporaryNDArray*<sp/>initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::NDArrayDescriptor*<sp/>descriptor);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS::UInteger<sp/>readCount();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">//<sp/>class<sp/>NDArrayDescriptor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">_MPS_INLINE<sp/>MPS::DataType<sp/>MPS::NDArrayDescriptor::dataType(){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::DataType&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,_MPS_PRIVATE_SEL(dataType));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::NDArrayDescriptor::numberOfDimensions(){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(numberOfDimensions));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::NDArrayDescriptor::lengthOfDimension(NS::UInteger<sp/>dimensionIndex){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(lengthOfDimension_),<sp/>dimensionIndex);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">_MPS_INLINE<sp/><ref refid="struct_m_p_s_1_1_dimension_slice" kindref="compound">MPS::DimensionSlice</ref><sp/>MPS::NDArrayDescriptor::sliceRangeForDimension(NS::UInteger<sp/>dimensionIndex){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::DimensionSlice&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(sliceRangeForDimension_),<sp/>dimensionIndex);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArrayDescriptor::sliceDimension(NS::UInteger<sp/>dimensionIndex,<sp/><ref refid="struct_m_p_s_1_1_dimension_slice" kindref="compound">MPS::DimensionSlice</ref><sp/>subRange){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(sliceDimension_withSubrange_),<sp/>dimensionIndex,<sp/>subRange);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArrayDescriptor::transposeDimension(NS::UInteger<sp/>dimensionIndex,<sp/>NS::UInteger<sp/>dimensionIndex2){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,_MPS_PRIVATE_SEL(transposeDimension_withDimension_),<sp/>dimensionIndex,<sp/>dimensionIndex2);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">_MPS_INLINE<sp/>vector_uchar16<sp/>MPS::NDArrayDescriptor::dimensionOrder(){</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;vector_uchar16&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(dimensionOrder));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType<sp/>dataType,<sp/>NS::UInteger<sp/>numberOfDimensions,<sp/>NS::UInteger*<sp/>dimensionSizes){</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArrayDescriptor*&gt;(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_dimensionCount_dimensionSizes_),<sp/>dataType,<sp/>numberOfDimensions,<sp/>dimensionSizes);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>MPS::NDArrayDescriptor::descriptorWithDataType(MPS::DataType<sp/>dataType,<sp/>NS::Array*<sp/>shape){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArrayDescriptor*&gt;(_MPS_PRIVATE_CLS(MPSNDArrayDescriptor),_MPS_PRIVATE_SEL(descriptorWithDataType_shape_),<sp/>dataType,<sp/>shape);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArrayDescriptor::reshapeWithDimensionCount(NS::UInteger<sp/>numberOfDimensions,<sp/>NS::UInteger*<sp/>dimensionSizes){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(reshapeWithDimensionCount_dimensionSizes_),<sp/>numberOfDimensions,<sp/>dimensionSizes);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArrayDescriptor::reshapeWithShape(NS::Array*<sp/>shape){</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(reshapeWithShape_),<sp/>shape);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//class<sp/>NDArrayAllocator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref>*<sp/>MPS::NDArrayAllocator::alloc(){</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>Object::sendMessage&lt;MPS::NDArrayAllocator*&gt;(_MPS_PRIVATE_CLS(MPSNDArrayAllocator),<sp/>_MPS_PRIVATE_SEL(alloc));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::alloc&lt;MPS::NDArrayAllocator&gt;(_MPS_PRIVATE_CLS(MPSNDArrayAllocator));</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref>*<sp/>MPS::NDArrayAllocator::init(){</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>Object::sendMessage&lt;MPS::NDArrayAllocator*&gt;(_MPS_PRIVATE_CLS(MPSNDArray),<sp/>_MPS_PRIVATE_SEL(init));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS::Object::init&lt;MPS::NDArrayAllocator&gt;();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>MPS::NDArrayAllocator::arrayForCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptor,<sp/><ref refid="class_m_p_s_1_1_kernel" kindref="compound">MPS::Kernel</ref>*<sp/>kernel){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArray*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(arrayForCommandBuffer_arrayDescriptor_kernel_),<sp/>cmdBuf,<sp/>descriptor,<sp/>kernel);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//class<sp/>NDArray</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref>*<sp/>MPS::NDArray::defaultAllocator(){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArrayAllocator*&gt;(_MPS_PRIVATE_CLS(MPSNDArray),<sp/>_MPS_PRIVATE_SEL(defaultAllocator));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">_MPS_INLINE<sp/>NS::String*<sp/>MPS::NDArray::label(){</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::String*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(label));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">_MPS_INLINE<sp/>MPS::DataType<sp/>MPS::NDArray::dataType()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::DataType&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(dataType));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MPS::NDArray::dataTypeSize()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;size_t&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(dataTypeSize));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::NDArray::numberOfDimensions()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(numberOfDimensions));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::NDArray::lengthOfDimension(NS::UInteger<sp/>dimensionIndex){</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(lengthOfDimension_),<sp/>dimensionIndex);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">_MPS_INLINE<sp/>MTL::Device*<sp/>MPS::NDArray::device()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MTL::Device*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(device));</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>MPS::NDArray::descriptor(){</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArrayDescriptor*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(descriptor));</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>MPS::NDArray::initWithDevice(MTL::Device*<sp/>device,<sp/>NDArrayDescriptor*<sp/>descriptor){</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArray*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_descriptor_),<sp/>device,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>MPS::NDArray::initWithDevice(MTL::Device*<sp/>device,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArray*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(initWithDevice_scalar_),<sp/>device,<sp/>value);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::NDArray::resourceSize(){</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(resourceSize));</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>MPS::NDArray::arrayViewWithCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptor,<sp/>MPS::AliasingStrategy<sp/>aliasing){</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArray*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(arrayViewWithCommandBuffer_descriptor_aliasing_),<sp/>cmdBuf,<sp/>descriptor,<sp/>aliasing);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array" kindref="compound">MPS::NDArray</ref>*<sp/>MPS::NDArray::parent()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArray*&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(parent));</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArray::exportDataWithCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/>MTL::Buffer*<sp/>buffer,<sp/>MPS::DataType<sp/>destinationDataType,<sp/>NS::UInteger<sp/>offset,<sp/>NS::Integer*<sp/>rowStrides){</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(exportDataWithCommandBuffer_toBuffer_destinationDataType_offset_rowStrides_),<sp/>cmdBuf,<sp/>buffer,<sp/>destinationDataType,<sp/>offset,<sp/>rowStrides);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArray::importDataWithCommandBuffer(MTL::CommandBuffer*<sp/>cmdBuf,<sp/>MTL::Buffer*<sp/>buffer,<sp/>MPS::DataType<sp/>sourceDataType,<sp/>NS::UInteger<sp/>offset,<sp/>NS::Integer*<sp/>rowStrides){</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(importDataWithCommandBuffer_fromBuffer_sourceDataType_offset_rowStrides_),<sp/>cmdBuf,<sp/>buffer,<sp/>sourceDataType,<sp/>offset,<sp/>rowStrides);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArray::readBytes(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/>NS::Integer*<sp/>strideBytesPerDimension){</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(readBytes_strideBytes_),<sp/>buffer,<sp/>strideBytesPerDimension);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArray::writeBytes(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/>NS::Integer*<sp/>strideBytesPerDimension){</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(writeBytes_strideBytes_),<sp/>buffer,<sp/>strideBytesPerDimension);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">_MPS_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPS::NDArray::synchronizeOnCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>Object::sendMessage&lt;void&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(synchronizeOnCommandBuffer_),<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">//<sp/>class<sp/>TemporaryNDArray</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_n_d_array_allocator" kindref="compound">MPS::NDArrayAllocator</ref>*<sp/>MPS::TemporaryNDArray::defaultAllocator(){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::NDArrayAllocator*&gt;(_MPS_PRIVATE_CLS(MPSTemporaryNDArray),<sp/>_MPS_PRIVATE_SEL(defaultAllocator));</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_MPS_INLINE<sp/>MPS::TemporaryNDArray*<sp/>MPS::TemporaryNDArray::initWithDevice(MTL::Device*<sp/>device,<sp/>MPS::NDArrayDescriptor*<sp/>descriptor){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>Object::sendMessage&lt;MPS::TemporaryNDArray*&gt;(_MPS_PRIVATE_CLS(MPSTemporaryNDArray),<sp/>_MPS_PRIVATE_SEL(initWithDevice_),<sp/>device,<sp/>descriptor);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}<sp/>USE<sp/>INIT<sp/>WITH<sp/>CMD<sp/>BUF<sp/>INSTEAD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">_MPS_INLINE<sp/>NS::UInteger<sp/>MPS::TemporaryNDArray::readCount(){</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;NS::UInteger&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_MPS_PRIVATE_SEL(readCount));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">_MPS_INLINE<sp/><ref refid="class_m_p_s_1_1_temporary_n_d_array" kindref="compound">MPS::TemporaryNDArray</ref>*<sp/>MPS::TemporaryNDArray::temporaryNDArrayWithCommandBuffer(MTL::CommandBuffer*<sp/>commandBuffer,<sp/><ref refid="class_m_p_s_1_1_n_d_array_descriptor" kindref="compound">MPS::NDArrayDescriptor</ref>*<sp/>descriptor){</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::sendMessage&lt;MPS::TemporaryNDArray*&gt;(_MPS_PRIVATE_CLS(MPSTemporaryNDArray),<sp/>_MPS_PRIVATE_SEL(temporaryNDArrayWithCommandBuffer_descriptor_),<sp/>commandBuffer,<sp/>descriptor);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSNDArray.hpp"/>
+  </compounddef>
+</doxygen>

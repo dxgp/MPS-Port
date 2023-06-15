@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_multiplication" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixMultiplication</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::Kernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1a300c30a223097e65a3b5f19bb75998fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixMultiplication * MPS::MatrixMultiplication::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixMultiplication::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="8" column="42" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1a8ee895f55f30cba0e4610ff2aadd39ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Origin</type>
+        <definition>_MPS_INLINE MTL::Origin MPS::MatrixMultiplication::resultMatrixOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>resultMatrixOrigin</name>
+        <qualifiedname>MPS::MatrixMultiplication::resultMatrixOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="9" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1af500007ea8f837ebd2e810a7e159a698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Origin</type>
+        <definition>_MPS_INLINE MTL::Origin MPS::MatrixMultiplication::leftMatrixOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>leftMatrixOrigin</name>
+        <qualifiedname>MPS::MatrixMultiplication::leftMatrixOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="10" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1a35120f854158c3f00d883061a4fe7f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::Origin</type>
+        <definition>_MPS_INLINE MTL::Origin MPS::MatrixMultiplication::rightMatrixOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>rightMatrixOrigin</name>
+        <qualifiedname>MPS::MatrixMultiplication::rightMatrixOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="11" column="21" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1a5f7d08b492bfda8cbda4531d4babf87e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixMultiplication::batchStart</definition>
+        <argsstring>()</argsstring>
+        <name>batchStart</name>
+        <qualifiedname>MPS::MatrixMultiplication::batchStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="12" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1a0c1e93befcfdca90fefb9cc294b39a00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NS::UInteger</type>
+        <definition>_MPS_INLINE NS::UInteger MPS::MatrixMultiplication::batchSize</definition>
+        <argsstring>()</argsstring>
+        <name>batchSize</name>
+        <qualifiedname>MPS::MatrixMultiplication::batchSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="13" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1ad57c281873c73d7ca808a067d01bf563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixMultiplication * MPS::MatrixMultiplication::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, bool transposeLeft, bool transposeRight, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns, double alpha, double beta)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixMultiplication::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>transposeLeft</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>transposeRight</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>resultRows</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>resultColumns</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>interiorColumns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>beta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="16" column="35" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1a605245cf3f6862f96fb2aa90eb6c9c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_multiplication" kindref="compound">MPS::MatrixMultiplication</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixMultiplication * MPS::MatrixMultiplication::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, NS::UInteger resultRows, NS::UInteger resultColumns, NS::UInteger interiorColumns)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixMultiplication::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>resultRows</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>resultColumns</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>interiorColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="18" column="35" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_multiplication_1a3bd6a148b0510a4ea9b60d167eb08bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixMultiplication::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *leftMatrix, MPS::Matrix *rightMatrix, MPS::Matrix *resultMatrix)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixMultiplication::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>leftMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>rightMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>resultMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="19" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixMultiplication</label>
+        <link refid="class_m_p_s_1_1_matrix_multiplication"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Kernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixMultiplication</label>
+        <link refid="class_m_p_s_1_1_matrix_multiplication"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::Kernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="6" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="6" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1a300c30a223097e65a3b5f19bb75998fd" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1a0c1e93befcfdca90fefb9cc294b39a00" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>batchSize</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1a5f7d08b492bfda8cbda4531d4babf87e" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>batchStart</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1a3bd6a148b0510a4ea9b60d167eb08bb4" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1ad57c281873c73d7ca808a067d01bf563" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1a605245cf3f6862f96fb2aa90eb6c9c9d" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1af500007ea8f837ebd2e810a7e159a698" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>leftMatrixOrigin</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1a8ee895f55f30cba0e4610ff2aadd39ea" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>resultMatrixOrigin</name></member>
+      <member refid="class_m_p_s_1_1_matrix_multiplication_1a35120f854158c3f00d883061a4fe7f28" prot="public" virt="non-virtual"><scope>MPS::MatrixMultiplication</scope><name>rightMatrixOrigin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

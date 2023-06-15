@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_m_p_s_1_1_scale_transform" kind="struct" language="C++" prot="public">
+    <compoundname>MPS::ScaleTransform</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_s_1_1_scale_transform_1afefb0eaa9acf54b66f7a158d0eb40dcd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::ScaleTransform::scaleX</definition>
+        <argsstring></argsstring>
+        <name>scaleX</name>
+        <qualifiedname>MPS::ScaleTransform::scaleX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="84" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_scale_transform_1aded7c62ab254f388835b14642977fdfd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::ScaleTransform::scaleY</definition>
+        <argsstring></argsstring>
+        <name>scaleY</name>
+        <qualifiedname>MPS::ScaleTransform::scaleY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="85" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_scale_transform_1a46f810e5d9b9e9658a84716af604fd3e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::ScaleTransform::translateX</definition>
+        <argsstring></argsstring>
+        <name>translateX</name>
+        <qualifiedname>MPS::ScaleTransform::translateX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="86" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_scale_transform_1af5e1af5afe94c53e3fce31f3f57c2c8c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::ScaleTransform::translateY</definition>
+        <argsstring></argsstring>
+        <name>translateY</name>
+        <qualifiedname>MPS::ScaleTransform::translateY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="87" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="83" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="83" bodyend="88"/>
+    <listofallmembers>
+      <member refid="struct_m_p_s_1_1_scale_transform_1afefb0eaa9acf54b66f7a158d0eb40dcd" prot="public" virt="non-virtual"><scope>MPS::ScaleTransform</scope><name>scaleX</name></member>
+      <member refid="struct_m_p_s_1_1_scale_transform_1aded7c62ab254f388835b14642977fdfd" prot="public" virt="non-virtual"><scope>MPS::ScaleTransform</scope><name>scaleY</name></member>
+      <member refid="struct_m_p_s_1_1_scale_transform_1a46f810e5d9b9e9658a84716af604fd3e" prot="public" virt="non-virtual"><scope>MPS::ScaleTransform</scope><name>translateX</name></member>
+      <member refid="struct_m_p_s_1_1_scale_transform_1af5e1af5afe94c53e3fce31f3f57c2c8c" prot="public" virt="non-virtual"><scope>MPS::ScaleTransform</scope><name>translateY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

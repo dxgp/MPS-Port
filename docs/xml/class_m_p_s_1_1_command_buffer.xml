@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_command_buffer" kind="class" language="C++" prot="public">
+    <compoundname>MPS::CommandBuffer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MTL::CommandBuffer &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1a9bdad9b821c0200e6468d895fa6b6f53" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::CommandBuffer *</type>
+        <definition>_MPS_INLINE MTL::CommandBuffer * MPS::CommandBuffer::commandBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>commandBuffer</name>
+        <qualifiedname>MPS::CommandBuffer::commandBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="28" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1a9cec36a9e185243a3508b06d767e1697" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MTL::CommandBuffer *</type>
+        <definition>_MPS_INLINE MTL::CommandBuffer * MPS::CommandBuffer::rootCommandBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>rootCommandBuffer</name>
+        <qualifiedname>MPS::CommandBuffer::rootCommandBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="29" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1aa72baa999bc7965630d07af945aa7d66" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_predicate" kindref="compound">MPS::Predicate</ref> *</type>
+        <definition>_MPS_INLINE MPS::Predicate * MPS::CommandBuffer::predicate</definition>
+        <argsstring>()</argsstring>
+        <name>predicate</name>
+        <qualifiedname>MPS::CommandBuffer::predicate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="30" column="24" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1a677e3ae2692399167ab85df7b5fb0da5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_heap_provider" kindref="compound">MPS::HeapProvider</ref> *</type>
+        <definition>_MPS_INLINE MPS::HeapProvider * MPS::CommandBuffer::heapProvider</definition>
+        <argsstring>()</argsstring>
+        <name>heapProvider</name>
+        <qualifiedname>MPS::CommandBuffer::heapProvider</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="31" column="27" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1a171e25e3c74dc80a62b4a2ccc918a5af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_command_buffer" kindref="compound">MPS::CommandBuffer</ref> *</type>
+        <definition>_MPS_INLINE MPS::CommandBuffer * MPS::CommandBuffer::initWithCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer)</argsstring>
+        <name>initWithCommandBuffer</name>
+        <qualifiedname>MPS::CommandBuffer::initWithCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="34" column="28" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1ae02d36066f0d306bb6ba3c012382913c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::CommandBuffer::commitAndContinue</definition>
+        <argsstring>()</argsstring>
+        <name>commitAndContinue</name>
+        <qualifiedname>MPS::CommandBuffer::commitAndContinue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="35" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1aee5bb27200c0103346a7e6265acca2f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::CommandBuffer::prefetchHeapForWorkloadSize</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>prefetchHeapForWorkloadSize</name>
+        <qualifiedname>MPS::CommandBuffer::prefetchHeapForWorkloadSize</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="36" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1ac0b0a17a2466200bdbe41481da408b65" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_command_buffer" kindref="compound">MPS::CommandBuffer</ref> *</type>
+        <definition>_MPS_INLINE MPS::CommandBuffer * MPS::CommandBuffer::commandBufferWithCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer)</argsstring>
+        <name>commandBufferWithCommandBuffer</name>
+        <qualifiedname>MPS::CommandBuffer::commandBufferWithCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="32" column="35" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_command_buffer_1a28cb9100b57672ffd444b9a1adf2d3aa" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_command_buffer" kindref="compound">MPS::CommandBuffer</ref> *</type>
+        <definition>_MPS_INLINE MPS::CommandBuffer * MPS::CommandBuffer::commandBufferFromCommandQueue</definition>
+        <argsstring>(MTL::CommandQueue *commandQueue)</argsstring>
+        <name>commandBufferFromCommandQueue</name>
+        <qualifiedname>MPS::CommandBuffer::commandBufferFromCommandQueue</qualifiedname>
+        <param>
+          <type>MTL::CommandQueue *</type>
+          <declname>commandQueue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="33" column="35" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::CommandBuffer</label>
+        <link refid="class_m_p_s_1_1_command_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MTL::CommandBuffer &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::CommandBuffer</label>
+        <link refid="class_m_p_s_1_1_command_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MTL::CommandBuffer &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" line="27" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCommandBuffer.hpp" bodystart="27" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_command_buffer_1a9bdad9b821c0200e6468d895fa6b6f53" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>commandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1a28cb9100b57672ffd444b9a1adf2d3aa" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>commandBufferFromCommandQueue</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1ac0b0a17a2466200bdbe41481da408b65" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>commandBufferWithCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1ae02d36066f0d306bb6ba3c012382913c" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>commitAndContinue</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1a677e3ae2692399167ab85df7b5fb0da5" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>heapProvider</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1a171e25e3c74dc80a62b4a2ccc918a5af" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>initWithCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1aa72baa999bc7965630d07af945aa7d66" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>predicate</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1aee5bb27200c0103346a7e6265acca2f4" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>prefetchHeapForWorkloadSize</name></member>
+      <member refid="class_m_p_s_1_1_command_buffer_1a9cec36a9e185243a3508b06d767e1697" prot="private" virt="non-virtual"><scope>MPS::CommandBuffer</scope><name>rootCommandBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

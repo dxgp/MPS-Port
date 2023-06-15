@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_m_p_s_1_1_matrix_vector_multiplication" kind="class" language="C++" prot="public">
+    <compoundname>MPS::MatrixVectorMultiplication</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_vector_multiplication_1a01b27f502e11fbfaa732dbb8d9effa96" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixVectorMultiplication * MPS::MatrixVectorMultiplication::alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <qualifiedname>MPS::MatrixVectorMultiplication::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="23" column="48" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_vector_multiplication_1a3e6ebacf8763a1ff39c484d702c07ee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixVectorMultiplication * MPS::MatrixVectorMultiplication::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, bool transpose, NS::UInteger rows, NS::UInteger columns, double alpha, double beta)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixVectorMultiplication::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>transpose</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>columns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>beta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="24" column="41" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_vector_multiplication_1a09011981a7b086da81664493894902c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_m_p_s_1_1_matrix_vector_multiplication" kindref="compound">MPS::MatrixVectorMultiplication</ref> *</type>
+        <definition>_MPS_INLINE MPS::MatrixVectorMultiplication * MPS::MatrixVectorMultiplication::initWithDevice</definition>
+        <argsstring>(MTL::Device *device, NS::UInteger rows, NS::UInteger columns)</argsstring>
+        <name>initWithDevice</name>
+        <qualifiedname>MPS::MatrixVectorMultiplication::initWithDevice</qualifiedname>
+        <param>
+          <type>MTL::Device *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>NS::UInteger</type>
+          <declname>columns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="25" column="41" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_p_s_1_1_matrix_vector_multiplication_1a4fd21cee701fa3e48bd57b406aa743c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>_MPS_INLINE void MPS::MatrixVectorMultiplication::encodeToCommandBuffer</definition>
+        <argsstring>(MTL::CommandBuffer *commandBuffer, MPS::Matrix *inputMatrix, MPS::Vector *inputVector, MPS::Vector *resultVector)</argsstring>
+        <name>encodeToCommandBuffer</name>
+        <qualifiedname>MPS::MatrixVectorMultiplication::encodeToCommandBuffer</qualifiedname>
+        <param>
+          <type>MTL::CommandBuffer *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_matrix" kindref="compound">MPS::Matrix</ref> *</type>
+          <declname>inputMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref> *</type>
+          <declname>inputVector</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_p_s_1_1_vector" kindref="compound">MPS::Vector</ref> *</type>
+          <declname>resultVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="26" column="14" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPS::MatrixVectorMultiplication</label>
+        <link refid="class_m_p_s_1_1_matrix_vector_multiplication"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPS::MatrixVectorMultiplication</label>
+        <link refid="class_m_p_s_1_1_matrix_vector_multiplication"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NS::Referencing&lt; MPS::MatrixBinaryKernel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" line="21" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSMatrix/MPSMatrixMultiplication.hpp" bodystart="21" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a01b27f502e11fbfaa732dbb8d9effa96" prot="public" virt="non-virtual"><scope>MPS::MatrixVectorMultiplication</scope><name>alloc</name></member>
+      <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a4fd21cee701fa3e48bd57b406aa743c7" prot="public" virt="non-virtual"><scope>MPS::MatrixVectorMultiplication</scope><name>encodeToCommandBuffer</name></member>
+      <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a3e6ebacf8763a1ff39c484d702c07ee2" prot="public" virt="non-virtual"><scope>MPS::MatrixVectorMultiplication</scope><name>initWithDevice</name></member>
+      <member refid="class_m_p_s_1_1_matrix_vector_multiplication_1a09011981a7b086da81664493894902c8" prot="public" virt="non-virtual"><scope>MPS::MatrixVectorMultiplication</scope><name>initWithDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

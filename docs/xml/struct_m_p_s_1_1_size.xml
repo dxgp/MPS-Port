@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_m_p_s_1_1_size" kind="struct" language="C++" prot="public">
+    <compoundname>MPS::Size</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_s_1_1_size_1aef3046e3572828bd587edac65d3f76ae" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::Size::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>MPS::Size::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="70" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_size_1afe1fe7a85ac8a0d6b3656b82ae5e2ce7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::Size::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>MPS::Size::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="71" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_size_1a28c641eb4f92455cd510519bfc8769a6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPS::Size::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <qualifiedname>MPS::Size::depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="72" column="17" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="69" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="69" bodyend="73"/>
+    <listofallmembers>
+      <member refid="struct_m_p_s_1_1_size_1a28c641eb4f92455cd510519bfc8769a6" prot="public" virt="non-virtual"><scope>MPS::Size</scope><name>depth</name></member>
+      <member refid="struct_m_p_s_1_1_size_1afe1fe7a85ac8a0d6b3656b82ae5e2ce7" prot="public" virt="non-virtual"><scope>MPS::Size</scope><name>height</name></member>
+      <member refid="struct_m_p_s_1_1_size_1aef3046e3572828bd587edac65d3f76ae" prot="public" virt="non-virtual"><scope>MPS::Size</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

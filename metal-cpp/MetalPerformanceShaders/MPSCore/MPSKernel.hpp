@@ -15,6 +15,7 @@ namespace MPS{
         MPS::Kernel* initWithCoder(NS::Coder* aDecoder, MTL::Device* device);
     };
 }
+/// @{ @private
 _MPS_INLINE MPS::Kernel* MPS::Kernel::alloc(){
     return NS::Object::alloc<MPS::Kernel>(_MPS_PRIVATE_CLS(MPSKernel));
 }
@@ -39,3 +40,4 @@ _MPS_INLINE MPS::Kernel* MPS::Kernel::initWithCoder(NS::Coder* aDecoder){
 _MPS_INLINE MPS::Kernel* MPS::Kernel::initWithCoder(NS::Coder* aDecoder, MTL::Device* device){
     return Object::sendMessage<MPS::Kernel*>(this, _MPS_PRIVATE_SEL(initWithCoder_device_), aDecoder, device);
 }
+/// @}

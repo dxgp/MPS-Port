@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File MPSHeaderBridge.hpp &mdash; MetalPerformanceShaders C++  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MetalPerformanceShaders C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">MetalPerformanceShaders C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Some important topic 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MetalPerformanceShaders C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File MPSHeaderBridge.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file_MPSHeaderBridge.hpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-mpsheaderbridge-hpp">
+<span id="program-listing-file-mpsheaderbridge-hpp"></span><h1>Program Listing for File MPSHeaderBridge.hpp<a class="headerlink" href="#program-listing-for-file-mpsheaderbridge-hpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_MPSHeaderBridge.hpp.html#file-mpsheaderbridge-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">MPSHeaderBridge.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MPSPrivate.hpp&quot;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span><span class="o">::</span><span class="nn">Private</span><span class="o">::</span><span class="nn">Class</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// _MTL_PRIVATE_DEF_CLS(MTLAccelerationStructureBoundingBoxGeometryDescriptor);</span>
+<span class="w">    </span><span class="c1">//MPSNDArray</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSNDArrayAllocator</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSNDArray</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSNDArrayDescriptor</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSTemporaryNDArray</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSCommandBuffer</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSPredicate</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSCommandBuffer</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSKernel</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSKernel</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrix</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrix</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSVector</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixDescriptor</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSVectorDescriptor</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixMultiplication</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixMultiplication</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixVectorMultiplication</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixFindTopK</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixDecomposition</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixDecompositionLU</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixDecompositionCholesky</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixRandom</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixRandomDistributionDescriptor</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixRandomMTGP32</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixRandomPhilox</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixSoftMax</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixSoftMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixLogSoftMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixSoftMaxGradient</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixLogSoftMaxGradient</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixSolve</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixSolveTriangular</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixSolveLU</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_CLS</span><span class="p">(</span><span class="n">MPSMatrixSolveCholesky</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span><span class="o">::</span><span class="nn">Private</span><span class="o">::</span><span class="nn">Protocol</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// _MTL_PRIVATE_DEF_PRO(MTLAccelerationStructure);</span>
+<span class="p">}</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MPS</span><span class="o">::</span><span class="nn">Private</span><span class="o">::</span><span class="nn">Selector</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// _MTL_PRIVATE_DEF_SEL(GPUEndTime,&quot;GPUEndTime&quot;);</span>
+<span class="w">    </span><span class="c1">//MPSNDArray</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">numberOfDimensions</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;numberOfDimensions&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">lengthOfDimension_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;lengthOfDimension:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">sliceRangeForDimension_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sliceRangeForDimension:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">sliceDimension_withSubrange_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sliceDimension:withSubrange:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">transposeDimension_withDimension_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;transposeDimension:withDimension:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">dimensionOrder</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dimensionOrder&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">descriptorWithDataType_dimensionCount_dimensionSizes_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;descriptorWithDataType:dimensionCount:dimensionSizes:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">descriptorWithDataType_shape_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;descriptorWithDataType:shape:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">reshapeWithDimensionCount_dimensionSizes_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;reshapeWithDimensionCount:dimensionSizes:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">reshapeWithShape_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;reshapeWithShape:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">alloc</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;alloc:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">init</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;init&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">arrayForCommandBuffer_arrayDescriptor_kernel_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;arrayForCommandBuffer:arrayDescriptor:kernel:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">defaultAllocator</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;defaultAllocator&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">label</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;label&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">dataType</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dataType&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">dataTypeSize</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dataTypeSize&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;device&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;descriptor&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_descriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:descriptor:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_scalar_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:scalar:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">resourceSize</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;resoureSize&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">arrayViewWithCommandBuffer_descriptor_aliasing_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;arrayViewWithCommandBuffer:descriptor:aliasing:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;parent&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">exportDataWithCommandBuffer_toBuffer_destinationDataType_offset_rowStrides_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;exportDataWithCommandBuffer:toBuffer:destinationDataType:offset:rowStrides:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">importDataWithCommandBuffer_fromBuffer_sourceDataType_offset_rowStrides_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;importDataWithCommandBuffer:fromBuffer:sourceDataType:offset:rowStrides:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">readBytes_strideBytes_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;readBytes:strideBytes:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">writeBytes_strideBytes_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;writeBytes:strideBytes:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">synchronizeOnCommandBuffer_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;synchronizeOnCommandBuffer:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">readCount</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;readCount&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">temporaryNDArrayWithCommandBuffer_descriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;temporaryNDArrayWithCommandBuffer:descriptor:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSCommandBuffer</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">predicateBuffer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;predicateBuffer&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">predicateOffset</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;predicateOffset&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">predicateWithBuffer_offset_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;predicateWithBuffer:offset:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithBuffer_offset_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithBuffer:offset:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">newHeapWithDescriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;newHeapWithDescriptor:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">retireHeap_cacheDelay_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;retireHeap:cacheDelay:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">commandBuffer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;commandBuffer&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">rootCommandBuffer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rootCommandBuffer&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;predicate&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">heapProvider</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;heapProvider&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">commandBufferWithCommandBuffer_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;commandBufferWithCommandBuffer:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">commandBufferFromCommandQueue_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;commandBufferFromCommandQueue:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithCommandBuffer_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithCommandBuffer:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">commitAndContinue</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;commitAndContinue&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">prefetchHeapForWorkloadSize_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prefetchHeapForWorkloadSize:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSKernel</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;options&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithCoder_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithCoder:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithCoder_device_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithCoder:device:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrix</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rows&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;columns&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">matrices</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;matrices&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">rowBytes</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rowBytes&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">matrixBytes</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;matrixBytes&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">matrixDescriptorWithRows_columns_rowBytes_dataType_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;matrixDescriptorWithRows:columns:rowBytes:dataType:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">matrixDescriptorWithRows_columns_matrices_rowBytes_matrixBytes_dataType_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;matrixDescriptorWithRows:columns:matrices:rowBytes:matrixBytes:dataType:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">rowBytesForColumns_dataType_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rowBytesForColumns:dataType:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;length&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vectors&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">vectorBytes</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vectorBytes&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">vectorDescriptorWithLength_dataType_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vectorDescriptorWithLength:dataType:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">vectorDescriptorWithLength_vectors_vectorBytes_dataType_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vectorDescriptorWithLength:vectors:vectorBytes:dataType:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">vectorBytesForLength_dataType_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vectorBytesForLength:dataType:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;offset&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;data&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithBuffer_descriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithBuffer:descriptor:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithBuffer_offset_descriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithBuffer:offset:descriptor:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">temporaryMatrixWithCommandBuffer_matrixDescriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;temporaryMatrixWithCommandBuffer:matrixDescriptor:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">prefetchStorageWithCommandBuffer_matrixDescriptorList_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prefetchStorageWithCommandBuffer:matrixDescriptorList:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">temporaryVectorWithCommandBuffer_descriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;temporaryVectorWithCommandBuffer:descriptor:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">prefetchStorageWithCommandBuffer_descriptorList_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prefetchStorageWithCommandBuffer:descriptorList:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixTypes</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">sourceMatrixOrigin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sourceMatrixOrigin&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">resultMatrixOrigin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;resultMatrixOrigin&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">batchStart</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;batchStart&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">batchSize</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;batchSize&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">primarySourceMatrixOrigin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;primarySourceMatrixOrigin&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">secondarySourceMatrixOrigin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;secondarySourceMatrixOrigin&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixMultiplication</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">leftMatrixOrigin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;leftMatrixOrigin&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">rightMatrixOrigin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rightMatrixOrigin&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_transposeLeft_transposeRight_resultRows_resultColumns_interiorColumns_alpha_beta_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:transposeLeft:transposeRight:resultRows:resultColumns:interiorColumns:alpha:beta:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_resultRows_resultColumns_interiorColumns_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:resultRows:resultColumns:interiorColumns:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_rows_columns_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:rows:columns:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_leftMatrix_rightMatrix_resultMatrix_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:leftMatrix:rightMatrix:resultMatrix:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_transpose_rows_columns_alpha_beta_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:transpose:rows:columns:alpha:beta:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_inputMatrix_inputVector_resultVector_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:inputMatrix:inputVector:resultVector:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixFindTopK</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">sourceRows</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sourceRows&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">sourceColumns</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sourceColumns&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">indexOffset</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;indexOffset&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">numberOfTopKValues</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;numberOfTopKValues&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_numberOfTopKValues_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:numberOfTopKValues:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_inputMatrix_resultIndexMatrix_resultValueMatrix_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:inputMatrix:resultIndexMatrix:resultValueMatrix:&quot;</span><span class="p">);</span>
+
+
+<span class="w">    </span><span class="c1">//MPSMatrixDecomposition</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_sourceMatrix_resultMatrix_pivotIndices_status_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:sourceMatrix:resultMatrix:pivotIndices:status:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_lower_order_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:lower:order:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_sourceMatrix_resultMatrix_status_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:sourceMatrix:resultMatrix:status:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixRandom</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">distributionType</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;distributionType&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;minimum&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">maximum</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;maximum&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mean&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">standardDeviation</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;standardDeviation&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">uniformDistributionDescriptorWithMinimum_maximum_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uniformDistributionDescriptorWithMinimum:maximum:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">normalDistributionDescriptorWithMean_standardDeviation_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;normalDistributionDescriptorWithMean:standardDeviation:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">normalDistributionDescriptorWithMean_standardDeviation_minimum_maximum_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;normalDistributionDescriptorWithMean:standardDeviation:minimum:maximum:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">defaultDistributionDescriptor</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;defaultDistributionDescriptor&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">destinationDataType</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;destinationDataType&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_destinationDataType_seed_distributionDescriptor_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:destinationDataType:seed:distributionDescriptor:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">synchronizeStateOnCommandBuffer_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;synchronizeStateOnCommandBuffer:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_destinationDataType_seed_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:destinationDataType:seed:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_destinationVector_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:destinationVector:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_destinationMatrix_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:destinationMatrix:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixSoftMax</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_inputMatrix_resultMatrix_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:inputMatrix:resultMatrix:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_gradientMatrix_forwardOutputMatrix_resultMatrix_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:gradientMatrix:forwardOutputMatrix:resultMatrix:&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//MPSMatrixSolve</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_right_upper_transpose_unit_order_numberOfRightHandSides_alpha_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:right:upper:transpose:unit:order:numberOfRightHandSides:alpha:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_solutionMatrix_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:sourceMatrix:rightHandSideMatrix:solutionMatrix:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_transpose_order_numberOfRightHandSides_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:transpose:order:numberOfRightHandSides:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">encodeToCommandBuffer_sourceMatrix_rightHandSideMatrix_pivotIndices_solutionMatrix_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;encodeToCommandBuffer:sourceMatrix:rightHandSideMatrix:pivotIndices:solutionMatrix:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_MPS_PRIVATE_DEF_SEL</span><span class="p">(</span><span class="n">initWithDevice_upper_order_numberOfRightHandSides_</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;initWithDevice:upper:order:numberOfRightHandSides:&quot;</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Gunjan Payal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

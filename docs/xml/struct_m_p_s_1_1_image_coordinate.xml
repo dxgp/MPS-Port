@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_m_p_s_1_1_image_coordinate" kind="struct" language="C++" prot="public">
+    <compoundname>MPS::ImageCoordinate</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_s_1_1_image_coordinate_1aeed3f66e4a7d237b3105803d4a3be03d" prot="public" static="no" mutable="no">
+        <type>NS::UInteger</type>
+        <definition>NS::UInteger MPS::ImageCoordinate::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>MPS::ImageCoordinate::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="91" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_image_coordinate_1a4d81f8b090b2bbbcc6d0c41a629f11e3" prot="public" static="no" mutable="no">
+        <type>NS::UInteger</type>
+        <definition>NS::UInteger MPS::ImageCoordinate::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>MPS::ImageCoordinate::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="92" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_s_1_1_image_coordinate_1a2dc4b654d94078ddf33e7310035fbffb" prot="public" static="no" mutable="no">
+        <type>NS::UInteger</type>
+        <definition>NS::UInteger MPS::ImageCoordinate::channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <qualifiedname>MPS::ImageCoordinate::channel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="93" column="22" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" line="90" column="5" bodyfile="/Users/gunjanpayal/MPS-Port/metal-cpp/MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp" bodystart="90" bodyend="94"/>
+    <listofallmembers>
+      <member refid="struct_m_p_s_1_1_image_coordinate_1a2dc4b654d94078ddf33e7310035fbffb" prot="public" virt="non-virtual"><scope>MPS::ImageCoordinate</scope><name>channel</name></member>
+      <member refid="struct_m_p_s_1_1_image_coordinate_1aeed3f66e4a7d237b3105803d4a3be03d" prot="public" virt="non-virtual"><scope>MPS::ImageCoordinate</scope><name>x</name></member>
+      <member refid="struct_m_p_s_1_1_image_coordinate_1a4d81f8b090b2bbbcc6d0c41a629f11e3" prot="public" virt="non-virtual"><scope>MPS::ImageCoordinate</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

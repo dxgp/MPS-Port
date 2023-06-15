@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>MPS-Port</highlight></codeline>
+<codeline><highlight class="normal">I<sp/>created<sp/>this<sp/>project<sp/>so<sp/>that<sp/>I<sp/>could<sp/>use<sp/>Metal<sp/>Performance<sp/>Shaders<sp/>with<sp/>metal-cpp.<sp/>Currently,<sp/>it<sp/>supports<sp/>all<sp/>&quot;MPSMatrix&quot;<sp/>operations<sp/>like<sp/>decomposition,<sp/>find<sp/>top<sp/>k<sp/>elements,<sp/>matrix<sp/>multiplication,<sp/>random<sp/>matrix<sp/>generation,<sp/>softmax,<sp/>matrix<sp/>solve.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>extension<sp/>was<sp/>written<sp/>in<sp/>the<sp/>same<sp/>style<sp/>as<sp/>metal-cpp.<sp/>Just<sp/>read<sp/>the<sp/>docs<sp/>below<sp/>to<sp/>understand<sp/>how<sp/>to<sp/>perform<sp/>these<sp/>operations<sp/>because<sp/>the<sp/>syntax<sp/>can<sp/>be<sp/>a<sp/>little<sp/>weird<sp/>at<sp/>times.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">All<sp/>functions<sp/>and<sp/>class<sp/>definitions<sp/>are<sp/>under<sp/>the<sp/>`MPS`<sp/>namespace.<sp/>So,<sp/>if<sp/>an<sp/>objC<sp/>call<sp/>were<sp/>`MPSMatrixMultiplication`,<sp/>it<sp/>would<sp/>be<sp/>written<sp/>in<sp/>C++<sp/>as<sp/>`MPS::MatrixMultiplication`.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Headers</highlight></codeline>
+<codeline><highlight class="normal">Just<sp/>include<sp/>the<sp/>`MPSMatrix.hpp`<sp/>file<sp/>in<sp/>`metal-cpp/MetalPerformanceShaders/MPSMatrix`<sp/>folder.<sp/>As<sp/>an<sp/>example,<sp/>here&apos;s<sp/>how<sp/>the<sp/>headers<sp/>look<sp/>like<sp/>for<sp/>me:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;Accelerate/Accelerate.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#define<sp/>NS_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>CA_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>MTL_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>MPS_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;Foundation/Foundation.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;Metal/Metal.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;QuartzCore/QuartzCore.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>command<sp/>I<sp/>use<sp/>to<sp/>compile<sp/>is:</highlight></codeline>
+<codeline><highlight class="normal">```zsh</highlight></codeline>
+<codeline><highlight class="normal">clang++<sp/>-std=c++17<sp/>-stdlib=libc++<sp/>-O2<sp/>-I../metal-cpp<sp/>-I<sp/>/opt<sp/>-fno-objc-arc<sp/>-framework<sp/>Metal<sp/>-framework<sp/>Foundation<sp/>-framework<sp/>MetalKit<sp/>-framework<sp/>Accelerate<sp/>-framework<sp/>MetalPerformanceShaders<sp/>-g<sp/>{put<sp/>your<sp/>file<sp/>name<sp/>here}<sp/><sp/>-o<sp/>test.x</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Make<sp/>sure<sp/>you<sp/>update<sp/>the<sp/>`-I`<sp/>argument<sp/>to<sp/>where<sp/>your<sp/>metal-cpp<sp/>folder<sp/>is<sp/>located.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Here&apos;s<sp/>the<sp/>documentation.<sp/>It&apos;s<sp/>just<sp/>enough<sp/>to<sp/>get<sp/>you<sp/>started.<sp/>I&apos;ll<sp/>add<sp/>more<sp/>to<sp/>the<sp/>documentation<sp/>including<sp/>what<sp/>works<sp/>and<sp/>what<sp/>doesn&apos;t<sp/>but<sp/>until<sp/>then:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Creating<sp/>Matrices</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>create<sp/>a<sp/>matrix,<sp/>you<sp/>need<sp/>`MPS::MatrixDescriptor`<sp/>objects.<sp/>You<sp/>must<sp/>create<sp/>a<sp/>descriptor<sp/>for<sp/>a<sp/>matrix,<sp/>which<sp/>is<sp/>later<sp/>used<sp/>to<sp/>actually<sp/>create<sp/>the<sp/>matrix.<sp/>For<sp/>e.g.To<sp/>create<sp/>a<sp/>descriptor<sp/>for<sp/>a<sp/>5x4<sp/>matrix<sp/>with<sp/>with<sp/>float32<sp/>datatype:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">MPS::MatrixDescriptor*<sp/>mps_matdes<sp/>=<sp/>MPS::MatrixDescriptor::matrixDescriptorWithRows(5,<sp/>4,<sp/>4*4,<sp/>MPS::MPSDataTypeFloat32);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>first<sp/>argument<sp/>is<sp/>the<sp/>number<sp/>of<sp/>rows,<sp/>followed<sp/>by<sp/>the<sp/>number<sp/>of<sp/>columns,<sp/>followed<sp/>by<sp/>the<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>a<sp/>row<sp/>i.e.<sp/>`numCols*dataTypeSize`,<sp/>followed<sp/>by<sp/>the<sp/>actual<sp/>data<sp/>type.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>actual<sp/>matrix<sp/>creation<sp/>then<sp/>works<sp/>as<sp/>follows<sp/>(the<sp/>`alloc`<sp/>syntax<sp/>does<sp/>look<sp/>like<sp/>an<sp/>eyesore.<sp/>This<sp/>is<sp/>why<sp/>the<sp/>final<sp/>goal<sp/>is<sp/>to<sp/>create<sp/>a<sp/>wrapper<sp/>around<sp/>these<sp/>operations):</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">MTL::Device*<sp/>device<sp/>=<sp/>MTL::CreateSystemDefaultDevice();</highlight></codeline>
+<codeline><highlight class="normal">MPS::MatrixDescriptor*<sp/>mps_matdes<sp/>=<sp/>MPS::MatrixDescriptor::matrixDescriptorWithRows(5,<sp/>4,<sp/>4*4,<sp/>MPS::MPSDataTypeFloat32);</highlight></codeline>
+<codeline><highlight class="normal">MPS::Matrix*<sp/>matrix<sp/>=<sp/>MPS::Matrix::alloc();<sp/>matrix-&gt;initWithDevice(device,<sp/>mps_matdes);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>actually<sp/>put<sp/>the<sp/>data<sp/>inside<sp/>the<sp/>matrix,<sp/>one<sp/>method<sp/>would<sp/>be<sp/>to<sp/>use<sp/>`matrix-&gt;data()`<sp/>which<sp/>just<sp/>returns<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>`MTL::Buffer`<sp/>containing<sp/>the<sp/>data<sp/>(row<sp/>major<sp/>order).<sp/>Then,<sp/>just<sp/>loop<sp/>through<sp/>it<sp/>and<sp/>add<sp/>your<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>can<sp/>also<sp/>initialize<sp/>the<sp/>matrix<sp/>with<sp/>an<sp/>array.<sp/>To<sp/>initialize<sp/>it<sp/>with<sp/>an<sp/>array<sp/>that<sp/>contains<sp/>your<sp/>data,<sp/>you<sp/>need<sp/>to<sp/>initialize<sp/>a<sp/>buffer<sp/>with<sp/>that<sp/>array<sp/>and<sp/>then<sp/>initialize<sp/>the<sp/>matrix<sp/>with<sp/>that<sp/>buffer<sp/>(easy,<sp/>huh?<sp/>array-&gt;buffer-&gt;matrix)<sp/>.<sp/>Still,<sp/>the<sp/>cleanest<sp/>way<sp/>to<sp/>write<sp/>this<sp/>would<sp/>be:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>data[]<sp/>=<sp/>{yourdatahere};</highlight></codeline>
+<codeline><highlight class="normal">MTL::Buffer*<sp/>buf<sp/>=<sp/>device-&gt;newBuffer(data,bufferSizeInBytes,MTL::ResourceStorageModeShared);</highlight></codeline>
+<codeline><highlight class="normal">MPS::MatrixDescriptor*<sp/>matdes<sp/>=<sp/>MPS::MatrixDescriptor::matrixDescriptorWithRows(...);</highlight></codeline>
+<codeline><highlight class="normal">MPS::Matrix*<sp/>mat<sp/>=<sp/>MPS::Matrix::alloc();mat-&gt;initWithBuffer(buf,matdes);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>already<sp/>have<sp/>a<sp/>`float`<sp/>array,<sp/>it<sp/>makes<sp/>more<sp/>sense<sp/>to<sp/>do<sp/>this<sp/>than<sp/>to<sp/>copy<sp/>the<sp/>data<sp/>into<sp/>the<sp/>buffer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>in<sp/>doubt,<sp/>just<sp/>open<sp/>the<sp/>header<sp/>file<sp/>corresponding<sp/>to<sp/>the<sp/>operation<sp/>you<sp/>want<sp/>to<sp/>perform<sp/>or<sp/>the<sp/>data<sp/>structure<sp/>you<sp/>want<sp/>to<sp/>know<sp/>more<sp/>about.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Matrix<sp/>Multiplication</highlight></codeline>
+<codeline><highlight class="normal">Now,<sp/>here&apos;s<sp/>a<sp/>complete<sp/>example<sp/>that<sp/>declares<sp/>and<sp/>then<sp/>multiplies<sp/>two<sp/>3x3<sp/>matrices:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;fstream&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;Accelerate/Accelerate.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#define<sp/>NS_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>CA_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>MTL_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>MPS_PRIVATE_IMPLEMENTATION</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;Foundation/Foundation.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;Metal/Metal.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;QuartzCore/QuartzCore.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;MetalPerformanceShaders/MPSCore/MPSCoreTypes.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;MetalPerformanceShaders/MPSMatrix/MPSMatrix.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>printMTLBuffer(MTL::Buffer<sp/>*buf,<sp/>std::string<sp/>name){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;name&lt;&lt;&quot;:&quot;&lt;&lt;&quot;&lt;&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/>*ptr<sp/>=<sp/>(float*)buf-&gt;contents();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for(int<sp/>i=0;i&lt;buf-&gt;length()/sizeof(float)<sp/>-<sp/>1;i++){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;ptr[i]&lt;&lt;&quot;,&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;ptr[buf-&gt;length()/sizeof(float)<sp/>-<sp/>1]&lt;&lt;&quot;&gt;&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout&lt;&lt;std::endl;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>add<sp/>the<sp/>data<sp/>to<sp/>an<sp/>array</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/>mat1_data[]<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0,<sp/>4.0,<sp/>5.0,<sp/>6.0,<sp/>7.0,<sp/>8.0,<sp/>9.0};</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/>mat2_data[]<sp/>=<sp/>{9.0,<sp/>8.0,<sp/>7.0,<sp/>6.0,<sp/>5.0,<sp/>4.0,<sp/>3.0,<sp/>2.0,<sp/>1.0};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//declare<sp/>the<sp/>device,<sp/>command<sp/>buffer,<sp/>command<sp/>queue</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MTL::Device*<sp/>device<sp/>=<sp/>MTL::CreateSystemDefaultDevice();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MTL::CommandQueue*<sp/>cmdQueue<sp/>=<sp/>device-&gt;newCommandQueue();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MTL::CommandBuffer*<sp/>cmdbuf<sp/>=<sp/>cmdQueue-&gt;commandBuffer();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//create<sp/>buffers<sp/>from<sp/>the<sp/>above<sp/>data</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MTL::Buffer*<sp/>b1<sp/>=<sp/>device-&gt;newBuffer(mat1_data,<sp/>36,<sp/>MTL::ResourceStorageModeShared);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MTL::Buffer*<sp/>b2<sp/>=<sp/>device-&gt;newBuffer(mat2_data,<sp/>36,<sp/>MTL::ResourceStorageModeShared);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//create<sp/>matrix<sp/>descriptors</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPS::MatrixDescriptor*<sp/>m1_des<sp/>=<sp/>MPS::MatrixDescriptor::matrixDescriptorWithRows(3,3,12,MPS::MPSDataTypeFloat32);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPS::MatrixDescriptor*<sp/>m2_des<sp/>=<sp/>MPS::MatrixDescriptor::matrixDescriptorWithRows(3,3,12,MPS::MPSDataTypeFloat32);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//create<sp/>matrices<sp/>from<sp/>their<sp/>matrix<sp/>descriptors</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPS::Matrix*<sp/>m1<sp/>=<sp/>MPS::Matrix::alloc();<sp/>m1-&gt;initWithBuffer(b1,<sp/>m1_des);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPS::Matrix*<sp/>m2<sp/>=<sp/>MPS::Matrix::alloc();<sp/>m2-&gt;initWithBuffer(b2,<sp/>m2_des);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPS::Matrix*<sp/>m_res<sp/>=<sp/>MPS::Matrix::alloc();<sp/>m_res-&gt;initWithDevice(device,<sp/>MPS::MatrixDescriptor::matrixDescriptorWithRows(3,3,12,MPS::MPSDataTypeFloat32));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//allocate<sp/>a<sp/>matrix<sp/>multiplication<sp/>object</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPS::MatrixMultiplication*<sp/>mps_matmul<sp/>=<sp/>MPS::MatrixMultiplication::alloc();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mps_matmul-&gt;initWithDevice(device,<sp/>3,<sp/>3,<sp/>3);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//encode<sp/>the<sp/>matmul<sp/>op.<sp/>to<sp/>the<sp/>command<sp/>buffer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mps_matmul-&gt;encodeToCommandBuffer(cmdbuf,<sp/>m1,<sp/>m2,<sp/>m_res);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//commit<sp/>command<sp/>buffer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cmdbuf-&gt;commit();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cmdbuf-&gt;waitUntilCompleted();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>print<sp/>the<sp/>data</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printMTLBuffer(b1,<sp/>&quot;m1&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printMTLBuffer(b2,<sp/>&quot;m2&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printMTLBuffer(m_res-&gt;data(),<sp/>&quot;res&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/Users/gunjanpayal/MPS-Port/README.md"/>
+  </compounddef>
+</doxygen>
